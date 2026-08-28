@@ -1,0 +1,60 @@
+---
+title: "CV"
+description: "Education, positions, teaching, service."
+---
+
+::: {.callout-note appearance="simple"}
+**To offer a PDF:** put your file at `files/cv.pdf`, then add this line here:
+`[Download CV (PDF)](files/cv.pdf)`. Quarto copies anything in `files/` into the
+published site. (The link is left out for now so the build doesn't break on a
+missing file.)
+:::
+
+## Education
+
+::: {.cv-entry}
+[2020 – 2025]{.cv-when}  
+[PhD, Statistics]{.cv-what} — University Name  
+Thesis: *Title of your thesis*. Advisor: Prof. Name.
+:::
+
+::: {.cv-entry}
+[2018 – 2020]{.cv-when}  
+[MSc, Statistics]{.cv-what} — University Name
+:::
+
+::: {.cv-entry}
+[2015 – 2018]{.cv-when}  
+[BSc, Statistics]{.cv-what} — College Name
+:::
+
+## Positions
+
+::: {.cv-entry}
+[2025 – present]{.cv-when}  
+[Your job title]{.cv-what} — Organisation  
+One line on what you do there.
+:::
+
+## Teaching
+
+- **Course code — Course name**, University, 2025. Instructor.
+- **Course code — Course name**, University, 2024. Teaching assistant.
+
+## Skills
+
+[R]{.pill}[Stan]{.pill}[Python]{.pill}[SQL]{.pill}[Quarto]{.pill}[git]{.pill}
+
+## Service
+
+- Reviewer — *Journal Name*, *Another Journal*
+- Organiser — Seminar / reading group
+
+## Awards
+
+| Year | Award |
+|------|-------|
+| 2025 | Name of award, Institution |
+| 2023 | Another award |
+
+: {tbl-colwidths="[15,85]"}

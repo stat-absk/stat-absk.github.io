@@ -1,0 +1,51 @@
+---
+title: "Research"
+description: "Papers, preprints, and software."
+---
+
+Replace the placeholders below with your own work. Each entry is plain Markdown —
+add or delete blocks freely.
+
+## Publications
+
+::: {.cv-entry}
+[**Title of the paper goes here**](https://doi.org/10.0000/example)  
+Bhattacharjee, A., Coauthor, B. (2026). *Journal Name*, 12(3), 45–67.  
+[[PDF](https://example.com/paper.pdf)] [[Code](https://github.com/YOUR-GITHUB-USERNAME/repo)] [[Data](https://example.com/data)]
+
+A sentence or two on what the paper actually does and why someone should read it.
+:::
+
+::: {.cv-entry}
+[**A second paper**](https://doi.org/10.0000/example2)  
+Bhattacharjee, A. (2025). *Another Journal*, 8(1), 1–20.  
+[[PDF](https://example.com/paper2.pdf)]
+
+One-line summary.
+:::
+
+## Preprints
+
+::: {.cv-entry}
+**Working title of the preprint**  
+Bhattacharjee, A. (2026). arXiv:0000.00000.  
+[[arXiv](https://arxiv.org/abs/0000.00000)]
+:::
+
+## Software
+
+::: {.cv-entry}
+[**yourpkg**](https://github.com/YOUR-GITHUB-USERNAME/yourpkg) — an R package for
+[what it does]. `install.packages("yourpkg")`
+
+[R]{.pill}[CRAN]{.pill}
+:::
+
+## Talks
+
+| Date | Talk | Venue |
+|------|------|-------|
+| 2026 | Title of the talk | Conference name |
+| 2025 | Another talk | Seminar series |
+
+: {tbl-colwidths="[12,58,30]"}

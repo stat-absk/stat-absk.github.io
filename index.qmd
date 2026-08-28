@@ -1,0 +1,44 @@
+---
+title: "Abhishek Bhattacharjee"
+subtitle: "Statistician"
+image: images/profile.svg
+about:
+  template: trestles
+  image-shape: round
+  image-width: 15em
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/YOUR-GITHUB-USERNAME
+    - icon: envelope
+      text: Email
+      href: mailto:stat.absk@gmail.com
+    - icon: mortarboard
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=YOUR-SCHOLAR-ID
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/YOUR-HANDLE
+toc: false
+---
+
+## Hello
+
+I'm a statistician working on **[your area — e.g. Bayesian hierarchical models,
+survival analysis, causal inference]**. I care about methods that survive contact
+with messy, real data, and about writing them up so other people can actually use
+them.
+
+This site collects my [research](research.qmd), a [CV](cv.qmd), and a
+[blog](blog.qmd) where I work through problems in R.
+
+## Currently
+
+- **Position** — [Your role], [Your institution or company]
+- **Working on** — [one line about a current project]
+- **Interests** — [three or four keywords]
+
+## Get in touch
+
+The fastest way to reach me is [email](mailto:stat.absk@gmail.com). Code lives on
+[GitHub](https://github.com/YOUR-GITHUB-USERNAME).

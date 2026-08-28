@@ -1,0 +1,70 @@
+project:
+  type: website
+  output-dir: docs          # GitHub Pages serves from main branch / docs folder
+  post-render:
+    - post-render.R         # recreates docs/.nojekyll after each build
+
+website:
+  title: "Abhishek Bhattacharjee"
+  description: "Statistician. Notes on data, models, and R."
+  # >>> EDIT: replace YOUR-GITHUB-USERNAME everywhere in this file <<<
+  site-url: "https://YOUR-GITHUB-USERNAME.github.io"
+  favicon: images/favicon.svg
+  open-graph: true
+  twitter-card: true
+
+  navbar:
+    logo: images/favicon.svg
+    title: "Abhishek Bhattacharjee"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: blog.qmd
+        text: Blog
+      - href: cv.qmd
+        text: CV
+    right:
+      - icon: github
+        href: https://github.com/YOUR-GITHUB-USERNAME
+        aria-label: GitHub
+      - icon: envelope
+        href: mailto:stat.absk@gmail.com
+        aria-label: Email
+      - icon: rss
+        href: blog.xml
+        aria-label: RSS
+
+  page-footer:
+    left: "&copy; 2026 Abhishek Bhattacharjee"
+    center:
+      - text: "Home"
+        href: index.qmd
+      - text: "Research"
+        href: research.qmd
+      - text: "Blog"
+        href: blog.qmd
+      - text: "CV"
+        href: cv.qmd
+    right: "Made with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles.scss]
+      dark:  [darkly, styles.scss]
+    toc: true
+    toc-title: "On this page"
+    anchor-sections: true
+    smooth-scroll: true
+    code-copy: true
+    code-overflow: wrap
+    link-external-newwindow: true
+
+execute:
+  freeze: auto      # don't re-run R code unless the .qmd actually changed
+  warning: false
+  message: false
+
+editor: source

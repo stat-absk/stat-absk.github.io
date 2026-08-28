@@ -1,0 +1,19 @@
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Quarto
+/.quarto/
+*_files/
+*_cache/
+
+# macOS
+.DS_Store
+
+# Note: docs/ and _freeze/ ARE committed on purpose.
+# docs/  = the rendered site GitHub Pages serves
+# _freeze/ = cached R results so the site builds fast and reproducibly
+
+**/*.quarto_ipynb

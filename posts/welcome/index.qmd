@@ -1,0 +1,47 @@
+---
+title: "Setting up this site"
+description: "How the site is built, and how I add a new post."
+date: 2026-08-28
+categories: [meta, quarto]
+---
+
+This site is a [Quarto](https://quarto.org) website, edited in RStudio and hosted
+on GitHub Pages. The whole thing is plain text — `.qmd` files plus one YAML config
+— which means it versions cleanly in git and anything I can compute in R can go
+straight into a page.
+
+## Adding a post
+
+Each post is a folder under `posts/` containing an `index.qmd`:
+
+```
+posts/
+  welcome/index.qmd
+  my-new-post/
+    index.qmd
+    a-figure.png
+```
+
+The folder-per-post layout keeps images next to the text that uses them, and the
+published URL comes out as `/posts/my-new-post/`.
+
+The front matter needs four things:
+
+``` yaml
+---
+title: "The title"
+description: "One line that shows up on the blog listing."
+date: 2026-09-01
+categories: [rstats, notes]
+---
+```
+
+Then **Render** in RStudio, and the post appears on the [blog page](../../blog.qmd)
+automatically — the listing reads the `posts/` folder, so there's no index to
+update by hand.
+
+## Why Quarto over R Markdown
+
+Mostly that the website machinery is built in rather than bolted on, that
+`freeze: auto` means old posts don't re-run their code on every build, and that
+the same `.qmd` can render to HTML, PDF, or slides without changing the source.

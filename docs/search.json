@@ -1,0 +1,170 @@
+[
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Setting up this site\n\n\n\nmeta\n\nquarto\n\n\n\nHow the site is built, and how I add a new post.\n\n\n\n\n\nAug 28, 2026\n\n1 min\n\n\n\n\n\n\nA worked example: fuel economy in mtcars\n\n\n\nrstats\n\nggplot2\n\nregression\n\n\n\nA short post that actually runs R — tables, a model, and a figure — to show how computation lands on the page.\n\n\n\n\n\nAug 27, 2026\n\n3 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Abhishek Bhattacharjee",
+    "section": "",
+    "text": "I’m a statistician working on [your area — e.g. Bayesian hierarchical models, survival analysis, causal inference]. I care about methods that survive contact with messy, real data, and about writing them up so other people can actually use them.\nThis site collects my research, a CV, and a blog where I work through problems in R."
+  },
+  {
+    "objectID": "index.html#hello",
+    "href": "index.html#hello",
+    "title": "Abhishek Bhattacharjee",
+    "section": "",
+    "text": "I’m a statistician working on [your area — e.g. Bayesian hierarchical models, survival analysis, causal inference]. I care about methods that survive contact with messy, real data, and about writing them up so other people can actually use them.\nThis site collects my research, a CV, and a blog where I work through problems in R."
+  },
+  {
+    "objectID": "index.html#currently",
+    "href": "index.html#currently",
+    "title": "Abhishek Bhattacharjee",
+    "section": "Currently",
+    "text": "Currently\n\nPosition — [Your role], [Your institution or company]\nWorking on — [one line about a current project]\nInterests — [three or four keywords]"
+  },
+  {
+    "objectID": "index.html#get-in-touch",
+    "href": "index.html#get-in-touch",
+    "title": "Abhishek Bhattacharjee",
+    "section": "Get in touch",
+    "text": "Get in touch\nThe fastest way to reach me is email. Code lives on GitHub."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Setting up this site",
+    "section": "",
+    "text": "This site is a Quarto website, edited in RStudio and hosted on GitHub Pages. The whole thing is plain text — .qmd files plus one YAML config — which means it versions cleanly in git and anything I can compute in R can go straight into a page."
+  },
+  {
+    "objectID": "posts/welcome/index.html#adding-a-post",
+    "href": "posts/welcome/index.html#adding-a-post",
+    "title": "Setting up this site",
+    "section": "Adding a post",
+    "text": "Adding a post\nEach post is a folder under posts/ containing an index.qmd:\nposts/\n  welcome/index.qmd\n  my-new-post/\n    index.qmd\n    a-figure.png\nThe folder-per-post layout keeps images next to the text that uses them, and the published URL comes out as /posts/my-new-post/.\nThe front matter needs four things:\n---\ntitle: \"The title\"\ndescription: \"One line that shows up on the blog listing.\"\ndate: 2026-09-01\ncategories: [rstats, notes]\n---\nThen Render in RStudio, and the post appears on the blog page automatically — the listing reads the posts/ folder, so there’s no index to update by hand."
+  },
+  {
+    "objectID": "posts/welcome/index.html#why-quarto-over-r-markdown",
+    "href": "posts/welcome/index.html#why-quarto-over-r-markdown",
+    "title": "Setting up this site",
+    "section": "Why Quarto over R Markdown",
+    "text": "Why Quarto over R Markdown\nMostly that the website machinery is built in rather than bolted on, that freeze: auto means old posts don’t re-run their code on every build, and that the same .qmd can render to HTML, PDF, or slides without changing the source."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Replace the placeholders below with your own work. Each entry is plain Markdown — add or delete blocks freely."
+  },
+  {
+    "objectID": "research.html#publications",
+    "href": "research.html#publications",
+    "title": "Research",
+    "section": "Publications",
+    "text": "Publications\n\nTitle of the paper goes here\nBhattacharjee, A., Coauthor, B. (2026). Journal Name, 12(3), 45–67.\n[PDF] [Code] [Data]\nA sentence or two on what the paper actually does and why someone should read it.\n\n\nA second paper\nBhattacharjee, A. (2025). Another Journal, 8(1), 1–20.\n[PDF]\nOne-line summary."
+  },
+  {
+    "objectID": "research.html#preprints",
+    "href": "research.html#preprints",
+    "title": "Research",
+    "section": "Preprints",
+    "text": "Preprints\n\nWorking title of the preprint\nBhattacharjee, A. (2026). arXiv:0000.00000.\n[arXiv]"
+  },
+  {
+    "objectID": "research.html#software",
+    "href": "research.html#software",
+    "title": "Research",
+    "section": "Software",
+    "text": "Software\n\nyourpkg — an R package for [what it does]. install.packages(\"yourpkg\")\nRCRAN"
+  },
+  {
+    "objectID": "research.html#talks",
+    "href": "research.html#talks",
+    "title": "Research",
+    "section": "Talks",
+    "text": "Talks\n\n\n\n\n\n\n\n\nDate\nTalk\nVenue\n\n\n\n\n2026\nTitle of the talk\nConference name\n\n\n2025\nAnother talk\nSeminar series"
+  },
+  {
+    "objectID": "posts/tidy-penguins/index.html",
+    "href": "posts/tidy-penguins/index.html",
+    "title": "A worked example: fuel economy in mtcars",
+    "section": "",
+    "text": "Everything below is executed by R when the page renders. The code is visible by default; click Code to fold it, or use the code menu at the top right to download the source.\nCode\nlibrary(ggplot2)\nlibrary(dplyr)\n\ncars &lt;- mtcars |&gt;\n  tibble::as_tibble(rownames = \"model\") |&gt;\n  mutate(\n    cylinders   = factor(cyl, levels = c(4, 6, 8), labels = c(\"4-cyl\", \"6-cyl\", \"8-cyl\")),\n    transmission = factor(am, levels = c(0, 1), labels = c(\"Automatic\", \"Manual\"))\n  )\n\nglimpse(cars)\n\n\nRows: 32\nColumns: 14\n$ model        &lt;chr&gt; \"Mazda RX4\", \"Mazda RX4 Wag\", \"Datsun 710\", \"Hornet 4 Dri…\n$ mpg          &lt;dbl&gt; 21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19.…\n$ cyl          &lt;dbl&gt; 6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, 4, …\n$ disp         &lt;dbl&gt; 160.0, 160.0, 108.0, 258.0, 360.0, 225.0, 360.0, 146.7, 1…\n$ hp           &lt;dbl&gt; 110, 110, 93, 110, 175, 105, 245, 62, 95, 123, 123, 180, …\n$ drat         &lt;dbl&gt; 3.90, 3.90, 3.85, 3.08, 3.15, 2.76, 3.21, 3.69, 3.92, 3.9…\n$ wt           &lt;dbl&gt; 2.620, 2.875, 2.320, 3.215, 3.440, 3.460, 3.570, 3.190, 3…\n$ qsec         &lt;dbl&gt; 16.46, 17.02, 18.61, 19.44, 17.02, 20.22, 15.84, 20.00, 2…\n$ vs           &lt;dbl&gt; 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, …\n$ am           &lt;dbl&gt; 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, …\n$ gear         &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, …\n$ carb         &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, …\n$ cylinders    &lt;fct&gt; 6-cyl, 6-cyl, 4-cyl, 6-cyl, 8-cyl, 6-cyl, 8-cyl, 4-cyl, 4…\n$ transmission &lt;fct&gt; Manual, Manual, Manual, Automatic, Automatic, Automatic, …"
+  },
+  {
+    "objectID": "posts/tidy-penguins/index.html#weight-against-fuel-economy",
+    "href": "posts/tidy-penguins/index.html#weight-against-fuel-economy",
+    "title": "A worked example: fuel economy in mtcars",
+    "section": "Weight against fuel economy",
+    "text": "Weight against fuel economy\nHeavier cars drink more, and the relationship is close to linear within each cylinder count.\n\n\nCode\nggplot(cars, aes(wt * 1000, mpg, colour = cylinders)) +\n  geom_point(size = 2.6, alpha = .85) +\n  geom_smooth(method = \"lm\", formula = y ~ x, se = FALSE, linewidth = .7) +\n  scale_colour_manual(values = c(\"#2f6f4e\", \"#c08a2e\", \"#8c3b3b\")) +\n  labs(\n    x = \"Weight (lb)\", y = \"Miles per gallon\", colour = NULL,\n    title = \"Fuel economy against weight\",\n    subtitle = \"32 cars, Motor Trend 1974\"\n  ) +\n  theme_minimal(base_size = 12) +\n  theme(legend.position = \"top\", plot.title = element_text(face = \"bold\"))\n\n\n\n\n\n\n\n\nFigure 1: Fuel economy falls with weight; the gap between 4- and 8-cylinder cars persists at any given weight.\n\n\n\n\n\nFigure 1 is cross-referenced with @fig-weight-mpg — Quarto numbers the figure and makes the reference a link."
+  },
+  {
+    "objectID": "posts/tidy-penguins/index.html#a-quick-model",
+    "href": "posts/tidy-penguins/index.html#a-quick-model",
+    "title": "A worked example: fuel economy in mtcars",
+    "section": "A quick model",
+    "text": "A quick model\n\n\nCode\nfit &lt;- lm(mpg ~ wt + cylinders, data = cars)\n\nbroom::tidy(fit, conf.int = TRUE) |&gt;\n  mutate(across(where(is.numeric), \\(x) round(x, 2))) |&gt;\n  knitr::kable()\n\n\n\n\nTable 1: Least-squares fit of mpg on weight and cylinder count.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\nconf.low\nconf.high\n\n\n\n\n(Intercept)\n33.99\n1.89\n18.01\n0\n30.12\n37.86\n\n\nwt\n-3.21\n0.75\n-4.25\n0\n-4.75\n-1.66\n\n\ncylinders6-cyl\n-4.26\n1.39\n-3.07\n0\n-7.09\n-1.42\n\n\ncylinders8-cyl\n-6.07\n1.65\n-3.67\n0\n-9.46\n-2.69\n\n\n\n\n\n\n\n\nEach extra 1000 lb costs roughly 3.2 mpg, holding cylinder count fixed. That number isn’t typed in — it’s an inline R expression, written like this:\nEach extra 1000 lb costs roughly 3.2 mpg.\n(In a .qmd the inline form is a backtick span starting with r.) Refit the model and the sentence updates itself, so the prose can never drift away from the numbers."
+  },
+  {
+    "objectID": "posts/tidy-penguins/index.html#group-summaries",
+    "href": "posts/tidy-penguins/index.html#group-summaries",
+    "title": "A worked example: fuel economy in mtcars",
+    "section": "Group summaries",
+    "text": "Group summaries\n\n\nCode\ncars |&gt;\n  summarise(\n    n = n(),\n    mean_mpg = round(mean(mpg), 1),\n    sd_mpg   = round(sd(mpg), 1),\n    .by = c(cylinders, transmission)\n  ) |&gt;\n  arrange(cylinders, transmission) |&gt;\n  knitr::kable(col.names = c(\"Cylinders\", \"Transmission\", \"n\", \"Mean mpg\", \"SD\"))\n\n\n\n\nTable 2: Mean fuel economy by cylinder count and transmission.\n\n\n\n\n\n\nCylinders\nTransmission\nn\nMean mpg\nSD\n\n\n\n\n4-cyl\nAutomatic\n3\n22.9\n1.5\n\n\n4-cyl\nManual\n8\n28.1\n4.5\n\n\n6-cyl\nAutomatic\n4\n19.1\n1.6\n\n\n6-cyl\nManual\n3\n20.6\n0.8\n\n\n8-cyl\nAutomatic\n12\n15.1\n2.8\n\n\n8-cyl\nManual\n2\n15.4\n0.6\n\n\n\n\n\n\n\n\nBecause freeze: auto is set in posts/_metadata.yml, this code runs once and the results are cached in _freeze/. Later site builds reuse them until this file changes — so rendering the site stays fast, and a post written today still builds years from now even if the packages have moved on."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "To offer a PDF: put your file at files/cv.pdf, then add this line here: [Download CV (PDF)](files/cv.pdf). Quarto copies anything in files/ into the published site. (The link is left out for now so the build doesn’t break on a missing file.)"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "CV",
+    "section": "Education",
+    "text": "Education\n\n2020 – 2025\nPhD, Statistics — University Name\nThesis: Title of your thesis. Advisor: Prof. Name.\n\n\n2018 – 2020\nMSc, Statistics — University Name\n\n\n2015 – 2018\nBSc, Statistics — College Name"
+  },
+  {
+    "objectID": "cv.html#positions",
+    "href": "cv.html#positions",
+    "title": "CV",
+    "section": "Positions",
+    "text": "Positions\n\n2025 – present\nYour job title — Organisation\nOne line on what you do there."
+  },
+  {
+    "objectID": "cv.html#teaching",
+    "href": "cv.html#teaching",
+    "title": "CV",
+    "section": "Teaching",
+    "text": "Teaching\n\nCourse code — Course name, University, 2025. Instructor.\nCourse code — Course name, University, 2024. Teaching assistant."
+  },
+  {
+    "objectID": "cv.html#skills",
+    "href": "cv.html#skills",
+    "title": "CV",
+    "section": "Skills",
+    "text": "Skills\nRStanPythonSQLQuartogit"
+  },
+  {
+    "objectID": "cv.html#service",
+    "href": "cv.html#service",
+    "title": "CV",
+    "section": "Service",
+    "text": "Service\n\nReviewer — Journal Name, Another Journal\nOrganiser — Seminar / reading group"
+  },
+  {
+    "objectID": "cv.html#awards",
+    "href": "cv.html#awards",
+    "title": "CV",
+    "section": "Awards",
+    "text": "Awards\n\n\n\n\n\n\n\nYear\nAward\n\n\n\n\n2025\nName of award, Institution\n\n\n2023\nAnother award"
+  }
+]
