@@ -41,4 +41,8 @@ now.
 Earlier: a PhD in Statistics from the University of Florida, and two years
 teaching as a tenure-track assistant professor.
 
+Away from work I build things for iOS. [SingleBell](singlebell.qmd) is a kettlebell
+practice app: one bell, the day's practice dealt each morning, and nothing that
+collects anything about you.
+
 [Views on this site are my own and do not represent my employer.]{.disclaimer}

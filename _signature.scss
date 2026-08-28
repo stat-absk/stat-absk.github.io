@@ -171,3 +171,41 @@ tbody td { border-color: $rule; }
   outline-offset: 3px;
   border-radius: var(--radius-field);
 }
+
+// ── App screenshots ────────────────────────────────────────────────────────
+// A phone is a whole: it keeps its edge, at the whole's radius.
+.shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--space-xl);
+  margin: var(--space-xl) 0 var(--space-xxl);
+  max-width: 46rem;
+
+  figure { margin: 0; }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-whole);
+    border: 1px solid $rule;
+  }
+
+  figcaption {
+    margin-top: var(--space-s);
+    font-size: $size-caption;
+    color: $ink3;
+    line-height: 1.4;
+  }
+}
+
+// ── App icon ───────────────────────────────────────────────────────────────
+// The one drawn object the app has. Masked to the platform's own icon shape so
+// it reads as an app icon rather than a picture of one.
+.app-icon img {
+  width: 104px;
+  height: 104px;
+  border-radius: 22.5%;          // iOS squircle, near enough
+  border: 1px solid $rule;
+  display: block;
+  margin-bottom: var(--space-l);
+}

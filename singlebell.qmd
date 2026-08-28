@@ -1,0 +1,118 @@
+---
+title: "SingleBell"
+subtitle: "A kettlebell practice app for iOS. One bell, eight ready-made protocols, and a builder for your own sessions."
+description-meta: "SingleBell is an iOS kettlebell app: the day's practice dealt fresh each morning, classic protocols, and a builder for your own sessions. No account, no analytics, and no network code — it collects nothing."
+image: images/singlebell/social-card.png
+toc: true
+toc-title: "On this page"
+---
+
+::: {.app-icon}
+![](images/singlebell/appicon.png){fig-alt="The SingleBell app icon: a chalk kettlebell on a slate ground"}
+:::
+
+SingleBell is a slate, written on in chalk. It gives you one practice for the day,
+counts it with you, and gets out of the way. It wants to feel like a well-made
+meditation app that happens to involve iron.
+
+Native SwiftUI. No dependencies. No network code. No account.
+
+[Coming to the App Store]{.pill}
+
+::: {.shots}
+![The day's practice, dealt fresh each morning](images/singlebell/home.png){group="shots"}
+
+![Every card opens the board before it starts anything](images/singlebell/chalkboard.png){group="shots"}
+
+![The clock counts, or you do](images/singlebell/clock-work.png){group="shots"}
+:::
+
+## What it does
+
+**The day's practice.** One card each morning, dealt from the week's shape and what
+you have already done — clean and press, one-arm swings, snatches — with its warm-up,
+complex and finisher chalked on the board and an honest estimate of what it costs.
+Choose short or standard. The day is dealt once and holds until midnight; finishing it
+resolves the card in place rather than moving it under your feet.
+
+**The classics, done properly.** Simple & Sinister, Quick and the Dead, Rite of
+Passage, Armor Building, the Kettlebell Axe, the Humane Burpee and more — each one
+credited to where it came from, each one adjustable on the slate before you start.
+
+**A builder.** Make your own: complexes on the clock, the same complexes on a
+whiteboard where you count the sets, or plain intervals. Keep what you make in Library.
+
+**A reference.** Every move has a sheet — how it's done, what it's for, the cues that
+matter. The get-up is never dealt to you automatically, because it is a skill before it
+is a set.
+
+**On the Lock Screen.** A running practice shows its round and its clock without
+unlocking the phone. A home-screen widget carries the week's tally.
+
+## What it deliberately doesn't do
+
+No streaks. No badges. No confetti. No charts or stat dashboards. No social feed, no
+followers, no sharing. No account. No ads. No motivational copy, and not one
+exclamation mark anywhere in the app.
+
+The absence is the point. A practice you keep is not one you were nagged into.
+
+## Privacy {#privacy}
+
+*Effective 28 August 2026.*
+
+**SingleBell collects nothing.** Not anonymised, not aggregated, not "to improve the
+experience". Nothing. The rest of this section is only the detail behind that sentence.
+
+### Nothing leaves your phone
+
+The app contains no networking code at all. It does not connect to a server, because
+there is no server. There is no account to create, nothing to sign in to, and no way
+for me — or anyone else — to see that you use the app, let alone what you do in it.
+
+There are no analytics, no crash reporters, no advertising identifiers, no attribution
+frameworks, and no third-party SDKs of any kind.
+
+### It asks you for nothing
+
+SingleBell requests no permissions. Not your location, contacts, photos, calendar,
+microphone, camera, or Health data. It is not integrated with HealthKit. You will never
+see a permission prompt, because the app declares none.
+
+The coach's voice is your device's built-in speech synthesis — sound going out, never
+sound coming in. Nothing is recorded and nothing is listened to. The app keeps audio
+running in the background for one reason: so the count keeps speaking when your screen
+locks mid-set.
+
+The Lock Screen Live Activity is drawn on your device and updated by the app itself. It
+uses no push token and no notification server.
+
+### What is stored, and where
+
+Your practice log, the sessions you save to Library, and your preferences are written
+to your device's own storage, in a container shared only between SingleBell and its
+own widgets — that sharing is what lets the home-screen widget show this week's tally.
+That container is on your phone and nowhere else.
+
+If your phone backs itself up to iCloud or to a computer, that backup will include
+SingleBell's data exactly as it includes every other app's. Those backups are covered
+by Apple's privacy policy, not by this one.
+
+### Deleting it
+
+Delete the app and everything goes with it. There is no copy held anywhere else and
+nothing to request from me, because I never had it in the first place.
+
+### Children
+
+No data is collected from anyone, of any age.
+
+### Changes
+
+If any of this ever stops being true, this page will say so before the version that
+changes it ships, and the date above will change.
+
+### Contact
+
+Questions about this policy, or about the app: [absk.bhtt@gmail.com](mailto:absk.bhtt@gmail.com).
+The same address is where to send a bug or a request.

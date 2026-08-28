@@ -3,42 +3,17 @@ freeze: auto
 title-block-banner: false
 author: "Abhishek Bhattacharjee"
 toc: true
-code-fold: show
-code-tools: true
+# Prose posts want neither; a post with R chunks can set them itself.
+code-fold: false
+code-tools: false
 
-# ---------------------------------------------------------------------------
-# TO START POSTING
+# One folder per post in this directory, each with an index.qmd:
 #
-# 1. Create one folder per post in this directory, each with an index.qmd:
+#   posts/my-next-post/index.qmd
 #
-#      posts/my-first-post/index.qmd
-#
-#    front matter:
-#      ---
-#      title: "The title"
-#      description: "One line for the listing."
-#      date: 2026-09-01
-#      categories: [rstats, notes]
-#      ---
-#
-# 2. In stuff.qmd, delete the "Nothing here yet." line and add to its
-#    front matter:
-#
-#      listing:
-#        contents: posts
-#        sort: "date desc"
-#        type: default
-#        categories: true
-#        sort-ui: false
-#        filter-ui: false
-#        feed: true
-#        fields: [date, title, reading-time, description, categories]
-#      page-layout: full
-#
-# 3. Re-add the RSS icon to the navbar in _quarto.yml (the feed only exists
-#    once the listing does):
-#
-#      - icon: rss
-#        href: stuff.xml
-#        aria-label: RSS
-# ---------------------------------------------------------------------------
+#   ---
+#   title: "The title"
+#   description: "One line for the listing."
+#   date: 2026-09-01
+#   categories: [rstats, notes]
+#   ---
