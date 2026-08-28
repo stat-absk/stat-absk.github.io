@@ -44,7 +44,6 @@ Or install the standalone CLI from <https://quarto.org/docs/get-started/>.
 
 | Placeholder | Where | Replace with |
 | --- | --- | --- |
-| `YOUR-GITHUB-USERNAME` | `_quarto.yml`, `index.qmd`, `research.qmd` | your GitHub username |
 | `YOUR-SCHOLAR-ID`, `YOUR-HANDLE` | `index.qmd` | Scholar / LinkedIn links (or delete those lines) |
 | `[your area — …]`, `[Your role]` etc. | `index.qmd`, `research.qmd`, `cv.qmd` | your actual details |
 | `images/profile.svg` | `index.qmd` | a real photo, e.g. `images/profile.jpg` |
@@ -52,7 +51,7 @@ Or install the standalone CLI from <https://quarto.org/docs/get-started/>.
 Find them all with:
 
 ```bash
-grep -rn "YOUR-GITHUB-USERNAME\|YOUR-SCHOLAR-ID\|YOUR-HANDLE" --include="*.qmd" --include="*.yml" .
+grep -rn "YOUR-SCHOLAR-ID\|YOUR-HANDLE\|\[Your role\]" --include="*.qmd" .
 ```
 
 Your email `stat.absk@gmail.com` is in `_quarto.yml` and `index.qmd` as a mailto
@@ -82,13 +81,13 @@ folder. To show thumbnails on the listing, add `image` to the `fields:` list in
 ## Publishing to GitHub Pages
 
 **1. Create the repo.** <https://github.com/new>. To get the short URL
-`https://YOUR-GITHUB-USERNAME.github.io/`, name the repo **exactly**
-`YOUR-GITHUB-USERNAME.github.io`. Make it **Public**. Don't add a README.
+`https://stat-absk.github.io/`, name the repo **exactly**
+`stat-absk.github.io`. Make it **Public**. Don't add a README.
 
 **2. Push.**
 
 ```bash
-git remote add origin https://github.com/YOUR-GITHUB-USERNAME/YOUR-GITHUB-USERNAME.github.io.git && git push -u origin main
+git remote add origin https://github.com/stat-absk/stat-absk.github.io.git && git push -u origin main
 ```
 
 **3. Turn on Pages.** Repo → **Settings** → **Pages** → Source: **Deploy from a

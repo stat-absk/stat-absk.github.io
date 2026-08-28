@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Abhishek Bhattacharjee</title>
-<link>https://YOUR-GITHUB-USERNAME.github.io/blog.html</link>
-<atom:link href="https://YOUR-GITHUB-USERNAME.github.io/blog.xml" rel="self" type="application/rss+xml"/>
+<link>https://stat-absk.github.io/blog.html</link>
+<atom:link href="https://stat-absk.github.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Statistician. Notes on data, models, and R.</description>
 <generator>quarto-1.9.38</generator>
 <lastBuildDate>Thu, 27 Aug 2026 18:30:00 GMT</lastBuildDate>
 <item>
   <title>Setting up this site</title>
   <dc:creator>Abhishek Bhattacharjee</dc:creator>
-  <link>https://YOUR-GITHUB-USERNAME.github.io/posts/welcome/</link>
+  <link>https://stat-absk.github.io/posts/welcome/</link>
   <description><![CDATA[ 
 
 
@@ -101,13 +101,13 @@ font-style: inherit;">---</span></span></code></pre></div></div>
  ]]></description>
   <category>meta</category>
   <category>quarto</category>
-  <guid>https://YOUR-GITHUB-USERNAME.github.io/posts/welcome/</guid>
+  <guid>https://stat-absk.github.io/posts/welcome/</guid>
   <pubDate>Thu, 27 Aug 2026 18:30:00 GMT</pubDate>
 </item>
 <item>
   <title>A worked example: fuel economy in mtcars</title>
   <dc:creator>Abhishek Bhattacharjee</dc:creator>
-  <link>https://YOUR-GITHUB-USERNAME.github.io/posts/tidy-penguins/</link>
+  <link>https://stat-absk.github.io/posts/tidy-penguins/</link>
   <description><![CDATA[ 
 
 
@@ -341,7 +341,7 @@ font-style: inherit;">"bold"</span>))</span></code></pre></div></div>
 <div id="fig-weight-mpg" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-weight-mpg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://YOUR-GITHUB-USERNAME.github.io/posts/tidy-penguins/index_files/figure-html/fig-weight-mpg-1.png" class="img-fluid figure-img" width="672">
+<img src="https://stat-absk.github.io/posts/tidy-penguins/index_files/figure-html/fig-weight-mpg-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-weight-mpg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Fuel economy falls with weight; the gap between 4- and 8-cylinder cars persists at any given weight.
@@ -620,9 +620,9 @@ Table&nbsp;2: Mean fuel economy by cylinder count and transmission.
   <category>rstats</category>
   <category>ggplot2</category>
   <category>regression</category>
-  <guid>https://YOUR-GITHUB-USERNAME.github.io/posts/tidy-penguins/</guid>
+  <guid>https://stat-absk.github.io/posts/tidy-penguins/</guid>
   <pubDate>Wed, 26 Aug 2026 18:30:00 GMT</pubDate>
-  <media:content url="https://YOUR-GITHUB-USERNAME.github.io/posts/tidy-penguins/thumbnail.png" medium="image" type="image/png" height="94" width="144"/>
+  <media:content url="https://stat-absk.github.io/posts/tidy-penguins/thumbnail.png" medium="image" type="image/png" height="94" width="144"/>
 </item>
 </channel>
 </rss>

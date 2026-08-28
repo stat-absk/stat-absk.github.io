@@ -9,7 +9,7 @@ about:
   links:
     - icon: github
       text: GitHub
-      href: https://github.com/YOUR-GITHUB-USERNAME
+      href: https://github.com/stat-absk
     - icon: envelope
       text: Email
       href: mailto:stat.absk@gmail.com
@@ -41,4 +41,4 @@ This site collects my [research](research.qmd), a [CV](cv.qmd), and a
 ## Get in touch
 
 The fastest way to reach me is [email](mailto:stat.absk@gmail.com). Code lives on
-[GitHub](https://github.com/YOUR-GITHUB-USERNAME).
+[GitHub](https://github.com/stat-absk).

@@ -11,7 +11,7 @@ add or delete blocks freely.
 ::: {.cv-entry}
 [**Title of the paper goes here**](https://doi.org/10.0000/example)  
 Bhattacharjee, A., Coauthor, B. (2026). *Journal Name*, 12(3), 45–67.  
-[[PDF](https://example.com/paper.pdf)] [[Code](https://github.com/YOUR-GITHUB-USERNAME/repo)] [[Data](https://example.com/data)]
+[[PDF](https://example.com/paper.pdf)] [[Code](https://github.com/stat-absk/repo)] [[Data](https://example.com/data)]
 
 A sentence or two on what the paper actually does and why someone should read it.
 :::
@@ -35,7 +35,7 @@ Bhattacharjee, A. (2026). arXiv:0000.00000.
 ## Software
 
 ::: {.cv-entry}
-[**yourpkg**](https://github.com/YOUR-GITHUB-USERNAME/yourpkg) — an R package for
+[**yourpkg**](https://github.com/stat-absk/yourpkg) — an R package for
 [what it does]. `install.packages("yourpkg")`
 
 [R]{.pill}[CRAN]{.pill}

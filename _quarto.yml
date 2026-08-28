@@ -7,8 +7,7 @@ project:
 website:
   title: "Abhishek Bhattacharjee"
   description: "Statistician. Notes on data, models, and R."
-  # >>> EDIT: replace YOUR-GITHUB-USERNAME everywhere in this file <<<
-  site-url: "https://YOUR-GITHUB-USERNAME.github.io"
+  site-url: "https://stat-absk.github.io"
   favicon: images/favicon.svg
   open-graph: true
   twitter-card: true
@@ -27,7 +26,7 @@ website:
         text: CV
     right:
       - icon: github
-        href: https://github.com/YOUR-GITHUB-USERNAME
+        href: https://github.com/stat-absk
         aria-label: GitHub
       - icon: envelope
         href: mailto:stat.absk@gmail.com
