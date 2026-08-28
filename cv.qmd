@@ -34,7 +34,7 @@ and pioneering use of real-world evidence and external-control cohorts.
 [Senior Manager, Biostatistics]{.cv-what} — Pfizer Healthcare India Pvt. Ltd., Chennai, India
 
 - Associate Director–equivalent statistical leader on the Data Science & Analytics
-  India leadership team, shaping statistical strategy across global Oncology and
+  India leadership team, shaping statistical strategy across global
   Inflammation & Immunology development programs.
 - Lead and develop a team of statisticians — building talent, strengthening
   statistical capability, and fostering a culture of scientific excellence.
