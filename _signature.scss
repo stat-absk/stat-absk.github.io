@@ -123,9 +123,37 @@ a:active, .nav-link:active { opacity: 0.7; }
   color: $ink2;
 }
 
-.cv-entry { margin-bottom: var(--space-xl); }
-.cv-entry .cv-when { color: $ink3; font-size: $size-caption; }
-.cv-entry .cv-what { color: $ink; font-weight: 600; }
+// A CV entry is the page's one object: a quiet date, the thing itself, and
+// whatever it did. Nothing is boxed and nothing is ruled — the spacing does it.
+.cv-entry {
+  margin-bottom: var(--space-xl);
+
+  p { margin-bottom: var(--space-s); }
+
+  ul {
+    margin: var(--space-s) 0 0;
+    padding-left: 1.15rem;
+  }
+  li {
+    margin-bottom: var(--space-xs);
+    color: $ink2;                     // the detail sits behind the entry itself
+    &::marker { color: $rule; }
+  }
+}
+
+// Consecutive entries breathe more than the lines inside one of them.
+.cv-entry + .cv-entry { margin-top: var(--space-l); }
+
+.cv-when {
+  display: block;
+  color: $ink3;
+  font-size: $size-caption;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;                // a span of years never wraps mid-range
+  margin-bottom: 2px;
+}
+
+.cv-what { color: $ink; font-weight: 600; }
 
 .disclaimer {
   display: inline-block;

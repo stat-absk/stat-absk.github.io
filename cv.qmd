@@ -112,14 +112,25 @@ Department of Statistics, Gainesville, FL, USA
 
 ## Education
 
-| Years | Qualification | Institution |
-|-------|---------------|-------------|
-| 2012 – 2017 | PhD, Statistics | University of Florida |
-| 2009 – 2011 | MSc, Statistics | University of Calcutta |
-| 2006 – 2009 | BSc, Statistics | University of Calcutta |
-| 2025 | Leadership Development Programme | IIM Ahmedabad (for Pfizer) |
+::: {.cv-entry}
+[2012 – 2017]{.cv-when}  
+[PhD, Statistics]{.cv-what} — University of Florida
+:::
 
-: {tbl-colwidths="[18,42,40]"}
+::: {.cv-entry}
+[2009 – 2011]{.cv-when}  
+[MSc, Statistics]{.cv-what} — University of Calcutta
+:::
+
+::: {.cv-entry}
+[2006 – 2009]{.cv-when}  
+[BSc, Statistics]{.cv-what} — University of Calcutta
+:::
+
+::: {.cv-entry}
+[2025]{.cv-when}  
+[Leadership Development Programme]{.cv-what} — IIM Ahmedabad (for Pfizer)
+:::
 
 ## Professional leadership & scientific service
 
