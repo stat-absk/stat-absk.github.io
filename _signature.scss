@@ -266,3 +266,38 @@ $shot-width: 200px;
   display: block;
   margin-bottom: var(--space-l);
 }
+
+// A single phone set beside the prose that describes it.
+.shot-right {
+  float: right;
+  width: $shot-width;
+  margin: 0 0 var(--space-l) var(--space-xl);
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 600 / 1303;
+    border-radius: var(--radius-part);
+    border: 1px solid $rule;
+  }
+  figcaption, p {
+    margin-top: var(--space-s);
+    font-size: $size-caption;
+    color: $ink3;
+    line-height: 1.4;
+  }
+}
+
+// A float must never run under the next section's heading or its rule.
+h2 { clear: both; }
+
+@media (max-width: 700px) {
+  .shot-right { float: none; margin: var(--space-l) 0; }
+}
+
+// A name is set in the serif, as the app sets names — never in bold.
+.name {
+  font-family: $font-family-serif;
+  font-size: 1.06em;
+  color: $ink;
+}

@@ -34,19 +34,68 @@ complex and finisher chalked on the board and an honest estimate of what it cost
 Choose short or standard. The day is dealt once and holds until midnight; finishing it
 resolves the card in place rather than moving it under your feet.
 
-**The classics, done properly.** Simple & Sinister, Quick and the Dead, Rite of
-Passage, Armor Building, the Kettlebell Axe, the Humane Burpee and more — each one
-credited to where it came from, each one adjustable on the slate before you start.
-
-**A builder.** Make your own: complexes on the clock, the same complexes on a
-whiteboard where you count the sets, or plain intervals. Keep what you make in Library.
-
 **A reference.** Every move has a sheet — how it's done, what it's for, the cues that
 matter. The get-up is never dealt to you automatically, because it is a skill before it
 is a set.
 
 **On the Lock Screen.** A running practice shows its round and its clock without
 unlocking the phone. A home-screen widget carries the week's tally.
+
+## The classics
+
+The protocols the kettlebell world already runs, each credited on its own board and
+adjustable before you start.
+
+::: {.shot-right}
+![Each classic carries its source](images/singlebell/classics.png)
+:::
+
+[Simple & Sinister]{.name} — 100 swings, then 10 get-ups. Ten sets of ten on the minute,
+then one get-up a minute for ten. *Pavel Tsatsouline.*
+
+[The Quick and the Dead]{.name} — power in short bursts with generous rest: swings and
+power push-ups, or snatches alone, chosen on the board. *Pavel Tsatsouline.*
+
+[Rite of Passage]{.name} — ladders of one-arm clean & press, one to five a side, pull-ups
+between rungs. Own pace, no clock. *Pavel Tsatsouline, Enter the Kettlebell.*
+
+[Kettlebell AXE]{.name} — one heavy bell, four hand-to-hand swings on the minute, twenty
+minutes. *Pavel Tsatsouline.*
+
+[Armor Building Complex]{.name} — clean and press, swing across, press the other side,
+squat. The lead side swaps every minute. *Dan John.*
+
+[Humane Burpee]{.name} — swings hold at fifteen every set while squats and push-ups ladder
+down to one. Pick five sets or ten. *Dan John.*
+
+[Advanced Minimalist]{.name} — snatches alone, two minutes on and two off, with the series
+and rep scheme rolled fresh. *Pavel Tsatsouline, The Quick and the Dead.*
+
+Each one can be re-paced on the slate before it starts: run Simple & Sinister on the
+minute or at your own pace, swap the get-up out if you haven't learned it yet, run
+Quick and the Dead as snatches alone, tighten the Axe to every thirty seconds, choose
+the Humane Burpee's set count.
+
+## Build your own
+
+::: {.shot-right}
+![A block, its moves, and how the clock treats them](images/singlebell/builder.png)
+:::
+
+The builder has three rooms behind one control: [on the clock]{.name}, where the app counts
+the intervals; [on the board]{.name}, the same complex written up as a whiteboard where you
+count the sets; and plain [intervals]{.name} for work that isn't a complex at all.
+
+Sessions are made of blocks. A block is a complex — up to eight moves from any
+shelf of the catalog, in the order you chalk them, each with its own count. One lift on
+a clock is the special case, not the shape.
+
+Each block decides how the clock treats it: own pace, a timer on the whole
+block, or a timer on each move, with its own rest and its own number of rounds.
+Blocks reorder, collapse, and stack into a session as long as you need. Shuffle deals a
+fresh one to start from, and anything you build can be saved to Library and run again.
+
+A half-built session is still there when you come back to it.
 
 ## What it deliberately doesn't do
 
