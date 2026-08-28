@@ -6,7 +6,7 @@ project:
 
 website:
   title: "Abhishek Bhattacharjee"
-  description: "Statistician. Notes on data, models, and R."
+  description: "Biostatistics leader — clinical development strategy, regulatory science, and real-world evidence."
   site-url: "https://stat-absk.github.io"
   favicon: images/favicon.svg
   open-graph: true
@@ -25,6 +25,12 @@ website:
       - href: cv.qmd
         text: CV
     right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/stat-absk/
+        aria-label: LinkedIn
+      - icon: mortarboard
+        href: https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en
+        aria-label: Google Scholar
       - icon: github
         href: https://github.com/stat-absk
         aria-label: GitHub

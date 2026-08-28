@@ -9,30 +9,37 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Abhishek Bhattacharjee",
+    "title": "Abhishek Bhattacharjee, PhD",
     "section": "",
-    "text": "I’m a statistician working on [your area — e.g. Bayesian hierarchical models, survival analysis, causal inference]. I care about methods that survive contact with messy, real data, and about writing them up so other people can actually use them.\nThis site collects my research, a CV, and a blog where I work through problems in R."
+    "text": "I’m a biostatistician working at the intersection of clinical development, regulatory science, and real-world evidence.\nI’m currently Senior Manager, Biostatistics at Pfizer in Chennai — an Associate Director–equivalent role on the Data Science & Analytics India leadership team — leading a team of statisticians across global Oncology and Inflammation & Immunology programs.\nBefore Pfizer I was a primary statistical reviewer at the FDA’s Oncology Center of Excellence, where I reviewed NDA, BLA, and IND submissions across several solid-tumor indications, led sponsor–agency labelling negotiations, and worked on one of the agency’s early evaluations of external-control cohorts in a pediatric neuroblastoma program. Earlier I was a tenure-track Assistant Professor of Statistics at the University of Northern Colorado.\nWhat connects all of it: taking complex quantitative science and turning it into decisions people can actually act on."
   },
   {
     "objectID": "index.html#hello",
     "href": "index.html#hello",
-    "title": "Abhishek Bhattacharjee",
+    "title": "Abhishek Bhattacharjee, PhD",
     "section": "",
-    "text": "I’m a statistician working on [your area — e.g. Bayesian hierarchical models, survival analysis, causal inference]. I care about methods that survive contact with messy, real data, and about writing them up so other people can actually use them.\nThis site collects my research, a CV, and a blog where I work through problems in R."
+    "text": "I’m a biostatistician working at the intersection of clinical development, regulatory science, and real-world evidence.\nI’m currently Senior Manager, Biostatistics at Pfizer in Chennai — an Associate Director–equivalent role on the Data Science & Analytics India leadership team — leading a team of statisticians across global Oncology and Inflammation & Immunology programs.\nBefore Pfizer I was a primary statistical reviewer at the FDA’s Oncology Center of Excellence, where I reviewed NDA, BLA, and IND submissions across several solid-tumor indications, led sponsor–agency labelling negotiations, and worked on one of the agency’s early evaluations of external-control cohorts in a pediatric neuroblastoma program. Earlier I was a tenure-track Assistant Professor of Statistics at the University of Northern Colorado.\nWhat connects all of it: taking complex quantitative science and turning it into decisions people can actually act on."
   },
   {
     "objectID": "index.html#currently",
     "href": "index.html#currently",
-    "title": "Abhishek Bhattacharjee",
+    "title": "Abhishek Bhattacharjee, PhD",
     "section": "Currently",
-    "text": "Currently\n\nPosition — [Your role], [Your institution or company]\nWorking on — [one line about a current project]\nInterests — [three or four keywords]"
+    "text": "Currently\n\nRole — Senior Manager, Biostatistics, Pfizer Healthcare India · Chennai\nLeading — statistical strategy across global Oncology and I&I development programs\nBuilding — enterprise capability in real-world evidence and target trial emulation\nInterests — estimand and endpoint strategy, Bayesian and adaptive designs, target trial emulation, reproducible quantitative science"
+  },
+  {
+    "objectID": "index.html#elsewhere",
+    "href": "index.html#elsewhere",
+    "title": "Abhishek Bhattacharjee, PhD",
+    "section": "Elsewhere",
+    "text": "Elsewhere\n\nResearch — 15 peer-reviewed papers and selected presentations\nCV — positions, education, and service\nBlog — notes on statistics and reproducible work in R\nService — Scientific Committee, IISA · Biostatistics Council, ISCR"
   },
   {
     "objectID": "index.html#get-in-touch",
     "href": "index.html#get-in-touch",
-    "title": "Abhishek Bhattacharjee",
+    "title": "Abhishek Bhattacharjee, PhD",
     "section": "Get in touch",
-    "text": "Get in touch\nThe fastest way to reach me is email. Code lives on GitHub."
+    "text": "Get in touch\nEmail is best: stat.absk@gmail.com.\n\n\n\n\n\n\nViews on this site are my own and do not represent my employer."
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -60,35 +67,28 @@
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "Replace the placeholders below with your own work. Each entry is plain Markdown — add or delete blocks freely."
+    "text": "15 peer-reviewed journal articles · 315 citations (as of July 2026) · Google Scholar"
+  },
+  {
+    "objectID": "research.html#areas-of-work",
+    "href": "research.html#areas-of-work",
+    "title": "Research",
+    "section": "Areas of work",
+    "text": "Areas of work\nEstimand & endpoint strategyTarget trial emulationReal-world evidence Bayesian & adaptive designsOncology trialsInflammation & immunology Empirical BayesData privacy\nMuch of my recent work sits in two places: using target trial emulation to bring observational data to bear on questions trials answer slowly or not at all, and endpoint and estimand strategy — deciding what a trial should measure before arguing about how to analyse it."
   },
   {
     "objectID": "research.html#publications",
     "href": "research.html#publications",
     "title": "Research",
     "section": "Publications",
-    "text": "Publications\n\nTitle of the paper goes here\nBhattacharjee, A., Coauthor, B. (2026). Journal Name, 12(3), 45–67.\n[PDF] [Code] [Data]\nA sentence or two on what the paper actually does and why someone should read it.\n\n\nA second paper\nBhattacharjee, A. (2025). Another Journal, 8(1), 1–20.\n[PDF]\nOne-line summary."
+    "text": "Publications\n\n2026\n\nDubinsky MC, Cohen ER, Irving PM, … Bhattacharjee A, et al. Bowel urgency in ulcerative colitis is associated with clinical endpoints, health-related quality of life, and biomarkers: data from the etrasimod ELEVATE UC 52 trial. Crohn’s & Colitis 360. 2026;otag072.\nMakgoeng SB, Gamalo M, Russo LJ, Pradhan V, Bhattacharjee A, Bhosale N. Data-driven trial design: use of target trial emulation to evaluate eligibility criteria in asthma and COPD. Frontiers in Medicine. 2026;13:1863026.\n\n\n\n2025\n\nArmuzzi A, Rubin DT, Schreiber S, … Bhattacharjee A, et al. Health-related quality of life outcomes with etrasimod treatment in patients with ulcerative colitis: a post hoc analysis of data from ELEVATE UC 52 and ELEVATE UC 12. Inflammatory Bowel Diseases. 2025;31(6):1583–1594.\nJairath V, Rubin DT, Verstockt B, … Bhattacharjee A, et al. The effect of etrasimod on fecal calprotectin and high-sensitivity C-reactive protein: results from the ELEVATE UC clinical program. Inflammatory Bowel Diseases. 2025;31(4):923–934.\nMagro F, Peyrin-Biroulet L, Sands BE, … Bhattacharjee A, et al. Endoscopic, histologic, and composite endpoints in patients with ulcerative colitis treated with etrasimod. Clinical Gastroenterology and Hepatology. 2025;23(2):341–350.\nAfzali A, Regueiro M, Yarur AJ, … Bhattacharjee A, et al. Concomitant use of etrasimod with opioids or antidepressants in patients with ulcerative colitis — a safety analysis. United European Gastroenterology Journal. 2025;13(5):719–727.\n\n\n\n2024\n\nRegueiro M, Siegmund B, Yarur AJ, … Bhattacharjee A, et al. Etrasimod for the treatment of ulcerative colitis: analysis of infection events from the ELEVATE UC clinical programme. Journal of Crohn’s and Colitis. 2024;18(10):1596–1605.\n\n\n\n2021 and earlier\n\nImerci A, Rogers KJ, Bhattacharjee A, Bowen JR, Thacker MM. Risk factors for failure of Pavlik harness treatment in infants with dislocated hips evaluated by dynamic sonography. Journal of Pediatric Orthopaedics. 2021;41(6):e386–e391.\nChatterjee N, Nair PKR, Nair VD, Viswanath S, Bhattacharjee A. Depth-wise distribution of soil-carbon stock in aggregate-sized fractions under shaded-perennial agroforestry systems in the Western Ghats of Karnataka, India. Agroforestry Systems. 2020;94(2):341–358.\nAlharash H, Hossain MJ, Bhattacharjee A, Levenbrown Y. Use of pulse contour technology for continuous blood pressure monitoring in pediatric patients. Blood Pressure Monitoring. 2020;25(5):278–284.\nChatterjee N, Nair PKR, Nair VD, Bhattacharjee A, et al. Do coffee agroforestry systems always improve soil carbon stocks deeper in the soil? A case study from Turrialba, Costa Rica. Forests. 2019;11(1):49.\nYing W, Bhattacharjee A, Wu SS. Effect of laser acupuncture on mitigating anxiety in acute stressed horses: a randomized, controlled study. American Journal of Traditional Chinese Veterinary Medicine. 2019;14(1).\nBhattacharjee A, Ghosh M. Bias-corrected empirical Bayes confidence intervals for the selected mean. Communications in Statistics — Theory and Methods. 2019;48(3):583–595.\nAhn H, Woods AJ, Kunik ME, … Bhattacharjee A, et al. Efficacy of transcranial direct current stimulation over primary motor cortex and contralateral supraorbital area on clinical pain severity and mobility performance in persons with knee osteoarthritis: a randomized, sham-controlled pilot study. Brain Stimulation. 2017;10(5):902–909.\nWu SS, Chen S, Bhattacharjee A, He Y. Collusion-resistant multi-matrix masking for privacy-preserving data collection. 2017 IEEE 3rd International Conference on Big Data Security on Cloud (BigDataSecurity). 2017:1–7."
   },
   {
-    "objectID": "research.html#preprints",
-    "href": "research.html#preprints",
+    "objectID": "research.html#selected-presentations",
+    "href": "research.html#selected-presentations",
     "title": "Research",
-    "section": "Preprints",
-    "text": "Preprints\n\nWorking title of the preprint\nBhattacharjee, A. (2026). arXiv:0000.00000.\n[arXiv]"
-  },
-  {
-    "objectID": "research.html#software",
-    "href": "research.html#software",
-    "title": "Research",
-    "section": "Software",
-    "text": "Software\n\nyourpkg — an R package for [what it does]. install.packages(\"yourpkg\")\nRCRAN"
-  },
-  {
-    "objectID": "research.html#talks",
-    "href": "research.html#talks",
-    "title": "Research",
-    "section": "Talks",
-    "text": "Talks\n\n\n\n\n\n\n\n\nDate\nTalk\nVenue\n\n\n\n\n2026\nTitle of the talk\nConference name\n\n\n2025\nAnother talk\nSeminar series"
+    "section": "Selected presentations",
+    "text": "Selected presentations\n\n\n\n\n\n\n\nYear\nVenue\n\n\n\n\n2024, 2022\nIISA Annual Conference\n\n\n2023\nNovartis Sankhya\n\n\n2018, 2015\nInternational Triennial Calcutta Symposium on Probability & Statistics\n\n\n2017\nASA Joint Statistical Meetings (JSM)"
   },
   {
     "objectID": "posts/tidy-penguins/index.html",
@@ -121,50 +121,57 @@
   {
     "objectID": "cv.html",
     "href": "cv.html",
-    "title": "CV",
+    "title": "Curriculum Vitae",
     "section": "",
-    "text": "To offer a PDF: put your file at files/cv.pdf, then add this line here: [Download CV (PDF)](files/cv.pdf). Quarto copies anything in files/ into the published site. (The link is left out for now so the build doesn’t break on a missing file.)"
+    "text": "PDF version: drop your file at files/cv.pdf, then add this line here: [Download CV (PDF)](files/cv.pdf). Quarto publishes anything in files/.\nChennai, India · stat.absk@gmail.com · Google Scholar · LinkedIn"
+  },
+  {
+    "objectID": "cv.html#profile",
+    "href": "cv.html#profile",
+    "title": "Curriculum Vitae",
+    "section": "Profile",
+    "text": "Profile\nBiostatistics leader pairing hands-on industry development and FDA regulatory experience across the drug-development lifecycle with a strong academic and methodological foundation. Currently Senior Manager, Biostatistics at Pfizer (Associate Director–equivalent) and a member of the Data Science & Analytics India leadership team, leading a team of statisticians across global Oncology and Inflammation & Immunology programs. Former FDA Oncology Center of Excellence primary reviewer with hands-on NDA/BLA experience, product-labelling negotiation, and pioneering use of real-world evidence and external-control cohorts."
+  },
+  {
+    "objectID": "cv.html#core-competencies",
+    "href": "cv.html#core-competencies",
+    "title": "Curriculum Vitae",
+    "section": "Core competencies",
+    "text": "Core competencies\nClinical development strategyRegulatory interactions (FDA) Oncology & I&I trial designNDA / BLA / IND submissions Endpoint & estimand strategyReal-world evidence Target trial emulationBayesian & adaptive designs People leadership & mentoringCross-functional influence Reproducible workflowsScientific publication & speaking"
+  },
+  {
+    "objectID": "cv.html#experience",
+    "href": "cv.html#experience",
+    "title": "Curriculum Vitae",
+    "section": "Experience",
+    "text": "Experience\n\nJun 2024 – present\nSenior Manager, Biostatistics — Pfizer Healthcare India Pvt. Ltd., Chennai, India\n\nAssociate Director–equivalent statistical leader on the Data Science & Analytics India leadership team, shaping statistical strategy across global Oncology and Inflammation & Immunology development programs.\nLead and develop a team of statisticians — building talent, strengthening statistical capability, and fostering a culture of scientific excellence.\nBuild enterprise capability in real-world evidence and target trial emulation, partnering with Statistics leadership to advance next-generation evidence generation.\nAdvance modern quantitative methods across programs, including endpoint consolidation, real-time trial monitoring, and reproducible quantitative science.\n\n\n\nMay 2022 – May 2024\nManager, Biostatistics — Pfizer Healthcare India Pvt. Ltd., Chennai, India\n\nTrial-statistician leadership across Inflammation & Immunology programs spanning pediatric ulcerative colitis and inflammatory bowel disease, with medical-affairs support and priority programs in atopic dermatitis, asthma, and COPD — from study design through regulatory deliverables.\nOncology statistical leadership on targeted-therapy programs across non-small cell lung cancer and melanoma, spanning protocol design, analysis planning, and submission-supporting deliverables.\n\n\n\nFeb 2020 – Apr 2022\nMathematical Statistician (Primary Reviewer) — U.S. Food and Drug Administration, Oncology Center of Excellence, Silver Spring, MD, USA\n\nPrimary statistical reviewer for NDA, BLA, and IND submissions across multiple oncology indications, delivering independent assessments that informed regulatory decisions and product labelling.\nReviewed applications spanning gastric and gastroesophageal cancers, cholangiocarcinoma, and additional solid-tumor indications, as well as an oncology biosimilar and a supportive-care (otoprotection) program.\nLed sponsor–agency interactions and labelling negotiations, translating statistical findings into clear regulatory positions.\nContributed to one of the FDA’s early evaluations of real-world evidence and external-control cohorts through review of a pediatric neuroblastoma program.\n\n\n\nAug 2019 – Jan 2020\nBiostatistician — Nemours Children’s Health System, Jacksonville, FL, USA\n\nLed end-to-end statistical strategy for investigator-initiated pediatric studies across multiple therapeutic areas — concept and design through analysis, interpretation, and publication.\n\n\n\nAug 2017 – Jul 2019\nAssistant Professor of Statistics (tenure-track) — University of Northern Colorado, Greeley, CO, USA\n\nTaught graduate and undergraduate statistics, mentored students, and led applied and methodological research.\nServed as statistical consultant on cross-disciplinary research collaborations across the university.\n\n\n\nAug 2012 – Aug 2017\nGraduate Assistant & Instructor — University of Florida, Department of Statistics, Gainesville, FL, USA\n\nInstructor, teaching assistant, and statistical consultant while completing PhD research.\n\n\n\nJun 2011 – Apr 2012\nStatistician — Cytel Statistical Software & Services Pvt. Ltd., Pune, India\n\nSupported early-stage sponsor studies through statistical programming, analysis, and study-support activities."
   },
   {
     "objectID": "cv.html#education",
     "href": "cv.html#education",
-    "title": "CV",
+    "title": "Curriculum Vitae",
     "section": "Education",
-    "text": "Education\n\n2020 – 2025\nPhD, Statistics — University Name\nThesis: Title of your thesis. Advisor: Prof. Name.\n\n\n2018 – 2020\nMSc, Statistics — University Name\n\n\n2015 – 2018\nBSc, Statistics — College Name"
+    "text": "Education\n\n\n\n\n\n\n\n\nYears\nQualification\nInstitution\n\n\n\n\n2012 – 2017\nPhD, Statistics\nUniversity of Florida\n\n\n2009 – 2011\nMSc, Statistics\nUniversity of Calcutta\n\n\n2006 – 2009\nBSc, Statistics\nUniversity of Calcutta\n\n\n2025\nLeadership Development Programme\nIIM Ahmedabad (for Pfizer)"
   },
   {
-    "objectID": "cv.html#positions",
-    "href": "cv.html#positions",
-    "title": "CV",
-    "section": "Positions",
-    "text": "Positions\n\n2025 – present\nYour job title — Organisation\nOne line on what you do there."
+    "objectID": "cv.html#professional-leadership-scientific-service",
+    "href": "cv.html#professional-leadership-scientific-service",
+    "title": "Curriculum Vitae",
+    "section": "Professional leadership & scientific service",
+    "text": "Professional leadership & scientific service\n\nScientific Committee Member — International Indian Statistical Association (IISA)\nCouncil Member, Biostatistics Council — Indian Society for Clinical Research (ISCR)\nMentor, Pfizer statistics internship program\nBiostatistics workshops — Loyola College and SSKM Hospital, Kolkata"
   },
   {
-    "objectID": "cv.html#teaching",
-    "href": "cv.html#teaching",
-    "title": "CV",
-    "section": "Teaching",
-    "text": "Teaching\n\nCourse code — Course name, University, 2025. Instructor.\nCourse code — Course name, University, 2024. Teaching assistant."
+    "objectID": "cv.html#selected-presentations",
+    "href": "cv.html#selected-presentations",
+    "title": "Curriculum Vitae",
+    "section": "Selected presentations",
+    "text": "Selected presentations\n\nIISA Annual Conference — 2024, 2022\nNovartis Sankhya — 2023\nInternational Triennial Calcutta Symposium on Probability & Statistics — 2018, 2015\nASA Joint Statistical Meetings (JSM) — 2017"
   },
   {
-    "objectID": "cv.html#skills",
-    "href": "cv.html#skills",
-    "title": "CV",
-    "section": "Skills",
-    "text": "Skills\nRStanPythonSQLQuartogit"
-  },
-  {
-    "objectID": "cv.html#service",
-    "href": "cv.html#service",
-    "title": "CV",
-    "section": "Service",
-    "text": "Service\n\nReviewer — Journal Name, Another Journal\nOrganiser — Seminar / reading group"
-  },
-  {
-    "objectID": "cv.html#awards",
-    "href": "cv.html#awards",
-    "title": "CV",
-    "section": "Awards",
-    "text": "Awards\n\n\n\n\n\n\n\nYear\nAward\n\n\n\n\n2025\nName of award, Institution\n\n\n2023\nAnother award"
+    "objectID": "cv.html#publications",
+    "href": "cv.html#publications",
+    "title": "Curriculum Vitae",
+    "section": "Publications",
+    "text": "Publications\n15 peer-reviewed journal articles · 315 citations (as of July 2026). Full list on the Research page and on Google Scholar."
   }
 ]

@@ -1,44 +1,66 @@
 ---
-title: "Abhishek Bhattacharjee"
-subtitle: "Statistician"
+title: "Abhishek Bhattacharjee, PhD"
+subtitle: "Biostatistics leader — clinical development strategy, regulatory science, real-world evidence"
 image: images/profile.svg
 about:
   template: trestles
   image-shape: round
   image-width: 15em
   links:
-    - icon: github
-      text: GitHub
-      href: https://github.com/stat-absk
     - icon: envelope
       text: Email
       href: mailto:stat.absk@gmail.com
     - icon: mortarboard
       text: Google Scholar
-      href: https://scholar.google.com/citations?user=YOUR-SCHOLAR-ID
+      href: https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en
+    - icon: github
+      text: GitHub
+      href: https://github.com/stat-absk
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/in/YOUR-HANDLE
+      href: https://www.linkedin.com/in/stat-absk/
 toc: false
 ---
 
 ## Hello
 
-I'm a statistician working on **[your area — e.g. Bayesian hierarchical models,
-survival analysis, causal inference]**. I care about methods that survive contact
-with messy, real data, and about writing them up so other people can actually use
-them.
+I'm a biostatistician working at the intersection of **clinical development,
+regulatory science, and real-world evidence**.
 
-This site collects my [research](research.qmd), a [CV](cv.qmd), and a
-[blog](blog.qmd) where I work through problems in R.
+I'm currently Senior Manager, Biostatistics at **Pfizer** in Chennai — an
+Associate Director–equivalent role on the Data Science & Analytics India
+leadership team — leading a team of statisticians across global Oncology and
+Inflammation & Immunology programs.
+
+Before Pfizer I was a primary statistical reviewer at the **FDA's Oncology
+Center of Excellence**, where I reviewed NDA, BLA, and IND submissions across
+several solid-tumor indications, led sponsor–agency labelling negotiations, and
+worked on one of the agency's early evaluations of external-control cohorts in a
+pediatric neuroblastoma program. Earlier I was a tenure-track Assistant Professor
+of Statistics at the University of Northern Colorado.
+
+What connects all of it: taking complex quantitative science and turning it into
+decisions people can actually act on.
 
 ## Currently
 
-- **Position** — [Your role], [Your institution or company]
-- **Working on** — [one line about a current project]
-- **Interests** — [three or four keywords]
+- **Role** — Senior Manager, Biostatistics, Pfizer Healthcare India · Chennai
+- **Leading** — statistical strategy across global Oncology and I&I development programs
+- **Building** — enterprise capability in real-world evidence and target trial emulation
+- **Interests** — estimand and endpoint strategy, Bayesian and adaptive designs,
+  target trial emulation, reproducible quantitative science
+
+## Elsewhere
+
+- [Research](research.qmd) — 15 peer-reviewed papers and selected presentations
+- [CV](cv.qmd) — positions, education, and service
+- [Blog](blog.qmd) — notes on statistics and reproducible work in R
+- Service — Scientific Committee, IISA · Biostatistics Council, ISCR
 
 ## Get in touch
 
-The fastest way to reach me is [email](mailto:stat.absk@gmail.com). Code lives on
-[GitHub](https://github.com/stat-absk).
+Email is best: [stat.absk@gmail.com](mailto:stat.absk@gmail.com).
+
+::: {.callout-note appearance="simple"}
+Views on this site are my own and do not represent my employer.
+:::

@@ -1,60 +1,147 @@
 ---
-title: "CV"
-description: "Education, positions, teaching, service."
+title: "Curriculum Vitae"
+description: "Positions, education, leadership, and service."
 ---
 
 ::: {.callout-note appearance="simple"}
-**To offer a PDF:** put your file at `files/cv.pdf`, then add this line here:
-`[Download CV (PDF)](files/cv.pdf)`. Quarto copies anything in `files/` into the
-published site. (The link is left out for now so the build doesn't break on a
-missing file.)
+**PDF version:** drop your file at `files/cv.pdf`, then add this line here:
+`[Download CV (PDF)](files/cv.pdf)`. Quarto publishes anything in `files/`.
+:::
+
+Chennai, India · [stat.absk@gmail.com](mailto:stat.absk@gmail.com) ·
+[Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en) ·
+[LinkedIn](https://www.linkedin.com/in/stat-absk/)
+
+## Profile
+
+Biostatistics leader pairing hands-on industry development and FDA regulatory
+experience across the drug-development lifecycle with a strong academic and
+methodological foundation. Currently Senior Manager, Biostatistics at Pfizer
+(Associate Director–equivalent) and a member of the Data Science & Analytics
+India leadership team, leading a team of statisticians across global Oncology and
+Inflammation & Immunology programs. Former FDA Oncology Center of Excellence
+primary reviewer with hands-on NDA/BLA experience, product-labelling negotiation,
+and pioneering use of real-world evidence and external-control cohorts.
+
+## Core competencies
+
+[Clinical development strategy]{.pill}[Regulatory interactions (FDA)]{.pill}
+[Oncology & I&I trial design]{.pill}[NDA / BLA / IND submissions]{.pill}
+[Endpoint & estimand strategy]{.pill}[Real-world evidence]{.pill}
+[Target trial emulation]{.pill}[Bayesian & adaptive designs]{.pill}
+[People leadership & mentoring]{.pill}[Cross-functional influence]{.pill}
+[Reproducible workflows]{.pill}[Scientific publication & speaking]{.pill}
+
+## Experience
+
+::: {.cv-entry}
+[Jun 2024 – present]{.cv-when}  
+[Senior Manager, Biostatistics]{.cv-what} — Pfizer Healthcare India Pvt. Ltd., Chennai, India
+
+- Associate Director–equivalent statistical leader on the Data Science & Analytics
+  India leadership team, shaping statistical strategy across global Oncology and
+  Inflammation & Immunology development programs.
+- Lead and develop a team of statisticians — building talent, strengthening
+  statistical capability, and fostering a culture of scientific excellence.
+- Build enterprise capability in real-world evidence and target trial emulation,
+  partnering with Statistics leadership to advance next-generation evidence generation.
+- Advance modern quantitative methods across programs, including endpoint
+  consolidation, real-time trial monitoring, and reproducible quantitative science.
+:::
+
+::: {.cv-entry}
+[May 2022 – May 2024]{.cv-when}  
+[Manager, Biostatistics]{.cv-what} — Pfizer Healthcare India Pvt. Ltd., Chennai, India
+
+- Trial-statistician leadership across Inflammation & Immunology programs spanning
+  pediatric ulcerative colitis and inflammatory bowel disease, with medical-affairs
+  support and priority programs in atopic dermatitis, asthma, and COPD — from study
+  design through regulatory deliverables.
+- Oncology statistical leadership on targeted-therapy programs across non-small cell
+  lung cancer and melanoma, spanning protocol design, analysis planning, and
+  submission-supporting deliverables.
+:::
+
+::: {.cv-entry}
+[Feb 2020 – Apr 2022]{.cv-when}  
+[Mathematical Statistician (Primary Reviewer)]{.cv-what} — U.S. Food and Drug
+Administration, Oncology Center of Excellence, Silver Spring, MD, USA
+
+- Primary statistical reviewer for NDA, BLA, and IND submissions across multiple
+  oncology indications, delivering independent assessments that informed regulatory
+  decisions and product labelling.
+- Reviewed applications spanning gastric and gastroesophageal cancers,
+  cholangiocarcinoma, and additional solid-tumor indications, as well as an oncology
+  biosimilar and a supportive-care (otoprotection) program.
+- Led sponsor–agency interactions and labelling negotiations, translating statistical
+  findings into clear regulatory positions.
+- Contributed to one of the FDA's early evaluations of real-world evidence and
+  external-control cohorts through review of a pediatric neuroblastoma program.
+:::
+
+::: {.cv-entry}
+[Aug 2019 – Jan 2020]{.cv-when}  
+[Biostatistician]{.cv-what} — Nemours Children's Health System, Jacksonville, FL, USA
+
+- Led end-to-end statistical strategy for investigator-initiated pediatric studies
+  across multiple therapeutic areas — concept and design through analysis,
+  interpretation, and publication.
+:::
+
+::: {.cv-entry}
+[Aug 2017 – Jul 2019]{.cv-when}  
+[Assistant Professor of Statistics (tenure-track)]{.cv-what} — University of
+Northern Colorado, Greeley, CO, USA
+
+- Taught graduate and undergraduate statistics, mentored students, and led applied
+  and methodological research.
+- Served as statistical consultant on cross-disciplinary research collaborations
+  across the university.
+:::
+
+::: {.cv-entry}
+[Aug 2012 – Aug 2017]{.cv-when}  
+[Graduate Assistant & Instructor]{.cv-what} — University of Florida,
+Department of Statistics, Gainesville, FL, USA
+
+- Instructor, teaching assistant, and statistical consultant while completing PhD research.
+:::
+
+::: {.cv-entry}
+[Jun 2011 – Apr 2012]{.cv-when}  
+[Statistician]{.cv-what} — Cytel Statistical Software & Services Pvt. Ltd., Pune, India
+
+- Supported early-stage sponsor studies through statistical programming, analysis,
+  and study-support activities.
 :::
 
 ## Education
 
-::: {.cv-entry}
-[2020 – 2025]{.cv-when}  
-[PhD, Statistics]{.cv-what} — University Name  
-Thesis: *Title of your thesis*. Advisor: Prof. Name.
-:::
+| Years | Qualification | Institution |
+|-------|---------------|-------------|
+| 2012 – 2017 | PhD, Statistics | University of Florida |
+| 2009 – 2011 | MSc, Statistics | University of Calcutta |
+| 2006 – 2009 | BSc, Statistics | University of Calcutta |
+| 2025 | Leadership Development Programme | IIM Ahmedabad (for Pfizer) |
 
-::: {.cv-entry}
-[2018 – 2020]{.cv-when}  
-[MSc, Statistics]{.cv-what} — University Name
-:::
+: {tbl-colwidths="[18,42,40]"}
 
-::: {.cv-entry}
-[2015 – 2018]{.cv-when}  
-[BSc, Statistics]{.cv-what} — College Name
-:::
+## Professional leadership & scientific service
 
-## Positions
+- Scientific Committee Member — International Indian Statistical Association (IISA)
+- Council Member, Biostatistics Council — Indian Society for Clinical Research (ISCR)
+- Mentor, Pfizer statistics internship program
+- Biostatistics workshops — Loyola College and SSKM Hospital, Kolkata
 
-::: {.cv-entry}
-[2025 – present]{.cv-when}  
-[Your job title]{.cv-what} — Organisation  
-One line on what you do there.
-:::
+## Selected presentations
 
-## Teaching
+- IISA Annual Conference — 2024, 2022
+- Novartis Sankhya — 2023
+- International Triennial Calcutta Symposium on Probability & Statistics — 2018, 2015
+- ASA Joint Statistical Meetings (JSM) — 2017
 
-- **Course code — Course name**, University, 2025. Instructor.
-- **Course code — Course name**, University, 2024. Teaching assistant.
+## Publications
 
-## Skills
-
-[R]{.pill}[Stan]{.pill}[Python]{.pill}[SQL]{.pill}[Quarto]{.pill}[git]{.pill}
-
-## Service
-
-- Reviewer — *Journal Name*, *Another Journal*
-- Organiser — Seminar / reading group
-
-## Awards
-
-| Year | Award |
-|------|-------|
-| 2025 | Name of award, Institution |
-| 2023 | Another award |
-
-: {tbl-colwidths="[15,85]"}
+15 peer-reviewed journal articles · 315 citations (as of July 2026).
+Full list on the [Research](research.qmd) page and on
+[Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en).
