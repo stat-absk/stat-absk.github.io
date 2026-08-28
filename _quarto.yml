@@ -46,7 +46,9 @@ website:
 
 format:
   html:
-    theme: [default, styles.scss]   # one material: slate, as in SingleBell
+    theme:
+      dark:  [default, styles-dark.scss]    # SingleBell's material; the default
+      light: [default, styles-light.scss]   # the same material, read the other way
     toc: true
     toc-title: "On this page"
     anchor-sections: true

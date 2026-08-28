@@ -1,0 +1,28 @@
+/*-- scss:defaults --*/
+//
+// Dark appearance — SingleBell's own material: chalk written on slate.
+// Values from Docs/design/SIGNATURE.md and Theme.swift.
+//
+
+$ground:    #0E1412;   // the page
+$surface:   #18201C;   // a card, a panel
+$surface2:  #232C27;   // a control inside a card
+$writing:   #F2F3EA;   // chalk — the only writing colour
+$accent:    #E9D592;   // yellow chalk; means "go", nothing else
+$on-accent: #14180F;
+
+// The app's four strengths, verbatim (Legibility.strength).
+$strength-primary:   0.92;
+$strength-secondary: 0.72;
+$strength-tertiary:  0.55;   // 5.7:1 on the ground
+$strength-faint:     0.12;
+
+// Chalk on slate: thinner glyphs read cleaner.
+$font-smoothing:     antialiased;
+$font-smoothing-moz: grayscale;
+
+@import "type";
+@import "palette-wiring";
+
+/*-- scss:rules --*/
+@import "signature";

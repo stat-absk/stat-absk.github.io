@@ -1,0 +1,27 @@
+// The four strengths, and the Bootstrap/Quarto wiring. Identical for both
+// appearances — only the five colours above differ.
+
+// The four strengths come from the appearance: chalk on slate and ink on paper
+// do not blend alike, so the same alpha is not the same legibility.
+$ink:   rgba($writing, $strength-primary);
+$ink2:  rgba($writing, $strength-secondary);
+$ink3:  rgba($writing, $strength-tertiary);
+$rule:  rgba($writing, $strength-faint);    // drawn, never written
+
+$body-bg:      $ground;
+$body-color:   $ink;
+$link-color:   $accent;
+$link-hover-color: $accent;
+$primary:      $accent;
+$border-radius: 12px;
+$border-color: $rule;
+
+$navbar-bg:  rgba($ground, 0.72);
+$navbar-fg:  $ink2;
+$navbar-hl:  $accent;
+$footer-bg:  $ground;
+$footer-fg:  $ink3;
+
+$code-block-bg: $surface;
+$code-color:    $ink2;
+$table-border-color: $rule;

@@ -1,0 +1,18 @@
+// Two faces by job, and the app's six sizes. Shared by both appearances.
+// ── Type ───────────────────────────────────────────────────────────────────
+// Two faces by job: names in serif, work in the system sans.
+$font-family-serif: ui-serif, "New York", "Iowan Old Style", Palatino, Georgia, serif;
+$font-family-sans-serif: system-ui, -apple-system, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+$font-family-monospace: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+
+// Six sizes — 12 / 15 / 17 / 22 / 28 / 44 — expressed against Quarto's 17px root
+// so they land on the app's scale while still following the reader's text size.
+$font-size-base: 1rem;              // 17 — body
+$size-eyebrow:  0.706rem;           // 12
+$size-caption:  0.882rem;           // 15
+$size-card:     1rem;               // 17
+$size-section:  1.294rem;           // 22 — a section title
+$size-page:     1.647rem;           // 28 — a page name
+// The app's 44 is a figure size (a count, a clock). This site has no figures,
+// so the scale stops at 28 and every page name is a page name.
+

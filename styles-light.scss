@@ -1,0 +1,33 @@
+/*-- scss:defaults --*/
+//
+// Light appearance — the same material read the other way round: the chalk
+// becomes the paper and the slate becomes the ink. The app has no light mode,
+// so this is an extrapolation, not a transcription. The one value that could not
+// simply invert is the accent: yellow chalk on paper is 1.3:1, so it keeps its
+// hue (46°) and saturation and is pressed down to 28% lightness — 5.4:1.
+//
+
+$ground:    #F2F3EA;   // the chalk, now the page
+$surface:   #E9EAE0;
+$surface2:  #DFE0D5;
+$writing:   #0E1412;   // the slate, now the ink
+$accent:    #6E5A16;   // the same yellow (hue 46), pressed into paper — 6.0:1
+$on-accent: #F2F3EA;
+
+// Ink on paper needs a firmer hand than chalk on slate — the app's strengths
+// are tuned for chalk and read washed out when inverted. Every written strength
+// is pressed harder here, and the rule with them so a hairline stays visible.
+$strength-primary:   0.92;   // 13.8:1
+$strength-secondary: 0.80;   //  9.3:1  (was .72 — 7.1:1)
+$strength-tertiary:  0.70;   //  6.6:1  (was .55 — 4.0:1, below AA)
+$strength-faint:     0.22;
+
+// Paper takes the full weight of the glyph; antialiasing would thin it.
+$font-smoothing:     auto;
+$font-smoothing-moz: auto;
+
+@import "type";
+@import "palette-wiring";
+
+/*-- scss:rules --*/
+@import "signature";
