@@ -144,13 +144,36 @@ a:active, .nav-link:active { opacity: 0.7; }
 // Consecutive entries breathe more than the lines inside one of them.
 .cv-entry + .cv-entry { margin-top: var(--space-l); }
 
+// Dates run down their own column so every entry starts on the same edge. The
+// date leaves the text flow rather than sitting above it, so the column is a
+// column and not an indent.
+// Sized from the longest date ("May 2022 – May 2024"), with headroom. Both the
+// column and the date's type are in rem, so the ratio holds at any text size.
+$cv-date-column: 11.5rem;
+$cv-date-gutter: 1.75rem;
+
+.cv-entry { position: relative; padding-left: $cv-date-column; }
+
 .cv-when {
-  display: block;
+  position: absolute;
+  left: 0;
+  top: 0.28em;                        // optical: caption text against 17px body
+  width: $cv-date-column - $cv-date-gutter;
   color: $ink3;
   font-size: $size-caption;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;                // a span of years never wraps mid-range
-  margin-bottom: 2px;
+}
+
+// Narrow enough that a column would squeeze the text: the date goes back above.
+@media (max-width: 700px) {
+  .cv-entry { padding-left: 0; }
+  .cv-when {
+    position: static;
+    display: block;
+    width: auto;
+    margin-bottom: 2px;
+  }
 }
 
 .cv-what { color: $ink; font-weight: 600; }
