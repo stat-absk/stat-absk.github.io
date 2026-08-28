@@ -21,39 +21,48 @@ toc: false
 
 ## Hello
 
-I'm a biostatistician working at the intersection of **clinical development,
-regulatory science, and real-world evidence**.
+I'm **Associate Director, Biostatistics at Pfizer** in Chennai, on the Data
+Science & Analytics India leadership team, where I lead a team of statisticians
+across global Inflammation & Immunology development programs.
 
-I'm currently Senior Manager, Biostatistics at **Pfizer** in Chennai — an
-Associate Director–equivalent role on the Data Science & Analytics India
-leadership team — leading a team of statisticians across global Oncology and
-Inflammation & Immunology programs.
+Before Pfizer I was a primary statistical reviewer at the **FDA's Oncology Center
+of Excellence**. That mix — regulatory judgement on one side, development strategy
+on the other — is what I bring to the work.
 
-Before Pfizer I was a primary statistical reviewer at the **FDA's Oncology
-Center of Excellence**, where I reviewed NDA, BLA, and IND submissions across
-several solid-tumor indications, led sponsor–agency labelling negotiations, and
-worked on one of the agency's early evaluations of external-control cohorts in a
-pediatric neuroblastoma program. Earlier I was a tenure-track Assistant Professor
-of Statistics at the University of Northern Colorado.
+## Oncology
 
-What connects all of it: taking complex quantitative science and turning it into
-decisions people can actually act on.
+My current role sits in Inflammation & Immunology, but oncology is where I built
+my regulatory foundation.
 
-## Currently
+At the FDA I reviewed NDA and BLA submissions across multiple oncology
+indications — gastric and gastroesophageal cancers, cholangiocarcinoma, and other
+solid tumors, alongside an oncology biosimilar and a supportive-care program —
+and led sponsor–agency interactions and labelling negotiations.
 
-- **Role** — Senior Manager, Biostatistics, Pfizer Healthcare India · Chennai
-- **Leading** — statistical strategy across global Oncology and I&I development programs
-- **Building** — enterprise capability in real-world evidence and target trial emulation
-- **Interests** — estimand and endpoint strategy, Bayesian and adaptive designs,
-  target trial emulation, reproducible quantitative science
+At Pfizer I served as trial statistician on targeted-therapy programs in
+non-small cell lung cancer and melanoma.
+
+## Innovation & research
+
+I'm most interested in the methods that change what a development program can
+actually learn:
+
+- **Real-world evidence and target trial emulation** — building enterprise
+  capability at Pfizer to support next-generation evidence generation
+- **External-control cohorts** — contributed to one of the FDA's early evaluations
+  of non-traditional evidence, through the review of a pediatric neuroblastoma program
+- **Endpoint consolidation and real-time trial monitoring** across development programs
+- **Empirical Bayes and adaptive design**, carried over from my PhD at the
+  University of Florida
+
+Fifteen peer-reviewed papers to date — the list is on
+[Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en)
+and in my [CV](cv.qmd).
 
 ## Elsewhere
 
 - [CV](cv.qmd) — positions, education, publications, and service
 - [Stuff](stuff.qmd) — notes and write-ups
-
-Reach me on [LinkedIn](https://www.linkedin.com/in/stat-absk/); papers are on
-[Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en).
 
 ::: {.callout-note appearance="simple"}
 Views on this site are my own and do not represent my employer.
