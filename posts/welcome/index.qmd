@@ -36,7 +36,7 @@ categories: [rstats, notes]
 ---
 ```
 
-Then **Render** in RStudio, and the post appears on the [blog page](../../blog.qmd)
+Then **Render** in RStudio, and the post appears on the [Stuff page](../../stuff.qmd)
 automatically — the listing reads the `posts/` folder, so there's no index to
 update by hand.
 

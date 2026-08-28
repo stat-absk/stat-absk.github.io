@@ -6,8 +6,8 @@
       version="2.0">
 <channel>
 <title>Abhishek Bhattacharjee</title>
-<link>https://stat-absk.github.io/blog.html</link>
-<atom:link href="https://stat-absk.github.io/blog.xml" rel="self" type="application/rss+xml"/>
+<link>https://stat-absk.github.io/stuff.html</link>
+<atom:link href="https://stat-absk.github.io/stuff.xml" rel="self" type="application/rss+xml"/>
 <description>Biostatistics leader — clinical development strategy, regulatory science, and real-world evidence.</description>
 <generator>quarto-1.9.38</generator>
 <lastBuildDate>Thu, 27 Aug 2026 18:30:00 GMT</lastBuildDate>
@@ -87,7 +87,7 @@ font-style: inherit;">]</span></span>
 <span id="cb2-6"><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">---</span></span></code></pre></div></div>
-<p>Then <strong>Render</strong> in RStudio, and the post appears on the <a href="../../blog.html">blog page</a> automatically — the listing reads the <code>posts/</code> folder, so there’s no index to update by hand.</p>
+<p>Then <strong>Render</strong> in RStudio, and the post appears on the <a href="../../stuff.html">Stuff page</a> automatically — the listing reads the <code>posts/</code> folder, so there’s no index to update by hand.</p>
 </section>
 <section id="why-quarto-over-r-markdown" class="level2">
 <h2 class="anchored" data-anchor-id="why-quarto-over-r-markdown">Why Quarto over R Markdown</h2>

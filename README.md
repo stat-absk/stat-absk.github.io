@@ -1,14 +1,13 @@
 # Personal website — Quarto + RStudio + GitHub Pages
 
-A Quarto website: home/about, research, CV, and a blog. Edited in RStudio,
+A Quarto website: home/about, CV, and a notes section. Edited in RStudio,
 rendered to `docs/`, served by GitHub Pages.
 
 ```
 _quarto.yml        site config: title, navbar, theme, output dir   <- start here
 index.qmd          home / about page
-research.qmd       papers, preprints, software, talks
-cv.qmd             education, positions, teaching, service
-blog.qmd           blog listing (reads posts/ automatically)
+cv.qmd             positions, education, publications, service
+stuff.qmd          notes listing (reads posts/ automatically)
 posts/
   _metadata.yml    settings shared by every post
   welcome/index.qmd
@@ -45,7 +44,6 @@ Or install the standalone CLI from <https://quarto.org/docs/get-started/>.
 | Placeholder | Where | Replace with |
 | --- | --- | --- |
 | `YOUR-SCHOLAR-ID`, `YOUR-HANDLE` | `index.qmd` | Scholar / LinkedIn links (or delete those lines) |
-| `[your area — …]`, `[Your role]` etc. | `index.qmd`, `research.qmd`, `cv.qmd` | your actual details |
 | `images/profile.svg` | `index.qmd` | a real photo, e.g. `images/profile.jpg` |
 
 Find them all with:
@@ -57,7 +55,7 @@ grep -rn "YOUR-SCHOLAR-ID\|YOUR-HANDLE\|\[Your role\]" --include="*.qmd" .
 Your email `stat.absk@gmail.com` is in `_quarto.yml` and `index.qmd` as a mailto
 link. It will be public — delete those two lines if you'd rather it weren't.
 
-## Adding a blog post
+## Adding a post
 
 ```bash
 mkdir -p posts/my-new-post
@@ -68,15 +66,15 @@ Create `posts/my-new-post/index.qmd`:
 ``` yaml
 ---
 title: "The title"
-description: "One line for the blog listing."
+description: "One line for the notes listing."
 date: 2026-09-01
 categories: [rstats, notes]
 ---
 ```
 
-Render — the listing picks it up automatically. Keep images in the post's own
+Render — the Stuff listing picks it up automatically. Keep images in the post's own
 folder. To show thumbnails on the listing, add `image` to the `fields:` list in
-`blog.qmd` and give each post an `image:` in its front matter.
+`stuff.qmd` and give each post an `image:` in its front matter.
 
 ## Publishing to GitHub Pages
 

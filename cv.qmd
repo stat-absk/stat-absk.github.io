@@ -3,12 +3,7 @@ title: "Curriculum Vitae"
 description: "Positions, education, leadership, and service."
 ---
 
-::: {.callout-note appearance="simple"}
-**PDF version:** drop your file at `files/cv.pdf`, then add this line here:
-`[Download CV (PDF)](files/cv.pdf)`. Quarto publishes anything in `files/`.
-:::
-
-Chennai, India · [stat.absk@gmail.com](mailto:stat.absk@gmail.com) ·
+Chennai, India ·
 [Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en) ·
 [LinkedIn](https://www.linkedin.com/in/stat-absk/)
 
@@ -140,8 +135,88 @@ Department of Statistics, Gainesville, FL, USA
 - International Triennial Calcutta Symposium on Probability & Statistics — 2018, 2015
 - ASA Joint Statistical Meetings (JSM) — 2017
 
+## Research focus
+
+Much of my recent work sits in two places: using **target trial emulation** to
+bring observational data to bear on questions trials answer slowly or not at all,
+and **endpoint and estimand strategy** — deciding what a trial should measure
+before arguing about how to analyse it.
+
 ## Publications
 
-15 peer-reviewed journal articles · 315 citations (as of July 2026).
-Full list on the [Research](research.qmd) page and on
-[Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en).
+15 peer-reviewed journal articles · 315 citations (as of July 2026) ·
+[Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en)
+
+### 2026
+
+1. Dubinsky MC, Cohen ER, Irving PM, … **Bhattacharjee A**, et al. Bowel urgency in
+   ulcerative colitis is associated with clinical endpoints, health-related quality
+   of life, and biomarkers: data from the etrasimod ELEVATE UC 52 trial.
+   *Crohn's & Colitis 360*. 2026;otag072.
+
+2. Makgoeng SB, Gamalo M, Russo LJ, Pradhan V, **Bhattacharjee A**, Bhosale N.
+   Data-driven trial design: use of target trial emulation to evaluate eligibility
+   criteria in asthma and COPD. *Frontiers in Medicine*. 2026;13:1863026.
+
+### 2025
+
+3. Armuzzi A, Rubin DT, Schreiber S, … **Bhattacharjee A**, et al. Health-related
+   quality of life outcomes with etrasimod treatment in patients with ulcerative
+   colitis: a post hoc analysis of data from ELEVATE UC 52 and ELEVATE UC 12.
+   *Inflammatory Bowel Diseases*. 2025;31(6):1583–1594.
+
+4. Jairath V, Rubin DT, Verstockt B, … **Bhattacharjee A**, et al. The effect of
+   etrasimod on fecal calprotectin and high-sensitivity C-reactive protein: results
+   from the ELEVATE UC clinical program. *Inflammatory Bowel Diseases*.
+   2025;31(4):923–934.
+
+5. Magro F, Peyrin-Biroulet L, Sands BE, … **Bhattacharjee A**, et al. Endoscopic,
+   histologic, and composite endpoints in patients with ulcerative colitis treated
+   with etrasimod. *Clinical Gastroenterology and Hepatology*. 2025;23(2):341–350.
+
+6. Afzali A, Regueiro M, Yarur AJ, … **Bhattacharjee A**, et al. Concomitant use of
+   etrasimod with opioids or antidepressants in patients with ulcerative colitis —
+   a safety analysis. *United European Gastroenterology Journal*. 2025;13(5):719–727.
+
+### 2024
+
+7. Regueiro M, Siegmund B, Yarur AJ, … **Bhattacharjee A**, et al. Etrasimod for the
+   treatment of ulcerative colitis: analysis of infection events from the ELEVATE UC
+   clinical programme. *Journal of Crohn's and Colitis*. 2024;18(10):1596–1605.
+
+### 2021 and earlier
+
+8. Imerci A, Rogers KJ, **Bhattacharjee A**, Bowen JR, Thacker MM. Risk factors for
+   failure of Pavlik harness treatment in infants with dislocated hips evaluated by
+   dynamic sonography. *Journal of Pediatric Orthopaedics*. 2021;41(6):e386–e391.
+
+9. Chatterjee N, Nair PKR, Nair VD, Viswanath S, **Bhattacharjee A**. Depth-wise
+   distribution of soil-carbon stock in aggregate-sized fractions under
+   shaded-perennial agroforestry systems in the Western Ghats of Karnataka, India.
+   *Agroforestry Systems*. 2020;94(2):341–358.
+
+10. Alharash H, Hossain MJ, **Bhattacharjee A**, Levenbrown Y. Use of pulse contour
+    technology for continuous blood pressure monitoring in pediatric patients.
+    *Blood Pressure Monitoring*. 2020;25(5):278–284.
+
+11. Chatterjee N, Nair PKR, Nair VD, **Bhattacharjee A**, et al. Do coffee agroforestry
+    systems always improve soil carbon stocks deeper in the soil? A case study from
+    Turrialba, Costa Rica. *Forests*. 2019;11(1):49.
+
+12. Ying W, **Bhattacharjee A**, Wu SS. Effect of laser acupuncture on mitigating
+    anxiety in acute stressed horses: a randomized, controlled study. *American
+    Journal of Traditional Chinese Veterinary Medicine*. 2019;14(1).
+
+13. **Bhattacharjee A**, Ghosh M. Bias-corrected empirical Bayes confidence intervals
+    for the selected mean. *Communications in Statistics — Theory and Methods*.
+    2019;48(3):583–595.
+
+14. Ahn H, Woods AJ, Kunik ME, … **Bhattacharjee A**, et al. Efficacy of transcranial
+    direct current stimulation over primary motor cortex and contralateral
+    supraorbital area on clinical pain severity and mobility performance in persons
+    with knee osteoarthritis: a randomized, sham-controlled pilot study.
+    *Brain Stimulation*. 2017;10(5):902–909.
+
+15. Wu SS, Chen S, **Bhattacharjee A**, He Y. Collusion-resistant multi-matrix masking
+    for privacy-preserving data collection. *2017 IEEE 3rd International Conference
+    on Big Data Security on Cloud (BigDataSecurity)*. 2017:1–7.

@@ -7,9 +7,6 @@ about:
   image-shape: round
   image-width: 15em
   links:
-    - icon: envelope
-      text: Email
-      href: mailto:stat.absk@gmail.com
     - icon: mortarboard
       text: Google Scholar
       href: https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en
@@ -52,14 +49,12 @@ decisions people can actually act on.
 
 ## Elsewhere
 
-- [Research](research.qmd) — 15 peer-reviewed papers and selected presentations
-- [CV](cv.qmd) — positions, education, and service
-- [Blog](blog.qmd) — notes on statistics and reproducible work in R
+- [CV](cv.qmd) — positions, education, publications, and service
+- [Stuff](stuff.qmd) — notes and write-ups
 - Service — Scientific Committee, IISA · Biostatistics Council, ISCR
 
-## Get in touch
-
-Email is best: [stat.absk@gmail.com](mailto:stat.absk@gmail.com).
+Reach me on [LinkedIn](https://www.linkedin.com/in/stat-absk/); papers are on
+[Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en).
 
 ::: {.callout-note appearance="simple"}
 Views on this site are my own and do not represent my employer.

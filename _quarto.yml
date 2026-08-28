@@ -18,12 +18,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: research.qmd
-        text: Research
-      - href: blog.qmd
-        text: Blog
       - href: cv.qmd
         text: CV
+      - href: stuff.qmd
+        text: Stuff
     right:
       - icon: linkedin
         href: https://www.linkedin.com/in/stat-absk/
@@ -34,11 +32,8 @@ website:
       - icon: github
         href: https://github.com/stat-absk
         aria-label: GitHub
-      - icon: envelope
-        href: mailto:stat.absk@gmail.com
-        aria-label: Email
       - icon: rss
-        href: blog.xml
+        href: stuff.xml
         aria-label: RSS
 
   page-footer:
@@ -46,12 +41,10 @@ website:
     center:
       - text: "Home"
         href: index.qmd
-      - text: "Research"
-        href: research.qmd
-      - text: "Blog"
-        href: blog.qmd
       - text: "CV"
         href: cv.qmd
+      - text: "Stuff"
+        href: stuff.qmd
     right: "Made with [Quarto](https://quarto.org)"
 
 format:

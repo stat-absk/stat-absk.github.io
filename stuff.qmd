@@ -1,6 +1,6 @@
 ---
-title: "Blog"
-subtitle: "Notes on statistics, R, and reproducible work."
+title: "Stuff"
+subtitle: "Notes, write-ups, and things I'm working through."
 listing:
   contents: posts
   sort: "date desc"
