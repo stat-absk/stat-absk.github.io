@@ -42,6 +42,8 @@ website:
         href: cv.qmd
       - text: "Stuff"
         href: stuff.qmd
+      - text: "SingleBell"
+        href: singlebell.qmd
     right: "Made with [Quarto](https://quarto.org)"
 
 format:
