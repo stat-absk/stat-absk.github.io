@@ -56,3 +56,11 @@ h2 { margin-top: 2.2rem; padding-bottom: .25rem; border-bottom: 1px solid rgba(1
 }
 
 .footer { font-size: .9rem; }
+
+// Small, quiet disclaimer line
+.disclaimer {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: .85rem;
+  opacity: .6;
+}
