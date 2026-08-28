@@ -1,66 +1,226 @@
 /*-- scss:defaults --*/
-// Design tokens — change these and the whole site follows.
-$accent:        #2f6f4e;      // primary / links
-$accent-dark:   #86c9a4;      // link colour used in dark mode
+//
+// Borrowed from SingleBell (Docs/design/SIGNATURE.md, Theme.swift):
+// one slate material, chalk as the only writing colour, one yellow-chalk accent
+// that only ever means "go". Names in serif, everything else in the system face.
+//
 
-$font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-                         "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-$font-family-monospace:  "SFMono-Regular", Menlo, Consolas, monospace;
+// ── Palette ────────────────────────────────────────────────────────────────
+$ground:      #0E1412;   // the page
+$surface:     #18201C;   // a card, a panel
+$surface2:    #232C27;   // a control inside a card
+$chalk:       #F2F3EA;   // the only writing colour
+$accent:      #E9D592;   // yellow chalk — means "go", nothing else
+$on-accent:   #14180F;
+$cool:        #B9D0D8;   // reserved (rest); unused here on purpose
 
-$body-font-size:  1.05rem;
-$line-height-base: 1.65;
+// Chalk at its four strengths
+$ink:         rgba($chalk, 0.92);   // primary
+$ink2:        rgba($chalk, 0.72);   // secondary
+$ink3:        rgba($chalk, 0.55);   // tertiary
+$rule:        rgba($chalk, 0.12);   // faint — drawn, never written
 
-$link-color:       $accent;
-$primary:          $accent;
-$navbar-bg:        transparent;
-$code-block-bg:    #f6f8f7;
-$border-radius:    .5rem;
+// ── Type ───────────────────────────────────────────────────────────────────
+// Two faces by job: names in serif, work in the system sans.
+$font-family-serif: ui-serif, "New York", "Iowan Old Style", Palatino, Georgia, serif;
+$font-family-sans-serif: system-ui, -apple-system, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+$font-family-monospace: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+
+// Six sizes — 12 / 15 / 17 / 22 / 28 / 44 — expressed against Quarto's 17px root
+// so they land on the app's scale while still following the reader's text size.
+$font-size-base: 1rem;              // 17 — body
+$size-eyebrow:  0.706rem;           // 12
+$size-caption:  0.882rem;           // 15
+$size-card:     1rem;               // 17
+$size-section:  1.294rem;           // 22 — a section title
+$size-page:     1.647rem;           // 28 — a page name
+// The app's 44 is a figure size (a count, a clock). This site has no figures,
+// so the scale stops at 28 and every page name is a page name.
+
+// ── Bootstrap / Quarto wiring ──────────────────────────────────────────────
+$body-bg:      $ground;
+$body-color:   $ink;
+$link-color:   $accent;
+$link-hover-color: $accent;
+$primary:      $accent;
+$border-radius: 12px;            // a field
+$border-color: $rule;
+
+$navbar-bg:    rgba($ground, 0.72);
+$navbar-fg:    $ink2;
+$navbar-hl:    $accent;
+$footer-bg:    $ground;
+$footer-fg:    $ink3;
+
+$code-block-bg: $surface;
+$code-color:    $ink2;
+$table-border-color: $rule;
 
 /*-- scss:rules --*/
 
-// Comfortable measure for reading
-main .page-columns .content { max-width: 46rem; }
+// ── Motion vocabulary ──────────────────────────────────────────────────────
+// SingleBell's springs, as far as CSS can carry them. settle 0.35 and snap 0.25,
+// both critically damped — no overshoot anywhere on a page you cannot throw.
+:root {
+  --settle: 350ms;
+  --snap:   250ms;
+  --ease:   cubic-bezier(0.22, 1, 0.36, 1);
 
-h1, h2, h3 { letter-spacing: -0.01em; font-weight: 650; }
-h2 { margin-top: 2.2rem; padding-bottom: .25rem; border-bottom: 1px solid rgba(128,128,128,.22); }
+  --space-xs:  4px;
+  --space-s:   8px;
+  --space-m:  12px;
+  --space-l:  16px;
+  --space-xl: 24px;
+  --space-xxl:32px;
 
-.navbar { border-bottom: 1px solid rgba(128,128,128,.18); backdrop-filter: blur(6px); }
-.navbar-title { font-weight: 650; }
-
-// Blog listing
-.quarto-listing .listing-title { font-weight: 650; }
-.quarto-listing .listing-date  { font-variant-numeric: tabular-nums; opacity: .75; }
-
-// About page image
-.quarto-about-trestles .about-image {
-  border-radius: 50%;
-  box-shadow: 0 6px 24px rgba(0,0,0,.16);
+  --radius-field: 12px;   // a field
+  --radius-part:  16px;   // a part
+  --radius-whole: 20px;   // a whole
 }
 
-// Small pill used for CV years / tags
+// ── Type ───────────────────────────────────────────────────────────────────
+// Tracking is size-specific: negative as text grows, none at reading size.
+// Leading runs inversely to size.
+body {
+  font-family: $font-family-sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: tabular-nums;   // figures are monospaced, never a mono face
+}
+
+h1, h2, h3, .quarto-title .title {
+  font-family: $font-family-serif;
+  font-weight: 400;                      // serif at regular; semibold blooms
+  color: $ink;
+}
+
+// Leading runs inversely to size; tracking goes negative only as text grows.
+h1, .quarto-title .title { font-size: $size-page;    line-height: 1.15; letter-spacing: -0.016em; }
+h2                       { font-size: $size-section; line-height: 1.25; letter-spacing: -0.01em; }
+h3                       { font-size: $size-card;    line-height: 1.35; letter-spacing: 0; font-weight: 600; }
+
+
+// The chalk rule: a hand-ruled line, 1.5px, opening a section.
+h2 {
+  margin-top: var(--space-xxl);
+  padding-bottom: var(--space-s);
+  border-bottom: 1.5px solid $rule;
+}
+
+p { max-width: 42rem; }
+
+// Uppercase exists in exactly one place, and it is tracked.
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: $size-eyebrow;
+  color: $ink3;
+}
+
+// ── The floating layer ─────────────────────────────────────────────────────
+// Glass is worn only by what floats above content. Content scrolls under it;
+// a soft edge where they meet, never a hard divider.
+.navbar {
+  background: rgba($ground, 0.72);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: none;
+  box-shadow: 0 1px 0 rgba($chalk, 0.06), 0 8px 24px -12px rgba(0, 0, 0, 0.8);
+}
+
+.navbar-title { font-family: $font-family-serif; font-weight: 400; letter-spacing: -0.01em; }
+
+.navbar .nav-link {
+  color: $ink2;
+  transition: color var(--snap) var(--ease);
+  &:hover { color: $ink; }
+  &.active { color: $accent; }     // the accent means "you are here" — a go
+}
+
+// ── Response: feedback on press, not on release ────────────────────────────
+a, .nav-link, .about-link {
+  transition: color var(--snap) var(--ease), opacity var(--snap) var(--ease);
+}
+a:active, .nav-link:active { opacity: 0.7; }
+
+.about-links .about-link {
+  border: 1px solid $rule;
+  border-radius: var(--radius-field);
+  color: $ink2;
+  transition: border-color var(--snap) var(--ease),
+              color var(--snap) var(--ease),
+              transform var(--snap) var(--ease);
+  &:hover { border-color: rgba($chalk, 0.28); color: $ink; }
+  &:active { transform: scale(0.98); }
+}
+
+// ── The portrait ───────────────────────────────────────────────────────────
+// A whole keeps its edge: a hairline frame, the way a card does.
+.about-image {
+  box-shadow: 0 0 0 1.5px $rule, 0 18px 40px -20px rgba(0, 0, 0, 0.9);
+}
+
+.about-entity .about-subtitle { color: $ink3; }
+
+// ── Written things ─────────────────────────────────────────────────────────
+// A pill is a part: a written label with an edge, never a filled chip — the
+// accent is not spent on decoration.
 .pill {
-  display: inline-block; padding: .12rem .55rem; margin-right: .4rem;
-  border: 1px solid rgba(128,128,128,.35); border-radius: 999px;
-  font-size: .8rem; opacity: .85;
+  display: inline-block;
+  padding: 2px var(--space-m);
+  margin: 0 var(--space-xs) var(--space-s) 0;
+  border: 1px solid $rule;
+  border-radius: 999px;
+  font-size: $size-caption;
+  color: $ink2;
 }
 
-// CV entries
-.cv-entry { margin-bottom: 1.25rem; }
-.cv-entry .cv-when { font-variant-numeric: tabular-nums; opacity: .7; font-size: .9rem; }
-.cv-entry .cv-what { font-weight: 600; }
+.cv-entry { margin-bottom: var(--space-xl); }
+.cv-entry .cv-when { color: $ink3; font-size: $size-caption; }
+.cv-entry .cv-what { color: $ink; font-weight: 600; }
 
-// Dark-mode link colour
-.quarto-dark {
-  a { color: $accent-dark; }
-  pre.sourceCode, code { background-color: #1c2128; }
-}
-
-.footer { font-size: .9rem; }
-
-// Small, quiet disclaimer line
 .disclaimer {
   display: inline-block;
-  margin-top: 1.5rem;
-  font-size: .85rem;
-  opacity: .6;
+  margin-top: var(--space-xl);
+  font-size: $size-caption;
+  color: $ink3;
+}
+
+// Tables: ruled, not boxed.
+table { border-color: $rule; }
+thead th { color: $ink2; font-weight: 600; border-bottom: 1.5px solid $rule; }
+tbody td { border-color: $rule; }
+
+.footer, .nav-footer { border-top: 1px solid $rule; font-size: $size-caption; }
+
+// ── Accessibility ──────────────────────────────────────────────────────────
+// Reduce Motion: the springs collapse to one short fade, as they do in the app.
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 200ms !important;
+    animation-duration: 200ms !important;
+    scroll-behavior: auto !important;
+  }
+  a:active, .about-link:active { transform: none !important; }
+}
+
+// Reduce Transparency: the glass becomes the opaque surface, as it does in the app.
+@media (prefers-reduced-transparency: reduce) {
+  .navbar {
+    background: $surface2;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  body { color: $chalk; }
+  .pill, .about-links .about-link { border-color: rgba($chalk, 0.3); }
+}
+
+:focus-visible {
+  outline: 2px solid $accent;
+  outline-offset: 3px;
+  border-radius: var(--radius-field);
 }

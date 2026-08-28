@@ -34,7 +34,7 @@
 
 /* other quarto variables */
 :root {
-  --quarto-font-monospace: "SFMono-Regular", Menlo, Consolas, monospace;
+  --quarto-font-monospace: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
 }
 
 /* syntax highlight based on Pandoc's rules */
@@ -216,4 +216,4 @@ code span.wa {
   content: "</";
 }
 
-/*# sourceMappingURL=ed0fe3c6a1a06815d06918780618dc46.css.map */
+/*# sourceMappingURL=ca3935e678f93ef8098b77cf8ce98611.css.map */

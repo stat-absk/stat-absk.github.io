@@ -46,9 +46,7 @@ website:
 
 format:
   html:
-    theme:
-      light: [cosmo, styles.scss]
-      dark:  [darkly, styles.scss]
+    theme: [default, styles.scss]   # one material: slate, as in SingleBell
     toc: true
     toc-title: "On this page"
     anchor-sections: true
@@ -60,6 +58,7 @@ format:
       - text: |
           <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
           <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          <meta name="theme-color" content="#0E1412">   <!-- mobile chrome matches the ground -->
 
 execute:
   freeze: auto      # don't re-run R code unless the .qmd actually changed
