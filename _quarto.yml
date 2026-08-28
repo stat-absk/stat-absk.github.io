@@ -8,7 +8,7 @@ website:
   title: "Abhishek Bhattacharjee"
   description: "Biostatistics leader — clinical development strategy, regulatory science, and real-world evidence."
   site-url: "https://stat-absk.github.io"
-  favicon: images/favicon.svg
+  favicon: images/favicon.png
   open-graph: true
   twitter-card: true
 
@@ -56,6 +56,10 @@ format:
     code-copy: true
     code-overflow: wrap
     link-external-newwindow: true
+    include-in-header:
+      - text: |
+          <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
 execute:
   freeze: auto      # don't re-run R code unless the .qmd actually changed
