@@ -32,9 +32,6 @@ website:
       - icon: github
         href: https://github.com/stat-absk
         aria-label: GitHub
-      - icon: rss
-        href: stuff.xml
-        aria-label: RSS
 
   page-footer:
     left: "&copy; 2026 Abhishek Bhattacharjee"

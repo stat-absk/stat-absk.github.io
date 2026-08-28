@@ -63,60 +63,11 @@
     "text": "Publications\n15 peer-reviewed journal articles · 315 citations (as of July 2026) · Google Scholar\n\n2026\n\nDubinsky MC, Cohen ER, Irving PM, … Bhattacharjee A, et al. Bowel urgency in ulcerative colitis is associated with clinical endpoints, health-related quality of life, and biomarkers: data from the etrasimod ELEVATE UC 52 trial. Crohn’s & Colitis 360. 2026;otag072.\nMakgoeng SB, Gamalo M, Russo LJ, Pradhan V, Bhattacharjee A, Bhosale N. Data-driven trial design: use of target trial emulation to evaluate eligibility criteria in asthma and COPD. Frontiers in Medicine. 2026;13:1863026.\n\n\n\n2025\n\nArmuzzi A, Rubin DT, Schreiber S, … Bhattacharjee A, et al. Health-related quality of life outcomes with etrasimod treatment in patients with ulcerative colitis: a post hoc analysis of data from ELEVATE UC 52 and ELEVATE UC 12. Inflammatory Bowel Diseases. 2025;31(6):1583–1594.\nJairath V, Rubin DT, Verstockt B, … Bhattacharjee A, et al. The effect of etrasimod on fecal calprotectin and high-sensitivity C-reactive protein: results from the ELEVATE UC clinical program. Inflammatory Bowel Diseases. 2025;31(4):923–934.\nMagro F, Peyrin-Biroulet L, Sands BE, … Bhattacharjee A, et al. Endoscopic, histologic, and composite endpoints in patients with ulcerative colitis treated with etrasimod. Clinical Gastroenterology and Hepatology. 2025;23(2):341–350.\nAfzali A, Regueiro M, Yarur AJ, … Bhattacharjee A, et al. Concomitant use of etrasimod with opioids or antidepressants in patients with ulcerative colitis — a safety analysis. United European Gastroenterology Journal. 2025;13(5):719–727.\n\n\n\n2024\n\nRegueiro M, Siegmund B, Yarur AJ, … Bhattacharjee A, et al. Etrasimod for the treatment of ulcerative colitis: analysis of infection events from the ELEVATE UC clinical programme. Journal of Crohn’s and Colitis. 2024;18(10):1596–1605.\n\n\n\n2021 and earlier\n\nImerci A, Rogers KJ, Bhattacharjee A, Bowen JR, Thacker MM. Risk factors for failure of Pavlik harness treatment in infants with dislocated hips evaluated by dynamic sonography. Journal of Pediatric Orthopaedics. 2021;41(6):e386–e391.\nChatterjee N, Nair PKR, Nair VD, Viswanath S, Bhattacharjee A. Depth-wise distribution of soil-carbon stock in aggregate-sized fractions under shaded-perennial agroforestry systems in the Western Ghats of Karnataka, India. Agroforestry Systems. 2020;94(2):341–358.\nAlharash H, Hossain MJ, Bhattacharjee A, Levenbrown Y. Use of pulse contour technology for continuous blood pressure monitoring in pediatric patients. Blood Pressure Monitoring. 2020;25(5):278–284.\nChatterjee N, Nair PKR, Nair VD, Bhattacharjee A, et al. Do coffee agroforestry systems always improve soil carbon stocks deeper in the soil? A case study from Turrialba, Costa Rica. Forests. 2019;11(1):49.\nYing W, Bhattacharjee A, Wu SS. Effect of laser acupuncture on mitigating anxiety in acute stressed horses: a randomized, controlled study. American Journal of Traditional Chinese Veterinary Medicine. 2019;14(1).\nBhattacharjee A, Ghosh M. Bias-corrected empirical Bayes confidence intervals for the selected mean. Communications in Statistics — Theory and Methods. 2019;48(3):583–595.\nAhn H, Woods AJ, Kunik ME, … Bhattacharjee A, et al. Efficacy of transcranial direct current stimulation over primary motor cortex and contralateral supraorbital area on clinical pain severity and mobility performance in persons with knee osteoarthritis: a randomized, sham-controlled pilot study. Brain Stimulation. 2017;10(5):902–909.\nWu SS, Chen S, Bhattacharjee A, He Y. Collusion-resistant multi-matrix masking for privacy-preserving data collection. 2017 IEEE 3rd International Conference on Big Data Security on Cloud (BigDataSecurity). 2017:1–7."
   },
   {
-    "objectID": "posts/tidy-penguins/index.html",
-    "href": "posts/tidy-penguins/index.html",
-    "title": "A worked example: fuel economy in mtcars",
-    "section": "",
-    "text": "Everything below is executed by R when the page renders. The code is visible by default; click Code to fold it, or use the code menu at the top right to download the source.\nCode\nlibrary(ggplot2)\nlibrary(dplyr)\n\ncars &lt;- mtcars |&gt;\n  tibble::as_tibble(rownames = \"model\") |&gt;\n  mutate(\n    cylinders   = factor(cyl, levels = c(4, 6, 8), labels = c(\"4-cyl\", \"6-cyl\", \"8-cyl\")),\n    transmission = factor(am, levels = c(0, 1), labels = c(\"Automatic\", \"Manual\"))\n  )\n\nglimpse(cars)\n\n\nRows: 32\nColumns: 14\n$ model        &lt;chr&gt; \"Mazda RX4\", \"Mazda RX4 Wag\", \"Datsun 710\", \"Hornet 4 Dri…\n$ mpg          &lt;dbl&gt; 21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19.…\n$ cyl          &lt;dbl&gt; 6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, 4, …\n$ disp         &lt;dbl&gt; 160.0, 160.0, 108.0, 258.0, 360.0, 225.0, 360.0, 146.7, 1…\n$ hp           &lt;dbl&gt; 110, 110, 93, 110, 175, 105, 245, 62, 95, 123, 123, 180, …\n$ drat         &lt;dbl&gt; 3.90, 3.90, 3.85, 3.08, 3.15, 2.76, 3.21, 3.69, 3.92, 3.9…\n$ wt           &lt;dbl&gt; 2.620, 2.875, 2.320, 3.215, 3.440, 3.460, 3.570, 3.190, 3…\n$ qsec         &lt;dbl&gt; 16.46, 17.02, 18.61, 19.44, 17.02, 20.22, 15.84, 20.00, 2…\n$ vs           &lt;dbl&gt; 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, …\n$ am           &lt;dbl&gt; 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, …\n$ gear         &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, …\n$ carb         &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, …\n$ cylinders    &lt;fct&gt; 6-cyl, 6-cyl, 4-cyl, 6-cyl, 8-cyl, 6-cyl, 8-cyl, 4-cyl, 4…\n$ transmission &lt;fct&gt; Manual, Manual, Manual, Automatic, Automatic, Automatic, …"
-  },
-  {
-    "objectID": "posts/tidy-penguins/index.html#weight-against-fuel-economy",
-    "href": "posts/tidy-penguins/index.html#weight-against-fuel-economy",
-    "title": "A worked example: fuel economy in mtcars",
-    "section": "Weight against fuel economy",
-    "text": "Weight against fuel economy\nHeavier cars drink more, and the relationship is close to linear within each cylinder count.\n\n\nCode\nggplot(cars, aes(wt * 1000, mpg, colour = cylinders)) +\n  geom_point(size = 2.6, alpha = .85) +\n  geom_smooth(method = \"lm\", formula = y ~ x, se = FALSE, linewidth = .7) +\n  scale_colour_manual(values = c(\"#2f6f4e\", \"#c08a2e\", \"#8c3b3b\")) +\n  labs(\n    x = \"Weight (lb)\", y = \"Miles per gallon\", colour = NULL,\n    title = \"Fuel economy against weight\",\n    subtitle = \"32 cars, Motor Trend 1974\"\n  ) +\n  theme_minimal(base_size = 12) +\n  theme(legend.position = \"top\", plot.title = element_text(face = \"bold\"))\n\n\n\n\n\n\n\n\nFigure 1: Fuel economy falls with weight; the gap between 4- and 8-cylinder cars persists at any given weight.\n\n\n\n\n\nFigure 1 is cross-referenced with @fig-weight-mpg — Quarto numbers the figure and makes the reference a link."
-  },
-  {
-    "objectID": "posts/tidy-penguins/index.html#a-quick-model",
-    "href": "posts/tidy-penguins/index.html#a-quick-model",
-    "title": "A worked example: fuel economy in mtcars",
-    "section": "A quick model",
-    "text": "A quick model\n\n\nCode\nfit &lt;- lm(mpg ~ wt + cylinders, data = cars)\n\nbroom::tidy(fit, conf.int = TRUE) |&gt;\n  mutate(across(where(is.numeric), \\(x) round(x, 2))) |&gt;\n  knitr::kable()\n\n\n\n\nTable 1: Least-squares fit of mpg on weight and cylinder count.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\nconf.low\nconf.high\n\n\n\n\n(Intercept)\n33.99\n1.89\n18.01\n0\n30.12\n37.86\n\n\nwt\n-3.21\n0.75\n-4.25\n0\n-4.75\n-1.66\n\n\ncylinders6-cyl\n-4.26\n1.39\n-3.07\n0\n-7.09\n-1.42\n\n\ncylinders8-cyl\n-6.07\n1.65\n-3.67\n0\n-9.46\n-2.69\n\n\n\n\n\n\n\n\nEach extra 1000 lb costs roughly 3.2 mpg, holding cylinder count fixed. That number isn’t typed in — it’s an inline R expression, written like this:\nEach extra 1000 lb costs roughly 3.2 mpg.\n(In a .qmd the inline form is a backtick span starting with r.) Refit the model and the sentence updates itself, so the prose can never drift away from the numbers."
-  },
-  {
-    "objectID": "posts/tidy-penguins/index.html#group-summaries",
-    "href": "posts/tidy-penguins/index.html#group-summaries",
-    "title": "A worked example: fuel economy in mtcars",
-    "section": "Group summaries",
-    "text": "Group summaries\n\n\nCode\ncars |&gt;\n  summarise(\n    n = n(),\n    mean_mpg = round(mean(mpg), 1),\n    sd_mpg   = round(sd(mpg), 1),\n    .by = c(cylinders, transmission)\n  ) |&gt;\n  arrange(cylinders, transmission) |&gt;\n  knitr::kable(col.names = c(\"Cylinders\", \"Transmission\", \"n\", \"Mean mpg\", \"SD\"))\n\n\n\n\nTable 2: Mean fuel economy by cylinder count and transmission.\n\n\n\n\n\n\nCylinders\nTransmission\nn\nMean mpg\nSD\n\n\n\n\n4-cyl\nAutomatic\n3\n22.9\n1.5\n\n\n4-cyl\nManual\n8\n28.1\n4.5\n\n\n6-cyl\nAutomatic\n4\n19.1\n1.6\n\n\n6-cyl\nManual\n3\n20.6\n0.8\n\n\n8-cyl\nAutomatic\n12\n15.1\n2.8\n\n\n8-cyl\nManual\n2\n15.4\n0.6\n\n\n\n\n\n\n\n\nBecause freeze: auto is set in posts/_metadata.yml, this code runs once and the results are cached in _freeze/. Later site builds reuse them until this file changes — so rendering the site stays fast, and a post written today still builds years from now even if the packages have moved on."
-  },
-  {
     "objectID": "stuff.html",
     "href": "stuff.html",
     "title": "Stuff",
     "section": "",
-    "text": "Setting up this site\n\n\n\nmeta\n\nquarto\n\n\n\nHow the site is built, and how I add a new post.\n\n\n\n\n\nAug 28, 2026\n\n1 min\n\n\n\n\n\n\nA worked example: fuel economy in mtcars\n\n\n\nrstats\n\nggplot2\n\nregression\n\n\n\nA short post that actually runs R — tables, a model, and a figure — to show how computation lands on the page.\n\n\n\n\n\nAug 27, 2026\n\n3 min\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Setting up this site",
-    "section": "",
-    "text": "This site is a Quarto website, edited in RStudio and hosted on GitHub Pages. The whole thing is plain text — .qmd files plus one YAML config — which means it versions cleanly in git and anything I can compute in R can go straight into a page."
-  },
-  {
-    "objectID": "posts/welcome/index.html#adding-a-post",
-    "href": "posts/welcome/index.html#adding-a-post",
-    "title": "Setting up this site",
-    "section": "Adding a post",
-    "text": "Adding a post\nEach post is a folder under posts/ containing an index.qmd:\nposts/\n  welcome/index.qmd\n  my-new-post/\n    index.qmd\n    a-figure.png\nThe folder-per-post layout keeps images next to the text that uses them, and the published URL comes out as /posts/my-new-post/.\nThe front matter needs four things:\n---\ntitle: \"The title\"\ndescription: \"One line that shows up on the blog listing.\"\ndate: 2026-09-01\ncategories: [rstats, notes]\n---\nThen Render in RStudio, and the post appears on the Stuff page automatically — the listing reads the posts/ folder, so there’s no index to update by hand."
-  },
-  {
-    "objectID": "posts/welcome/index.html#why-quarto-over-r-markdown",
-    "href": "posts/welcome/index.html#why-quarto-over-r-markdown",
-    "title": "Setting up this site",
-    "section": "Why Quarto over R Markdown",
-    "text": "Why Quarto over R Markdown\nMostly that the website machinery is built in rather than bolted on, that freeze: auto means old posts don’t re-run their code on every build, and that the same .qmd can render to HTML, PDF, or slides without changing the source."
+    "text": "Nothing here yet."
   },
   {
     "objectID": "index.html",
@@ -144,6 +95,6 @@
     "href": "index.html#elsewhere",
     "title": "Abhishek Bhattacharjee, PhD",
     "section": "Elsewhere",
-    "text": "Elsewhere\n\nCV — positions, education, publications, and service\nStuff — notes and write-ups\nService — Scientific Committee, IISA · Biostatistics Council, ISCR\n\nReach me on LinkedIn; papers are on Google Scholar.\n\n\n\n\n\n\nViews on this site are my own and do not represent my employer."
+    "text": "Elsewhere\n\nCV — positions, education, publications, and service\nStuff — notes and write-ups\n\nReach me on LinkedIn; papers are on Google Scholar.\n\n\n\n\n\n\nViews on this site are my own and do not represent my employer."
   }
 ]

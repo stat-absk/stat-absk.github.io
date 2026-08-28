@@ -51,7 +51,6 @@ decisions people can actually act on.
 
 - [CV](cv.qmd) — positions, education, publications, and service
 - [Stuff](stuff.qmd) — notes and write-ups
-- Service — Scientific Committee, IISA · Biostatistics Council, ISCR
 
 Reach me on [LinkedIn](https://www.linkedin.com/in/stat-absk/); papers are on
 [Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en).

@@ -1,16 +1,7 @@
 ---
 title: "Stuff"
 subtitle: "Notes, write-ups, and things I'm working through."
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
-  feed: true
-  fields: [date, title, reading-time, description, categories]
-page-layout: full
-title-block-banner: false
 toc: false
 ---
+
+Nothing here yet.
