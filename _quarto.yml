@@ -22,8 +22,6 @@ website:
         text: CV
       - href: stuff.qmd
         text: Stuff
-      - href: singlebell.qmd
-        text: SingleBell
     right:
       - icon: linkedin
         href: https://www.linkedin.com/in/stat-absk/
@@ -44,8 +42,6 @@ website:
         href: cv.qmd
       - text: "Stuff"
         href: stuff.qmd
-      - text: "SingleBell"
-        href: singlebell.qmd
     right: "Made with [Quarto](https://quarto.org)"
 
 format:
