@@ -225,19 +225,25 @@ tbody td { border-color: $rule; }
 
 // ── App screenshots ────────────────────────────────────────────────────────
 // A phone is a whole: it keeps its edge, at the whole's radius.
+// Capped rather than fluid: a phone shown wider than this only enlarges UI text
+// that is still too small to read, and the source would have to grow with it.
+// At 200px against 600px sources these stay sharp at 3x.
+$shot-width: 200px;
+
 .shots {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, $shot-width));
+  justify-content: start;
   gap: var(--space-xl);
   margin: var(--space-xl) 0 var(--space-xxl);
-  max-width: 46rem;
 
   figure { margin: 0; }
 
   img {
     width: 100%;
     height: auto;
-    border-radius: var(--radius-whole);
+    aspect-ratio: 600 / 1303;      // reserves the space before the image loads
+    border-radius: var(--radius-part);
     border: 1px solid $rule;
   }
 
