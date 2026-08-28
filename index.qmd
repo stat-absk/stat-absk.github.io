@@ -1,23 +1,27 @@
 ---
-title: "Abhishek Bhattacharjee, PhD"
-subtitle: "Biostatistics leader — clinical development strategy, regulatory science, real-world evidence"
+pagetitle: "Abhishek Bhattacharjee, PhD"
+description: "Biostatistics leader — clinical development strategy, regulatory science, real-world evidence"
 image: images/profile.jpg
-about:
-  template: trestles
-  image-shape: round
-  image-width: 15em
-  links:
-    - icon: mortarboard
-      text: Google Scholar
-      href: https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en
-    - icon: github
-      text: GitHub
-      href: https://github.com/stat-absk
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/stat-absk/
 toc: false
 ---
+
+::: {.hero}
+::: {.hero-portrait}
+![](images/profile.jpg){fig-alt="Portrait of Abhishek Bhattacharjee"}
+:::
+
+::: {.hero-text}
+# Abhishek Bhattacharjee, PhD {.hero-name}
+
+[Biostatistics leader — clinical development strategy, regulatory science, real-world evidence.]{.hero-role}
+
+::: {.hero-links}
+[Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en)
+[GitHub](https://github.com/stat-absk)
+[LinkedIn](https://www.linkedin.com/in/stat-absk/)
+:::
+:::
+:::
 
 I'm Associate Director, Biostatistics at Pfizer in Chennai, on the Data Science &
 Analytics India leadership team, where I lead a team of statisticians across

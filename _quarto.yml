@@ -63,6 +63,25 @@ format:
           <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
           <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
           <meta name="theme-color" content="#0E1412">   <!-- mobile chrome matches the ground -->
+    include-after-body:
+      - text: |
+          <script>
+            // Scroll edge: the header wears its glass only once content passes under it.
+            (function () {
+              var header = document.getElementById("quarto-header");
+              if (!header) return;
+              var hero = document.querySelector(".hero-name");
+              if (hero) header.classList.add("has-hero");
+              var update = function () {
+                header.classList.toggle("scrolled", window.scrollY > 8);
+                if (hero) {
+                  header.classList.toggle("past-hero", hero.getBoundingClientRect().bottom < 64);
+                }
+              };
+              window.addEventListener("scroll", update, { passive: true });
+              update();
+            })();
+          </script>
 
 execute:
   freeze: auto      # don't re-run R code unless the .qmd actually changed

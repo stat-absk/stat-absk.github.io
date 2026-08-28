@@ -44,8 +44,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d425e9d334c5ce50f1b957389f860d54.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e2d9aa53ba367f0cc9a05d30ab014987.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-b97e4a631c646d03eceb2fe6d7fe988c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-2e1f274d16c74cc675ae1e4566e5c438.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-17c4cb1ce1273cd92da46fd94c2879cc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -792,6 +792,23 @@ ul.task-list li input[type="checkbox"] {
 </div>
   </div>
 </footer>
+<script>
+  // Scroll edge: the header wears its glass only once content passes under it.
+  (function () {
+    var header = document.getElementById("quarto-header");
+    if (!header) return;
+    var hero = document.querySelector(".hero-name");
+    if (hero) header.classList.add("has-hero");
+    var update = function () {
+      header.classList.toggle("scrolled", window.scrollY > 8);
+      if (hero) {
+        header.classList.toggle("past-hero", hero.getBoundingClientRect().bottom < 64);
+      }
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+  })();
+</script>
 
 
 

@@ -21,6 +21,9 @@ $strength-faint:     0.12;
 $font-smoothing:     antialiased;
 $font-smoothing-moz: grayscale;
 
+// The tooth of the ground (chalk dust on slate).
+$grain-opacity: 0.05;
+
 @import "type";
 @import "palette-wiring";
 

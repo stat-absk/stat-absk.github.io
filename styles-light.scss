@@ -26,6 +26,9 @@ $strength-faint:     0.22;
 $font-smoothing:     auto;
 $font-smoothing-moz: auto;
 
+// The tooth of the ground (paper tooth).
+$grain-opacity: 0.04;
+
 @import "type";
 @import "palette-wiring";
 

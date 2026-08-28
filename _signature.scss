@@ -22,6 +22,31 @@
   --radius-whole: 20px;   // a whole
 }
 
+// ── The ground ─────────────────────────────────────────────────────────────
+// The slate has a tooth. A whisper of grain over everything keeps large fields
+// of ground from reading as dead pixels — film grain, not decoration.
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: $grain-opacity;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyNDAnIGhlaWdodD0nMjQwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsdGVyPSd1cmwoI24pJy8+PC9zdmc+");
+  background-size: 240px 240px;
+}
+
+// Writing selected is chalk under the thumb: the accent, faintly.
+::selection { background: rgba($accent, 0.28); color: $writing; }
+
+html { scrollbar-color: rgba($writing, 0.25) transparent; }
+
+// A page arrives: one short rise, settled, never repeated within the page.
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+}
+main#quarto-document-content { animation: rise 500ms var(--ease) backwards; }
+
 // ── Type ───────────────────────────────────────────────────────────────────
 // Tracking is size-specific: negative as text grows, none at reading size.
 // Leading runs inversely to size.
@@ -43,7 +68,7 @@ h1, h2, h3, .quarto-title .title {
 }
 
 // Leading runs inversely to size; tracking goes negative only as text grows.
-h1, .quarto-title .title { font-size: $size-page;    line-height: 1.15; letter-spacing: -0.016em; }
+h1, .quarto-title .title { font-size: clamp($size-page, 1.4rem + 1.2vw, 1.9rem); line-height: 1.15; letter-spacing: -0.016em; }
 h2                       { font-size: $size-section; line-height: 1.25; letter-spacing: -0.01em; }
 h3                       { font-size: $size-card;    line-height: 1.35; letter-spacing: 0; font-weight: 600; }
 
@@ -69,14 +94,33 @@ p { max-width: 42rem; }
 // Glass is worn only by what floats above content. Content scrolls under it;
 // a soft edge where they meet, never a hard divider.
 .navbar {
-  background: rgba($ground, 0.72);
+  background: rgba($ground, 0);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: none;
+  box-shadow: none;
+  transition: background-color var(--settle) var(--ease),
+              box-shadow var(--settle) var(--ease);
+}
+
+// The scroll edge: at rest the bar is part of the page; the moment content
+// passes beneath it, the glass and a soft shadow arrive together.
+#quarto-header.scrolled .navbar {
+  background: rgba($ground, 0.72);
   box-shadow: 0 1px 0 rgba($writing, 0.06), 0 8px 24px -12px rgba($writing, 0.18);
 }
 
 .navbar-title { font-family: $font-family-serif; font-weight: 400; letter-spacing: -0.01em; }
+
+// On the page that opens with the name at display size, the bar does not say it
+// twice: the large title collapses into the bar as it scrolls away, as a
+// navigation bar inherits a large title.
+#quarto-header.has-hero .navbar-title {
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity var(--settle) var(--ease), transform var(--settle) var(--ease);
+}
+#quarto-header.has-hero.past-hero .navbar-title { opacity: 1; transform: none; }
 
 .navbar .nav-link {
   color: $ink2;
@@ -86,29 +130,150 @@ p { max-width: 42rem; }
 }
 
 // ── Response: feedback on press, not on release ────────────────────────────
-a, .nav-link, .about-link {
+a, .nav-link {
   transition: color var(--snap) var(--ease), opacity var(--snap) var(--ease);
 }
 a:active, .nav-link:active { opacity: 0.7; }
 
-.about-links .about-link {
-  border: 1px solid $rule;
-  border-radius: var(--radius-field);
-  color: $ink2;
-  transition: border-color var(--snap) var(--ease),
-              color var(--snap) var(--ease),
-              transform var(--snap) var(--ease);
-  &:hover { border-color: rgba($writing, 0.28); color: $ink; }
-  &:active { transform: scale(0.98); }
+// In prose, an underline is drawn faintly in the accent and firms on hover —
+// a link reads as a link without shouting.
+main a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba($accent, 0.4);
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color var(--snap) var(--ease),
+              color var(--snap) var(--ease), opacity var(--snap) var(--ease);
+  &:hover { text-decoration-color: $accent; }
+}
+main .hero-links a, main .pill, main h1 a, main h2 a, main h3 a { text-decoration: none; }
+
+// ── The hero ───────────────────────────────────────────────────────────────
+// The homepage opens with the name at display size and the portrait beside it.
+// Display text earns tighter tracking and leading than a page name does.
+.hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: clamp(var(--space-xl), 5vw, 64px);
+  margin: clamp(var(--space-xl), 6vh, 72px) 0 clamp(var(--space-xl), 5vh, 56px);
+
+  // The portrait is written first (so the name is not lifted into the title
+  // block) but reads second: text left, portrait right.
+  .hero-text     { order: 1; }
+  .hero-portrait { order: 2; }
 }
 
-// ── The portrait ───────────────────────────────────────────────────────────
-// A whole keeps its edge: a hairline frame, the way a card does.
-.about-image {
+// A page whose opening is hand-rolled leaves an empty title block behind;
+// it takes no room.
+#title-block-header:empty { display: none; margin: 0; }
+
+h1.hero-name {
+  font-size: clamp(2rem, 1.4rem + 3vw, 2.75rem);
+  line-height: 1.06;
+  letter-spacing: -0.022em;
+  margin: 0 0 var(--space-m);
+  border: none;
+  padding: 0;
+  text-wrap: balance;
+}
+
+.hero-role {
+  display: block;
+  font-size: $size-card;
+  line-height: 1.55;
+  color: $ink2;
+  max-width: 30rem;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  margin-top: var(--space-xl);
+
+  a {
+    display: inline-block;
+    padding: 5px var(--space-l);
+    border: 1px solid $rule;
+    border-radius: 999px;
+    font-size: $size-caption;
+    color: $ink2;
+    text-decoration: none;
+    transition: border-color var(--snap) var(--ease),
+                color var(--snap) var(--ease),
+                transform var(--snap) var(--ease);
+    &:hover { border-color: rgba($writing, 0.28); color: $ink; }
+    &:active { transform: scale(0.97); }
+  }
+}
+
+// The portrait is a whole: hairline ring, a shadow that sits it on the page.
+.hero-portrait img {
+  width: clamp(150px, 12vw + 90px, 208px);
+  height: auto;
+  border-radius: 50%;
   box-shadow: 0 0 0 1.5px $rule, 0 18px 40px -20px rgba($writing, 0.28);
 }
 
-.about-entity .about-subtitle { color: $ink3; }
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    .hero-portrait { order: 0; }      // the portrait opens the page, card-style
+    .hero-portrait img { width: 128px; }
+  }
+}
+
+// ── Page openings ──────────────────────────────────────────────────────────
+// A page's own title block: name, then a quiet description, then air.
+#title-block-header {
+  margin: clamp(var(--space-xl), 5vh, 56px) 0 var(--space-xxl);
+
+  .title { margin-bottom: var(--space-xs); }
+  .subtitle, .description {
+    color: $ink3;
+    font-size: $size-card;
+    line-height: 1.55;
+    max-width: 34rem;
+    margin-top: var(--space-s);
+  }
+  .quarto-title-meta { display: none; }   // no dates, no authors — the page is the author's
+}
+
+// The SingleBell opening: the icon and the name on one line, as an App Store
+// listing sets them — identity first, claim second.
+.sb-hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--space-xl);
+  margin: clamp(var(--space-xl), 5vh, 56px) 0 var(--space-xxl);
+
+  .app-icon img { margin-bottom: 0; }
+}
+
+h1.sb-name {
+  font-size: clamp(1.8rem, 1.3rem + 2.2vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-xs);
+  border: none;
+  padding: 0;
+}
+
+.sb-sub {
+  display: block;
+  color: $ink2;
+  max-width: 30rem;
+  line-height: 1.55;
+  margin-bottom: var(--space-m);
+}
+
+@media (max-width: 700px) {
+  .sb-hero { grid-template-columns: 1fr; gap: var(--space-l); }
+  .app-icon img { width: 88px; height: 88px; }
+}
 
 // ── Written things ─────────────────────────────────────────────────────────
 // A pill is a part: a written label with an edge, never a filled chip — the
@@ -190,7 +355,70 @@ table { border-color: $rule; }
 thead th { color: $ink2; font-weight: 600; border-bottom: 1.5px solid $rule; }
 tbody td { border-color: $rule; }
 
+// ── The margin TOC ─────────────────────────────────────────────────────────
+// "On this page" is the site's one eyebrow put to work; the list hangs from a
+// hairline, and the accent marks where you are.
+nav[role="doc-toc"] {
+  #toc-title {
+    font-family: $font-family-sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: $size-eyebrow;
+    font-weight: 400;
+    color: $ink3;
+    border: none;
+    margin: 0 0 var(--space-m);
+    padding: 0;
+  }
+
+  > ul { border-left: 1px solid $rule; padding-left: 0; }
+
+  .nav-link {
+    display: block;
+    color: $ink3;
+    font-size: $size-caption;
+    line-height: 1.45;
+    padding: 3px 0 3px var(--space-l);
+    margin-left: -1px;
+    border-left: 1px solid transparent;
+    transition: color var(--snap) var(--ease),
+                border-color var(--snap) var(--ease);
+    &:hover { color: $ink; }
+    &.active { color: $ink; border-left-color: $accent; }
+  }
+}
+
+// ── The footer ─────────────────────────────────────────────────────────────
+// One quiet line: the name, the pages set off by middle dots, the colophon.
 .footer, .nav-footer { border-top: 1px solid $rule; font-size: $size-caption; }
+
+.nav-footer {
+  padding: var(--space-xl) 0;
+  color: $ink3;
+
+  p { margin: 0; }
+  a { color: $ink3; text-decoration: none;
+      &:hover { color: $ink; } }
+
+  .footer-items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .footer-items .nav-item { display: inline-flex; align-items: center; }
+  .footer-items .nav-item + .nav-item::before {
+    content: "·";
+    color: rgba($writing, 0.35);
+    padding: 0 var(--space-s);
+  }
+  .footer-items .nav-link { display: inline; padding: 0; }
+  .footer-items .nav-link p { display: inline; margin: 0; }
+}
 
 // ── Accessibility ──────────────────────────────────────────────────────────
 // Reduce Motion: the springs collapse to one short fade, as they do in the app.
@@ -200,7 +428,8 @@ tbody td { border-color: $rule; }
     animation-duration: 200ms !important;
     scroll-behavior: auto !important;
   }
-  a:active, .about-link:active { transform: none !important; }
+  a:active { transform: none !important; }
+  main, .hero { animation: none !important; }
 }
 
 // Reduce Transparency: the glass becomes the opaque surface, as it does in the app.
