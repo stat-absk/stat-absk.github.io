@@ -1,7 +1,7 @@
 ---
 title: "Abhishek Bhattacharjee, PhD"
 subtitle: "Biostatistics leader — clinical development strategy, regulatory science, real-world evidence"
-image: images/profile.svg
+image: images/profile.jpg
 about:
   template: trestles
   image-shape: round
