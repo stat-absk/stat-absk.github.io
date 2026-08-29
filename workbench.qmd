@@ -8,6 +8,8 @@ toc: true
 toc-title: "On this page"
 ---
 
+[A work in progress]{.pill}
+
 ::: {.hero-links}
 [Open the workbench](https://stat-absk-ct-dashboard.share.connect.posit.cloud/)
 [Follow the tutorial](https://github.com/stat-absk/CT_Dashboard/blob/main/TUTORIAL.md)
@@ -82,5 +84,11 @@ Gernot Wassmer and Friedrich Pahlke. All of the statistical machinery is
 theirs; the workbench only sets a table for learning it. It is not a validated
 GxP system, and a design headed for a protocol should be reproduced in rpact
 itself — which is exactly what the R code under every result is for.
+
+It is also very much a work in progress. Chapters and examples are still
+being added, rough edges remain, and anything here may change. If something
+is wrong, missing, or confusing, the
+[issues page](https://github.com/stat-absk/CT_Dashboard/issues) is open —
+that kind of feedback is exactly what shapes it next.
 
 [The workbench is a personal open-source project and is not affiliated with my employer or with the rpact team.]{.disclaimer}

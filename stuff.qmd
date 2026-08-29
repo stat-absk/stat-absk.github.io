@@ -8,6 +8,7 @@ toc: false
 environment for group sequential and adaptive trial design, built on the
 [rpact](https://www.rpact.org) R package. Guided chapters, a worked example
 behind every feature, and the reproducing R code under every result.
+Still a work in progress, and growing.
 [Open the app](https://stat-absk-ct-dashboard.share.connect.posit.cloud/) or
 [follow the tutorial](https://github.com/stat-absk/CT_Dashboard/blob/main/TUTORIAL.md).
 

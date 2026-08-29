@@ -4,7 +4,7 @@
     "href": "workbench.html",
     "title": "Clinical Trial Design Workbench",
     "section": "",
-    "text": "Open the workbench Follow the tutorial Quick-start guide Source on GitHub\nThe workbench is a place to learn trial design by doing it. It is built for statisticians who are new to the field, and it teaches the way people actually learn: start with the question every trial begins with — how many patients? — then power, then the step up to designs with interim looks.\nNothing is hidden behind the interface. Every form mirrors the rpact R package’s own functions, and every result is shown with the exact R code that reproduces it, so what you learn in the app transfers directly to your own scripts."
+    "text": "A work in progress\nThe workbench is a place to learn trial design by doing it. It is built for statisticians who are new to the field, and it teaches the way people actually learn: start with the question every trial begins with — how many patients? — then power, then the step up to designs with interim looks.\nNothing is hidden behind the interface. Every form mirrors the rpact R package’s own functions, and every result is shown with the exact R code that reproduces it, so what you learn in the app transfers directly to your own scripts."
   },
   {
     "objectID": "workbench.html#whats-inside",
@@ -25,7 +25,7 @@
     "href": "workbench.html#what-it-is-and-isnt",
     "title": "Clinical Trial Design Workbench",
     "section": "What it is, and isn’t",
-    "text": "What it is, and isn’t\nThe workbench is a teaching tool. It is free, open source (LGPL-3), and runs entirely on the rpact package — the validated, widely used R implementation of confirmatory adaptive trial methodology by Gernot Wassmer and Friedrich Pahlke. All of the statistical machinery is theirs; the workbench only sets a table for learning it. It is not a validated GxP system, and a design headed for a protocol should be reproduced in rpact itself — which is exactly what the R code under every result is for.\nThe workbench is a personal open-source project and is not affiliated with my employer or with the rpact team."
+    "text": "What it is, and isn’t\nThe workbench is a teaching tool. It is free, open source (LGPL-3), and runs entirely on the rpact package — the validated, widely used R implementation of confirmatory adaptive trial methodology by Gernot Wassmer and Friedrich Pahlke. All of the statistical machinery is theirs; the workbench only sets a table for learning it. It is not a validated GxP system, and a design headed for a protocol should be reproduced in rpact itself — which is exactly what the R code under every result is for.\nIt is also very much a work in progress. Chapters and examples are still being added, rough edges remain, and anything here may change. If something is wrong, missing, or confusing, the issues page is open — that kind of feedback is exactly what shapes it next.\nThe workbench is a personal open-source project and is not affiliated with my employer or with the rpact team."
   },
   {
     "objectID": "index.html",
@@ -81,7 +81,7 @@
     "href": "stuff.html",
     "title": "Stuff",
     "section": "",
-    "text": "Clinical Trial Design Workbench — a free, open practice environment for group sequential and adaptive trial design, built on the rpact R package. Guided chapters, a worked example behind every feature, and the reproducing R code under every result. Open the app or follow the tutorial.\nSingleBell — a kettlebell practice app for iOS. One bell, the day’s practice dealt each morning, and nothing that collects anything about you."
+    "text": "Clinical Trial Design Workbench — a free, open practice environment for group sequential and adaptive trial design, built on the rpact R package. Guided chapters, a worked example behind every feature, and the reproducing R code under every result. Still a work in progress, and growing. Open the app or follow the tutorial.\nSingleBell — a kettlebell practice app for iOS. One bell, the day’s practice dealt each morning, and nothing that collects anything about you."
   },
   {
     "objectID": "cv.html",
