@@ -1,5 +1,89 @@
 [
   {
+    "objectID": "workbench.html",
+    "href": "workbench.html",
+    "title": "Clinical Trial Design Workbench",
+    "section": "",
+    "text": "Open the workbench Follow the tutorial Quick-start guide Source on GitHub\nThe workbench is a place to learn trial design by doing it. It is built for statisticians who are new to the field, and it teaches the way people actually learn: start with the question every trial begins with — how many patients? — then power, then the step up to designs with interim looks.\nNothing is hidden behind the interface. Every form mirrors the rpact R package’s own functions, and every result is shown with the exact R code that reproduces it, so what you learn in the app transfers directly to your own scripts."
+  },
+  {
+    "objectID": "workbench.html#whats-inside",
+    "href": "workbench.html#whats-inside",
+    "title": "Clinical Trial Design Workbench",
+    "section": "What’s inside",
+    "text": "What’s inside\nEvery rpact function family has an interface, organised the way the work is actually done.\nDesign — group sequential boundaries: O’Brien–Fleming, Pocock, Haybittle–Peto, alpha-spending families, and the characteristics and plots that let you read what a boundary costs.\nSample size & power — means, rates, and survival endpoints; survival planning with accrual and follow-up; and the conversion calculators that turn medians into hazard rates and back.\nSimulation — check a design’s operating characteristics by simulation before you trust them, including multi-arm and population-enrichment designs.\nAnalysis — enter interim data and monitor a running trial: stage results, test actions, conditional power, repeated confidence intervals, and the final inference once a boundary is crossed.\nCompare — put two saved designs side by side and see where they differ.\nAnything you compute can be saved, carried into the next calculation, exported as an HTML report, or written to a session file and restored later."
+  },
+  {
+    "objectID": "workbench.html#learn-by-doing",
+    "href": "workbench.html#learn-by-doing",
+    "title": "Clinical Trial Design Workbench",
+    "section": "Learn by doing",
+    "text": "Learn by doing\nThe Start tab holds eight guided chapters that seed the objects the rest of the app builds on. Behind them sit 64 worked examples across 58 functions — every feature in the app has at least one example you can load with a click, run, and then bend: each one ends with a “try changing this” prompt and an interpretation of what the numbers mean.\nThe tutorial turns those examples into a follow-along course. Each exercise names what to load, what numbers to expect, and what to try next; the numbers quoted are verified against rpact 4.4.0. It closes with a capstone that designs, simulates, and analyses an anti-hypertensive trial end to end. If you only want your bearings, the shorter quick-start guide covers the layout and the first calculation."
+  },
+  {
+    "objectID": "workbench.html#what-it-is-and-isnt",
+    "href": "workbench.html#what-it-is-and-isnt",
+    "title": "Clinical Trial Design Workbench",
+    "section": "What it is, and isn’t",
+    "text": "What it is, and isn’t\nThe workbench is a teaching tool. It is free, open source (LGPL-3), and runs entirely on the rpact package — the validated, widely used R implementation of confirmatory adaptive trial methodology by Gernot Wassmer and Friedrich Pahlke. All of the statistical machinery is theirs; the workbench only sets a table for learning it. It is not a validated GxP system, and a design headed for a protocol should be reproduced in rpact itself — which is exactly what the R code under every result is for.\nThe workbench is a personal open-source project and is not affiliated with my employer or with the rpact team."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Abhishek Bhattacharjee, PhD",
+    "section": "",
+    "text": "Abhishek Bhattacharjee, PhD\nBiostatistics leader — clinical development strategy, regulatory science, real-world evidence.\n\nGoogle Scholar GitHub LinkedIn\n\n\n\nI’m Associate Director, Biostatistics at Pfizer in Chennai, on the Data Science & Analytics India leadership team, where I lead a team of statisticians across global Inflammation & Immunology development programs.\nMy current work sits in I&I, but oncology is where I built my regulatory foundation. Before Pfizer I was a primary statistical reviewer at the FDA’s Oncology Center of Excellence, assessing NDA and BLA submissions across gastric and gastroesophageal cancers, cholangiocarcinoma and other solid tumors, and leading sponsor–agency interactions and labelling negotiations. At Pfizer I served as trial statistician on targeted-therapy programs in non-small cell lung cancer and melanoma.\nWhat holds my attention now are the methods that change what a development program can learn — real-world evidence and target trial emulation, external control cohorts, endpoint consolidation, real-time trial monitoring. I worked on one of the FDA’s early evaluations of non-traditional evidence through the review of a pediatric neuroblastoma program, and I’m building that capability at Pfizer now.\nEarlier: a PhD in Statistics from the University of Florida, and two years teaching as a tenure-track assistant professor.\nAway from work I build things for iOS. SingleBell is a kettlebell practice app: one bell, the day’s practice dealt each morning, and nothing that collects anything about you.\nViews on this site are my own and do not represent my employer."
+  },
+  {
+    "objectID": "singlebell.html",
+    "href": "singlebell.html",
+    "title": "SingleBell",
+    "section": "",
+    "text": "A kettlebell practice app for iOS. One bell, eight ready-made protocols, and a builder for your own sessions.\nComing to the App Store\nSingleBell is a slate, written on in chalk. It gives you one practice for the day, counts it with you, and gets out of the way.\nNative SwiftUI. No dependencies. No network code. No account."
+  },
+  {
+    "objectID": "singlebell.html#what-it-does",
+    "href": "singlebell.html#what-it-does",
+    "title": "SingleBell",
+    "section": "What it does",
+    "text": "What it does\nThe day’s practice. One card each morning, dealt from the week’s shape and what you have already done — clean and press, one-arm swings, snatches — with its warm-up, complex and finisher chalked on the board and an honest estimate of what it costs. Choose short or standard. The day is dealt once and holds until midnight; finishing it resolves the card in place rather than moving it under your feet.\nA reference. Every move has a sheet — how it’s done, what it’s for, the cues that matter. The get-up is never dealt to you automatically, because it is a skill before it is a set.\nOn the Lock Screen. A running practice shows its round and its clock without unlocking the phone. A home-screen widget carries the week’s tally."
+  },
+  {
+    "objectID": "singlebell.html#the-classics",
+    "href": "singlebell.html#the-classics",
+    "title": "SingleBell",
+    "section": "The classics",
+    "text": "The classics\nThe protocols the kettlebell world already runs, each credited on its own board and adjustable before you start.\n\n\n\n\nEach classic carries its source\n\n\n\nSimple & Sinister — 100 swings, then 10 get-ups. Ten sets of ten on the minute, then one get-up a minute for ten. Pavel Tsatsouline.\nThe Quick and the Dead — power in short bursts with generous rest: swings and power push-ups, or snatches alone, chosen on the board. Pavel Tsatsouline.\nRite of Passage — ladders of one-arm clean & press, one to five a side, pull-ups between rungs. Own pace, no clock. Pavel Tsatsouline, Enter the Kettlebell.\nKettlebell AXE — one heavy bell, four hand-to-hand swings on the minute, twenty minutes. Pavel Tsatsouline.\nArmor Building Complex — clean and press, swing across, press the other side, squat. The lead side swaps every minute. Dan John.\nHumane Burpee — swings hold at fifteen every set while squats and push-ups ladder down to one. Pick five sets or ten. Dan John.\nAdvanced Minimalist — snatches alone, two minutes on and two off, with the series and rep scheme rolled fresh. Pavel Tsatsouline, The Quick and the Dead.\nEach one can be re-paced on the slate before it starts: run Simple & Sinister on the minute or at your own pace, swap the get-up out if you haven’t learned it yet, run Quick and the Dead as snatches alone, tighten the Axe to every thirty seconds, choose the Humane Burpee’s set count."
+  },
+  {
+    "objectID": "singlebell.html#build-your-own",
+    "href": "singlebell.html#build-your-own",
+    "title": "SingleBell",
+    "section": "Build your own",
+    "text": "Build your own\n\n\n\n\nA block, its moves, and how the clock treats them\n\n\n\nThe builder has three rooms behind one control: on the clock, where the app counts the intervals; on the board, the same complex written up as a whiteboard where you count the sets; and plain intervals for work that isn’t a complex at all.\nSessions are made of blocks. A block is a complex — up to eight moves from any shelf of the catalog, in the order you chalk them, each with its own count. One lift on a clock is the special case, not the shape.\nEach block decides how the clock treats it: own pace, a timer on the whole block, or a timer on each move, with its own rest and its own number of rounds. Blocks reorder, collapse, and stack into a session as long as you need. Shuffle deals a fresh one to start from, and anything you build can be saved to Library and run again.\nA half-built session is still there when you come back to it."
+  },
+  {
+    "objectID": "singlebell.html#what-it-deliberately-doesnt-do",
+    "href": "singlebell.html#what-it-deliberately-doesnt-do",
+    "title": "SingleBell",
+    "section": "What it deliberately doesn’t do",
+    "text": "What it deliberately doesn’t do\nNo streaks. No badges. No confetti. No charts or stat dashboards. No social feed, no followers, no sharing. No account. No ads. No motivational copy, and not one exclamation mark anywhere in the app.\nThe absence is the point. A practice you keep is not one you were nagged into."
+  },
+  {
+    "objectID": "singlebell.html#privacy",
+    "href": "singlebell.html#privacy",
+    "title": "SingleBell",
+    "section": "Privacy",
+    "text": "Privacy\nEffective 28 August 2026.\nSingleBell collects nothing. Not anonymised, not aggregated, not “to improve the experience”. Nothing. The rest of this section is only the detail behind that sentence.\n\nNothing leaves your phone\nThe app contains no networking code at all. It does not connect to a server, because there is no server. There is no account to create, nothing to sign in to, and no way for me — or anyone else — to see that you use the app, let alone what you do in it.\nThere are no analytics, no crash reporters, no advertising identifiers, no attribution frameworks, and no third-party SDKs of any kind.\n\n\nIt asks you for nothing\nSingleBell requests no permissions. Not your location, contacts, photos, calendar, microphone, camera, or Health data. It is not integrated with HealthKit. You will never see a permission prompt, because the app declares none.\nThe coach’s voice is your device’s built-in speech synthesis — sound going out, never sound coming in. Nothing is recorded and nothing is listened to. The app keeps audio running in the background for one reason: so the count keeps speaking when your screen locks mid-set.\nThe Lock Screen Live Activity is drawn on your device and updated by the app itself. It uses no push token and no notification server.\n\n\nWhat is stored, and where\nYour practice log, the sessions you save to Library, and your preferences are written to your device’s own storage, in a container shared only between SingleBell and its own widgets — that sharing is what lets the home-screen widget show this week’s tally. That container is on your phone and nowhere else.\nIf your phone backs itself up to iCloud or to a computer, that backup will include SingleBell’s data exactly as it includes every other app’s. Those backups are covered by Apple’s privacy policy, not by this one.\n\n\nDeleting it\nDelete the app and everything goes with it. There is no copy held anywhere else and nothing to request from me, because I never had it in the first place.\n\n\nChildren\nNo data is collected from anyone, of any age.\n\n\nChanges\nIf any of this ever stops being true, this page will say so before the version that changes it ships, and the date above will change.\n\n\nContact\nQuestions about this policy, or about the app: absk.bhtt@gmail.com. The same address is where to send a bug or a request."
+  },
+  {
+    "objectID": "stuff.html",
+    "href": "stuff.html",
+    "title": "Stuff",
+    "section": "",
+    "text": "Clinical Trial Design Workbench — a free, open practice environment for group sequential and adaptive trial design, built on the rpact R package. Guided chapters, a worked example behind every feature, and the reproducing R code under every result. Open the app or follow the tutorial.\nSingleBell — a kettlebell practice app for iOS. One bell, the day’s practice dealt each morning, and nothing that collects anything about you."
+  },
+  {
     "objectID": "cv.html",
     "href": "cv.html",
     "title": "Curriculum Vitae",
@@ -61,61 +145,5 @@
     "title": "Curriculum Vitae",
     "section": "Publications",
     "text": "Publications\n15 peer-reviewed journal articles · 315 citations (as of July 2026) · Google Scholar\n\n2026\n\nDubinsky MC, Cohen ER, Irving PM, … Bhattacharjee A, et al. Bowel urgency in ulcerative colitis is associated with clinical endpoints, health-related quality of life, and biomarkers: data from the etrasimod ELEVATE UC 52 trial. Crohn’s & Colitis 360. 2026;otag072.\nMakgoeng SB, Gamalo M, Russo LJ, Pradhan V, Bhattacharjee A, Bhosale N. Data-driven trial design: use of target trial emulation to evaluate eligibility criteria in asthma and COPD. Frontiers in Medicine. 2026;13:1863026.\n\n\n\n2025\n\nArmuzzi A, Rubin DT, Schreiber S, … Bhattacharjee A, et al. Health-related quality of life outcomes with etrasimod treatment in patients with ulcerative colitis: a post hoc analysis of data from ELEVATE UC 52 and ELEVATE UC 12. Inflammatory Bowel Diseases. 2025;31(6):1583–1594.\nJairath V, Rubin DT, Verstockt B, … Bhattacharjee A, et al. The effect of etrasimod on fecal calprotectin and high-sensitivity C-reactive protein: results from the ELEVATE UC clinical program. Inflammatory Bowel Diseases. 2025;31(4):923–934.\nMagro F, Peyrin-Biroulet L, Sands BE, … Bhattacharjee A, et al. Endoscopic, histologic, and composite endpoints in patients with ulcerative colitis treated with etrasimod. Clinical Gastroenterology and Hepatology. 2025;23(2):341–350.\nAfzali A, Regueiro M, Yarur AJ, … Bhattacharjee A, et al. Concomitant use of etrasimod with opioids or antidepressants in patients with ulcerative colitis — a safety analysis. United European Gastroenterology Journal. 2025;13(5):719–727.\n\n\n\n2024\n\nRegueiro M, Siegmund B, Yarur AJ, … Bhattacharjee A, et al. Etrasimod for the treatment of ulcerative colitis: analysis of infection events from the ELEVATE UC clinical programme. Journal of Crohn’s and Colitis. 2024;18(10):1596–1605.\n\n\n\n2021 and earlier\n\nImerci A, Rogers KJ, Bhattacharjee A, Bowen JR, Thacker MM. Risk factors for failure of Pavlik harness treatment in infants with dislocated hips evaluated by dynamic sonography. Journal of Pediatric Orthopaedics. 2021;41(6):e386–e391.\nChatterjee N, Nair PKR, Nair VD, Viswanath S, Bhattacharjee A. Depth-wise distribution of soil-carbon stock in aggregate-sized fractions under shaded-perennial agroforestry systems in the Western Ghats of Karnataka, India. Agroforestry Systems. 2020;94(2):341–358.\nAlharash H, Hossain MJ, Bhattacharjee A, Levenbrown Y. Use of pulse contour technology for continuous blood pressure monitoring in pediatric patients. Blood Pressure Monitoring. 2020;25(5):278–284.\nChatterjee N, Nair PKR, Nair VD, Bhattacharjee A, et al. Do coffee agroforestry systems always improve soil carbon stocks deeper in the soil? A case study from Turrialba, Costa Rica. Forests. 2019;11(1):49.\nYing W, Bhattacharjee A, Wu SS. Effect of laser acupuncture on mitigating anxiety in acute stressed horses: a randomized, controlled study. American Journal of Traditional Chinese Veterinary Medicine. 2019;14(1).\nBhattacharjee A, Ghosh M. Bias-corrected empirical Bayes confidence intervals for the selected mean. Communications in Statistics — Theory and Methods. 2019;48(3):583–595.\nAhn H, Woods AJ, Kunik ME, … Bhattacharjee A, et al. Efficacy of transcranial direct current stimulation over primary motor cortex and contralateral supraorbital area on clinical pain severity and mobility performance in persons with knee osteoarthritis: a randomized, sham-controlled pilot study. Brain Stimulation. 2017;10(5):902–909.\nWu SS, Chen S, Bhattacharjee A, He Y. Collusion-resistant multi-matrix masking for privacy-preserving data collection. 2017 IEEE 3rd International Conference on Big Data Security on Cloud (BigDataSecurity). 2017:1–7."
-  },
-  {
-    "objectID": "stuff.html",
-    "href": "stuff.html",
-    "title": "Stuff",
-    "section": "",
-    "text": "Nothing here yet."
-  },
-  {
-    "objectID": "singlebell.html",
-    "href": "singlebell.html",
-    "title": "SingleBell",
-    "section": "",
-    "text": "A kettlebell practice app for iOS. One bell, eight ready-made protocols, and a builder for your own sessions.\nComing to the App Store\nSingleBell is a slate, written on in chalk. It gives you one practice for the day, counts it with you, and gets out of the way.\nNative SwiftUI. No dependencies. No network code. No account."
-  },
-  {
-    "objectID": "singlebell.html#what-it-does",
-    "href": "singlebell.html#what-it-does",
-    "title": "SingleBell",
-    "section": "What it does",
-    "text": "What it does\nThe day’s practice. One card each morning, dealt from the week’s shape and what you have already done — clean and press, one-arm swings, snatches — with its warm-up, complex and finisher chalked on the board and an honest estimate of what it costs. Choose short or standard. The day is dealt once and holds until midnight; finishing it resolves the card in place rather than moving it under your feet.\nA reference. Every move has a sheet — how it’s done, what it’s for, the cues that matter. The get-up is never dealt to you automatically, because it is a skill before it is a set.\nOn the Lock Screen. A running practice shows its round and its clock without unlocking the phone. A home-screen widget carries the week’s tally."
-  },
-  {
-    "objectID": "singlebell.html#the-classics",
-    "href": "singlebell.html#the-classics",
-    "title": "SingleBell",
-    "section": "The classics",
-    "text": "The classics\nThe protocols the kettlebell world already runs, each credited on its own board and adjustable before you start.\n\n\n\n\nEach classic carries its source\n\n\n\nSimple & Sinister — 100 swings, then 10 get-ups. Ten sets of ten on the minute, then one get-up a minute for ten. Pavel Tsatsouline.\nThe Quick and the Dead — power in short bursts with generous rest: swings and power push-ups, or snatches alone, chosen on the board. Pavel Tsatsouline.\nRite of Passage — ladders of one-arm clean & press, one to five a side, pull-ups between rungs. Own pace, no clock. Pavel Tsatsouline, Enter the Kettlebell.\nKettlebell AXE — one heavy bell, four hand-to-hand swings on the minute, twenty minutes. Pavel Tsatsouline.\nArmor Building Complex — clean and press, swing across, press the other side, squat. The lead side swaps every minute. Dan John.\nHumane Burpee — swings hold at fifteen every set while squats and push-ups ladder down to one. Pick five sets or ten. Dan John.\nAdvanced Minimalist — snatches alone, two minutes on and two off, with the series and rep scheme rolled fresh. Pavel Tsatsouline, The Quick and the Dead.\nEach one can be re-paced on the slate before it starts: run Simple & Sinister on the minute or at your own pace, swap the get-up out if you haven’t learned it yet, run Quick and the Dead as snatches alone, tighten the Axe to every thirty seconds, choose the Humane Burpee’s set count."
-  },
-  {
-    "objectID": "singlebell.html#build-your-own",
-    "href": "singlebell.html#build-your-own",
-    "title": "SingleBell",
-    "section": "Build your own",
-    "text": "Build your own\n\n\n\n\nA block, its moves, and how the clock treats them\n\n\n\nThe builder has three rooms behind one control: on the clock, where the app counts the intervals; on the board, the same complex written up as a whiteboard where you count the sets; and plain intervals for work that isn’t a complex at all.\nSessions are made of blocks. A block is a complex — up to eight moves from any shelf of the catalog, in the order you chalk them, each with its own count. One lift on a clock is the special case, not the shape.\nEach block decides how the clock treats it: own pace, a timer on the whole block, or a timer on each move, with its own rest and its own number of rounds. Blocks reorder, collapse, and stack into a session as long as you need. Shuffle deals a fresh one to start from, and anything you build can be saved to Library and run again.\nA half-built session is still there when you come back to it."
-  },
-  {
-    "objectID": "singlebell.html#what-it-deliberately-doesnt-do",
-    "href": "singlebell.html#what-it-deliberately-doesnt-do",
-    "title": "SingleBell",
-    "section": "What it deliberately doesn’t do",
-    "text": "What it deliberately doesn’t do\nNo streaks. No badges. No confetti. No charts or stat dashboards. No social feed, no followers, no sharing. No account. No ads. No motivational copy, and not one exclamation mark anywhere in the app.\nThe absence is the point. A practice you keep is not one you were nagged into."
-  },
-  {
-    "objectID": "singlebell.html#privacy",
-    "href": "singlebell.html#privacy",
-    "title": "SingleBell",
-    "section": "Privacy",
-    "text": "Privacy\nEffective 28 August 2026.\nSingleBell collects nothing. Not anonymised, not aggregated, not “to improve the experience”. Nothing. The rest of this section is only the detail behind that sentence.\n\nNothing leaves your phone\nThe app contains no networking code at all. It does not connect to a server, because there is no server. There is no account to create, nothing to sign in to, and no way for me — or anyone else — to see that you use the app, let alone what you do in it.\nThere are no analytics, no crash reporters, no advertising identifiers, no attribution frameworks, and no third-party SDKs of any kind.\n\n\nIt asks you for nothing\nSingleBell requests no permissions. Not your location, contacts, photos, calendar, microphone, camera, or Health data. It is not integrated with HealthKit. You will never see a permission prompt, because the app declares none.\nThe coach’s voice is your device’s built-in speech synthesis — sound going out, never sound coming in. Nothing is recorded and nothing is listened to. The app keeps audio running in the background for one reason: so the count keeps speaking when your screen locks mid-set.\nThe Lock Screen Live Activity is drawn on your device and updated by the app itself. It uses no push token and no notification server.\n\n\nWhat is stored, and where\nYour practice log, the sessions you save to Library, and your preferences are written to your device’s own storage, in a container shared only between SingleBell and its own widgets — that sharing is what lets the home-screen widget show this week’s tally. That container is on your phone and nowhere else.\nIf your phone backs itself up to iCloud or to a computer, that backup will include SingleBell’s data exactly as it includes every other app’s. Those backups are covered by Apple’s privacy policy, not by this one.\n\n\nDeleting it\nDelete the app and everything goes with it. There is no copy held anywhere else and nothing to request from me, because I never had it in the first place.\n\n\nChildren\nNo data is collected from anyone, of any age.\n\n\nChanges\nIf any of this ever stops being true, this page will say so before the version that changes it ships, and the date above will change.\n\n\nContact\nQuestions about this policy, or about the app: absk.bhtt@gmail.com. The same address is where to send a bug or a request."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Abhishek Bhattacharjee, PhD",
-    "section": "",
-    "text": "Abhishek Bhattacharjee, PhD\nBiostatistics leader — clinical development strategy, regulatory science, real-world evidence.\n\nGoogle Scholar GitHub LinkedIn\n\n\n\nI’m Associate Director, Biostatistics at Pfizer in Chennai, on the Data Science & Analytics India leadership team, where I lead a team of statisticians across global Inflammation & Immunology development programs.\nMy current work sits in I&I, but oncology is where I built my regulatory foundation. Before Pfizer I was a primary statistical reviewer at the FDA’s Oncology Center of Excellence, assessing NDA and BLA submissions across gastric and gastroesophageal cancers, cholangiocarcinoma and other solid tumors, and leading sponsor–agency interactions and labelling negotiations. At Pfizer I served as trial statistician on targeted-therapy programs in non-small cell lung cancer and melanoma.\nWhat holds my attention now are the methods that change what a development program can learn — real-world evidence and target trial emulation, external control cohorts, endpoint consolidation, real-time trial monitoring. I worked on one of the FDA’s early evaluations of non-traditional evidence through the review of a pediatric neuroblastoma program, and I’m building that capability at Pfizer now.\nEarlier: a PhD in Statistics from the University of Florida, and two years teaching as a tenure-track assistant professor.\nAway from work I build things for iOS. SingleBell is a kettlebell practice app: one bell, the day’s practice dealt each morning, and nothing that collects anything about you.\nViews on this site are my own and do not represent my employer."
   }
 ]

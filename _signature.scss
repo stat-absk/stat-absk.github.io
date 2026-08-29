@@ -524,6 +524,28 @@ h2 { clear: both; }
   .shot-right { float: none; margin: var(--space-l) 0; }
 }
 
+// A browser window is a wide whole: it keeps its edge at the whole's radius,
+// full measure, with its caption set quietly beneath.
+.wide-shot {
+  margin: var(--space-xl) 0 var(--space-xxl);
+
+  figure { margin: 0; }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-part);
+    border: 1px solid $rule;
+  }
+
+  figcaption {
+    margin-top: var(--space-s);
+    font-size: $size-caption;
+    color: $ink3;
+    line-height: 1.4;
+  }
+}
+
 // A name is set in the serif, as the app sets names — never in bold.
 .name {
   font-family: $font-family-serif;

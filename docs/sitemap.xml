@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://stat-absk.github.io/cv.html</loc>
-    <lastmod>2026-08-28T13:49:25.756Z</lastmod>
+    <loc>https://stat-absk.github.io/workbench.html</loc>
+    <lastmod>2026-08-29T07:46:44.277Z</lastmod>
   </url>
   <url>
-    <loc>https://stat-absk.github.io/stuff.html</loc>
-    <lastmod>2026-08-28T12:34:21.153Z</lastmod>
+    <loc>https://stat-absk.github.io/index.html</loc>
+    <lastmod>2026-08-28T15:01:01.296Z</lastmod>
   </url>
   <url>
     <loc>https://stat-absk.github.io/singlebell.html</loc>
     <lastmod>2026-08-28T15:00:16.534Z</lastmod>
   </url>
   <url>
-    <loc>https://stat-absk.github.io/index.html</loc>
-    <lastmod>2026-08-28T15:01:01.296Z</lastmod>
+    <loc>https://stat-absk.github.io/stuff.html</loc>
+    <lastmod>2026-08-29T07:46:47.254Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stat-absk.github.io/cv.html</loc>
+    <lastmod>2026-08-28T13:49:25.756Z</lastmod>
   </url>
 </urlset>

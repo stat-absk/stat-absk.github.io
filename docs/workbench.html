@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Biostatistics leader — clinical development strategy, regulatory science, real-world evidence">
+<meta name="description" content="The Clinical Trial Design Workbench is a free, open-source Shiny app for learning group sequential and adaptive clinical trial design with rpact — guided chapters, 64 worked examples, and a follow-along tutorial.">
 
-<title>Abhishek Bhattacharjee, PhD – Abhishek Bhattacharjee</title>
+<title>Clinical Trial Design Workbench – Abhishek Bhattacharjee</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -80,17 +80,21 @@ ul.task-list li input[type="checkbox"] {
 <meta name="theme-color" content="#0E1412">   <!-- mobile chrome matches the ground -->
 
 
-<meta property="og:title" content="Abhishek Bhattacharjee, PhD">
-<meta property="og:description" content="Biostatistics leader — clinical development strategy, regulatory science, real-world evidence">
-<meta property="og:image" content="https://stat-absk.github.io/images/profile.jpg">
+<meta property="og:title" content="Clinical Trial Design Workbench">
+<meta property="og:description" content="A free, open practice environment for group sequential and adaptive trial design. Every screen mirrors the real rpact API, and every result shows the R code that produced it.">
+<meta property="og:image" content="https://stat-absk.github.io/images/workbench/start.png">
 <meta property="og:site_name" content="Abhishek Bhattacharjee">
-<meta name="twitter:title" content="Abhishek Bhattacharjee, PhD">
-<meta name="twitter:description" content="Biostatistics leader — clinical development strategy, regulatory science, real-world evidence">
-<meta name="twitter:image" content="https://stat-absk.github.io/images/profile.jpg">
+<meta property="og:image:height" content="900">
+<meta property="og:image:width" content="1440">
+<meta name="twitter:title" content="Clinical Trial Design Workbench">
+<meta name="twitter:description" content="A free, open practice environment for group sequential and adaptive trial design. Every screen mirrors the real rpact API, and every result shows the R code that produced it.">
+<meta name="twitter:image" content="https://stat-absk.github.io/images/workbench/start.png">
+<meta name="twitter:image-height" content="900">
+<meta name="twitter:image-width" content="1440">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -272,7 +276,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -312,34 +316,76 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#whats-inside" id="toc-whats-inside" class="nav-link active" data-scroll-target="#whats-inside">What’s inside</a></li>
+  <li><a href="#learn-by-doing" id="toc-learn-by-doing" class="nav-link" data-scroll-target="#learn-by-doing">Learn by doing</a></li>
+  <li><a href="#what-it-is-and-isnt" id="toc-what-it-is-and-isnt" class="nav-link" data-scroll-target="#what-it-is-and-isnt">What it is, and isn’t</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
 
-
-
-
-<div class="hero">
-<div class="hero-portrait">
-<p><img src="images/profile.jpg" class="img-fluid" alt="Portrait of Abhishek Bhattacharjee"></p>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Clinical Trial Design Workbench</h1>
+<p class="subtitle lead">A free, open practice environment for group sequential and adaptive trial design. Every screen mirrors the real rpact API, and every result shows the R code that produced it.</p>
 </div>
-<section id="abhishek-bhattacharjee-phd" class="level1 hero-name hero-text">
-<h1 class="hero-name">Abhishek Bhattacharjee, PhD</h1>
-<p><span class="hero-role">Biostatistics leader — clinical development strategy, regulatory science, real-world evidence.</span></p>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <div class="hero-links">
-<p><a href="https://scholar.google.com/citations?user=9LJsXtMAAAAJ&amp;hl=en">Google Scholar</a> <a href="https://github.com/stat-absk">GitHub</a> <a href="https://www.linkedin.com/in/stat-absk/">LinkedIn</a></p>
+<p><a href="https://stat-absk-ct-dashboard.share.connect.posit.cloud/">Open the workbench</a> <a href="https://github.com/stat-absk/CT_Dashboard/blob/main/TUTORIAL.md">Follow the tutorial</a> <a href="https://github.com/stat-absk/CT_Dashboard/blob/main/USER_GUIDE.md">Quick-start guide</a> <a href="https://github.com/stat-absk/CT_Dashboard">Source on GitHub</a></p>
 </div>
+<p>The workbench is a place to learn trial design by doing it. It is built for statisticians who are new to the field, and it teaches the way people actually learn: start with the question every trial begins with — how many patients? — then power, then the step up to designs with interim looks.</p>
+<p>Nothing is hidden behind the interface. Every form mirrors the <a href="https://www.rpact.org">rpact</a> R package’s own functions, and every result is shown with the exact R code that reproduces it, so what you learn in the app transfers directly to your own scripts.</p>
+<div class="wide-shot">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/workbench/start.png" class="img-fluid figure-img"></p>
+<figcaption>The Start tab: eight guided chapters, from a first sample size calculation to a first interim analysis</figcaption>
+</figure>
+</div>
+</div>
+<section id="whats-inside" class="level2">
+<h2 class="anchored" data-anchor-id="whats-inside">What’s inside</h2>
+<p>Every rpact function family has an interface, organised the way the work is actually done.</p>
+<p><span class="name">Design</span> — group sequential boundaries: O’Brien–Fleming, Pocock, Haybittle–Peto, alpha-spending families, and the characteristics and plots that let you read what a boundary costs.</p>
+<p><span class="name">Sample size &amp; power</span> — means, rates, and survival endpoints; survival planning with accrual and follow-up; and the conversion calculators that turn medians into hazard rates and back.</p>
+<p><span class="name">Simulation</span> — check a design’s operating characteristics by simulation before you trust them, including multi-arm and population-enrichment designs.</p>
+<p><span class="name">Analysis</span> — enter interim data and monitor a running trial: stage results, test actions, conditional power, repeated confidence intervals, and the final inference once a boundary is crossed.</p>
+<p><span class="name">Compare</span> — put two saved designs side by side and see where they differ.</p>
+<p>Anything you compute can be saved, carried into the next calculation, exported as an HTML report, or written to a session file and restored later.</p>
 </section>
-</div>
-<p>I’m Associate Director, Biostatistics at Pfizer in Chennai, on the Data Science &amp; Analytics India leadership team, where I lead a team of statisticians across global Inflammation &amp; Immunology development programs.</p>
-<p>My current work sits in I&amp;I, but oncology is where I built my regulatory foundation. Before Pfizer I was a primary statistical reviewer at the FDA’s Oncology Center of Excellence, assessing NDA and BLA submissions across gastric and gastroesophageal cancers, cholangiocarcinoma and other solid tumors, and leading sponsor–agency interactions and labelling negotiations. At Pfizer I served as trial statistician on targeted-therapy programs in non-small cell lung cancer and melanoma.</p>
-<p>What holds my attention now are the methods that change what a development program can learn — real-world evidence and target trial emulation, external control cohorts, endpoint consolidation, real-time trial monitoring. I worked on one of the FDA’s early evaluations of non-traditional evidence through the review of a pediatric neuroblastoma program, and I’m building that capability at Pfizer now.</p>
-<p>Earlier: a PhD in Statistics from the University of Florida, and two years teaching as a tenure-track assistant professor.</p>
-<p>Away from work I build things for iOS. <a href="./singlebell.html">SingleBell</a> is a kettlebell practice app: one bell, the day’s practice dealt each morning, and nothing that collects anything about you.</p>
-<p><span class="disclaimer">Views on this site are my own and do not represent my employer.</span></p>
+<section id="learn-by-doing" class="level2">
+<h2 class="anchored" data-anchor-id="learn-by-doing">Learn by doing</h2>
+<p>The Start tab holds eight guided chapters that seed the objects the rest of the app builds on. Behind them sit <strong>64 worked examples across 58 functions</strong> — every feature in the app has at least one example you can load with a click, run, and then bend: each one ends with a “try changing this” prompt and an interpretation of what the numbers mean.</p>
+<p>The <a href="https://github.com/stat-absk/CT_Dashboard/blob/main/TUTORIAL.md">tutorial</a> turns those examples into a follow-along course. Each exercise names what to load, what numbers to expect, and what to try next; the numbers quoted are verified against rpact 4.4.0. It closes with a capstone that designs, simulates, and analyses an anti-hypertensive trial end to end. If you only want your bearings, the shorter <a href="https://github.com/stat-absk/CT_Dashboard/blob/main/USER_GUIDE.md">quick-start guide</a> covers the layout and the first calculation.</p>
+</section>
+<section id="what-it-is-and-isnt" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-is-and-isnt">What it is, and isn’t</h2>
+<p>The workbench is a teaching tool. It is free, open source (<a href="https://github.com/stat-absk/CT_Dashboard/blob/main/LICENSE.md">LGPL-3</a>), and runs entirely on the <a href="https://www.rpact.org">rpact</a> package — the validated, widely used R implementation of confirmatory adaptive trial methodology by Gernot Wassmer and Friedrich Pahlke. All of the statistical machinery is theirs; the workbench only sets a table for learning it. It is not a validated GxP system, and a design headed for a protocol should be reproduced in rpact itself — which is exactly what the R code under every result is for.</p>
+<p><span class="disclaimer">The workbench is a personal open-source project and is not affiliated with my employer or with the rpact team.</span></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -784,7 +830,7 @@ ul.task-list li input[type="checkbox"] {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./workbench.html">
+    <a class="nav-link active" href="./workbench.html" aria-current="page">
 <p>Workbench</p>
 </a>
   </li>  
