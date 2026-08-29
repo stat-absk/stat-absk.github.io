@@ -59,6 +59,10 @@ differ.
 Anything you compute can be saved, carried into the next calculation, exported
 as an HTML report, or written to a session file and restored later.
 
+::: {.wide-shot}
+![A design under construction: rpact's own argument names on the left, the result and its boundary plot in the middle, and underneath, the exact R code that reproduces the whole thing](images/workbench/design.png)
+:::
+
 ## Learn by doing
 
 The Start tab is laid out as a course rather than a menu: eight guided
