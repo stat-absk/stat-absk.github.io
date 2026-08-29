@@ -28,13 +28,15 @@ shown with the exact R code that reproduces it, so what you learn in the app
 transfers directly to your own scripts.
 
 ::: {.wide-shot}
-![The Start tab: eight guided chapters, from a first sample size calculation to a first interim analysis](images/workbench/start.png)
+![The Start tab opens with the course contents: eight chapters in three parts, from a first sample size calculation to a first interim analysis](images/workbench/start.png)
 :::
 
 ## What's inside
 
 Every rpact function family has an interface, organised the way the work is
-actually done.
+actually done. Each one opens the same way — the phase of work it belongs
+to, what it does, and a line on when you would reach for it — so moving
+between them costs nothing.
 
 [Design]{.name} — group sequential boundaries: O'Brien–Fleming, Pocock,
 Haybittle–Peto, alpha-spending families, and the characteristics and plots
@@ -59,8 +61,12 @@ as an HTML report, or written to a session file and restored later.
 
 ## Learn by doing
 
-The Start tab holds eight guided chapters that seed the objects the rest of
-the app builds on. Behind them sit **64 worked examples across 58 functions**
+The Start tab is laid out as a course rather than a menu: eight guided
+chapters in three parts — sizing a fixed trial, designs that can stop early,
+and what to do when the formulas run out. Each chapter seeds the objects the
+next one needs, so none of them can dead-end, and the contents list at the
+top shows the whole arc before you start. Behind them sit
+**64 worked examples across 58 functions**
 — every feature in the app has at least one example you can load with a
 click, run, and then bend: each one ends with a "try changing this" prompt
 and an interpretation of what the numbers mean.
