@@ -23,30 +23,15 @@ toc: false
 :::
 :::
 
-I'm Associate Director, Biostatistics at Pfizer in Chennai, on the Data Science &
-Analytics India leadership team, where I lead a team of statisticians across
-global Inflammation & Immunology development programs.
+I'm Associate Director, Biostatistics at Pfizer in Chennai, where I lead a team
+of statisticians across different therapeutic areas to move the global portfolio
+ahead.
 
-My current work sits in I&I, but oncology is where I built my regulatory
-foundation. Before Pfizer I was a primary statistical reviewer at the FDA's
-Oncology Center of Excellence, assessing NDA and BLA submissions across gastric
-and gastroesophageal cancers, cholangiocarcinoma and other solid tumors, and
-leading sponsor–agency interactions and labelling negotiations. At Pfizer I served
-as trial statistician on targeted-therapy programs in non-small cell lung cancer
-and melanoma.
+Before this: primary statistical reviewer at the FDA's Oncology Center of
+Excellence. What holds my attention now are the methods that change what a
+development program can learn — real-world evidence, target trial emulation,
+external control cohorts. The details are in the [CV](cv.qmd).
 
-What holds my attention now are the methods that change what a development
-program can learn — real-world evidence and target trial emulation, external
-control cohorts, endpoint consolidation, real-time trial monitoring. I worked on
-one of the FDA's early evaluations of non-traditional evidence through the review
-of a pediatric neuroblastoma program, and I'm building that capability at Pfizer
-now.
-
-Earlier: a PhD in Statistics from the University of Florida, and two years
-teaching as a tenure-track assistant professor.
-
-Away from work I build things for iOS. [SingleBell](singlebell.qmd) is a kettlebell
-practice app: one bell, the day's practice dealt each morning, and nothing that
-collects anything about you.
+Away from work I [build things](singlebell.qmd), travel, photograph, and others.
 
 [Views on this site are my own and do not represent my employer.]{.disclaimer}
