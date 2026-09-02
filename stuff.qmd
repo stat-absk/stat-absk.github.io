@@ -12,7 +12,8 @@ Still a work in progress, and growing.
 [Open the app](https://stat-absk-ct-dashboard.share.connect.posit.cloud/) or
 [follow the tutorial](https://github.com/stat-absk/CT_Dashboard/blob/main/TUTORIAL.md).
 
-[Show every patient](slides/tufte-pharma.html) — Edward Tufte's ten rules for
+[Data visualizations based on Tufte's principles](slides/tufte-pharma.html)
+— Edward Tufte's ten rules for
 data graphics, demonstrated on the figures a clinical statistician actually
 makes: Kaplan-Meier plots, forest plots, lab profiles, spaghetti plots. A
 15-minute slide deck; the rules are side-by-side pairs, the junk version on
