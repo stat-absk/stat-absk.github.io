@@ -18,7 +18,8 @@ makes: Kaplan-Meier plots, forest plots, lab profiles, spaghetti plots. A
 15-minute slide deck; every rule is a side-by-side pair, the junk version on
 the left, the revised figure on the right, and the kill list is drawn the
 same way. All data simulated, built in R with Quarto and ggplot2.
-[Open the slides](slides/tufte-pharma.html).
+[Open the slides](slides/tufte-pharma.html) or
+[get the source](https://github.com/stat-absk/tufte-pharma).
 
 [SingleBell](singlebell.qmd) — a kettlebell practice app for iOS. One bell,
 the day's practice dealt each morning, and nothing that collects anything
