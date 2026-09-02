@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs          # GitHub Pages serves from main branch / docs folder
+  resources:
+    - slides/               # self-contained slide decks, copied as-is
   post-render:
     - post-render.R         # recreates docs/.nojekyll after each build
 
