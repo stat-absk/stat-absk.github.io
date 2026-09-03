@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="SingleBell is an iOS kettlebell app: the day’s practice dealt fresh each morning, classic protocols, and a builder for your own sessions. No account, no analytics, and no network code — it collects nothing.">
+<meta name="description" content="SingleBell is an iPhone kettlebell app: the day’s practice dealt fresh each morning, the classic protocols, a builder for your own sessions, and the running practice on your Lock Screen and Apple Watch. No account, no analytics, and no network code — it collects nothing.">
 
 <title>SingleBell – Abhishek Bhattacharjee</title>
 <style>
@@ -45,8 +45,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d425e9d334c5ce50f1b957389f860d54.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c78b40d9f5df6df7a40e2b2234583591.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-ce11ed70865798af6161b7b5b6f20ae6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-471ce7337ee73a4bacdaf0a4d66d6c41.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-78053d902bf79a24c77ee18768f21349.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -322,19 +322,26 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#what-it-does" id="toc-what-it-does" class="nav-link active" data-scroll-target="#what-it-does">What it does</a></li>
+  <li><a href="#the-practice-off-the-screen" id="toc-the-practice-off-the-screen" class="nav-link" data-scroll-target="#the-practice-off-the-screen">The practice off the screen</a></li>
+  <li><a href="#the-room" id="toc-the-room" class="nav-link" data-scroll-target="#the-room">The room</a></li>
   <li><a href="#the-classics" id="toc-the-classics" class="nav-link" data-scroll-target="#the-classics">The classics</a></li>
   <li><a href="#build-your-own" id="toc-build-your-own" class="nav-link" data-scroll-target="#build-your-own">Build your own</a></li>
+  <li><a href="#accessibility" id="toc-accessibility" class="nav-link" data-scroll-target="#accessibility">Accessibility</a></li>
   <li><a href="#what-it-deliberately-doesnt-do" id="toc-what-it-deliberately-doesnt-do" class="nav-link" data-scroll-target="#what-it-deliberately-doesnt-do">What it deliberately doesn’t do</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
   <li><a href="#privacy" id="toc-privacy" class="nav-link" data-scroll-target="#privacy">Privacy</a>
   <ul class="collapse">
   <li><a href="#nothing-leaves-your-phone" id="toc-nothing-leaves-your-phone" class="nav-link" data-scroll-target="#nothing-leaves-your-phone">Nothing leaves your phone</a></li>
   <li><a href="#it-asks-you-for-nothing" id="toc-it-asks-you-for-nothing" class="nav-link" data-scroll-target="#it-asks-you-for-nothing">It asks you for nothing</a></li>
   <li><a href="#what-is-stored-and-where" id="toc-what-is-stored-and-where" class="nav-link" data-scroll-target="#what-is-stored-and-where">What is stored, and where</a></li>
+  <li><a href="#the-practice-off-the-screen-1" id="toc-the-practice-off-the-screen-1" class="nav-link" data-scroll-target="#the-practice-off-the-screen-1">The practice off the screen</a></li>
+  <li><a href="#backups" id="toc-backups" class="nav-link" data-scroll-target="#backups">Backups</a></li>
   <li><a href="#deleting-it" id="toc-deleting-it" class="nav-link" data-scroll-target="#deleting-it">Deleting it</a></li>
   <li><a href="#children" id="toc-children" class="nav-link" data-scroll-target="#children">Children</a></li>
   <li><a href="#changes" id="toc-changes" class="nav-link" data-scroll-target="#changes">Changes</a></li>
   <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
   </ul></li>
+  <li><a href="#support" id="toc-support" class="nav-link" data-scroll-target="#support">Support</a></li>
   </ul>
 </nav>
     </div>
@@ -351,8 +358,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="singlebell" class="level1 sb-name sb-hero-text">
 <h1 class="sb-name">SingleBell</h1>
-<p><span class="sb-sub">A kettlebell practice app for iOS. One bell, eight ready-made protocols, and a builder for your own sessions.</span></p>
-<p><span class="pill">Coming to the App Store</span></p>
+<p><span class="sb-sub">A kettlebell practice app for iPhone. One bell, eight ready-made protocols, a builder for your own sessions — and the practice on your Lock Screen and your wrist while your hands are full.</span></p>
+<p><span class="pill">Coming to the App Store</span> <span class="pill">iPhone · iOS 18 or later</span></p>
 </section>
 </div>
 <p>SingleBell is a slate, written on in chalk. It gives you one practice for the day, counts it with you, and gets out of the way.</p>
@@ -361,7 +368,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/singlebell/home.png" class="img-fluid figure-img" data-group="shots"></p>
-<figcaption>The day’s practice, dealt fresh each morning</figcaption>
+<figcaption>Today’s Practice, dealt fresh each morning</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -373,15 +380,45 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/singlebell/clock-work.png" class="img-fluid figure-img" data-group="shots"></p>
-<figcaption>The clock counts, or you do</figcaption>
+<figcaption>The clock counts…</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/singlebell/board.png" class="img-fluid figure-img" data-group="shots"></p>
+<figcaption>…or you do</figcaption>
 </figure>
 </div>
 </div>
 <section id="what-it-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-does">What it does</h2>
-<p><strong>The day’s practice.</strong> One card each morning, dealt from the week’s shape and what you have already done — clean and press, one-arm swings, snatches — with its warm-up, complex and finisher chalked on the board and an honest estimate of what it costs. Choose short or standard. The day is dealt once and holds until midnight; finishing it resolves the card in place rather than moving it under your feet.</p>
-<p><strong>A reference.</strong> Every move has a sheet — how it’s done, what it’s for, the cues that matter. The get-up is never dealt to you automatically, because it is a skill before it is a set.</p>
-<p><strong>On the Lock Screen.</strong> A running practice shows its round and its clock without unlocking the phone. A home-screen widget carries the week’s tally.</p>
+<p><strong>Today’s Practice.</strong> One full board each morning, dealt from the shape of the week and from what you have already done: a warm-up, a kettlebell complex around the day’s lift — clean &amp; press, one-arm swings, or the snatch — and a bodyweight finisher, chalked on the board with an honest estimate of what it costs. Short is about twenty minutes, Standard about thirty-five. The lift you have practised least recently leads; a snatch day waits until you have logged a swing day; a weekend is a rest day only once the week has earned it. Tap Light, Right or Heavy when you finish and the next board led by that lift adds or drops a set. The day is dealt once and holds until midnight — finishing it resolves the card in place rather than moving it under your feet.</p>
+<p><strong>Day one.</strong> New to the bell? Today opens on ten minutes of swings: three sets at your own pace, a minute between them, one form cue at a time, ending on how the swing is done.</p>
+<p><strong>The week, under the day.</strong> Seven tally strokes, filled for the days you practised, and behind them a practice calendar — a stroke under each day you trained, and the one word you gave it.</p>
+<p><strong>A reference.</strong> Every move in the app has a sheet — what it is, four cues, the mistakes to watch for — one tap from anywhere the move is named: the chalkboard, the board, the clock, the Builder. The get-up is never dealt to you automatically, because it is a skill before it is a set.</p>
+<p><strong>Library and Search.</strong> What you keep — the practices you saved, the last few you ran — and one field over everything the app knows, grouped as it finds it. Every hit opens the same chalkboard every card does.</p>
+</section>
+<section id="the-practice-off-the-screen" class="level2">
+<h2 class="anchored" data-anchor-id="the-practice-off-the-screen">The practice off the screen</h2>
+<div class="watch-shot">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/singlebell/wrist.png" class="img-fluid figure-img"></p>
+<figcaption>The same card, in the Smart Stack of a paired Apple Watch</figcaption>
+</figure>
+</div>
+</div>
+<p>A kettlebell practice starts with your hands empty and ends with them full, and the phone goes face-up on the floor. So the running practice leaves the screen.</p>
+<p><strong>On the Lock Screen and in the Dynamic Island.</strong> The phase in its own light, the clock, what you are doing, what comes next, and the two controls a set actually needs — Pause, and Skip or Set done — without unlocking the phone.</p>
+<p><strong>On your wrist.</strong> With an Apple Watch paired, the same card appears in the Smart Stack: the phase and the clock, the movement, Pause and Set done under a thumb that never leaves the wrist. Nothing runs on the watch — the phone draws the card and performs the press — so there is no second app to install and nothing to keep in sync. Needs watchOS 11.</p>
+<p><strong>On the home screen.</strong> Two widgets: today’s board, dealt by the same rule Today uses, and the week as seven strokes.</p>
+<p><strong>Without opening the app.</strong> <em>Start today’s practice</em>, <em>Start Simple &amp; Sinister</em>, <em>Pause</em> and <em>Resume</em> are there for Siri, Spotlight and the Action Button the moment the app is installed, with nothing to set up.</p>
+<p><strong>On the wall.</strong> Mirror the phone to a television and the practice gets a room drawn for that screen — the number at whatever size the set can carry, the movement under it, the phase in one corner — while the controls stay under your thumb on the phone.</p>
+</section>
+<section id="the-room" class="level2">
+<h2 class="anchored" data-anchor-id="the-room">The room</h2>
+<p>Only practices with a clock get the clock; a practice you count yourself gets a board with every set chalked on it from the start, filling in as you tap. Both are lit the same way: <strong>the whole room changes temperature with the phase</strong> — warm for work, cool for rest, neutral while you get ready or pause — so you can tell where you are from across the garage with the text blurred out. The digits are drawn to be read from the floor. Turn the phone on its side and the room turns with it.</p>
+<p>Beeps cut through music and keep going when the screen locks; a voice can name each block if you want it; your music plays at full volume underneath. The clock survives a phone call, or the app being closed, and picks up where it left off. The finish happens in place — <em>Put the bell down.</em> — with one optional question, and ending early asks first, on the slate, in the app’s own words.</p>
 </section>
 <section id="the-classics" class="level2">
 <h2 class="anchored" data-anchor-id="the-classics">The classics</h2>
@@ -401,6 +438,7 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="name">Armor Building Complex</span> — clean and press, swing across, press the other side, squat. The lead side swaps every minute. <em>Dan John.</em></p>
 <p><span class="name">Humane Burpee</span> — swings hold at fifteen every set while squats and push-ups ladder down to one. Pick five sets or ten. <em>Dan John.</em></p>
 <p><span class="name">Advanced Minimalist</span> — snatches alone, two minutes on and two off, with the series and rep scheme rolled fresh. <em>Pavel Tsatsouline, The Quick and the Dead.</em></p>
+<p><span class="name">The Simple &amp; Sinister Warm-up</span> — hip bridges, prying goblet squats, halos; three rounds. It opens Today’s Practice, and any practice can warm up first.</p>
 <p>Each one can be re-paced on the slate before it starts: run Simple &amp; Sinister on the minute or at your own pace, swap the get-up out if you haven’t learned it yet, run Quick and the Dead as snatches alone, tighten the Axe to every thirty seconds, choose the Humane Burpee’s set count.</p>
 </section>
 <section id="build-your-own" class="level2">
@@ -413,34 +451,56 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </div>
-<p>The builder has three rooms behind one control: <span class="name">on the clock</span>, where the app counts the intervals; <span class="name">on the board</span>, the same complex written up as a whiteboard where you count the sets; and plain <span class="name">intervals</span> for work that isn’t a complex at all.</p>
+<p>The Builder has three rooms behind one control: <span class="name">on the clock</span>, where the app counts the intervals; <span class="name">on the board</span>, the same complex written up as a whiteboard where you count the sets; and plain <span class="name">intervals</span> — work and rest in rounds, rounds in sets — for work that isn’t a complex at all.</p>
 <p>Sessions are made of blocks. A block is a complex — up to eight moves from any shelf of the catalog, in the order you chalk them, each with its own count. One lift on a clock is the special case, not the shape.</p>
-<p>Each block decides how the clock treats it: own pace, a timer on the whole block, or a timer on each move, with its own rest and its own number of rounds. Blocks reorder, collapse, and stack into a session as long as you need. Shuffle deals a fresh one to start from, and anything you build can be saved to Library and run again.</p>
+<p>Each block decides how the clock treats it: own pace, a timer on the whole block (Tabata, EMOM, AMRAP), or a timer on each move as stations, with its own rest and its own number of rounds. Every number is dialled, not picked off a list. Blocks reorder, collapse, and stack into a session as long as you need. Shuffle deals a fresh one to start from, and anything you build can be saved to Library and run again.</p>
 <p>A half-built session is still there when you come back to it.</p>
+</section>
+<section id="accessibility" class="level2">
+<h2 class="anchored" data-anchor-id="accessibility">Accessibility</h2>
+<p>Every line of type follows the text size you set, into the accessibility sizes, and nothing shrinks a label to fit. Reduce Motion turns the springs into one fade and the room’s light into a cut. Reduce Transparency gives the floating controls their opaque form. Increase Contrast firms the chalk; Bold Text is answered on every line. The app is a dark slate at every hour, by design — there is no light appearance to switch to.</p>
 </section>
 <section id="what-it-deliberately-doesnt-do" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-deliberately-doesnt-do">What it deliberately doesn’t do</h2>
 <p>No streaks. No badges. No confetti. No charts or stat dashboards. No social feed, no followers, no sharing. No account. No ads. No motivational copy, and not one exclamation mark anywhere in the app.</p>
 <p>The absence is the point. A practice you keep is not one you were nagged into.</p>
 </section>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
+<p>An iPhone on iOS 18 or later. The Smart Stack card needs an Apple Watch on watchOS 11, paired to that phone. There is no iPad version and no separate watch app.</p>
+</section>
 <section id="privacy" class="level2">
 <h2 class="anchored" data-anchor-id="privacy">Privacy</h2>
-<p><em>Effective 28 August 2026.</em></p>
+<p><em>Effective 3 September 2026.</em></p>
 <p><strong>SingleBell collects nothing.</strong> Not anonymised, not aggregated, not “to improve the experience”. Nothing. The rest of this section is only the detail behind that sentence.</p>
 <section id="nothing-leaves-your-phone" class="level3">
 <h3 class="anchored" data-anchor-id="nothing-leaves-your-phone">Nothing leaves your phone</h3>
 <p>The app contains no networking code at all. It does not connect to a server, because there is no server. There is no account to create, nothing to sign in to, and no way for me — or anyone else — to see that you use the app, let alone what you do in it.</p>
-<p>There are no analytics, no crash reporters, no advertising identifiers, no attribution frameworks, and no third-party SDKs of any kind.</p>
+<p>There are no analytics, no crash reporters, no advertising identifiers, no attribution frameworks, and no third-party SDKs of any kind. The only crash reports that exist are the ones Apple collects for every app, if you have opted in to sharing those with developers in your iOS settings.</p>
 </section>
 <section id="it-asks-you-for-nothing" class="level3">
 <h3 class="anchored" data-anchor-id="it-asks-you-for-nothing">It asks you for nothing</h3>
-<p>SingleBell requests no permissions. Not your location, contacts, photos, calendar, microphone, camera, or Health data. It is not integrated with HealthKit. You will never see a permission prompt, because the app declares none.</p>
+<p>SingleBell requests no permissions. Not your location, contacts, photos, calendar, microphone, camera, or Health data. It is not integrated with HealthKit. The app declares no permission that would produce a prompt. The one system question you may see is iOS asking, once, whether to allow Live Activities from SingleBell — that is the system’s question about its own Lock Screen, and answering No costs you only the card.</p>
 <p>The coach’s voice is your device’s built-in speech synthesis — sound going out, never sound coming in. Nothing is recorded and nothing is listened to. The app keeps audio running in the background for one reason: so the count keeps speaking when your screen locks mid-set.</p>
-<p>The Lock Screen Live Activity is drawn on your device and updated by the app itself. It uses no push token and no notification server.</p>
 </section>
 <section id="what-is-stored-and-where" class="level3">
 <h3 class="anchored" data-anchor-id="what-is-stored-and-where">What is stored, and where</h3>
-<p>Your practice log, the sessions you save to Library, and your preferences are written to your device’s own storage, in a container shared only between SingleBell and its own widgets — that sharing is what lets the home-screen widget show this week’s tally. That container is on your phone and nowhere else.</p>
+<p>Everything the app remembers is written to your phone’s own storage, in a container shared only between SingleBell and its own widgets — that sharing is what lets the home-screen widget show today’s board. That container is on your phone and nowhere else. It holds:</p>
+<ul>
+<li><strong>your settings</strong> — the sound switches and cue volume, whether you have a pull-up bar, whether practices warm up first, how long Today’s Practice runs, the get-ready count, and whether you have put the “Start here” card away;</li>
+<li><strong>your Library</strong> — the practices you chose to save, and any move you typed in yourself;</li>
+<li><strong>a list of the practices you finished, and when</strong> — which practice, the date, how long it took, and the one optional word from the closing screen, Light, Right or Heavy. It marks the practice calendar, lets a chalkboard say “last run 9 days ago”, and picks which lift Today’s Practice leads with. That is everything it is used for;</li>
+<li><strong>the last six practices you ran</strong>, so the Library can offer them again;</li>
+<li><strong>a practice in progress</strong>, so an app closed mid-workout can offer it back, forgotten within two hours or as soon as the practice ends; and the half-built board in the Builder, kept for the day it was written.</li>
+</ul>
+<p>What it does not keep: no times per set, no reps counted, no streaks, no personal bests, no bodyweight, no bell weight, no goals.</p>
+</section>
+<section id="the-practice-off-the-screen-1" class="level3">
+<h3 class="anchored" data-anchor-id="the-practice-off-the-screen-1">The practice off the screen</h3>
+<p>The Lock Screen card, the Dynamic Island and the Apple Watch card are one Live Activity, drawn on your phone by the app itself. It uses no push token and no notification server. iOS carries it to a paired watch the way it carries every Live Activity, over the pairing you already have; nothing runs on the watch, and the card disappears when the practice ends. Siri, Spotlight and the Action Button hand the app a request and nothing about how it was made. Mirroring to a television is done by iOS, over your own AirPlay connection or a cable — the app draws the second screen and still contains no network code.</p>
+</section>
+<section id="backups" class="level3">
+<h3 class="anchored" data-anchor-id="backups">Backups</h3>
 <p>If your phone backs itself up to iCloud or to a computer, that backup will include SingleBell’s data exactly as it includes every other app’s. Those backups are covered by Apple’s privacy policy, not by this one.</p>
 </section>
 <section id="deleting-it" class="level3">
@@ -457,10 +517,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="contact" class="level3">
 <h3 class="anchored" data-anchor-id="contact">Contact</h3>
-<p>Questions about this policy, or about the app: <a href="mailto:absk.bhtt@gmail.com">absk.bhtt@gmail.com</a>. The same address is where to send a bug or a request.</p>
-
-
+<p>Questions about this policy: <a href="mailto:absk.bhtt@gmail.com">absk.bhtt@gmail.com</a>.</p>
 </section>
+</section>
+<section id="support" class="level2">
+<h2 class="anchored" data-anchor-id="support">Support</h2>
+<p>SingleBell has no account and keeps nothing off your phone, so there is nothing for me to look up on your behalf — but a bug, a question or a request is welcome at <a href="mailto:absk.bhtt@gmail.com">absk.bhtt@gmail.com</a>.</p>
+<p>If it is a bug, the three things that help most are which iPhone and iOS version you are on, what you tapped, and what you expected to happen instead. A screenshot of the room says more than a paragraph. Nothing in a screenshot of SingleBell is personal to you beyond the practices you chose to run.</p>
+
+
 </section>
 
 </main> <!-- /main -->

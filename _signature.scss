@@ -517,11 +517,33 @@ $shot-width: 200px;
   }
 }
 
+// A watch face beside the prose about it. Narrower than a phone, and it keeps
+// its own proportions — the phone's aspect ratio would squash it — with a
+// corner near the watch's own glass.
+.watch-shot {
+  float: right;
+  width: 150px;
+  margin: 0 0 var(--space-l) var(--space-xl);
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 24%;
+    border: 1px solid $rule;
+  }
+  figcaption, p {
+    margin-top: var(--space-s);
+    font-size: $size-caption;
+    color: $ink3;
+    line-height: 1.4;
+  }
+}
+
 // A float must never run under the next section's heading or its rule.
 h2 { clear: both; }
 
 @media (max-width: 700px) {
-  .shot-right { float: none; margin: var(--space-l) 0; }
+  .shot-right, .watch-shot { float: none; margin: var(--space-l) 0; }
 }
 
 // A browser window is a wide whole: it keeps its edge at the whole's radius,
