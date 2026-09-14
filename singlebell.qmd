@@ -38,14 +38,17 @@ Native SwiftUI. No dependencies. No network code. No account.
 ## What it does
 
 **Today's Practice.** One full board each morning, dealt from the shape of the week and
-from what you have already done: a warm-up, a kettlebell complex around the day's lift —
-clean & press, one-arm swings, or the snatch — and a bodyweight finisher, chalked on the
-board with an honest estimate of what it costs. Short is about twenty minutes, Standard
-about thirty-five. The lift you have practised least recently leads; a snatch day waits
-until you have logged a swing day; a weekend is a rest day only once the week has earned
-it. Tap Light, Right or Heavy when you finish and the next board led by that lift adds or
-drops a set. The day is dealt once and holds until midnight — finishing it resolves the
-card in place rather than moving it under your feet.
+from what you have already done: a warm-up chosen for the day's lift, a kettlebell
+complex around that lift — clean & press, one-arm swings, or the snatch — and a
+bodyweight finisher, chalked on the board with an honest estimate of what it costs. Short
+is about twenty minutes, Standard about thirty-five. The lift you have practised least
+recently leads, and a snatch day waits until you have logged a swing day. Rest when you
+decide to: the app never declares a rest day, and the week under the card shows what it
+has had. Tap Light, Right or Heavy when you finish and the next board led by that lift
+adds or drops a set. The day is dealt once and holds until midnight — finishing it
+resolves the card in place rather than moving it under your feet. Either side of Start
+are two doors: open the day in the Builder and make it yours, or keep it in your Library
+as dealt.
 
 **Day one.** New to the bell? Today opens on ten minutes of swings: three sets at your
 own pace, a minute between them, one form cue at a time, ending on how the swing is done.
@@ -139,12 +142,21 @@ down to one. Pick five sets or ten. *Dan John.*
 and rep scheme rolled fresh. *Pavel Tsatsouline, The Quick and the Dead.*
 
 [The Simple & Sinister Warm-up]{.name} — hip bridges, prying goblet squats, halos; three
-rounds. It opens Today's Practice, and any practice can warm up first.
+rounds on the clock. The same three lines open Today's Practice, under one line chosen
+for the day's lift.
 
 Each one can be re-paced on the slate before it starts: run Simple & Sinister on the
 minute or at your own pace, swap the get-up out if you haven't learned it yet, run
-Quick and the Dead as snatches alone, tighten the Axe to every thirty seconds, choose
-the Humane Burpee's set count.
+Quick and the Dead as snatches alone, tighten the Axe to every thirty seconds, run the
+Complex for thirty minutes or on ninety-second rounds, choose the Humane Burpee's set
+count.
+
+**Warm up first.** Every board carries the switch, on until you turn it off. Simple &
+Sinister warms up on its own trio. Everything else takes a round dealt for what follows —
+the world's greatest stretch before anything that goes overhead, good mornings before
+swings, jumping jacks otherwise, the trio under it — for two rounds: each move its own
+station on the clock, or one block marked down with a tap on a board. Never more than
+seven minutes in front of a classic.
 
 ## Build your own
 
@@ -192,7 +204,7 @@ paired to that phone. There is no iPad version and no separate watch app.
 
 ## Privacy {#privacy}
 
-*Effective 3 September 2026.*
+*Effective 14 September 2026.*
 
 **SingleBell collects nothing.** Not anonymised, not aggregated, not "to improve the
 experience". Nothing. The rest of this section is only the detail behind that sentence.
@@ -230,7 +242,9 @@ It holds:
 
 - **your settings** — the sound switches and cue volume, whether you have a pull-up bar,
   whether practices warm up first, how long Today's Practice runs, the get-ready count,
-  and whether you have put the "Start here" card away;
+  how you last set up each classic on its board (Simple & Sinister's pace, the Rite's
+  pull, the Complex's clock), whether you have put the "Start here" card away, and
+  whether the app has explained "/side" to you once;
 - **your Library** — the practices you chose to save, and any move you typed in yourself;
 - **a list of the practices you finished, and when** — which practice, the date, how long
   it took, and the one optional word from the closing screen, Light, Right or Heavy. It
