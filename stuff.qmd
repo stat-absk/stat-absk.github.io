@@ -30,7 +30,8 @@ definitions and derived scores, floor and ceiling effects, and how age, CAG
 and time enter a model. Fifty slides, every code chunk in tidy R on small
 illustrative tables, no participant data. Built from the Enroll-HD
 documentation and the *Analyzing Data* articles at enroll-hd.org.
-[Open the slides](slides/enrollhd-getting-started.html).
+[Open the slides](slides/enrollhd-getting-started.html) or
+[get the source](https://github.com/stat-absk/enrollhd-getting-started).
 
 [SingleBell](singlebell.qmd) — a kettlebell practice app for iOS. One bell,
 the day's practice dealt each morning, and nothing that collects anything
