@@ -22,6 +22,16 @@ same way. All data simulated, built in R with Quarto and ggplot2.
 [Open the slides](slides/tufte-pharma.html) or
 [get the source](https://github.com/stat-absk/tufte-pharma).
 
+[Getting started with Enroll-HD data](slides/enrollhd-getting-started.html)
+— a tutorial for statisticians about to open an Enroll-HD periodic dataset
+for the first time: Huntington's disease in five minutes, how the eleven data
+files fit together, the de-identification conventions that bite, disease
+definitions and derived scores, floor and ceiling effects, and how age, CAG
+and time enter a model. Fifty slides, every code chunk in tidy R on small
+illustrative tables, no participant data. Built from the Enroll-HD
+documentation and the *Analyzing Data* articles at enroll-hd.org.
+[Open the slides](slides/enrollhd-getting-started.html).
+
 [SingleBell](singlebell.qmd) — a kettlebell practice app for iOS. One bell,
 the day's practice dealt each morning, and nothing that collects anything
 about you.
