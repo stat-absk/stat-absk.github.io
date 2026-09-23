@@ -243,19 +243,15 @@ main#quarto-document-content { max-width: none; }
 .hero-portrait { animation-delay: 120ms; }
 @for $i from 1 through 4 { .hero-latest > p:nth-child(#{$i}) { animation-delay: #{240ms + 50ms * $i}; } }
 
-// Other pages open with a masthead: the name low in the top of the screen,
-// and the first band already in view beneath it.
-.sb-hero { min-height: 40svh; align-content: end; margin: 0; padding-bottom: var(--space-xxl); box-sizing: border-box; }
+// Other pages open with their name at the top, a page name's worth of air
+// around it, and the content straight under it: no empty screen to cross.
+.sb-hero { margin: clamp(var(--space-xl), 5vh, 48px) 0 var(--space-xxl); }
 
 #title-block-header:not(:empty) {
-  min-height: 40svh;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-start;
-  margin: 0;
-  padding-bottom: var(--space-xxl);
+  margin: clamp(var(--space-xl), 5vh, 48px) 0 var(--space-xl);
   > * { width: 100%; }
 
   .title { font-size: clamp(2rem, 1.4rem + 3vw, 2.75rem); line-height: 1.06; letter-spacing: -0.022em; text-wrap: balance; }
@@ -292,7 +288,7 @@ main#quarto-document-content section.level2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
   gap: var(--space-xl);
-  margin: clamp(var(--space-xl), 5vh, 56px) 0;
+  margin: 0 0 clamp(var(--space-xl), 5vh, 56px);
 }
 .card {
   padding: var(--space-xl);
@@ -324,7 +320,6 @@ main#quarto-document-content section.level2 {
     .hero-text { order: 1; }
     .hero-latest { order: 2; grid-template-columns: 1fr; row-gap: var(--space-l); }
   }
-  .sb-hero, #title-block-header:not(:empty) { min-height: auto; padding-top: var(--space-xxl); }
   main#quarto-document-content section.level2 {
     grid-template-columns: 1fr;
     > h2 { grid-row: auto; position: static; margin-bottom: var(--space-l); }
