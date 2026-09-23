@@ -26,10 +26,12 @@ same way. All data simulated, built in R with Quarto and ggplot2.
 — a tutorial for statisticians about to open an Enroll-HD periodic dataset
 for the first time: Huntington's disease in five minutes, how the eleven data
 files fit together, the de-identification conventions that bite, disease
-definitions and derived scores, floor and ceiling effects, and how age, CAG
-and time enter a model. Fifty slides, every code chunk in tidy R on small
-illustrative tables, no participant data. Built from the Enroll-HD
-documentation and the *Analyzing Data* articles at enroll-hd.org.
+definitions and derived scores, floor and ceiling effects, how age, CAG
+and time enter a model, and a closing section on HDClarity, the CSF and
+blood study nested in Enroll-HD, with simulated releases for testing code
+before the data arrive. Sixty slides, every code chunk in tidy R on small
+illustrative tables, no participant data. Built from the public Enroll-HD
+and HDClarity documentation and the *Analyzing Data* articles at enroll-hd.org.
 [Open the slides](slides/enrollhd-getting-started.html) or
 [get the source](https://github.com/stat-absk/enrollhd-getting-started).
 

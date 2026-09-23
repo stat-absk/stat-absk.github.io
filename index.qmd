@@ -32,6 +32,6 @@ Excellence. What holds my attention now are the methods that change what a
 development program can learn — real-world evidence, target trial emulation,
 external control cohorts. The details are in the [CV](cv.qmd).
 
-Away from work I [build things](singlebell.qmd), travel, photograph, and others.
+Away from work I [build things](stuff.qmd), travel, photograph, and others.
 
 [Views on this site are my own and do not represent my employer.]{.disclaimer}
