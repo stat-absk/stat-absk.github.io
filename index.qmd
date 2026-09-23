@@ -15,25 +15,34 @@ toc: false
 
 [Biostatistics leader — clinical development strategy, regulatory science, real-world evidence.]{.hero-role}
 
+::: {.hero-now}
+Associate Director, Biostatistics at Pfizer in Chennai, leading a team of
+statisticians across therapeutic areas. Before this, primary statistical
+reviewer at the FDA's Oncology Center of Excellence. What holds my attention
+now are the methods that change what a development program can learn:
+real-world evidence, target trial emulation, external control cohorts.
+:::
+
 ::: {.hero-links}
+[Read the CV](cv.qmd){.primary}
 [Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en)
 [GitHub](https://github.com/stat-absk)
 [LinkedIn](https://www.linkedin.com/in/stat-absk/)
 :::
 :::
+
+::: {.hero-latest}
+[Clinical Trial Design Workbench](workbench.qmd)
+Practice group sequential and adaptive design on the real rpact API, with the reproducing R code under every result.
+
+[Enroll-HD for statisticians](slides/enrollhd-getting-started.html)
+Sixty slides on the periodic dataset, HDClarity and simulated releases for testing analysis code.
+
+[Tufte for pharma](slides/tufte-pharma.html)
+Ten rules for data graphics, shown on the figures a trial statistician actually makes.
+
+[Everything else, on Stuff →](stuff.qmd){.more}
 :::
-
-## Now
-
-I'm Associate Director, Biostatistics at Pfizer in Chennai, where I lead a team
-of statisticians across different therapeutic areas to move the global portfolio
-ahead.
-
-Before this: primary statistical reviewer at the FDA's Oncology Center of
-Excellence. What holds my attention now are the methods that change what a
-development program can learn — real-world evidence, target trial emulation,
-external control cohorts. The details are in the [CV](cv.qmd).
-
-Away from work I [build things](stuff.qmd), travel, photograph, and others.
+:::
 
 [Views on this site are my own and do not represent my employer.]{.disclaimer}
