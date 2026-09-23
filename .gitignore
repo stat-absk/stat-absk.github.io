@@ -12,6 +12,9 @@
 # macOS
 .DS_Store
 
+# Claude Code local tooling (preview server config)
+.claude/
+
 # Note: docs/ and _freeze/ ARE committed on purpose.
 # docs/  = the rendered site GitHub Pages serves
 # _freeze/ = cached R results so the site builds fast and reproducibly

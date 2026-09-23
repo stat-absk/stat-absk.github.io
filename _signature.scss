@@ -122,11 +122,30 @@ p { max-width: 46rem; }                 // the measure lives inside a band, not 
 }
 #quarto-header.has-hero.past-hero .navbar-title { opacity: 1; transform: none; }
 
+// The pages are the bar's whole job, so they read at card size and near-full
+// strength — quiet was costing them findability. The accent still means
+// "you are here", and now it draws the line as well as the word.
 .navbar .nav-link {
-  color: $ink2;
-  transition: color var(--snap) var(--ease);
-  &:hover { color: $ink; }
-  &.active { color: $accent; }     // the accent means "you are here" — a go
+  position: relative;
+  font-size: $size-card;
+  color: $ink;
+  opacity: 0.85;
+  transition: color var(--snap) var(--ease), opacity var(--snap) var(--ease);
+  &:hover { opacity: 1; }
+  &.active {
+    color: $accent;
+    opacity: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.5rem;
+      right: 0.5rem;
+      bottom: 2px;
+      height: 2px;
+      border-radius: 1px;
+      background: $accent;
+    }
+  }
 }
 
 // ── Response: feedback on press, not on release ────────────────────────────
@@ -194,7 +213,7 @@ main#quarto-document-content { max-width: none; }
 
   .hero-text     { grid-column: 1; grid-row: 1; align-self: center; }
   .hero-portrait { grid-column: 2; grid-row: 1; align-self: center; }
-  .hero-latest   { grid-column: 1 / -1; grid-row: 2; }
+  .site-map      { grid-column: 1 / -1; grid-row: 2; }
 }
 
 .hero-now {
@@ -209,17 +228,53 @@ main#quarto-document-content { max-width: none; }
 .hero-links a.primary { border-color: rgba($accent, 0.7); color: $accent; }
 .hero-links a.primary:hover { border-color: $accent; }
 
-// The latest things: a ruled row of three, each a name and one line.
-.hero-latest {
+// The ways in: every page of the site as a card at the hero's foot. A card
+// has an edge, a lift, and an arrow that arrives on hover — it reads as a
+// door, not a paragraph. The whole card is the target.
+.site-map {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
-  column-gap: $band-gap;
-  align-items: start;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-l);
   margin-top: var(--space-xxl);
   padding-top: var(--space-xl);
   border-top: 1.5px solid $rule;
+}
+
+.nav-card {
+  position: relative;
+  padding: var(--space-l) var(--space-xl) var(--space-xl);
+  border: 1px solid $rule;
+  border-radius: var(--radius-part);
+  background: rgba($surface, 0.55);
+  transition: border-color var(--snap) var(--ease), transform var(--snap) var(--ease);
 
   p { margin: 0; max-width: none; font-size: $size-caption; color: $ink3; line-height: 1.5; }
+
+  // The page's name, set as a name; its target stretches over the card.
+  p > a:first-child {
+    display: block;
+    font-family: $font-family-serif;
+    font-size: $size-section;
+    line-height: 1.25;
+    color: $ink;
+    margin-bottom: var(--space-xs);
+    text-decoration: none;
+    transition: color var(--snap) var(--ease);
+    &::before { content: ""; position: absolute; inset: 0; border-radius: var(--radius-part); }
+    &::after  { content: " →"; opacity: 0; transition: opacity var(--snap) var(--ease); }
+  }
+
+  &:hover {
+    border-color: rgba($writing, 0.28);
+    transform: translateY(-2px);
+    p > a:first-child { color: $accent; &::after { opacity: 1; } }
+  }
+  &:focus-within { border-color: $accent; }
+}
+
+// The Latest band: the newest things, each a name and one line.
+.latest {
+  p { max-width: none; margin: 0 0 var(--space-l); font-size: $size-caption; color: $ink3; line-height: 1.5; }
   p > a:first-child:not(.more) {
     display: block;
     font-family: $font-family-serif;
@@ -230,18 +285,19 @@ main#quarto-document-content { max-width: none; }
     text-decoration: none;
     &:hover { color: $accent; }
   }
-  .more { align-self: end; white-space: nowrap; color: $ink2; text-decoration: none; padding-top: 0.2em;
+  p:last-child { margin-bottom: 0; }
+  .more { color: $ink2; text-decoration: none; font-size: $size-caption;
           &:hover { color: $ink; } }
 }
 
 // Arrival: the pieces of the first screen settle in one after another, a
 // beat apart, and only once.
-.hero-text > *, .hero-portrait, .hero-latest > p {
+.hero-text > *, .hero-portrait, .site-map > .nav-card {
   animation: rise 420ms var(--ease) backwards;
 }
 @for $i from 1 through 6 { .hero-text > :nth-child(#{$i}) { animation-delay: #{40ms * $i}; } }
 .hero-portrait { animation-delay: 120ms; }
-@for $i from 1 through 4 { .hero-latest > p:nth-child(#{$i}) { animation-delay: #{240ms + 50ms * $i}; } }
+@for $i from 1 through 4 { .site-map > .nav-card:nth-child(#{$i}) { animation-delay: #{240ms + 50ms * $i}; } }
 
 // Other pages open with their name at the top, a page name's worth of air
 // around it, and the content straight under it: no empty screen to cross.
@@ -310,15 +366,20 @@ main#quarto-document-content section.level2 {
   }
 }
 
+// Four abreast needs room; between phone and full width the cards pair up.
+@media (max-width: 1100px) {
+  .site-map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 700px) {
   .hero {
     min-height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    .hero-portrait, .hero-text, .hero-latest { grid-column: 1; grid-row: auto; }
+    .hero-portrait, .hero-text, .site-map { grid-column: 1; grid-row: auto; }
     .hero-portrait { order: 0; }
     .hero-text { order: 1; }
-    .hero-latest { order: 2; grid-template-columns: 1fr; row-gap: var(--space-l); }
+    .site-map { order: 2; grid-template-columns: 1fr; }
   }
   main#quarto-document-content section.level2 {
     grid-template-columns: 1fr;

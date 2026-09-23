@@ -31,10 +31,32 @@ real-world evidence, target trial emulation, external control cohorts.
 :::
 :::
 
-::: {.hero-latest}
-[Clinical Trial Design Workbench](workbench.qmd)
-Practice group sequential and adaptive design on the real rpact API, with the reproducing R code under every result.
+::: {.site-map}
+::: {.nav-card}
+[CV](cv.qmd)
+Roles, education, talks, and publications — the full record.
+:::
 
+::: {.nav-card}
+[Stuff](stuff.qmd)
+Notes, write-ups, and things I'm working through.
+:::
+
+::: {.nav-card}
+[Workbench](workbench.qmd)
+Practice group sequential and adaptive design on the real rpact API.
+:::
+
+::: {.nav-card}
+[SingleBell](singlebell.qmd)
+A kettlebell practice app for iOS. One bell, nothing collected.
+:::
+:::
+:::
+
+## Latest
+
+::: {.latest}
 [Enroll-HD for statisticians](slides/enrollhd-getting-started.html)
 Sixty slides on the periodic dataset, HDClarity and simulated releases for testing analysis code.
 
@@ -42,7 +64,6 @@ Sixty slides on the periodic dataset, HDClarity and simulated releases for testi
 Ten rules for data graphics, shown on the figures a trial statistician actually makes.
 
 [Everything else, on Stuff →](stuff.qmd){.more}
-:::
 :::
 
 [Views on this site are my own and do not represent my employer.]{.disclaimer}
