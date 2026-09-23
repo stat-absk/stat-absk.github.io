@@ -80,7 +80,7 @@ h2 {
   border-bottom: 1.5px solid $rule;
 }
 
-p { max-width: 42rem; }
+p { max-width: 46rem; }                 // the measure lives inside a band, not the page
 
 // Uppercase exists in exactly one place, and it is tracked.
 .eyebrow {
@@ -167,6 +167,115 @@ main .hero-links a, main .pill, main h1 a, main h2 a, main h3 a { text-decoratio
 // A page whose opening is hand-rolled leaves an empty title block behind;
 // it takes no room.
 #title-block-header:empty { display: none; margin: 0; }
+
+// ── Full screen ────────────────────────────────────────────────────────────
+// The pages take the whole viewport, as the decks do. A page opens with one
+// screen that holds only its name (the hero, the app's listing, or the title
+// block), and the content follows on scroll as bands that run edge to edge:
+// each section's name in a left column, its content beside it, a chalk rule
+// above. The reading measure lives inside a band, so lines stay readable at
+// any width.
+$bar-height: 4rem;
+$band-columns: minmax(11rem, 1fr) minmax(0, 3.4fr);
+$band-gap: clamp(var(--space-xl), 4vw, 64px);
+
+main#quarto-document-content { max-width: none; }
+
+// The opening screen. A small mark at the foot says the page continues.
+.opening {
+  min-height: calc(100svh - #{$bar-height});
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: var(--space-xxl);
+
+  &::after {
+    content: "↓";
+    position: absolute;
+    left: 0;
+    bottom: var(--space-l);
+    font-size: $size-caption;
+    color: $ink3;
+    animation: nod 2.4s var(--ease) infinite;
+  }
+}
+@keyframes nod { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+
+.hero, .sb-hero { @extend .opening; align-content: center; margin: 0; }
+
+#title-block-header:not(:empty) {
+  @extend .opening;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  > * { width: 100%; }
+
+  .title { font-size: clamp(2rem, 1.4rem + 3vw, 2.75rem); line-height: 1.06; letter-spacing: -0.022em; text-wrap: balance; }
+  .subtitle, .description { font-size: clamp($size-card, 0.9rem + 0.6vw, $size-section); max-width: 40rem; }
+}
+
+// A band: a level-two section. The name sits in the left column and stays
+// while its content scrolls past; the rule spans the whole width.
+main#quarto-document-content section.level2 {
+  display: grid;
+  grid-template-columns: $band-columns;
+  column-gap: $band-gap;
+  padding: clamp(var(--space-xl), 5vh, 56px) 0;
+  border-top: 1.5px solid $rule;
+
+  > h2 {
+    grid-column: 1;
+    grid-row: 1 / span 200;              // the name owns the column for the whole band
+    align-self: start;
+    position: sticky;
+    top: calc(#{$bar-height} + var(--space-l));
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  > :not(h2) { grid-column: 2; }
+  > :not(h2):first-of-type { margin-top: 0; }
+  > *:last-child { margin-bottom: 0; }
+}
+
+// A grid of wholes: the things on the Stuff page. Each keeps its edge at the
+// whole's radius; the measure is the card's.
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: var(--space-xl);
+  margin: clamp(var(--space-xl), 5vh, 56px) 0;
+}
+.card {
+  padding: var(--space-xl);
+  border: 1px solid $rule;
+  border-radius: var(--radius-whole);
+  background: rgba($surface, 0.55);
+  transition: border-color var(--snap) var(--ease), transform var(--settle) var(--ease);
+  &:hover { border-color: rgba($writing, 0.28); }
+
+  p { max-width: none; margin-bottom: var(--space-m); }
+  p:last-child { margin-bottom: 0; }
+  > p:first-child > a:first-child {   // the name of the thing, set as a name
+    font-family: $font-family-serif;
+    font-size: $size-section;
+    line-height: 1.25;
+    color: $ink;
+    display: block;
+    margin-bottom: var(--space-s);
+  }
+}
+
+@media (max-width: 700px) {
+  .opening { min-height: calc(80svh - #{$bar-height}); }
+  main#quarto-document-content section.level2 {
+    grid-template-columns: 1fr;
+    > h2 { grid-row: auto; position: static; margin-bottom: var(--space-l); }
+    > :not(h2) { grid-column: 1; }
+  }
+  .cards { grid-template-columns: 1fr; }
+}
 
 h1.hero-name {
   font-size: clamp(2rem, 1.4rem + 3vw, 2.75rem);

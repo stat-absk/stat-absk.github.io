@@ -55,6 +55,12 @@ format:
     theme:
       dark:  [default, styles-dark.scss]    # SingleBell's material; the default
       light: [default, styles-light.scss]   # the same material, read the other way
+    page-layout: full                        # the page takes the viewport, as the decks do
+    grid:
+      sidebar-width: 0px
+      body-width: 1600px
+      margin-width: 240px
+      gutter-width: 2.5rem
     toc: true
     toc-title: "On this page"
     anchor-sections: true

@@ -23,6 +23,8 @@ toc: false
 :::
 :::
 
+## Now
+
 I'm Associate Director, Biostatistics at Pfizer in Chennai, where I lead a team
 of statisticians across different therapeutic areas to move the global portfolio
 ahead.
