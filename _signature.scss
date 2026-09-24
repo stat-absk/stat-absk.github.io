@@ -504,6 +504,13 @@ h1.sb-name {
   font-size: $size-caption;
   color: $ink2;
 }
+// The one pill that is a door — the App Store link on the SingleBell page — wears
+// the accent, faintly at rest and firm under the pointer, the way every link does.
+a.pill.store {
+  color: $accent;
+  border-color: rgba($accent, 0.45);
+  &:hover, &:focus-visible { border-color: $accent; }
+}
 
 // A CV entry is the page's one object: a quiet date, the thing itself, and
 // whatever it did. Nothing is boxed and nothing is ruled — the spacing does it.

@@ -1,6 +1,6 @@
 ---
 pagetitle: "SingleBell"
-description-meta: "SingleBell is an iPhone kettlebell app: the day's practice dealt fresh each morning, the classic protocols, a builder for your own sessions, and the running practice on your Lock Screen and Apple Watch. No account, no analytics, and no network code — it collects nothing."
+description-meta: "SingleBell is an iPhone kettlebell app, on the App Store: the day's practice dealt fresh each morning, the classic protocols, a builder for your own sessions, and the running practice on your Lock Screen and Apple Watch. No account, no analytics, and no network code — it collects nothing."
 image: images/singlebell/social-card.png
 toc: true
 toc-title: "On this page"
@@ -16,7 +16,7 @@ toc-title: "On this page"
 
 [A kettlebell practice app for iPhone. One bell, eight ready-made protocols, a builder for your own sessions — and the practice on your Lock Screen and your wrist while your hands are full.]{.sb-sub}
 
-[Coming to the App Store]{.pill} [iPhone · iOS 18 or later]{.pill}
+[Download on the App Store →](https://apps.apple.com/app/singlebell-kb-practice/id6805588015){.pill .store} [iPhone · iOS 18 or later]{.pill}
 :::
 :::
 
