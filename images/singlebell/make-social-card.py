@@ -32,11 +32,11 @@ sans_accent = font("/System/Library/Fonts/Avenir Next.ttc", 30, index=5)
 card = Image.new("RGB", (W, H), GROUND)
 d = ImageDraw.Draw(card)
 
-# The icon, at the size the page's hero draws it, with its corners rounded.
-icon = Image.open(os.path.join(HERE, "appicon.png")).convert("RGB").resize((112, 112), Image.LANCZOS)
-mask = Image.new("L", icon.size, 0)
-ImageDraw.Draw(mask).rounded_rectangle((0, 0, 111, 111), radius=26, fill=255)
-card.paste(icon, (92, 82), mask)
+# The icon, at the size the page's hero draws it. appicon.png is Icon Composer's own
+# render of the app's AppIcon.icon (ictool, design generation 26), so it carries the
+# platform's shape and glass rim in its alpha: paste it by that, not a drawn mask.
+icon = Image.open(os.path.join(HERE, "appicon.png")).convert("RGBA").resize((112, 112), Image.LANCZOS)
+card.paste(icon, (92, 82), icon)
 
 d.text((88, 214), "SingleBell", font=serif, fill=WRITING)
 d.text((92, 332), "A kettlebell practice app for iPhone.", font=sans, fill=MUTED)

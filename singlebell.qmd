@@ -8,7 +8,7 @@ toc-title: "On this page"
 
 ::: {.sb-hero}
 ::: {.app-icon}
-![](images/singlebell/appicon.png){fig-alt="The SingleBell app icon: a chalk kettlebell on a slate ground"}
+![](images/singlebell/appicon.png){fig-alt="The SingleBell app icon: a white glass kettlebell on a navy ground"}
 :::
 
 ::: {.sb-hero-text}
