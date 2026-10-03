@@ -88,7 +88,7 @@ watchOS 11.
 **On the home screen.** Two widgets: today's board, dealt by the same rule Today uses, and
 the week as seven strokes.
 
-**Without opening the app.** *Start today's practice*, *Start Simple & Sinister*, *Pause*
+**Without opening the app.** *Start today's practice*, *Start swings and get-ups*, *Pause*
 and *Resume* are there for Siri, Spotlight and the Action Button the moment the app is
 installed, with nothing to set up.
 
@@ -113,46 +113,46 @@ on the slate, in the app's own words.
 
 ## The classics
 
-The protocols the kettlebell world already runs, each credited on its own board and
+The protocols the kettlebell world already runs, each named for what it asks and
 adjustable before you start.
 
 ::: {.shot-right}
-![Each classic carries its source](images/singlebell/classics.png)
+![Each classic is named for what it asks](images/singlebell/classics.png)
 :::
 
-[Simple & Sinister]{.name} — 100 swings, then 10 get-ups. Ten sets of ten on the minute,
-then one get-up a minute for ten. *Pavel Tsatsouline.*
+[Swings & Get-Ups]{.name} — 100 swings, then 10 get-ups. Ten sets of ten on the minute,
+then one get-up a minute for ten.
 
-[The Quick and the Dead]{.name} — power in short bursts with generous rest: swings and
-power push-ups, or snatches alone, chosen on the board. *Pavel Tsatsouline.*
+[Swings and Power Push-Ups]{.name} — power in short bursts with generous rest: swings and
+power push-ups, or snatches alone, chosen on the board.
 
-[Rite of Passage]{.name} — ladders of one-arm clean & press, one to five a side, pull-ups
-between rungs. Own pace, no clock. *Pavel Tsatsouline, Enter the Kettlebell.*
+[Clean & Press Ladder]{.name} — ladders of one-arm clean & press, one to five a side, pull-ups
+between rungs. Own pace, no clock.
 
-[Kettlebell AXE]{.name} — one heavy bell, four hand-to-hand swings on the minute, twenty
-minutes. *Pavel Tsatsouline.*
+[Hand-to-Hand Swings]{.name} — one heavy bell, four hand-to-hand swings on the minute, twenty
+minutes.
 
-[Armor Building Complex]{.name} — clean and press, swing across, press the other side,
-squat. The lead side swaps every minute. *Dan John.*
+[Clean & Press and Squats]{.name} — clean and press, swing across, press the other side,
+squat. The lead side swaps every minute.
 
-[Humane Burpee]{.name} — swings hold at fifteen every set while squats and push-ups ladder
-down to one. Pick five sets or ten. *Dan John.*
+[Swings, Squats & Push-Ups]{.name} — swings hold at fifteen every set while squats and push-ups ladder
+down to one. Pick five sets or ten.
 
-[Advanced Minimalist]{.name} — snatches alone, two minutes on and two off, with the series
-and rep scheme rolled fresh. *Pavel Tsatsouline, The Quick and the Dead.*
+[Snatch Intervals]{.name} — snatches alone, two minutes on and two off, with the series
+and rep scheme rolled fresh.
 
-[The Simple & Sinister Warm-up]{.name} — hip bridges, prying goblet squats, halos; three
+[The Swings & Get-Ups Warm-up]{.name} — hip bridges, prying goblet squats, halos; three
 rounds on the clock. The same three lines open Today's Practice, under one line chosen
 for the day's lift.
 
-Each one can be re-paced on the slate before it starts: run Simple & Sinister on the
+Each one can be re-paced on the slate before it starts: run Swings & Get-Ups on the
 minute or at your own pace, swap the get-up out if you haven't learned it yet, run
-Quick and the Dead as snatches alone, tighten the Axe to every thirty seconds, run the
-Complex for thirty minutes or on ninety-second rounds, choose the Humane Burpee's set
-count.
+Swings and Power Push-Ups as snatches alone, tighten Hand-to-Hand Swings to every thirty
+seconds, run Clean & Press and Squats for thirty minutes or on ninety-second rounds,
+choose the set count for Swings, Squats & Push-Ups.
 
-**Warm up first.** Every board carries the switch, on until you turn it off. Simple &
-Sinister warms up on its own trio. Everything else takes a round dealt for what follows —
+**Warm up first.** Every board carries the switch, on until you turn it off. Swings &
+Get-Ups warms up on its own trio. Everything else takes a round dealt for what follows —
 the world's greatest stretch before anything that goes overhead, good mornings before
 swings, jumping jacks otherwise, the trio under it — for two rounds: each move its own
 station on the clock, or one block marked down with a tap on a board. Never more than
@@ -242,8 +242,8 @@ It holds:
 
 - **your settings** — the sound switches and cue volume, whether you have a pull-up bar,
   whether practices warm up first, how long Today's Practice runs, the get-ready count,
-  how you last set up each classic on its board (Simple & Sinister's pace, the Rite's
-  pull, the Complex's clock), whether you have put the "Start here" card away, and
+  how you last set up each classic on its board (the pace of Swings & Get-Ups, the pull in
+  the Clean & Press Ladder, the clock on Clean & Press and Squats), whether you have put the "Start here" card away, and
   whether the app has explained "/side" to you once;
 - **your Library** — the practices you chose to save, and any move you typed in yourself;
 - **a list of the practices you finished, and when** — which practice, the date, how long
