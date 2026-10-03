@@ -98,6 +98,10 @@ phase in one corner — while the controls stay under your thumb on the phone.
 
 ## The room
 
+::: {.shot-right}
+![Rest: the same clock, the cool room](images/singlebell/clock-rest.png)
+:::
+
 Only practices with a clock get the clock; a practice you count yourself gets a board with
 every set chalked on it from the start, filling in as you tap. Both are lit the same way:
 **the whole room changes temperature with the phase** — warm for work, cool for rest,
