@@ -208,12 +208,12 @@ paired to that phone. There is no iPad version and no separate watch app.
 
 ## Privacy {#privacy}
 
-*Effective 3 October 2026.*
+*Effective 5 October 2026.*
 
 **SingleBell collects nothing.** Not anonymised, not aggregated, not "to improve the
 experience". Nothing. The rest of this section is only the detail behind that sentence.
 
-### Nothing leaves your phone
+### Nothing leaves your phone, unless you save a copy
 
 The app contains no networking code at all. It does not connect to a server, because
 there is no server. There is no account to create, nothing to sign in to, and no way
@@ -257,13 +257,24 @@ It holds:
   you end early, after at least a minute, is kept too, marked as ended early, and nothing
   is dealt from it; one you take off the calendar is held until midnight, only so today's
   practice does not change under you, and is then gone;
-- **the last six practices you ran**, so the Library can offer them again;
+- **the last six practices you ran**, so the Recents shelf on the practice calendar can
+  offer them again;
+- **today's card**, as it was dealt this morning, kept for that day so it does not change
+  under you, and whether you switched it to run on the clock, kept until midnight;
 - **a practice in progress**, so an app closed mid-workout can offer it back, forgotten
   within two hours or as soon as the practice ends; and the half-built board in the
   Builder, kept for the day it was written.
 
 What it does not keep: no times per set, no reps counted, no streaks, no personal bests,
 no bodyweight, no bell weight, no goals.
+
+### Saving a copy
+
+Preferences → **Save a copy of your log** writes one file: your log of practices, your
+Library, your own moves and your settings. You choose where it goes, in iOS's own save
+sheet: your phone, iCloud Drive, or another app's folder. iOS moves the file; the app
+opens no connection to do it, and never makes a copy by itself. Once saved, the copy is
+yours: wherever you keep it is covered by that place's terms, not by this policy.
 
 ### The practice off the screen
 
@@ -283,8 +294,9 @@ by Apple's privacy policy, not by this one.
 
 ### Deleting it
 
-Delete the app and everything goes with it. There is no copy held anywhere else and
-nothing to request from me, because I never had it in the first place.
+Delete the app and everything goes with it, except a copy you saved yourself, which is
+yours. There is no copy held anywhere else and nothing to request from me, because I
+never had it in the first place.
 
 ### Children
 
