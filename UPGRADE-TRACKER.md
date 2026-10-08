@@ -267,10 +267,10 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | [x] | 1.13 `post-render.R`: AVIF + WebP (AVIF guarded by a capability check) at 1x/2x display widths, `<picture>` rewrite, `width`/`height`, lazy loading. SingleBell as served: 312 KB | C | FR-1.13, FR-1.14 |
 | [x] | 1.14 `R/make_social_card.R` (ragg + magick, Palatino until Literata); Python file deleted | C | D5 |
 | [x] | 1.15 `R/check_budgets.R` — gzip text + 1x images, exits 1 over budget | C | pre-mortem #4 |
-| [ ] | 1.16 Lighthouse: no Node on this machine and the anonymous PageSpeed API quota was exhausted on 8 Oct. Run <https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fstat-absk.github.io%2F> (and `/cv.html`, `/singlebell.html`) and record the scores below | A | Gate 1 |
+| [x] | 1.16 Lighthouse, first readings from the checks Action (run 37807582344, 8 Oct): performance 0.99–1.00, best-practices 1.00, SEO 1.00 on Home and CV; accessibility 0.96 / 0.96 / 0.91 — the logo link had no name, and Quarto writes captioned figures without `alt`. Both fixed (`logo-alt`, alt from the caption in `post-render.R`) | C | Gate 1 |
 | [x] | 1.17 Rendered, reviewed in preview, pushed with OK — `c701ef3`, 8 Oct 2026 | C | — |
 
-**Gate 1 record:** accessibility ___ / ___ / ___ (pending 1.16) · SingleBell 312 KB as served (was ~6.3 MB) · longest prose line ≤ 73 chars · live 2026-10-08
+**Gate 1 record:** accessibility 96 / 96 / 91 on 8 Oct before the alt fixes; re-read after the next deploy · SingleBell 312 KB as served (was ~6.3 MB) · longest prose line ≤ 73 chars · live 2026-10-08
 
 *Deviations from the review in Phase 1:* the measure is a rem token, not `66ch` (see 1.5); the skip link needs two lines of the existing script, since Quarto offers no body-top include.
 
@@ -343,7 +343,7 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | [ ] | 4.3 Colophon (W11) | A→C | — |
 | [x] | 4.4 `cv.qmd` renders `docs/cv.pdf` via Typst from the same source, **designed as pencil on paper**: `typst-template.typ` (paper ground, graphite, Literata and Atkinson from `fonts/ttf/` static cuts, section names and dates in a working margin, a hand-drawn rule above each section, the tally in graphite, the career strip as a figure); `_extensions/chalk/chalk-typst.lua` maps the CV's classes onto the template. Competencies in the PDF only. "PDF" link beside Scholar and LinkedIn. Print stylesheet for the web page. Chunks use `ragg` so non-HTML formats don't open R's X11 png device | C | FR-4.2, ADR-08 |
 | [ ] | 4.5 Deck theme + chalk extension published as a Quarto extension; installed in `enrollhd-getting-started` and `tufte-pharma`; decks rebuilt | C | FR-4.3, ADR-07 |
-| [~] | 4.6 `.github/workflows/checks.yml` runs after each Pages deployment: Lighthouse on Home, CV, SingleBell (accessibility must be 100, CLS ≤ 0.05, bytes ≤ 1 MB; performance/SEO/best-practices warn under 0.9) with reports as artefacts, and a lychee link check over `docs/`. **Screenshots at three widths not yet added** | C | FR-4.4 |
+| [~] | 4.6 `.github/workflows/checks.yml` runs after each Pages deployment: Lighthouse on Home, CV, SingleBell (accessibility must be 100, CLS ≤ 0.05, bytes ≤ 1 MB; performance/SEO/best-practices warn under 0.9) with reports as artefacts, and a lychee link check over `docs/` (`--root-dir docs`). Trigger is `deployment_status`, as Pages' dynamic workflow raises no `workflow_run`. **Screenshots at three widths not yet added** | C | FR-4.4 |
 | [x] | 4.7 "Last tended" date at the foot of every page, from the source file's last commit date (`post-render.R`) | C | FR-4.5 |
 | [~] | 4.8 `Person` JSON-LD on every page: name, role, employer, image, Scholar, GitHub, LinkedIn. **ORCID missing — add if you have one** | A→C | FR-4.6 |
 | [ ] | 4.9 Measure, then decide D9 (Bootstrap) | A | ADR-09 |
@@ -373,4 +373,4 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | 2026-10-08 | 3c technical half pushed live (`e8d349e`). Phase 3 remaining: Home recomposition (3c.1, waits on W1, W2, W5, W8) and the Literata social card (3c.9). |
 | 2026-10-08 | W1 and W2 chosen (HOME-DRAFTS.md). Home recomposed and verified locally without Now or the caption. |
 | 2026-10-08 | New Home pushed live (`289d6a6`). Phase 3 remaining: Now band (W5), portrait caption (W8), Elsewhere line to confirm, Literata social card (3c.9). |
-| 2026-10-08 | Phase 4 first batch built locally: CV PDF designed on the site's material (Typst template + filter, static TTFs in `fonts/ttf/`), print stylesheet, last-tended dates, Person JSON-LD, checks workflow; social card in Literata. Awaiting push. |
+| 2026-10-08 | Phase 4 first batch built locally: CV PDF designed on the site's material (Typst template + filter, static TTFs in `fonts/ttf/`), print stylesheet, last-tended dates, Person JSON-LD, checks workflow; social card in Literata. Pushed live (`fa7c74d`). First checks run: Lighthouse 0.96/0.96/0.91 accessibility, links failed only on root-relative paths. Fixes built locally (logo name, figure alt, lychee root, deployment_status trigger). Awaiting push. |

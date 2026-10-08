@@ -5,10 +5,10 @@
 
 name: checks
 
+# Pages' own deploy is a "dynamic" workflow and does not raise workflow_run,
+# but each deploy posts a deployment status; the checks start on success.
 on:
-  workflow_run:
-    workflows: ["pages build and deployment"]
-    types: [completed]
+  deployment_status:
   workflow_dispatch:
 
 permissions:
@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   lighthouse:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.deployment_status.state == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -32,7 +32,7 @@ jobs:
           temporaryPublicStorage: false
 
   links:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.deployment_status.state == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -41,6 +41,7 @@ jobs:
         with:
           args: >-
             --no-progress
+            --root-dir docs
             --accept 200,204,206,301,302,303,307,308,403,429,999
             --exclude-path docs/site_libs
             --exclude-path docs/slides

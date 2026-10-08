@@ -21,6 +21,7 @@ website:
 
   navbar:
     logo: images/favicon.svg
+    logo-alt: "Home"
     title: "Abhishek Bhattacharjee"
     # Work · Notes · CV, and About once it is written. The ways to reach me
     # are words in the footer, not icons in the bar.

@@ -85,6 +85,12 @@ rewrite_images <- function(page) {
       srcset <- paste(sprintf("%s %dx", derivative_path(src, d$widths, fmt), seq_along(d$widths)), collapse = ", ")
       xml_add_child(picture, "source", type = paste0("image/", fmt), srcset = srcset)
     }
+    # Quarto writes a captioned figure's <img> without alt; the caption is the
+    # description, so it is also the alt, and an uncaptioned one is marked decorative.
+    if (is.na(xml_attr(img, "alt"))) {
+      cap <- xml_find_first(img, "ancestor::figure[1]/figcaption")
+      xml_set_attr(img, "alt", if (inherits(cap, "xml_node")) trimws(xml_text(cap)) else "")
+    }
     # The original stays as the fallback, now with its box declared.
     xml_set_attr(img, "width", as.character(d$width))
     xml_set_attr(img, "height", as.character(d$height))
