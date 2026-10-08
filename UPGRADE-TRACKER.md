@@ -371,4 +371,5 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | 2026-10-08 | Phase 3a + 3b pushed live (`87e0844`). 3c open: Home recomposition waits on W1, W2, W5, W8; `theme_chalk()`, CV figures, DOIs, Workbench/SingleBell tweaks, Literata social card are Claude's. |
 | 2026-10-08 | 3c technical half built and verified locally: `theme_chalk()`, career strip, papers by year, 14 DOIs, Workbench and SingleBell page changes, privacy page. |
 | 2026-10-08 | 3c technical half pushed live (`e8d349e`). Phase 3 remaining: Home recomposition (3c.1, waits on W1, W2, W5, W8) and the Literata social card (3c.9). |
-| 2026-10-08 | W1 and W2 chosen (HOME-DRAFTS.md). Home recomposed and verified locally without Now or the caption. Awaiting push OK. |
+| 2026-10-08 | W1 and W2 chosen (HOME-DRAFTS.md). Home recomposed and verified locally without Now or the caption. |
+| 2026-10-08 | New Home pushed live (`289d6a6`). Phase 3 remaining: Now band (W5), portrait caption (W8), Elsewhere line to confirm, Literata social card (3c.9). |
