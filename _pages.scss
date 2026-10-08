@@ -1,93 +1,63 @@
 // Pages: the home hero and its cards, the SingleBell opening, CV entries, screenshots.
 
 // ── The hero ───────────────────────────────────────────────────────────────
-// The homepage opens with the name at display size and the portrait beside it.
-// Display text earns tighter tracking and leading than a page name does.
+// The home page opens like the first page of a notebook: a sentence in my
+// voice set large, a chalk rule drawn once beneath it, a paragraph, and the
+// portrait in the aside. Three zones — margin, text, aside — on the band grid,
+// so the bands below start on the same edges.
 .hero {
   display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: clamp(var(--space-xl), 5vw, 64px);
+  grid-template-columns: minmax(11rem, 1fr) minmax(0, 3fr) auto;
+  column-gap: $band-gap;
+  align-items: start;
+  margin: 0;
+  padding: clamp(var(--space-xxl), 8vh, var(--space-5xl)) 0 var(--space-3xl);
 
-  // The portrait is written first (so the name is not lifted into the title
-  // block) but reads second: text left, portrait right.
-  .hero-text     { order: 1; }
-  .hero-portrait { order: 2; }
+  // Both on the first row: the portrait is written first in the markup, and
+  // auto-placement would otherwise drop the text to a second row.
+  .hero-text     { grid-column: 2; grid-row: 1; }
+  .hero-portrait { grid-column: 3; grid-row: 1; padding-top: var(--space-s); }
 }
 
 // A page whose opening is hand-rolled leaves an empty title block behind;
 // it takes no room.
 #title-block-header:empty { display: none; margin: 0; }
 
-// The home page opens with one composed screen: the name and the portrait,
-// what I do now, the ways in, and the three latest things pinned to the foot,
-// so the first screen is full of the page rather than empty around it.
-.hero {
-  min-height: calc(100svh - #{$bar-height});
-  box-sizing: border-box;
-  margin: 0;
-  padding: var(--space-xl) 0 var(--space-xxl);
-  grid-template-columns: minmax(0, 1fr) auto;
-  grid-template-rows: 1fr auto;
-  align-items: center;
-
-  .hero-text     { grid-column: 1; grid-row: 1; align-self: center; }
-  .hero-portrait { grid-column: 2; grid-row: 1; align-self: center; }
-  .site-map      { grid-column: 1 / -1; grid-row: 2; }
+// The opening sentence: large, but a sentence, so it keeps a sentence's
+// leading and never balances into ragged short lines.
+h1.hero-name {
+  font-size: clamp(1.8rem, 1.2rem + 1.9vw, 2.7rem);
+  line-height: 1.2;
+  letter-spacing: -0.012em;
+  max-width: 22em;
+  margin: 0 0 var(--space-l);
+  border: none;
+  padding: 0;
+  text-wrap: pretty;
 }
+
+.hero .chalk-rule { max-width: 22em; margin: 0 0 var(--space-xl); }
 
 .hero-now {
   max-width: var(--measure);
-  margin-top: var(--space-l);
   color: $ink2;
   line-height: 1.55;
-  p { margin: 0; }
+  p { margin: 0 0 var(--space-m); }
+  p:last-child { margin-bottom: 0; }
 }
+
+// Arrival: the rule under the opening draws itself, left to right, once — the
+// page's one authored moment. Not again within the session (the page's script
+// marks the document on return).
+@keyframes draw {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+.hero .chalk-rule { animation: draw 600ms var(--ease) 150ms both; }
+html.arrived .hero .chalk-rule { animation: none; }
 
 // The one primary path wears the accent: "go".
 .hero-links a.primary { color: $accent; }
-
-// The ways in: every page of the site as a ruled row at the hero's foot.
-.site-map {
-  margin-top: var(--space-xxl);
-  margin-bottom: 0;
-}
-
-// The Latest band: the newest things, each a name and one line.
-.latest {
-  p { max-width: none; margin: 0 0 var(--space-l); font-size: $size-caption; color: $ink3; line-height: 1.5; }
-  p > a:first-child:not(.more) {
-    display: block;
-    font-family: $font-family-serif;
-    font-size: $size-lead;
-    line-height: 1.25;
-    color: $ink;
-    margin-bottom: var(--space-xs);
-    text-decoration: none;
-    &:hover { color: $accent; }
-  }
-  p:last-child { margin-bottom: 0; }
-  .more { color: $ink2; text-decoration: none; font-size: $size-caption;
-          &:hover { color: $ink; } }
-}
-
-h1.hero-name {
-  font-size: $size-display;
-  line-height: 1.06;
-  letter-spacing: -0.022em;
-  margin: 0 0 var(--space-m);
-  border: none;
-  padding: 0;
-  text-wrap: balance;
-}
-
-.hero-role {
-  display: block;
-  font-size: clamp($size-card, 0.9rem + 0.6vw, $size-lead);
-  line-height: 1.5;
-  color: $ink2;
-  max-width: 34rem;
-}
 
 // The ways to reach me, as words. Each is a 44px target; the underline says
 // it is a link, so nothing is outlined.
@@ -110,26 +80,34 @@ h1.hero-name {
   }
 }
 
-// The portrait: the photograph carries the only saturated colour on the site,
-// so it is shown plainly — no ring, no glow — with an image's corner.
+// The portrait: a 4:5 rectangle with the painted wall showing — the only
+// saturated colour on the site — shown plainly, no ring, no glow, with an
+// image's corner.
 .hero-portrait img {
-  width: clamp(150px, 14vw + 90px, 272px);
+  width: clamp(160px, 14vw + 70px, 300px);
   height: auto;
-  border-radius: 50%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-image);
 }
 
-// On a phone the hero is one column: the portrait opens the page, then the
-// name, then the ways in. (After the hero's own rules, so it wins.)
+// Narrower, the margin goes first; on a phone the portrait opens the page,
+// then the sentence. (After the hero's own rules, so these win.)
+@media (max-width: 1000px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) auto;
+    .hero-text { grid-column: 1; }
+    .hero-portrait { grid-column: 2; }
+  }
+}
 @media (max-width: 700px) {
   .hero {
-    min-height: auto;
-    gap: var(--space-xl);
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    .hero-portrait, .hero-text, .site-map { grid-column: 1; grid-row: auto; }
-    .hero-portrait { order: 0; }
+    row-gap: var(--space-xl);
+    padding-top: var(--space-xl);
+    .hero-portrait, .hero-text { grid-column: 1; grid-row: auto; }
+    .hero-portrait { order: 0; padding-top: 0; }
     .hero-text { order: 1; }
-    .site-map { order: 2; }
   }
   .hero-portrait img { width: 128px; }
 }

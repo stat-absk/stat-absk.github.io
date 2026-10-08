@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-20704ea1ce66f109ee115262b13fe209.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4a14a959e3275248d7bcb47bb5a60a3c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script><link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1eaa8d1f26a2c3c98bc005c904627b9a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-51b36711fc50d8af9489f7a6e46e33cc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-81eaffe6b3cc0008f241951ba86f5ee1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-16f9e06be56c4f12b17f0ea82fc48536.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,13 +68,13 @@ ul.task-list li input[type="checkbox"] {
   body.quarto-dark .tally svg { filter: url(#chalk); }
 </style>
 <meta property="og:title" content="SingleBell">
-<meta property="og:description" content="Biostatistics leader — clinical development strategy, regulatory science, and real-world evidence.">
+<meta property="og:description" content="I’m Abhishek, a statistician. I spend my days on research that leads to new medicines, and the evidence behind them: what it shows, and what it doesn’t.">
 <meta property="og:image" content="https://stat-absk.github.io/images/singlebell/social-card.png">
 <meta property="og:site_name" content="Abhishek Bhattacharjee">
 <meta property="og:image:height" content="630">
 <meta property="og:image:width" content="1200">
 <meta name="twitter:title" content="SingleBell">
-<meta name="twitter:description" content="Biostatistics leader — clinical development strategy, regulatory science, and real-world evidence.">
+<meta name="twitter:description" content="I’m Abhishek, a statistician. I spend my days on research that leads to new medicines, and the evidence behind them: what it shows, and what it doesn’t.">
 <meta name="twitter:image" content="https://stat-absk.github.io/images/singlebell/social-card.png">
 <meta name="twitter:image-height" content="630">
 <meta name="twitter:image-width" content="1200">
@@ -870,6 +870,13 @@ ul.task-list li input[type="checkbox"] {
     // places include-before-body inside main, so it is moved to the body's top.
     var skip = document.querySelector(".skip-link");
     if (skip) document.body.prepend(skip);
+
+    // The arrival stroke on Home draws once per session; on return the
+    // rule is simply there.
+    try {
+      if (sessionStorage.getItem("arrived")) document.documentElement.classList.add("arrived");
+      sessionStorage.setItem("arrived", "1");
+    } catch (e) {}
 
     // Changing appearance is a duster wipe: the toggle's own click is wrapped in
     // a view transition, and the document is marked so the wipe keyframes apply.

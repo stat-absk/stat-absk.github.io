@@ -44,8 +44,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4a14a959e3275248d7bcb47bb5a60a3c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1eaa8d1f26a2c3c98bc005c904627b9a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-51b36711fc50d8af9489f7a6e46e33cc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-81eaffe6b3cc0008f241951ba86f5ee1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-16f9e06be56c4f12b17f0ea82fc48536.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -845,6 +845,13 @@ ggplot2.
     // places include-before-body inside main, so it is moved to the body's top.
     var skip = document.querySelector(".skip-link");
     if (skip) document.body.prepend(skip);
+
+    // The arrival stroke on Home draws once per session; on return the
+    // rule is simply there.
+    try {
+      if (sessionStorage.getItem("arrived")) document.documentElement.classList.add("arrived");
+      sessionStorage.setItem("arrived", "1");
+    } catch (e) {}
 
     // Changing appearance is a duster wipe: the toggle's own click is wrapped in
     // a view transition, and the document is marked so the wipe keyframes apply.

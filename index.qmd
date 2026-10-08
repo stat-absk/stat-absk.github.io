@@ -1,51 +1,36 @@
 ---
 pagetitle: "Abhishek Bhattacharjee, PhD"
-description: "Biostatistics leader — clinical development strategy, regulatory science, real-world evidence"
+description: "I'm Abhishek, a statistician. I spend my days on research that leads to new medicines, and the evidence behind them: what it shows, and what it doesn't."
 image: images/profile.jpg
 toc: false
 ---
 
 ::: {.hero}
+<!-- The portrait is written first so the opening sentence is not lifted into
+     the title block; the grid puts the text before it. -->
 ::: {.hero-portrait}
 ![](images/profile.jpg){fig-alt="Portrait of Abhishek Bhattacharjee"}
 :::
 
 ::: {.hero-text}
-# Abhishek Bhattacharjee, PhD {.hero-name}
+# I'm Abhishek, a statistician. I spend my days on research that leads to new medicines, and the evidence behind them: what it shows, and what it doesn't. {.hero-name}
 
-[Biostatistics leader — clinical development strategy, regulatory science, real-world evidence.]{.hero-role}
+{{< rule >}}
 
 ::: {.hero-now}
-Senior Manager, Biostatistics at Pfizer in Chennai, leading a team of
-statisticians across therapeutic areas. Before this, primary statistical
-reviewer at the FDA's Oncology Center of Excellence. What holds my attention
-now are the methods that change what a development program can learn:
-real-world evidence, target trial emulation, external control cohorts.
+I lead a team of statisticians at Pfizer in Chennai. I used to review cancer drug
+applications at the FDA. I think mostly about what evidence outside a trial is
+worth — real-world data, external controls, target trial emulation — and about
+asking the right question before the analysis starts.
 :::
-
-::: {.hero-links}
-[Read the CV](cv.qmd){.primary}
-[Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en)
-[GitHub](https://github.com/stat-absk)
-[LinkedIn](https://www.linkedin.com/in/stat-absk/)
 :::
 :::
 
-::: {.things .site-map}
+## Made
+
+::: {.things}
 ::: {.thing}
-[CV](cv.qmd)
-
-Roles, education, talks, and publications — the full record.
-:::
-
-::: {.thing}
-[Notes](notes.qmd)
-
-Talks, write-ups, and things I'm working through.
-:::
-
-::: {.thing}
-[Workbench](workbench.qmd)
+[Clinical Trial Design Workbench](workbench.qmd)
 
 Practice group sequential and adaptive design on the real rpact API.
 :::
@@ -56,18 +41,33 @@ Practice group sequential and adaptive design on the real rpact API.
 A kettlebell practice app for iOS. One bell, nothing collected.
 :::
 :::
-:::
 
-## Latest
+## Written
 
-::: {.latest}
+::: {.things}
+::: {.thing}
 [Enroll-HD for statisticians](slides/enrollhd-getting-started.html)
+
 Sixty slides on the periodic dataset, HDClarity and simulated releases for testing analysis code.
 
+[September 2026 · 60 slides · 4.4 MB]{.meta}
+:::
+
+::: {.thing}
 [Tufte for pharma](slides/tufte-pharma.html)
+
 Ten rules for data graphics, shown on the figures a trial statistician actually makes.
 
-[All notes and talks](notes.qmd){.more}
+[September 2026 · 17 slides · 6.5 MB]{.meta}
 :::
+:::
+
+[All notes and talks](notes.qmd)
+
+## Elsewhere
+
+I'm on [Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en)
+and [GitHub](https://github.com/stat-absk).
+[LinkedIn](https://www.linkedin.com/in/stat-absk/) is where to write to me.
 
 [Views on this site are my own and do not represent my employer.]{.disclaimer}

@@ -324,7 +324,7 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 
 | | Task | Owner | Req |
 | --- | --- | --- | --- |
-| [ ] | 3c.1 Home recomposed to the notebook layout; portrait 4:5 with caption; name up to 76 px fluid — **waits on W1, W2, W5, W8** | A→C | FR-3.11 |
+| [~] | 3c.1 Home recomposed to the notebook layout with W1 and W2 (chosen 8 Oct): opening sentence set large, chalk rule drawn once per session beneath it, the paragraph, 4:5 portrait in the aside, then Made / Written / Elsewhere bands. **Without Now (W5) and the portrait caption (W8)** — add when written. The Elsewhere line is draft option 2, unconfirmed. The site description meta now carries W1 | A→C | FR-3.11 |
 | [x] | 3c.2 `R/theme_chalk.R`: the theme, the palette (sentinel colours), and `chalk_inline()` which renders a plot to inline SVG with the page's custom properties, so figures follow the appearance. Output goes through a `{=html}` fence — Pandoc otherwise breaks the SVG at blank lines | C | FR-3.8 |
 | [x] | 3c.3 CV career strip: seven roles on three rows (University / Regulator / Industry & practice), 2011–now, labelled directly, drawn at render time | C | FR-3.8 |
 | [~] | 3c.4 Papers by year in the margin under "Publications", first-authored paper circled; the 15 as three tally gates; **14 DOI links** from Crossref (titles matched exactly; the Pavlik paper's 2021 DOI chosen over a 2023 erratum). Paper 12 (laser acupuncture, AJTCVM) has no DOI registered — left unlinked | C | FR-3.8, FR-3.2 |
@@ -371,3 +371,4 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | 2026-10-08 | Phase 3a + 3b pushed live (`87e0844`). 3c open: Home recomposition waits on W1, W2, W5, W8; `theme_chalk()`, CV figures, DOIs, Workbench/SingleBell tweaks, Literata social card are Claude's. |
 | 2026-10-08 | 3c technical half built and verified locally: `theme_chalk()`, career strip, papers by year, 14 DOIs, Workbench and SingleBell page changes, privacy page. |
 | 2026-10-08 | 3c technical half pushed live (`e8d349e`). Phase 3 remaining: Home recomposition (3c.1, waits on W1, W2, W5, W8) and the Literata social card (3c.9). |
+| 2026-10-08 | W1 and W2 chosen (HOME-DRAFTS.md). Home recomposed and verified locally without Now or the caption. Awaiting push OK. |

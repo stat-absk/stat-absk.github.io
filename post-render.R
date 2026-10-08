@@ -32,7 +32,7 @@ if (!"avif" %in% formats) cat("post-render: this ImageMagick cannot write AVIF; 
 # dense screens. Anything not listed is served at its own width and half of it.
 display_width <- function(src) {
   w <- c(
-    "images/profile.jpg"            = 272,   # the hero portrait, at its largest
+    "images/profile.jpg"            = 300,   # the hero portrait, at its largest
     "images/singlebell/appicon.png" = 104,   # the app icon in the SingleBell opening
     "images/workbench/"             = 1180   # browser windows, full measure
   )

@@ -13,7 +13,7 @@ project:
 
 website:
   title: "Abhishek Bhattacharjee"
-  description: "Biostatistics leader — clinical development strategy, regulatory science, and real-world evidence."
+  description: "I'm Abhishek, a statistician. I spend my days on research that leads to new medicines, and the evidence behind them: what it shows, and what it doesn't."
   site-url: "https://stat-absk.github.io"
   favicon: images/favicon.png
   open-graph: true
@@ -101,6 +101,13 @@ format:
               // places include-before-body inside main, so it is moved to the body's top.
               var skip = document.querySelector(".skip-link");
               if (skip) document.body.prepend(skip);
+
+              // The arrival stroke on Home draws once per session; on return the
+              // rule is simply there.
+              try {
+                if (sessionStorage.getItem("arrived")) document.documentElement.classList.add("arrived");
+                sessionStorage.setItem("arrived", "1");
+              } catch (e) {}
 
               // Changing appearance is a duster wipe: the toggle's own click is wrapped in
               // a view transition, and the document is marked so the wipe keyframes apply.
