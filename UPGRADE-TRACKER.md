@@ -267,10 +267,10 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | [x] | 1.13 `post-render.R`: AVIF + WebP (AVIF guarded by a capability check) at 1x/2x display widths, `<picture>` rewrite, `width`/`height`, lazy loading. SingleBell as served: 312 KB | C | FR-1.13, FR-1.14 |
 | [x] | 1.14 `R/make_social_card.R` (ragg + magick, Palatino until Literata); Python file deleted | C | D5 |
 | [x] | 1.15 `R/check_budgets.R` — gzip text + 1x images, exits 1 over budget | C | pre-mortem #4 |
-| [ ] | 1.16 Lighthouse: no Node on this machine — scores via PageSpeed Insights once live | C | Gate 1 |
-| [ ] | 1.17 Render, review in preview, **ask before push** | C | — |
+| [ ] | 1.16 Lighthouse: no Node on this machine and the anonymous PageSpeed API quota was exhausted on 8 Oct. Run <https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fstat-absk.github.io%2F> (and `/cv.html`, `/singlebell.html`) and record the scores below | A | Gate 1 |
+| [x] | 1.17 Rendered, reviewed in preview, pushed with OK — `c701ef3`, 8 Oct 2026 | C | — |
 
-**Gate 1 record:** accessibility ___ / ___ / ___ (after push) · SingleBell 312 KB as served (was ~6.3 MB) · longest prose line ≤ 73 chars · date ___
+**Gate 1 record:** accessibility ___ / ___ / ___ (pending 1.16) · SingleBell 312 KB as served (was ~6.3 MB) · longest prose line ≤ 73 chars · live 2026-10-08
 
 *Deviations from the review in Phase 1:* the measure is a rem token, not `66ch` (see 1.5); the skip link needs two lines of the existing script, since Quarto offers no body-top include.
 
@@ -360,4 +360,5 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | Date | Entry |
 | --- | --- |
 | 2026-10-08 | Review received. Decisions D1–D5 settled. Tracker created. Nothing pushed. |
-| 2026-10-08 | Phase 1 built and verified locally (1.1–1.15). Planning Markdown excluded from the render (`project.render`). Awaiting push. |
+| 2026-10-08 | Phase 1 built and verified locally (1.1–1.15). Planning Markdown excluded from the render (`project.render`). |
+| 2026-10-08 | Phase 1 pushed live (`c701ef3`); live markup verified (pictures, skip link, canonical, theme-color, same-tab links). Lighthouse pending (1.16). |
