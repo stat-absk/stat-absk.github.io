@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-20704ea1ce66f109ee115262b13fe209.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4a14a959e3275248d7bcb47bb5a60a3c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script><link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-db083ac006524634d789187db209bb2b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-5585c6bc15149828f1f591c71c54abe7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-78958e0717bd56712b6aebe0982839e6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-30eedbf3d212aef0f294c1c08ea526fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -60,8 +60,13 @@ ul.task-list li input[type="checkbox"] {
 }</script><style>html{ scroll-behavior: smooth; }</style>
 <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1412">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131A17">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F2F3EA">
+<!-- Chalk on slate: the marks are roughened by the page's #chalk filter. On paper they stay clean. --><style>
+  body.quarto-dark .chalk-rule,
+  body.quarto-dark main#quarto-document-content section.level2::before,
+  body.quarto-dark .tally svg { filter: url(#chalk); }
+</style>
 <meta property="og:title" content="Abhishek Bhattacharjee, PhD">
 <meta property="og:description" content="Biostatistics leader — clinical development strategy, regulatory science, real-world evidence">
 <meta property="og:image" content="https://stat-absk.github.io/images/profile.jpg">
@@ -297,18 +302,22 @@ ul.task-list li input[type="checkbox"] {
 <div class="hero-links">
 <p><a href="./cv.html" class="primary">Read the CV</a> <a href="https://scholar.google.com/citations?user=9LJsXtMAAAAJ&amp;hl=en">Google Scholar</a> <a href="https://github.com/stat-absk">GitHub</a> <a href="https://www.linkedin.com/in/stat-absk/">LinkedIn</a></p>
 </div>
-</section><div class="site-map">
-<div class="nav-card">
-<p><a href="./cv.html">CV</a> Roles, education, talks, and publications — the full record.</p>
+</section><div class="things site-map">
+<div class="thing">
+<p><a href="./cv.html">CV</a></p>
+<p>Roles, education, talks, and publications — the full record.</p>
 </div>
-<div class="nav-card">
-<p><a href="./notes.html">Notes</a> Talks, write-ups, and things I’m working through.</p>
+<div class="thing">
+<p><a href="./notes.html">Notes</a></p>
+<p>Talks, write-ups, and things I’m working through.</p>
 </div>
-<div class="nav-card">
-<p><a href="./workbench.html">Workbench</a> Practice group sequential and adaptive design on the real rpact API.</p>
+<div class="thing">
+<p><a href="./workbench.html">Workbench</a></p>
+<p>Practice group sequential and adaptive design on the real rpact API.</p>
 </div>
-<div class="nav-card">
-<p><a href="./singlebell.html">SingleBell</a> A kettlebell practice app for iOS. One bell, nothing collected.</p>
+<div class="thing">
+<p><a href="./singlebell.html">SingleBell</a></p>
+<p>A kettlebell practice app for iOS. One bell, nothing collected.</p>
 </div>
 </div>
 </div>
@@ -777,13 +786,34 @@ ul.task-list li input[type="checkbox"] {
 <p>Made with <a href="https://quarto.org">Quarto</a></p>
 </div>
   </div>
-</footer><script>
-  // Scroll edge: the header wears its glass only once content passes under it.
+</footer><!-- The chalk: one turbulence-and-displacement filter, applied only to the marks. --><svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><defs><filter id="chalk" x="-2%" y="-40%" width="104%" height="180%" color-interpolation-filters="sRGB"><feturbulence type="fractalNoise" basefrequency="0.9" numoctaves="2" seed="7" result="grain"></feturbulence><fedisplacementmap in="SourceGraphic" in2="grain" scale="2.4" xchannelselector="R" ychannelselector="G"></fedisplacementmap></filter></defs></svg><script>
   (function () {
     // "Skip to content" must be the first thing a keyboard reaches. Quarto
     // places include-before-body inside main, so it is moved to the body's top.
     var skip = document.querySelector(".skip-link");
     if (skip) document.body.prepend(skip);
+
+    // Changing appearance is a duster wipe: the toggle's own click is wrapped in
+    // a view transition, and the document is marked so the wipe keyframes apply.
+    var toggle = document.querySelector(".quarto-color-scheme-toggle");
+    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (toggle && document.startViewTransition && !still) {
+      toggle.addEventListener("click", function (e) {
+        if (e.wiped) return;
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        document.documentElement.classList.add("appearance-wipe");
+        document.startViewTransition(function () {
+          var again = new MouseEvent("click", { bubbles: true, cancelable: true });
+          again.wiped = true;
+          toggle.dispatchEvent(again);
+        }).finished.finally(function () {
+          document.documentElement.classList.remove("appearance-wipe");
+        });
+      }, true);
+    }
+
+    // Scroll edge: the header wears its glass only once content passes under it.
     var header = document.getElementById("quarto-header");
     if (!header) return;
     var hero = document.querySelector(".hero-name");

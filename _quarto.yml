@@ -7,6 +7,7 @@ project:
   resources:
     - slides/               # self-contained slide decks, copied as-is
     - fonts/                # the site's faces, served from here (see R/fetch_fonts.R)
+    - marks/                # the chalk marks sprite (see _extensions/chalk)
   post-render:
     - post-render.R         # recreates docs/.nojekyll after each build
 
@@ -58,8 +59,8 @@ format:
     page-layout: full                        # the page takes the viewport, as the decks do
     grid:
       sidebar-width: 0px
-      body-width: 1600px
-      margin-width: 240px
+      body-width: 1180px                   # beyond this the slate is simply slate
+      margin-width: 220px
       gutter-width: 2.5rem
     toc: true
     toc-title: "On this page"
@@ -72,20 +73,56 @@ format:
       - text: |
           <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
           <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-          <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1412">
+          <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131A17">
           <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F2F3EA">
+          <!-- Chalk on slate: the marks are roughened by the page's #chalk filter. On paper they stay clean. -->
+          <style>
+            body.quarto-dark .chalk-rule,
+            body.quarto-dark main#quarto-document-content section.level2::before,
+            body.quarto-dark .tally svg { filter: url(#chalk); }
+          </style>
     include-before-body:
       - text: |
           <a class="skip-link" href="#quarto-document-content">Skip to content</a>
     include-after-body:
       - text: |
+          <!-- The chalk: one turbulence-and-displacement filter, applied only to the marks. -->
+          <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+            <defs>
+              <filter id="chalk" x="-2%" y="-40%" width="104%" height="180%" color-interpolation-filters="sRGB">
+                <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="grain"/>
+                <feDisplacementMap in="SourceGraphic" in2="grain" scale="2.4" xChannelSelector="R" yChannelSelector="G"/>
+              </filter>
+            </defs>
+          </svg>
           <script>
-            // Scroll edge: the header wears its glass only once content passes under it.
             (function () {
               // "Skip to content" must be the first thing a keyboard reaches. Quarto
               // places include-before-body inside main, so it is moved to the body's top.
               var skip = document.querySelector(".skip-link");
               if (skip) document.body.prepend(skip);
+
+              // Changing appearance is a duster wipe: the toggle's own click is wrapped in
+              // a view transition, and the document is marked so the wipe keyframes apply.
+              var toggle = document.querySelector(".quarto-color-scheme-toggle");
+              var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+              if (toggle && document.startViewTransition && !still) {
+                toggle.addEventListener("click", function (e) {
+                  if (e.wiped) return;
+                  e.preventDefault();
+                  e.stopImmediatePropagation();
+                  document.documentElement.classList.add("appearance-wipe");
+                  document.startViewTransition(function () {
+                    var again = new MouseEvent("click", { bubbles: true, cancelable: true });
+                    again.wiped = true;
+                    toggle.dispatchEvent(again);
+                  }).finished.finally(function () {
+                    document.documentElement.classList.remove("appearance-wipe");
+                  });
+                }, true);
+              }
+
+              // Scroll edge: the header wears its glass only once content passes under it.
               var header = document.getElementById("quarto-header");
               if (!header) return;
               var hero = document.querySelector(".hero-name");

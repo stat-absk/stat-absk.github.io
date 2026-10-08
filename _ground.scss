@@ -9,16 +9,33 @@
   --snap:   250ms;
   --ease:   cubic-bezier(0.22, 1, 0.36, 1);
 
+  // Within a section: the app's steps. Between sections: three larger ones.
   --space-xs:  4px;
   --space-s:   8px;
   --space-m:  12px;
   --space-l:  16px;
   --space-xl: 24px;
   --space-xxl:32px;
+  --space-3xl: 48px;
+  --space-4xl: 72px;
+  --space-5xl: 112px;
 
-  --radius-field: 12px;   // a field
-  --radius-part:  16px;   // a part
-  --radius-whole: 20px;   // a whole
+  // Marks have no radius; only images keep one.
+  --radius-image: 6px;
+
+  // The material, as custom properties, so inline SVG figures can take
+  // currentColor and these and follow the appearance without a second render.
+  --ground:  #{$ground};
+  --deep:    #{$deep};
+  --surface: #{$surface};
+  --writing: #{$writing};
+  --accent:  #{$accent};
+  --ink:     #{$ink};
+  --ink2:    #{$ink2};
+  --ink3:    #{$ink3};
+  --rule:    #{$rule};
+  --edge:    #{$edge};
+  --dust:    #{$dust};
 }
 
 // ── The ground ─────────────────────────────────────────────────────────────
@@ -42,11 +59,24 @@ body::after {
 
 html { scrollbar-color: rgba($writing, 0.25) transparent; }
 
-// A page arrives: one short rise, settled, never repeated within the page.
-@keyframes rise {
-  from { opacity: 0; transform: translateY(10px); }
+// ── Motion ─────────────────────────────────────────────────────────────────
+// Each page has at most one authored moment; every other movement answers
+// something the reader did. Nothing rises on load and nothing moves on scroll.
+
+// Changing page: a cross-fade with the bar held still, where the browser can.
+@view-transition { navigation: auto; }
+#quarto-header { view-transition-name: bar; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 200ms; }
+
+// Changing appearance: a duster wipe — the new appearance sweeps in from the
+// left. The toggle is wrapped in a view transition by the page's script, which
+// marks the document while it runs.
+@keyframes wipe {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
 }
-main#quarto-document-content { animation: rise 500ms var(--ease) backwards; }
+html.appearance-wipe::view-transition-old(root) { animation: none; }
+html.appearance-wipe::view-transition-new(root) { animation: wipe 350ms var(--ease); }
 
 // "Skip to content" is the first thing a keyboard reaches and the last thing a
 // pointer sees: off-canvas until focused, then a chalk tab at the top left.
@@ -59,7 +89,6 @@ main#quarto-document-content { animation: rise 500ms var(--ease) backwards; }
   background: $ground;
   color: $accent;
   border: 1px solid $edge;
-  border-radius: var(--radius-field);
   transform: translateY(-200%);
   transition: transform var(--snap) var(--ease);
   &:focus { transform: none; }
@@ -74,7 +103,8 @@ main#quarto-document-content { animation: rise 500ms var(--ease) backwards; }
     transition: none !important;
     scroll-behavior: auto !important;
   }
-  a:active, .nav-card:hover, .hero-links a:active { transform: none !important; }
+  a:active { transform: none !important; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
 }
 
 // Reduce Transparency: the glass becomes the opaque surface, as it does in the app.
@@ -88,11 +118,11 @@ main#quarto-document-content { animation: rise 500ms var(--ease) backwards; }
 
 @media (prefers-contrast: more) {
   body { color: $writing; }
-  .pill, .about-links .about-link { border-color: rgba($writing, 0.3); }
 }
 
+// The focus ring: the accent, 2px, square on text and following an image's corner.
 :focus-visible {
   outline: 2px solid $accent;
   outline-offset: 3px;
-  border-radius: var(--radius-field);
 }
+img:focus-visible, .shots a:focus-visible { border-radius: var(--radius-image); }

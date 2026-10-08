@@ -8,6 +8,7 @@ $ink2:  rgba($writing, $strength-secondary);
 $ink3:  rgba($writing, $strength-tertiary);
 $rule:  rgba($writing, $strength-faint);    // drawn, never written
 $edge:  rgba($writing, $strength-edge);     // the edge of a control: 3:1, so it can be found
+$dust:  rgba($writing, 0.07);               // a soft smudge behind a figure or a quote
 
 $body-bg:      $ground;
 $body-color:   $ink;
@@ -20,9 +21,9 @@ $border-color: $rule;
 $navbar-bg:  rgba($ground, 0.72);
 $navbar-fg:  $ink2;
 $navbar-hl:  $accent;
-$footer-bg:  $ground;
+$footer-bg:  $deep;
 $footer-fg:  $ink3;
 
-$code-block-bg: $surface;
+$code-block-bg: $deep;                      // recessed, not raised
 $code-color:    $ink2;
 $table-border-color: $rule;

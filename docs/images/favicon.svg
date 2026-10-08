@@ -1,6 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- One gate of five: four uprights and the strike. -->
   <rect width="64" height="64" rx="14" fill="#0E1412"/>
-  <text x="32" y="32" text-anchor="middle" dominant-baseline="central"
-        font-family="ui-serif,New York,Georgia,serif"
-        font-size="30" fill="#F2F3EA">AB</text>
+  <g fill="none" stroke="#F2F3EA" stroke-width="3.6" stroke-linecap="round">
+    <path d="M16.4 15 C15.6 27, 16.3 40, 15.5 49"/>
+    <path d="M26.6 14.5 C26 27, 26.8 39, 26 49.5"/>
+    <path d="M37.2 15.2 C36.4 27, 37.3 40, 36.5 49"/>
+    <path d="M47.6 14.8 C46.8 27, 47.5 39, 46.8 49.5"/>
+    <path d="M10 43 C22 36, 42 24, 55 17"/>
+  </g>
 </svg>

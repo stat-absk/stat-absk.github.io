@@ -4,12 +4,18 @@
 // Values from Docs/design/SIGNATURE.md and Theme.swift.
 //
 
-$ground:    #0E1412;   // the page
-$surface:   #18201C;   // a card, a panel
-$surface2:  #232C27;   // a control inside a card
+$ground:    #131A17;   // the page — real slate is grey-green; near-black hid the grain
+$deep:      #0C110F;   // recessed: code blocks, the footer
+$surface:   #18201C;   // a panel
+$surface2:  #232C27;   // a control inside a panel
 $writing:   #F2F3EA;   // chalk — the only writing colour
 $accent:    #E9D592;   // yellow chalk; means "go", nothing else
 $on-accent: #14180F;
+
+// The marks: chalk strokes, roughened by the page's turbulence filter.
+$chalk-filter: true;
+$mark-weight:  2.2;    // px, the stroke of a rule
+$mark-opacity: 0.55;
 
 // The app's four strengths, verbatim (Legibility.strength).
 $strength-primary:   0.92;
@@ -32,5 +38,6 @@ $grain-opacity: 0.05;
 @import "fonts";
 @import "ground";
 @import "type-rules";
+@import "marks";
 @import "bands";
 @import "pages";

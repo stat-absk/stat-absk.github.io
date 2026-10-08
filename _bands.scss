@@ -88,12 +88,13 @@ main#quarto-document-content { max-width: none; }
 
 // A band: a level-two section. The name sits in the left column and stays
 // while its content scrolls past; the rule spans the whole width.
+// The chalk rule above the band is drawn by _marks.scss; the band leaves room
+// for it. The name sits on the ground so the margin's dates slide under it.
 main#quarto-document-content section.level2 {
   display: grid;
   grid-template-columns: $band-columns;
   column-gap: $band-gap;
-  padding: clamp(var(--space-xl), 5vh, 56px) 0;
-  border-top: 1.5px solid $rule;
+  padding: clamp(var(--space-3xl), 6vh, var(--space-4xl)) 0;
 
   > h2 {
     grid-column: 1;
@@ -105,60 +106,61 @@ main#quarto-document-content section.level2 {
     padding: 0;
     border: none;
   }
+  // Where the margin also holds dates, the name stays put so nothing slides
+  // under it.
+  &:has(.cv-when) > h2 { position: static; }
   > :not(h2) { grid-column: 2; }
   > :not(h2):first-of-type { margin-top: 0; }
   > *:last-child { margin-bottom: 0; }
 }
 
-// A grid of wholes: the things on the Stuff page. Each keeps its edge at the
-// whole's radius; the measure is the card's.
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-  gap: var(--space-xl);
-  margin: 0 0 clamp(var(--space-xl), 5vh, 56px);
+// A list of things: ruled rows, a name on the left and one line on the right,
+// the whole row a link. Nothing is boxed.
+.things {
+  margin: 0 0 var(--space-3xl);
+  border-bottom: 1px solid $rule;
 }
-.card {
-  padding: var(--space-xl);
-  border: 1px solid $edge;
-  border-radius: var(--radius-whole);
-  background: rgba($surface, 0.55);
-  transition: border-color var(--snap) var(--ease), transform var(--settle) var(--ease);
-  &:hover { border-color: rgba($writing, 0.28); }
+.thing {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(10rem, 1.2fr) minmax(0, 2.4fr);
+  column-gap: $band-gap;
+  align-items: baseline;
+  padding: var(--space-l) 0;
+  border-top: 1px solid $rule;
 
-  p { max-width: none; margin-bottom: var(--space-m); }
-  p:last-child { margin-bottom: 0; }
-  > p:first-child > a:first-child {   // the name of the thing, set as a name
+  > p { margin: 0; max-width: none; }
+  > p:first-child { grid-column: 1; }
+  > p:not(:first-child) { grid-column: 2; color: $ink2; }
+  > p.meta { font-family: $font-family-sans-serif; font-size: $size-caption; color: $ink3; margin-top: var(--space-xs); }
+
+  // The name of the thing, set as a name; its target is the whole row.
+  > p:first-child > a {
     font-family: $font-family-serif;
     font-size: $size-lead;
     line-height: 1.25;
     color: $ink;
-    display: block;
-    margin-bottom: var(--space-s);
+    text-decoration: none;
+    transition: color var(--snap) var(--ease);
+    &::before { content: ""; position: absolute; inset: 0; }
   }
-}
+  &:hover > p:first-child > a, > p:first-child > a:focus-visible { color: $accent; }
 
-// Four abreast needs room; between phone and full width the cards pair up.
-@media (max-width: 1100px) {
-  .site-map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  // Other links in the row sit above the row's target, so they still work.
+  > p:not(:first-child) a { position: relative; z-index: 1; }
 }
 
 @media (max-width: 700px) {
-  .hero {
-    min-height: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    .hero-portrait, .hero-text, .site-map { grid-column: 1; grid-row: auto; }
-    .hero-portrait { order: 0; }
-    .hero-text { order: 1; }
-    .site-map { order: 2; grid-template-columns: 1fr; }
-  }
   main#quarto-document-content section.level2 {
     grid-template-columns: 1fr;
     > h2 { grid-row: auto; position: static; margin-bottom: var(--space-l); }
     > :not(h2) { grid-column: 1; }
   }
-  .cards { grid-template-columns: 1fr; }
+  .thing {
+    grid-template-columns: 1fr;
+    row-gap: var(--space-xs);
+    > p, > p:not(:first-child) { grid-column: 1; }
+  }
 }
 
 // ── Page openings ──────────────────────────────────────────────────────────
@@ -209,11 +211,13 @@ nav[role="doc-toc"] {
 }
 
 // ── The footer ─────────────────────────────────────────────────────────────
-// One quiet line: the name, the pages set off by middle dots, the colophon.
-.footer, .nav-footer { border-top: 1px solid $rule; font-size: $size-caption; }
+// One quiet line on the recessed ground: the name, the pages, the colophon.
+.footer, .nav-footer { border-top: none; font-size: $size-caption; }
 
 .nav-footer {
   padding: var(--space-xl) 0;
+  margin-top: var(--space-4xl);
+  background: $deep;
   color: $ink3;
 
   p { margin: 0; }
@@ -233,11 +237,7 @@ nav[role="doc-toc"] {
     list-style: none;
   }
   .footer-items .nav-item { display: inline-flex; align-items: center; }
-  .footer-items .nav-item + .nav-item::before {
-    content: "·";
-    color: rgba($writing, 0.35);
-    padding: 0 var(--space-s);
-  }
+  .footer-items .nav-item + .nav-item { margin-left: var(--space-l); }   // air, not middle dots
   .footer-items .nav-link { display: inline; padding: 0; }
   .footer-items .nav-link p { display: inline; margin: 0; }
 }

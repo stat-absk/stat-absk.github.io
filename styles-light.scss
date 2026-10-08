@@ -7,12 +7,20 @@
 // hue (46°) and saturation and is pressed down to 28% lightness — 5.4:1.
 //
 
-$ground:    #F2F3EA;   // the chalk, now the page
+// Pencil on paper: not the dark appearance inverted, but its own material —
+// a mark a hand makes and can rub out.
+$ground:    #F2F3EA;   // paper; its faint green keeps it off every other site's cream
+$deep:      #E6E7DD;   // recessed: code blocks, the footer
 $surface:   #E9EAE0;
 $surface2:  #DFE0D5;
-$writing:   #0E1412;   // the slate, now the ink
+$writing:   #2A302D;   // graphite — 12.1:1, softer than ink, well past AAA
 $accent:    #6E5A16;   // the same yellow (hue 46), pressed into paper — 6.0:1
 $on-accent: #F2F3EA;
+
+// The marks: pencil strokes, thinner and clean.
+$chalk-filter: false;
+$mark-weight:  1.5;
+$mark-opacity: 0.6;
 
 // Ink on paper needs a firmer hand than chalk on slate — the app's strengths
 // are tuned for chalk and read washed out when inverted. Every written strength
@@ -37,5 +45,6 @@ $grain-opacity: 0.04;
 @import "fonts";
 @import "ground";
 @import "type-rules";
+@import "marks";
 @import "bands";
 @import "pages";

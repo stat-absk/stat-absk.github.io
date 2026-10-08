@@ -4,22 +4,20 @@ subtitle: "Things I've made."
 toc: false
 ---
 
-::: {.cards #things}
+::: {.things}
 
-::: {.card}
-[Clinical Trial Design Workbench](workbench.qmd) — a free, open practice
-environment for group sequential and adaptive trial design, built on the
-[rpact](https://www.rpact.org) R package. Guided chapters, a worked example
-behind every feature, and the reproducing R code under every result.
-Still a work in progress, and growing.
-[Open the app](https://stat-absk-ct-dashboard.share.connect.posit.cloud/) or
-[follow the tutorial](https://github.com/stat-absk/CT_Dashboard/blob/main/TUTORIAL.md).
+::: {.thing}
+[Clinical Trial Design Workbench](workbench.qmd)
+
+Practice group sequential and adaptive trial design on the real rpact API, with the reproducing R code under every result.
+
+[Open the app](https://stat-absk-ct-dashboard.share.connect.posit.cloud/) · [the tutorial](https://github.com/stat-absk/CT_Dashboard/blob/main/TUTORIAL.md){.meta}
 :::
 
-::: {.card}
-[SingleBell](singlebell.qmd) — a kettlebell practice app for iOS. One bell,
-the day's practice dealt each morning, and nothing that collects anything
-about you.
+::: {.thing}
+[SingleBell](singlebell.qmd)
+
+A kettlebell practice app for iOS. One bell, the day's practice dealt each morning, and nothing that collects anything about you.
 :::
 
 :::

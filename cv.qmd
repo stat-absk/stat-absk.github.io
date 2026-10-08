@@ -146,7 +146,7 @@ before arguing about how to analyse it.
 
 ## Publications
 
-15 peer-reviewed journal articles · 315 citations (as of July 2026) ·
+{{< tally 15 >}} peer-reviewed journal articles · 315 citations (as of July 2026) ·
 [Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en)
 
 ### 2026

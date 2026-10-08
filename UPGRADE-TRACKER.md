@@ -302,23 +302,23 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 
 | | Task | Owner | Req |
 | --- | --- | --- | --- |
-| [ ] | 3a.1 Tokens as CSS custom properties on `:root` | C | FR-3.7 |
-| [ ] | 3a.2 Dark: slate `#131A17`, deep slate `#0C110F` for code and footer; dust surfaces | C | FR-3.6 |
-| [ ] | 3a.3 Light: graphite on paper; marks thinner, unfiltered | C | FR-3.5 |
-| [ ] | 3a.4 `marks/chalk.svg` sprite + one turbulence/displacement filter (< 15 KB) | C | FR-3.1, ADR-03 |
-| [ ] | 3a.5 `_extensions/chalk/` Lua: `tally`, `rule` with accessible text | C | FR-3.2, FR-3.3 |
-| [ ] | 3a.6 Favicon as one gate of five; social card from `R/make_social_card.R` | C | FR-3.10 |
+| [x] | 3a.1 Tokens as CSS custom properties on `:root` (`--ground` … `--dust`) | C | FR-3.7 |
+| [x] | 3a.2 Dark: slate `#131A17`, deep slate `#0C110F` for code blocks and the footer; `$dust` behind quotes | C | FR-3.6 |
+| [x] | 3a.3 Light: graphite `#2A302D` on paper; marks 1.5 px, unfiltered | C | FR-3.5 |
+| [x] | 3a.4 `marks/chalk.svg` (tally stroke, strike, underline, circle, eight rules; 3 KB). The filter lives in the page (`_quarto.yml`), scoped to `body.quarto-dark` — Quarto's theme pipeline treats `url(#chalk)` in SCSS as a file to copy. The eight rule paths are also in `_marks.scss` as data URIs so bands need no request | C | FR-3.1, ADR-03 |
+| [x] | 3a.5 `_extensions/chalk/`: `{{< tally N >}}` (number as hidden text, strokes `aria-hidden`) and `{{< rule >}}` (cycles eight). First use: the 15 papers on the CV | C | FR-3.2, FR-3.3 |
+| [~] | 3a.6 Favicon is one gate of five (`images/favicon.svg`, PNGs from `R/make_favicon.R`). Social card still Palatino: R cannot rasterise WOFF2, so the Literata card needs the TTF — part of 3c | C | FR-3.10 |
 
 **3b Rows, margin, motion**
 
 | | Task | Owner | Req |
 | --- | --- | --- | --- |
-| [ ] | 3b.1 Remove every box: card borders/fills/lift/arrow, pill outlines, portrait ring and glow; three-radius system retired except images | C | FR-3.4 |
-| [ ] | 3b.2 Listing rows on Made and Notes (reuse Sept prototype C) | C | FR-3.4, D10 |
-| [ ] | 3b.3 Working margin: CV dates into the band's left column; margin-note component (folds under on phones) | C | review §Layout |
-| [ ] | 3b.4 Content width 1180 px; three zones; spacing steps 48 / 72 / 112 | C | review §Grid |
-| [ ] | 3b.5 Motion set: rule draws once on Home; appearance wipe; view-transition cross-fade; Reduce Motion → none | C | FR-3.9 |
-| [ ] | 3b.6 Focus ring squared on inline text links | C | review §A11y |
+| [x] | 3b.1 No boxes: cards, pill outlines, image borders, portrait ring and glow gone; `--radius-image: 6px` is the only radius; the store link is a plain primary link | C | FR-3.4 |
+| [x] | 3b.2 `.things` / `.thing` ruled rows on Home (the four doors), Work and Notes — name left, one line right, meta line, whole row a link | C | FR-3.4, D10 |
+| [~] | 3b.3 CV dates in the band's margin (absolute, `top: auto`); the section name stops being sticky where the margin holds dates. Margin-note component not yet built (no content uses it) | C | review §Layout |
+| [x] | 3b.4 Body 1180 px, margin 220 px; `--space-3xl/4xl/5xl` = 48 / 72 / 112; bands use them | C | review §Grid |
+| [~] | 3b.5 Page rise and hero stagger removed; cross-document view transition (200 ms, bar held still); appearance wipe (350 ms) wrapping Quarto's toggle; Reduce Motion disables all. The Home rule draw-once waits for 3c's composition | C | FR-3.9 |
+| [x] | 3b.6 Focus ring square on text; images keep their corner | C | review §A11y |
 
 **3c Home and figures** — *needs W1, W2, W5, W8*
 
@@ -366,3 +366,4 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | 2026-10-08 | Phase 1 pushed live (`c701ef3`); live markup verified (pictures, skip link, canonical, theme-color, same-tab links). Lighthouse pending (1.16). |
 | 2026-10-08 | Phase 2 technical half built and verified locally: fonts (102 KB), scale, SCSS split, Work/Notes pages, bar, footer words, competencies cut. Prose (W1–W6) and About still with Abhishek. |
 | 2026-10-08 | Phase 2 pushed live (`753d35c`). Open: W1–W6, About (gates the About tab), Lighthouse/CLS readings (1.16, 2.3), cross-device check (2.14). |
+| 2026-10-08 | Phase 3a + 3b built and verified locally (materials, marks, rows, margin, motion). Awaiting review and push OK. 3c waits on W1, W2, W5, W8. |

@@ -31,24 +31,28 @@ real-world evidence, target trial emulation, external control cohorts.
 :::
 :::
 
-::: {.site-map}
-::: {.nav-card}
+::: {.things .site-map}
+::: {.thing}
 [CV](cv.qmd)
+
 Roles, education, talks, and publications — the full record.
 :::
 
-::: {.nav-card}
+::: {.thing}
 [Notes](notes.qmd)
+
 Talks, write-ups, and things I'm working through.
 :::
 
-::: {.nav-card}
+::: {.thing}
 [Workbench](workbench.qmd)
+
 Practice group sequential and adaptive design on the real rpact API.
 :::
 
-::: {.nav-card}
+::: {.thing}
 [SingleBell](singlebell.qmd)
+
 A kettlebell practice app for iOS. One bell, nothing collected.
 :::
 :::

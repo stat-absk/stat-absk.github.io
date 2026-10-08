@@ -80,23 +80,34 @@ main a {
 main .hero-links a, main .pill, main h1 a, main h2 a, main h3 a { text-decoration: none; }
 
 // ── Written things ─────────────────────────────────────────────────────────
-// A pill is a part: a written label with an edge, never a filled chip — the
-// accent is not spent on decoration.
+// A label is written, not boxed: small, in the sans, set off by air.
 .pill {
   display: inline-block;
-  padding: 2px var(--space-m);
-  margin: 0 var(--space-xs) var(--space-s) 0;
-  border: 1px solid $edge;
-  border-radius: 999px;
+  margin: 0 var(--space-l) var(--space-xs) 0;
   font-size: $size-caption;
   color: $ink2;
 }
-// The one pill that is a door — the App Store link on the SingleBell page — wears
-// the accent, faintly at rest and firm under the pointer, the way every link does.
+// The one label that is a door — the App Store link on the SingleBell page — is
+// a plain primary link: the accent, underlined, 44px tall to tap.
 a.pill.store {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: $accent;
-  border-color: rgba($accent, 0.45);
-  &:hover, &:focus-visible { border-color: $accent; }
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba($accent, 0.4);
+  text-underline-offset: 0.18em;
+  &:hover, &:focus-visible { text-decoration-color: $accent; }
+}
+
+// A quoted block sits on dust — a soft smudge, not a box.
+blockquote {
+  margin: var(--space-xl) 0;
+  padding: var(--space-l) var(--space-xl);
+  border: none;
+  background: $dust;
+  color: $ink2;
 }
 
 .disclaimer {
