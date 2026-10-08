@@ -20,6 +20,39 @@ and pioneering use of real-world evidence and external-control cohorts.
 
 ## Experience
 
+```{r}
+#| label: career-strip
+#| echo: false
+#| results: asis
+source("R/theme_chalk.R")
+roles <- tibble::tribble(
+  ~role,                              ~where,                 ~kind,                 ~from,        ~to,
+  "Statistician",                     "Cytel",                "Industry & practice", "2011-06-01", "2012-04-30",
+  "Graduate assistant & instructor",  "University of Florida","University",          "2012-08-01", "2017-08-31",
+  "Assistant professor",              "Northern Colorado",    "University",          "2017-08-01", "2019-07-31",
+  "Biostatistician",                  "Nemours",              "Industry & practice", "2019-08-01", "2020-01-31",
+  "Mathematical statistician",        "FDA",                  "Regulator",           "2020-02-01", "2022-04-30",
+  "Manager",                          "Pfizer",               "Industry & practice", "2022-05-01", "2024-05-31",
+  "Senior Manager",                   "",                     "Industry & practice", "2024-06-01", as.character(Sys.Date())
+)
+roles$from <- as.Date(roles$from); roles$to <- as.Date(roles$to)
+roles$kind <- factor(roles$kind, levels = c("Industry & practice", "Regulator", "University"))
+strip <- ggplot(roles, aes(y = kind)) +
+  geom_segment(aes(x = from, xend = to, yend = kind), colour = chalk_colours[["ink"]],
+               linewidth = 4, lineend = "round") +
+  geom_text(aes(x = from, label = role), hjust = 0, nudge_y = 0.32, size = 3,
+            colour = chalk_colours[["ink2"]], family = "Atkinson Hyperlegible Next") +
+  geom_text(aes(x = from, label = where), hjust = 0, nudge_y = -0.34, size = 2.7,
+            colour = chalk_colours[["ink3"]], family = "Atkinson Hyperlegible Next") +
+  scale_x_date(date_breaks = "2 years", date_labels = "%Y",
+               limits = as.Date(c("2011-01-01", NA)), expand = expansion(mult = c(0, 0.08))) +
+  scale_y_discrete(expand = expansion(add = 0.7)) +
+  labs(x = NULL, y = NULL) +
+  theme_chalk()
+chalk_inline(strip, width = 7.5, height = 2.6,
+  summary = "Seven roles on one time axis from 2011 to now: Cytel in 2011, the University of Florida from 2012 to 2017, the University of Northern Colorado to 2019, Nemours in 2019, the FDA from 2020 to 2022, and Pfizer since 2022.")
+```
+
 ::: {.cv-entry}
 [Jun 2024 – present]{.cv-when}
 [Senior Manager, Biostatistics]{.cv-what} — Pfizer Healthcare India Pvt. Ltd., Chennai, India
@@ -149,61 +182,84 @@ before arguing about how to analyse it.
 {{< tally 15 >}} peer-reviewed journal articles · 315 citations (as of July 2026) ·
 [Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en)
 
+```{r}
+#| label: papers-by-year
+#| echo: false
+#| results: asis
+source("R/theme_chalk.R")
+papers <- data.frame(
+  year  = c(2026, 2026, 2025, 2025, 2025, 2025, 2024, 2021, 2020, 2020, 2019, 2019, 2019, 2017, 2017),
+  first = c(FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE)
+)
+papers$n <- ave(papers$year, papers$year, FUN = seq_along)
+dots <- ggplot(papers, aes(year, n)) +
+  geom_point(colour = chalk_colours[["ink"]], size = 2) +
+  geom_point(data = subset(papers, first), shape = 1, size = 5.5, stroke = 0.9,
+             colour = chalk_colours[["accent"]]) +
+  scale_x_continuous(breaks = c(2017, 2020, 2023, 2026), limits = c(2016.5, 2026.5)) +
+  scale_y_continuous(breaks = NULL, expand = expansion(add = c(0.8, 0.8))) +
+  labs(x = NULL, y = NULL) +
+  theme_chalk(base_size = 11) +
+  theme(axis.line.x = element_blank(), panel.grid.major.x = element_blank(), plot.margin = margin(0, 0, 0, 0))
+chalk_inline(dots, width = 2.4, height = 1.5, class = "figure-chalk margin-figure",
+  summary = "Fifteen papers by year from 2017 to 2026, one dot each; the first-authored paper, in 2019, is circled.")
+```
+
 ### 2026
 
 1. Dubinsky MC, Cohen ER, Irving PM, … **Bhattacharjee A**, et al. Bowel urgency in
    ulcerative colitis is associated with clinical endpoints, health-related quality
    of life, and biomarkers: data from the etrasimod ELEVATE UC 52 trial.
-   *Crohn's & Colitis 360*. 2026;otag072.
+   *Crohn's & Colitis 360*. 2026;otag072. [doi](https://doi.org/10.1093/crocol/otag072)
 
 2. Makgoeng SB, Gamalo M, Russo LJ, Pradhan V, **Bhattacharjee A**, Bhosale N.
    Data-driven trial design: use of target trial emulation to evaluate eligibility
-   criteria in asthma and COPD. *Frontiers in Medicine*. 2026;13:1863026.
+   criteria in asthma and COPD. *Frontiers in Medicine*. 2026;13:1863026. [doi](https://doi.org/10.3389/fmed.2026.1863026)
 
 ### 2025
 
 3. Armuzzi A, Rubin DT, Schreiber S, … **Bhattacharjee A**, et al. Health-related
    quality of life outcomes with etrasimod treatment in patients with ulcerative
    colitis: a post hoc analysis of data from ELEVATE UC 52 and ELEVATE UC 12.
-   *Inflammatory Bowel Diseases*. 2025;31(6):1583–1594.
+   *Inflammatory Bowel Diseases*. 2025;31(6):1583–1594. [doi](https://doi.org/10.1093/ibd/izae229)
 
 4. Jairath V, Rubin DT, Verstockt B, … **Bhattacharjee A**, et al. The effect of
    etrasimod on fecal calprotectin and high-sensitivity C-reactive protein: results
    from the ELEVATE UC clinical program. *Inflammatory Bowel Diseases*.
-   2025;31(4):923–934.
+   2025;31(4):923–934. [doi](https://doi.org/10.1093/ibd/izae111)
 
 5. Magro F, Peyrin-Biroulet L, Sands BE, … **Bhattacharjee A**, et al. Endoscopic,
    histologic, and composite endpoints in patients with ulcerative colitis treated
-   with etrasimod. *Clinical Gastroenterology and Hepatology*. 2025;23(2):341–350.
+   with etrasimod. *Clinical Gastroenterology and Hepatology*. 2025;23(2):341–350. [doi](https://doi.org/10.1016/j.cgh.2024.07.010)
 
 6. Afzali A, Regueiro M, Yarur AJ, … **Bhattacharjee A**, et al. Concomitant use of
    etrasimod with opioids or antidepressants in patients with ulcerative colitis —
-   a safety analysis. *United European Gastroenterology Journal*. 2025;13(5):719–727.
+   a safety analysis. *United European Gastroenterology Journal*. 2025;13(5):719–727. [doi](https://doi.org/10.1002/ueg2.12745)
 
 ### 2024
 
 7. Regueiro M, Siegmund B, Yarur AJ, … **Bhattacharjee A**, et al. Etrasimod for the
    treatment of ulcerative colitis: analysis of infection events from the ELEVATE UC
-   clinical programme. *Journal of Crohn's and Colitis*. 2024;18(10):1596–1605.
+   clinical programme. *Journal of Crohn's and Colitis*. 2024;18(10):1596–1605. [doi](https://doi.org/10.1093/ecco-jcc/jjae060)
 
 ### 2021 and earlier
 
 8. Imerci A, Rogers KJ, **Bhattacharjee A**, Bowen JR, Thacker MM. Risk factors for
    failure of Pavlik harness treatment in infants with dislocated hips evaluated by
-   dynamic sonography. *Journal of Pediatric Orthopaedics*. 2021;41(6):e386–e391.
+   dynamic sonography. *Journal of Pediatric Orthopaedics*. 2021;41(6):e386–e391. [doi](https://doi.org/10.1097/bpo.0000000000001799)
 
 9. Chatterjee N, Nair PKR, Nair VD, Viswanath S, **Bhattacharjee A**. Depth-wise
    distribution of soil-carbon stock in aggregate-sized fractions under
    shaded-perennial agroforestry systems in the Western Ghats of Karnataka, India.
-   *Agroforestry Systems*. 2020;94(2):341–358.
+   *Agroforestry Systems*. 2020;94(2):341–358. [doi](https://doi.org/10.1007/s10457-019-00399-z)
 
 10. Alharash H, Hossain MJ, **Bhattacharjee A**, Levenbrown Y. Use of pulse contour
     technology for continuous blood pressure monitoring in pediatric patients.
-    *Blood Pressure Monitoring*. 2020;25(5):278–284.
+    *Blood Pressure Monitoring*. 2020;25(5):278–284. [doi](https://doi.org/10.1097/mbp.0000000000000458)
 
 11. Chatterjee N, Nair PKR, Nair VD, **Bhattacharjee A**, et al. Do coffee agroforestry
     systems always improve soil carbon stocks deeper in the soil? A case study from
-    Turrialba, Costa Rica. *Forests*. 2019;11(1):49.
+    Turrialba, Costa Rica. *Forests*. 2019;11(1):49. [doi](https://doi.org/10.3390/f11010049)
 
 12. Ying W, **Bhattacharjee A**, Wu SS. Effect of laser acupuncture on mitigating
     anxiety in acute stressed horses: a randomized, controlled study. *American
@@ -211,14 +267,14 @@ before arguing about how to analyse it.
 
 13. **Bhattacharjee A**, Ghosh M. Bias-corrected empirical Bayes confidence intervals
     for the selected mean. *Communications in Statistics — Theory and Methods*.
-    2019;48(3):583–595.
+    2019;48(3):583–595. [doi](https://doi.org/10.1080/03610926.2017.1417427)
 
 14. Ahn H, Woods AJ, Kunik ME, … **Bhattacharjee A**, et al. Efficacy of transcranial
     direct current stimulation over primary motor cortex and contralateral
     supraorbital area on clinical pain severity and mobility performance in persons
     with knee osteoarthritis: a randomized, sham-controlled pilot study.
-    *Brain Stimulation*. 2017;10(5):902–909.
+    *Brain Stimulation*. 2017;10(5):902–909. [doi](https://doi.org/10.1016/j.brs.2017.05.007)
 
 15. Wu SS, Chen S, **Bhattacharjee A**, He Y. Collusion-resistant multi-matrix masking
     for privacy-preserving data collection. *2017 IEEE 3rd International Conference
-    on Big Data Security on Cloud (BigDataSecurity)*. 2017:1–7.
+    on Big Data Security on Cloud (BigDataSecurity)*. 2017:1–7. [doi](https://doi.org/10.1109/bigdatasecurity.2017.10)

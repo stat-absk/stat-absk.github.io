@@ -108,7 +108,7 @@ main#quarto-document-content section.level2 {
   }
   // Where the margin also holds dates, the name stays put so nothing slides
   // under it.
-  &:has(.cv-when) > h2 { position: static; }
+  &:has(.cv-when) > h2, &:has(.margin-figure) > h2 { position: static; }
   > :not(h2) { grid-column: 2; }
   > :not(h2):first-of-type { margin-top: 0; }
   > *:last-child { margin-bottom: 0; }

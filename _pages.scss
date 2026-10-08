@@ -223,6 +223,25 @@ main#quarto-document-content section.level2 > .cv-entry:first-of-type { margin-t
 
 .cv-what { color: $ink; font-weight: 600; }
 
+// ── Figures ────────────────────────────────────────────────────────────────
+// A figure is drawn in R with theme_chalk() and inlined as SVG that takes the
+// page's colours. It fills its column; a margin figure sits in the band's left
+// column under the section name.
+.figure-chalk {
+  margin: 0 0 var(--space-xl);
+  svg { display: block; width: 100%; height: auto; }
+}
+main#quarto-document-content section.level2 > .margin-figure {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: start;
+  margin: var(--space-m) 0 0;
+  max-width: 14rem;
+}
+@media (max-width: 700px) {
+  main#quarto-document-content section.level2 > .margin-figure { grid-row: auto; max-width: 16rem; }
+}
+
 // ── App screenshots ────────────────────────────────────────────────────────
 // A phone is a whole: it keeps its edge, at the whole's radius.
 // Capped rather than fluid: a phone shown wider than this only enlarges UI text

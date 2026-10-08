@@ -11,11 +11,12 @@ toc-title: "On this page"
 [A work in progress]{.pill}
 
 ::: {.hero-links}
-[Open the workbench](https://stat-absk-ct-dashboard.share.connect.posit.cloud/)
-[Follow the tutorial](https://github.com/stat-absk/CT_Dashboard/blob/main/TUTORIAL.md)
-[Quick-start guide](https://github.com/stat-absk/CT_Dashboard/blob/main/USER_GUIDE.md)
-[Source on GitHub](https://github.com/stat-absk/CT_Dashboard)
+[Open the workbench](https://stat-absk-ct-dashboard.share.connect.posit.cloud/){.primary}
 :::
+
+There is a [tutorial](https://github.com/stat-absk/CT_Dashboard/blob/main/TUTORIAL.md)
+to follow along, a shorter [quick-start guide](https://github.com/stat-absk/CT_Dashboard/blob/main/USER_GUIDE.md),
+and the [source on GitHub](https://github.com/stat-absk/CT_Dashboard).
 
 The workbench is a place to learn trial design by doing it. It is built for
 statisticians who are new to the field, and it teaches the way people actually
@@ -65,7 +66,7 @@ as an HTML report, or written to a session file and restored later.
 
 ## Learn by doing
 
-The Start tab is laid out as a course rather than a menu: eight guided
+The Start tab is laid out as a course rather than a menu: {{< tally 8 >}} guided
 chapters in three parts — sizing a fixed trial, designs that can stop early,
 and what to do when the formulas run out. Each chapter seeds the objects the
 next one needs, so none of them can dead-end, and the contents list at the
