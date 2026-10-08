@@ -210,6 +210,15 @@ nav[role="doc-toc"] {
   }
 }
 
+// A page's last-tended date: one quiet line at its foot, in the sans.
+.tended {
+  margin: var(--space-4xl) 0 0;
+  font-family: $font-family-sans-serif;
+  font-size: $size-caption;
+  color: $ink3;
+  max-width: none;
+}
+
 // ── The footer ─────────────────────────────────────────────────────────────
 // One quiet line on the recessed ground: the name, the pages, the colophon.
 .footer, .nav-footer { border-top: none; font-size: $size-caption; }

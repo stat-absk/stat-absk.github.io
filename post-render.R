@@ -101,3 +101,25 @@ rewrite_images <- function(page) {
 pages <- list.files(out, pattern = "\\.html$", full.names = TRUE)   # top level only: the site's pages
 done <- vapply(pages, rewrite_images, logical(1))
 cat("post-render: images rewritten on", sum(done), "page(s); formats:", paste(formats, collapse = ", "), "\n")
+
+# ── Last tended ──────────────────────────────────────────────────────────────
+# A quiet date at the foot of each page, so a reader knows how fresh it is: the
+# day the page's source was last committed. Pages with no committed source
+# (a page just created, or an alias) get nothing.
+tended <- function(page) {
+  src <- sub("\\.html$", ".qmd", basename(page))
+  if (!file.exists(src)) return(FALSE)
+  when <- tryCatch(system2("git", c("log", "-1", "--format=%cs", "--", shQuote(src)), stdout = TRUE), error = function(e) character())
+  if (!length(when) || !nzchar(when[1])) return(FALSE)
+  d <- as.Date(when[1])
+  html <- readLines(page, warn = FALSE, encoding = "UTF-8")
+  i <- grep("</main>", html, fixed = TRUE)
+  if (!length(i)) return(FALSE)
+  line <- sprintf('<p class="tended">Last tended <time datetime="%s">%s %s %s</time>.</p>',
+                  format(d), as.integer(format(d, "%d")), format(d, "%B"), format(d, "%Y"))
+  html[i[1]] <- sub("</main>", paste0(line, "</main>"), html[i[1]], fixed = TRUE)
+  writeLines(html, page, useBytes = TRUE)
+  TRUE
+}
+dated <- vapply(pages, tended, logical(1))
+cat("post-render: last-tended dates on", sum(dated), "page(s)\n")

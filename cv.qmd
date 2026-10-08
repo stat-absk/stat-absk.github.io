@@ -1,11 +1,34 @@
 ---
 title: "Curriculum Vitae"
 description: "Positions, education, leadership, and service."
+format:
+  html: default
+  typst:                          # the same source, typeset as a PDF (docs/cv.pdf)
+    title: "Abhishek Bhattacharjee, PhD"
+    subtitle: "Curriculum Vitae"
+    template-partials:            # pencil on paper: the site's material, on the page
+      - typst-template.typ
+      - typst-show.typ
+    font-paths: [fonts/ttf]
+    toc: false
+format-links: false
+filters:
+  - chalk                         # on paper, the CV's classes become the template's functions
+knitr:
+  opts_chunk:
+    dev: "ragg_png"               # R's own png device wants X11 on this machine
 ---
 
+::: {.content-visible when-format="html"}
 Chennai, India ·
 [Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en) ·
-[LinkedIn](https://www.linkedin.com/in/stat-absk/)
+[LinkedIn](https://www.linkedin.com/in/stat-absk/) ·
+[PDF](cv.pdf)
+:::
+
+::: {.content-visible when-format="typst"}
+Chennai, India · stat-absk.github.io · [Google Scholar](https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en) · [LinkedIn](https://www.linkedin.com/in/stat-absk/)
+:::
 
 ## Profile
 
@@ -18,6 +41,12 @@ Inflammation & Immunology programs. Former FDA Oncology Center of Excellence
 primary reviewer with hands-on NDA/BLA experience, product-labelling negotiation,
 and pioneering use of real-world evidence and external-control cohorts.
 
+::: {.content-visible when-format="typst"}
+## Core competencies
+
+Clinical development strategy · Regulatory interactions (FDA) · Oncology & I&I trial design · NDA / BLA / IND submissions · Endpoint & estimand strategy · Real-world evidence · Target trial emulation · Bayesian & adaptive designs · People leadership & mentoring · Cross-functional influence · Reproducible workflows · Scientific publication & speaking
+:::
+
 ## Experience
 
 ```{r}
@@ -26,31 +55,42 @@ and pioneering use of real-world evidence and external-control cohorts.
 #| results: asis
 source("R/theme_chalk.R")
 roles <- tibble::tribble(
-  ~role,                              ~where,                 ~kind,                 ~from,        ~to,
-  "Statistician",                     "Cytel",                "Industry & practice", "2011-06-01", "2012-04-30",
-  "Graduate assistant & instructor",  "University of Florida","University",          "2012-08-01", "2017-08-31",
-  "Assistant professor",              "Northern Colorado",    "University",          "2017-08-01", "2019-07-31",
-  "Biostatistician",                  "Nemours",              "Industry & practice", "2019-08-01", "2020-01-31",
-  "Mathematical statistician",        "FDA",                  "Regulator",           "2020-02-01", "2022-04-30",
-  "Manager",                          "Pfizer",               "Industry & practice", "2022-05-01", "2024-05-31",
-  "Senior Manager",                   "",                     "Industry & practice", "2024-06-01", as.character(Sys.Date())
+  ~role,                         ~where,                  ~kind,                 ~from,        ~to,          ~flip,
+  "Statistician",                "Cytel",                 "Industry & practice", "2011-06-01", "2012-04-30", FALSE,
+  "Graduate assistant",          "University of Florida", "University",          "2012-08-01", "2017-08-31", FALSE,
+  "Assistant professor",         "Northern Colorado",     "University",          "2017-08-01", "2019-07-31", TRUE,
+  "Biostatistician",             "Nemours",               "Industry & practice", "2019-08-01", "2020-01-31", TRUE,
+  "Mathematical statistician",   "FDA",                   "Regulator",           "2020-02-01", "2022-04-30", FALSE,
+  "Manager",                     "Pfizer",                "Industry & practice", "2022-05-01", "2024-05-31", TRUE,
+  "Senior Manager",              "",                      "Industry & practice", "2024-06-01", as.character(Sys.Date()), FALSE
 )
 roles$from <- as.Date(roles$from); roles$to <- as.Date(roles$to)
-roles$kind <- factor(roles$kind, levels = c("Industry & practice", "Regulator", "University"))
-strip <- ggplot(roles, aes(y = kind)) +
-  geom_segment(aes(x = from, xend = to, yend = kind), colour = chalk_colours[["ink"]],
-               linewidth = 4, lineend = "round") +
-  geom_text(aes(x = from, label = role), hjust = 0, nudge_y = 0.32, size = 3,
-            colour = chalk_colours[["ink2"]], family = "Atkinson Hyperlegible Next") +
-  geom_text(aes(x = from, label = where), hjust = 0, nudge_y = -0.34, size = 2.7,
+kinds <- c("Industry & practice", "Regulator", "University")
+roles$y    <- match(roles$kind, kinds)
+roles$now  <- roles$to >= Sys.Date() - 1          # the one role to look at: the current one
+# Labels sit above the bar (role) and below it (where); where two roles follow
+# each other on a row, the second is flipped so nothing collides.
+roles$role_y  <- roles$y + ifelse(roles$flip, -0.34, 0.3)
+roles$where_y <- roles$y + ifelse(roles$flip, 0.3, -0.34)
+# Data ink only: the bars, their names, a range-frame axis from the first day
+# to today. The current role carries the accent; the rest sit in the second ink.
+strip <- ggplot(roles) +
+  geom_segment(aes(x = from, xend = to, y = y, yend = y, colour = now),
+               linewidth = 2.6, lineend = "round", show.legend = FALSE) +
+  geom_text(aes(x = from, y = role_y, label = role), hjust = 0, size = 3.3,
+            colour = chalk_colours[["ink"]], family = "Atkinson Hyperlegible Next") +
+  geom_text(aes(x = from, y = where_y, label = where), hjust = 0, size = 3,
             colour = chalk_colours[["ink3"]], family = "Atkinson Hyperlegible Next") +
-  scale_x_date(date_breaks = "2 years", date_labels = "%Y",
-               limits = as.Date(c("2011-01-01", NA)), expand = expansion(mult = c(0, 0.08))) +
-  scale_y_discrete(expand = expansion(add = 0.7)) +
+  scale_colour_manual(values = c(`FALSE` = chalk_colours[["ink2"]], `TRUE` = chalk_colours[["accent"]])) +
+  scale_x_date(breaks = as.Date(paste0(seq(2012, 2026, 2), "-01-01")), date_labels = "%Y",
+               limits = c(min(roles$from), max(roles$to)), expand = c(0, 0)) +
+  scale_y_continuous(breaks = 1:3, labels = kinds, expand = expansion(add = 0.65)) +
+  coord_cartesian(clip = "off") +
   labs(x = NULL, y = NULL) +
-  theme_chalk()
-chalk_inline(strip, width = 7.5, height = 2.6,
-  summary = "Seven roles on one time axis from 2011 to now: Cytel in 2011, the University of Florida from 2012 to 2017, the University of Northern Colorado to 2019, Nemours in 2019, the FDA from 2020 to 2022, and Pfizer since 2022.")
+  theme_chalk() +
+  theme(plot.margin = margin(4, 48, 4, 0))        # room for the last label past the frame
+chalk_inline(strip, width = 6.6, height = 2.3, name = "career-strip",
+  summary ="Seven roles on one time axis from 2011 to now: Cytel in 2011, the University of Florida from 2012 to 2017, the University of Northern Colorado to 2019, Nemours in 2019, the FDA from 2020 to 2022, and Pfizer since 2022.")
 ```
 
 ::: {.cv-entry}
@@ -192,16 +232,18 @@ papers <- data.frame(
   first = c(FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE)
 )
 papers$n <- ave(papers$year, papers$year, FUN = seq_along)
+# One dot per paper, stacked by year; the single first-authored paper is ringed
+# in the accent. No axis line, no grid: the dots and four year labels are all.
 dots <- ggplot(papers, aes(year, n)) +
-  geom_point(colour = chalk_colours[["ink"]], size = 2) +
-  geom_point(data = subset(papers, first), shape = 1, size = 5.5, stroke = 0.9,
+  geom_point(colour = chalk_colours[["ink2"]], size = 2.2) +
+  geom_point(data = subset(papers, first), shape = 1, size = 6, stroke = 1,
              colour = chalk_colours[["accent"]]) +
   scale_x_continuous(breaks = c(2017, 2020, 2023, 2026), limits = c(2016.5, 2026.5)) +
   scale_y_continuous(breaks = NULL, expand = expansion(add = c(0.8, 0.8))) +
   labs(x = NULL, y = NULL) +
-  theme_chalk(base_size = 11) +
-  theme(axis.line.x = element_blank(), panel.grid.major.x = element_blank(), plot.margin = margin(0, 0, 0, 0))
-chalk_inline(dots, width = 2.4, height = 1.5, class = "figure-chalk margin-figure",
+  theme_chalk(base_size = 13) +
+  theme(axis.line.x = element_blank(), plot.margin = margin(0, 0, 0, 0))
+chalk_inline(dots, width = 2.2, height = 1.4, class = "figure-chalk margin-figure", name = "papers-by-year",
   summary = "Fifteen papers by year from 2017 to 2026, one dot each; the first-authored paper, in 2019, is circled.")
 ```
 

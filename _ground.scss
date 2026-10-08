@@ -120,6 +120,23 @@ html.appearance-wipe::view-transition-new(root) { animation: wipe 350ms var(--ea
   body { color: $writing; }
 }
 
+// ── Print ──────────────────────────────────────────────────────────────────
+// On paper the page is ink on white: no bar, no contents, no grain, no marks
+// that need a filter; the bands keep their two columns, and links show where
+// they go.
+@media print {
+  #quarto-header, .nav-footer, nav[role="doc-toc"], .skip-link, .chalk-rule,
+  body::after, .quarto-color-scheme-toggle, .tended { display: none !important; }
+  main#quarto-document-content section.level2::before { display: none; }
+  html, body { background: #fff !important; color: #111 !important; }
+  body { font-size: 11pt; }
+  main a { color: #111; text-decoration: none; }
+  main p a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #555; }
+  main#quarto-document-content section.level2 { border-top: 1px solid #bbb; padding: 18pt 0; }
+  .cv-when { color: #555; }
+  .figure-chalk { filter: invert(1) hue-rotate(180deg); }   // the chalk figure, as ink
+}
+
 // The focus ring: the accent, 2px, square on text and following an image's corner.
 :focus-visible {
   outline: 2px solid $accent;

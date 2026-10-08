@@ -70,3 +70,23 @@ writeLines(c(
 sizes <- file.size(file.path("fonts", unique(faces$file)))
 cat(sprintf("%-40s %6.1f KB\n", unique(faces$file), sizes / 1024), sep = "")
 cat(sprintf("total %.1f KB (budget 200 KB)\n", sum(sizes) / 1024))
+
+# ── The same faces as static TTF, for Typst and R ────────────────────────────
+# The web serves WOFF2; the CV's PDF (Typst) and the social card (ragg) need
+# TTF files, and Typst cannot instance a variable font, so these are the
+# static cuts from the families' own repositories (the same OFL licence). They
+# live in fonts/ttf/, never on the web.
+statics <- c(
+  "https://raw.githubusercontent.com/googlefonts/literata/main/fonts/ttf/Literata-Regular.ttf",
+  "https://raw.githubusercontent.com/googlefonts/literata/main/fonts/ttf/Literata-Italic.ttf",
+  "https://raw.githubusercontent.com/googlefonts/literata/main/fonts/ttf/Literata-SemiBold.ttf",
+  "https://raw.githubusercontent.com/googlefonts/atkinson-hyperlegible-next/main/fonts/ttf/AtkinsonHyperlegibleNext-Regular.ttf",
+  "https://raw.githubusercontent.com/googlefonts/atkinson-hyperlegible-next/main/fonts/ttf/AtkinsonHyperlegibleNext-Medium.ttf"
+)
+dir.create("fonts/ttf", showWarnings = FALSE)
+for (u in statics) {
+  path <- file.path("fonts/ttf", basename(u))
+  if (!file.exists(path)) download.file(u, path, mode = "wb", quiet = TRUE)
+}
+ttfs <- list.files("fonts/ttf", pattern = "\\.ttf$")
+cat(sprintf("%-40s %7.0f KB\n", ttfs, file.size(file.path("fonts/ttf", ttfs)) / 1024), sep = "")

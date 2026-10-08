@@ -7,10 +7,8 @@
 # the site's own palette (_palette-wiring.scss: ground, writing, accent), not the
 # app's, because it is the site's card; the phone inside it is the app as it is.
 #
-# Type: the page's headings are New York on Apple devices, but its Large cut is
-# not reachable from R (freetype gives only the Display instance, whose hairlines
-# vanish at this size), so the card takes the next face in the site's serif
-# stack, Iowan Old Style. Phase 3 regenerates the card in Literata.
+# Type: the site's own faces, from the static TTFs in fonts/ttf (see
+# R/fetch_fonts.R), registered for this session.
 
 library(grid)
 library(ragg)
@@ -18,16 +16,17 @@ library(magick)
 library(systemfonts)
 
 here <- "images/singlebell"
-ground  <- "#0E1412"; writing <- "#F2F3EA"; muted <- "#B8BDB5"; accent <- "#E9D592"
+ground  <- "#131A17"; writing <- "#F2F3EA"; muted <- "#B8BDB5"; accent <- "#E9D592"
 W <- 1200; H <- 630
 
-first_available <- function(...) {
-  have <- unique(system_fonts()$family)
-  for (f in c(...)) if (f %in% have) return(f)
-  "serif"
-}
-serif <- first_available("Iowan Old Style", "Palatino", "Georgia")
-sans  <- first_available("Avenir Next", "Helvetica Neue", "Helvetica")
+# Registered from the repo's files unless the system already has the family.
+use_font <- function(family, ...) tryCatch(register_font(family, ...), error = function(e) invisible(NULL))
+use_font("Literata", plain = "fonts/ttf/Literata-Regular.ttf", italic = "fonts/ttf/Literata-Italic.ttf",
+         bold = "fonts/ttf/Literata-SemiBold.ttf")
+use_font("Atkinson Hyperlegible Next", plain = "fonts/ttf/AtkinsonHyperlegibleNext-Regular.ttf",
+         bold = "fonts/ttf/AtkinsonHyperlegibleNext-Medium.ttf")
+serif <- "Literata"
+sans  <- "Atkinson Hyperlegible Next"
 
 # Grid measures from the top-left, as the layout is written. At 72 dpi a big
 # point is a pixel.

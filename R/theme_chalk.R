@@ -32,9 +32,10 @@ theme_chalk <- function(base_size = 14, base_family = "Atkinson Hyperlegible Nex
       axis.text        = element_text(colour = c[["ink3"]], size = rel(0.8)),
       axis.title       = element_text(colour = c[["ink3"]], size = rel(0.8)),
       axis.ticks       = element_blank(),
+      # No grid: the one line is the x axis, and with expand = 0 it is a range
+      # frame, spanning only where the data is.
       axis.line.x      = element_line(colour = c[["rule"]], linewidth = 0.5),
       panel.grid       = element_blank(),
-      panel.grid.major.x = element_line(colour = c[["rule"]], linewidth = 0.3),
       legend.position  = "none",
       strip.text       = element_text(colour = c[["ink2"]], hjust = 0),
       plot.background  = element_rect(fill = "transparent", colour = NA),
@@ -45,11 +46,27 @@ theme_chalk <- function(base_size = 14, base_family = "Atkinson Hyperlegible Nex
 
 # Render a plot as inline SVG whose colours are the page's. `summary` is the
 # one-sentence description assistive technology reads instead of the picture.
-chalk_inline <- function(plot, width = 7, height = 2.6, summary, class = "figure-chalk") {
+# In any other format (the CV's PDF) the same drawing is written as a PNG in
+# the paper palette, to images/figures/<name>.png, and placed as an image; a
+# margin figure is left out there.
+chalk_inline <- function(plot, width = 7, height = 2.6, summary, class = "figure-chalk", name = "figure") {
   svg <- svglite::svgstring(width = width, height = height, bg = "transparent", standalone = FALSE, scaling = 1)
   print(plot)
   grDevices::dev.off()
   out <- as.character(svg())
+  if (!knitr::is_html_output()) {
+    if (grepl("margin-figure", class)) return(invisible(NULL))
+    paper <- c(ink = "#2A302D", ink2 = "#4A514D", ink3 = "#6B726E", rule = "#C4C7BC", accent = "#6E5A16")
+    for (nm in names(paper)) out <- gsub(chalk_colours[[nm]], paper[[nm]], out, ignore.case = TRUE)
+    dir.create("images/figures", showWarnings = FALSE, recursive = TRUE)
+    path <- file.path("images/figures", paste0(name, ".png"))
+    tmp <- tempfile(fileext = ".svg")
+    writeLines(out, tmp)
+    img <- magick::image_read_svg(tmp, width = round(width * 300))
+    magick::image_write(img, path, format = "png")
+    cat(sprintf("\n![](%s){width=100%%}\n\n", path))   # no caption on paper; the figure is read directly
+    return(invisible(path))
+  }
   vars <- c(ink = "ink", ink2 = "ink2", ink3 = "ink3", rule = "rule", accent = "accent")
   for (nm in names(vars)) {
     out <- gsub(chalk_colours[[nm]], sprintf("var(--%s)", vars[[nm]]), out, ignore.case = TRUE)

@@ -1,0 +1,49 @@
+# Checks on every push, run against the live site once GitHub Pages has
+# deployed it: Lighthouse on Home, the CV and SingleBell against the budgets in
+# UPGRADE-TRACKER.md, and a link check across the built site. A regression
+# fails the run; the Lighthouse reports are kept as artefacts to look through.
+
+name: checks
+
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://stat-absk.github.io/
+            https://stat-absk.github.io/cv.html
+            https://stat-absk.github.io/singlebell.html
+          configPath: .github/lighthouserc.json
+          uploadArtifacts: true
+          temporaryPublicStorage: false
+
+  links:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Link check
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --accept 200,204,206,301,302,303,307,308,403,429,999
+            --exclude-path docs/site_libs
+            --exclude-path docs/slides
+            --exclude 'linkedin\.com'
+            'docs/**/*.html'
+          fail: true

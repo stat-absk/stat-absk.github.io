@@ -326,11 +326,11 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | --- | --- | --- | --- |
 | [~] | 3c.1 Home recomposed to the notebook layout with W1 and W2 (chosen 8 Oct): opening sentence set large, chalk rule drawn once per session beneath it, the paragraph, 4:5 portrait in the aside, then Made / Written / Elsewhere bands. **Without Now (W5) and the portrait caption (W8)** — add when written. The Elsewhere line is draft option 2, unconfirmed. The site description meta now carries W1 | A→C | FR-3.11 |
 | [x] | 3c.2 `R/theme_chalk.R`: the theme, the palette (sentinel colours), and `chalk_inline()` which renders a plot to inline SVG with the page's custom properties, so figures follow the appearance. Output goes through a `{=html}` fence — Pandoc otherwise breaks the SVG at blank lines | C | FR-3.8 |
-| [x] | 3c.3 CV career strip: seven roles on three rows (University / Regulator / Industry & practice), 2011–now, labelled directly, drawn at render time | C | FR-3.8 |
+| [x] | 3c.3 CV career strip: seven roles on three rows (University / Regulator / Industry & practice), 2011–now, labelled directly, drawn at render time. Revised to Tufte's rules (8 Oct): no grid, a range-frame axis spanning only the data, bars in the second ink with the one accent on the current role, labels staggered so adjacent roles never collide | C | FR-3.8 |
 | [~] | 3c.4 Papers by year in the margin under "Publications", first-authored paper circled; the 15 as three tally gates; **14 DOI links** from Crossref (titles matched exactly; the Pavlik paper's 2021 DOI chosen over a 2023 erratum). Paper 12 (laser acupuncture, AJTCVM) has no DOI registered — left unlinked | C | FR-3.8, FR-3.2 |
 | [x] | 3c.5 Workbench: one primary link, the other three in a sentence; eight chapters as a tally; screenshots already via the pipeline | C | review §Page by page |
 | [x] | 3c.6 SingleBell: store link is a plain primary link (3b); the privacy policy is `privacy.qmd`; `singlebell.html#privacy` redirects there; a two-sentence Privacy band remains with the link | C | review §Page by page |
-| [ ] | 3c.9 Social card in Literata: needs the Literata TTF (R cannot rasterise WOFF2) — a download to approve; Palatino until then | C | FR-3.10 |
+| [x] | 3c.9 Social card drawn in Literata and Atkinson from the static TTFs (approved 8 Oct) | C | FR-3.10 |
 | [ ] | 3c.7 Cover-the-name test with one person who knows you | A | Gate 3 |
 | [ ] | 3c.8 Render, review, **ask before push** | C | — |
 
@@ -341,11 +341,11 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | [ ] | 4.1 Notes listing from `posts/`; RSS once W9 #1 exists | A→C | FR-4.1 |
 | [ ] | 4.2 Outside work page (W10, D8) through the image pipeline | A→C | — |
 | [ ] | 4.3 Colophon (W11) | A→C | — |
-| [ ] | 4.4 `cv.qmd` Typst output; competencies in PDF only; print stylesheet for the web page | C | FR-4.2, ADR-08 |
+| [x] | 4.4 `cv.qmd` renders `docs/cv.pdf` via Typst from the same source, **designed as pencil on paper**: `typst-template.typ` (paper ground, graphite, Literata and Atkinson from `fonts/ttf/` static cuts, section names and dates in a working margin, a hand-drawn rule above each section, the tally in graphite, the career strip as a figure); `_extensions/chalk/chalk-typst.lua` maps the CV's classes onto the template. Competencies in the PDF only. "PDF" link beside Scholar and LinkedIn. Print stylesheet for the web page. Chunks use `ragg` so non-HTML formats don't open R's X11 png device | C | FR-4.2, ADR-08 |
 | [ ] | 4.5 Deck theme + chalk extension published as a Quarto extension; installed in `enrollhd-getting-started` and `tufte-pharma`; decks rebuilt | C | FR-4.3, ADR-07 |
-| [ ] | 4.6 GitHub Action: Lighthouse, link check, screenshots at 390 / 768 / 1440 in both appearances; fails on budget regression | C | FR-4.4 |
-| [ ] | 4.7 "Last tended" date on every page | C | FR-4.5 |
-| [ ] | 4.8 `Person` JSON-LD (name, role, employer, Scholar, GitHub, LinkedIn, ORCID if any) | A→C | FR-4.6 |
+| [~] | 4.6 `.github/workflows/checks.yml` runs after each Pages deployment: Lighthouse on Home, CV, SingleBell (accessibility must be 100, CLS ≤ 0.05, bytes ≤ 1 MB; performance/SEO/best-practices warn under 0.9) with reports as artefacts, and a lychee link check over `docs/`. **Screenshots at three widths not yet added** | C | FR-4.4 |
+| [x] | 4.7 "Last tended" date at the foot of every page, from the source file's last commit date (`post-render.R`) | C | FR-4.5 |
+| [~] | 4.8 `Person` JSON-LD on every page: name, role, employer, image, Scholar, GitHub, LinkedIn. **ORCID missing — add if you have one** | A→C | FR-4.6 |
 | [ ] | 4.9 Measure, then decide D9 (Bootstrap) | A | ADR-09 |
 
 ---
@@ -373,3 +373,4 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | 2026-10-08 | 3c technical half pushed live (`e8d349e`). Phase 3 remaining: Home recomposition (3c.1, waits on W1, W2, W5, W8) and the Literata social card (3c.9). |
 | 2026-10-08 | W1 and W2 chosen (HOME-DRAFTS.md). Home recomposed and verified locally without Now or the caption. |
 | 2026-10-08 | New Home pushed live (`289d6a6`). Phase 3 remaining: Now band (W5), portrait caption (W8), Elsewhere line to confirm, Literata social card (3c.9). |
+| 2026-10-08 | Phase 4 first batch built locally: CV PDF designed on the site's material (Typst template + filter, static TTFs in `fonts/ttf/`), print stylesheet, last-tended dates, Person JSON-LD, checks workflow; social card in Literata. Awaiting push. |

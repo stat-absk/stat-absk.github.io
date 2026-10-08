@@ -6,7 +6,8 @@
 --                      so neighbouring rules never match.
 --
 -- The strokes live in marks/chalk.svg; the chalk roughening is the page's
--- #chalk filter, applied by _marks.scss.
+-- #chalk filter, applied by _marks.scss. In any format that is not HTML (the
+-- CV's PDF, for one) a tally is simply its number and a rule is nothing.
 
 local SPRITE = "/marks/chalk.svg"
 local rule_n = 0
@@ -27,6 +28,8 @@ end
 return {
   ["tally"] = function(args, kwargs, meta)
     local n = tonumber(pandoc.utils.stringify(args[1] or "")) or 0
+    if quarto.doc.is_format("typst") then return pandoc.RawInline("typst", "#tally(" .. n .. ")") end
+    if not quarto.doc.is_format("html") then return pandoc.Str(tostring(n)) end
     local gates, left = {}, n
     while left > 0 do
       local k = math.min(left, 5)
@@ -40,6 +43,7 @@ return {
   end,
 
   ["rule"] = function(args, kwargs, meta)
+    if not quarto.doc.is_format("html") then return pandoc.Null() end
     rule_n = rule_n % 8 + 1
     return pandoc.RawBlock("html",
       string.format('<div class="chalk-rule" data-rule="%d" aria-hidden="true"></div>', rule_n))

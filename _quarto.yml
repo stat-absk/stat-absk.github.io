@@ -71,6 +71,17 @@ format:
     link-external-newwindow: false           # links stay in the tab; the reader decides
     include-in-header:
       - text: |
+          <script type="application/ld+json">
+            {"@context": "https://schema.org", "@type": "Person",
+             "name": "Abhishek Bhattacharjee",
+             "jobTitle": "Senior Manager, Biostatistics",
+             "worksFor": {"@type": "Organization", "name": "Pfizer"},
+             "url": "https://stat-absk.github.io/",
+             "image": "https://stat-absk.github.io/images/profile.jpg",
+             "sameAs": ["https://scholar.google.com/citations?user=9LJsXtMAAAAJ",
+                        "https://github.com/stat-absk",
+                        "https://www.linkedin.com/in/stat-absk/"]}
+          </script>
           <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
           <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
           <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131A17">
