@@ -1,0 +1,378 @@
+// Pages: the home hero and its cards, the SingleBell opening, CV entries, screenshots.
+
+// ── The hero ───────────────────────────────────────────────────────────────
+// The homepage opens with the name at display size and the portrait beside it.
+// Display text earns tighter tracking and leading than a page name does.
+.hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: clamp(var(--space-xl), 5vw, 64px);
+
+  // The portrait is written first (so the name is not lifted into the title
+  // block) but reads second: text left, portrait right.
+  .hero-text     { order: 1; }
+  .hero-portrait { order: 2; }
+}
+
+// A page whose opening is hand-rolled leaves an empty title block behind;
+// it takes no room.
+#title-block-header:empty { display: none; margin: 0; }
+
+// The home page opens with one composed screen: the name and the portrait,
+// what I do now, the ways in, and the three latest things pinned to the foot,
+// so the first screen is full of the page rather than empty around it.
+.hero {
+  min-height: calc(100svh - #{$bar-height});
+  box-sizing: border-box;
+  margin: 0;
+  padding: var(--space-xl) 0 var(--space-xxl);
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+
+  .hero-text     { grid-column: 1; grid-row: 1; align-self: center; }
+  .hero-portrait { grid-column: 2; grid-row: 1; align-self: center; }
+  .site-map      { grid-column: 1 / -1; grid-row: 2; }
+}
+
+.hero-now {
+  max-width: var(--measure);
+  margin-top: var(--space-l);
+  color: $ink2;
+  line-height: 1.55;
+  p { margin: 0; }
+}
+
+// The one primary path wears the accent: "go".
+.hero-links a.primary { border-color: rgba($accent, 0.7); color: $accent; }
+.hero-links a.primary:hover { border-color: $accent; }
+
+// The ways in: every page of the site as a card at the hero's foot. A card
+// has an edge, a lift, and an arrow that arrives on hover — it reads as a
+// door, not a paragraph. The whole card is the target.
+.site-map {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-l);
+  margin-top: var(--space-xxl);
+  padding-top: var(--space-xl);
+  border-top: 1.5px solid $rule;
+}
+
+.nav-card {
+  position: relative;
+  padding: var(--space-l) var(--space-xl) var(--space-xl);
+  border: 1px solid $edge;
+  border-radius: var(--radius-part);
+  background: rgba($surface, 0.55);
+  transition: border-color var(--snap) var(--ease), transform var(--snap) var(--ease);
+
+  p { margin: 0; max-width: none; font-size: $size-caption; color: $ink3; line-height: 1.5; }
+
+  // The page's name, set as a name; its target stretches over the card.
+  p > a:first-child {
+    display: block;
+    font-family: $font-family-serif;
+    font-size: $size-lead;
+    line-height: 1.25;
+    color: $ink;
+    margin-bottom: var(--space-xs);
+    text-decoration: none;
+    transition: color var(--snap) var(--ease);
+    &::before { content: ""; position: absolute; inset: 0; border-radius: var(--radius-part); }
+    &::after  { content: " →"; opacity: 0; transition: opacity var(--snap) var(--ease); }
+  }
+
+  &:hover {
+    border-color: rgba($writing, 0.28);
+    transform: translateY(-2px);
+    p > a:first-child { color: $accent; &::after { opacity: 1; } }
+  }
+  &:focus-within { border-color: $accent; }
+}
+
+// The Latest band: the newest things, each a name and one line.
+.latest {
+  p { max-width: none; margin: 0 0 var(--space-l); font-size: $size-caption; color: $ink3; line-height: 1.5; }
+  p > a:first-child:not(.more) {
+    display: block;
+    font-family: $font-family-serif;
+    font-size: $size-lead;
+    line-height: 1.25;
+    color: $ink;
+    margin-bottom: var(--space-xs);
+    text-decoration: none;
+    &:hover { color: $accent; }
+  }
+  p:last-child { margin-bottom: 0; }
+  .more { color: $ink2; text-decoration: none; font-size: $size-caption;
+          &:hover { color: $ink; } }
+}
+
+// Arrival: the pieces of the first screen settle in one after another, a
+// beat apart, and only once.
+.hero-text > *, .hero-portrait, .site-map > .nav-card {
+  animation: rise 420ms var(--ease) backwards;
+}
+@for $i from 1 through 6 { .hero-text > :nth-child(#{$i}) { animation-delay: #{40ms * $i}; } }
+.hero-portrait { animation-delay: 120ms; }
+@for $i from 1 through 4 { .site-map > .nav-card:nth-child(#{$i}) { animation-delay: #{240ms + 50ms * $i}; } }
+
+h1.hero-name {
+  font-size: $size-display;
+  line-height: 1.06;
+  letter-spacing: -0.022em;
+  margin: 0 0 var(--space-m);
+  border: none;
+  padding: 0;
+  text-wrap: balance;
+}
+
+.hero-role {
+  display: block;
+  font-size: clamp($size-card, 0.9rem + 0.6vw, $size-lead);
+  line-height: 1.5;
+  color: $ink2;
+  max-width: 34rem;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  margin-top: var(--space-xl);
+
+  // A pill is a target: 44px tall, with an edge the reader can see (3:1).
+  a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 var(--space-l);
+    border: 1px solid $edge;
+    border-radius: 999px;
+    font-size: $size-caption;
+    color: $ink2;
+    text-decoration: none;
+    transition: border-color var(--snap) var(--ease),
+                color var(--snap) var(--ease),
+                transform var(--snap) var(--ease);
+    &:hover { border-color: $ink2; color: $ink; }
+    &:active { transform: scale(0.97); }
+  }
+}
+
+// The portrait is a whole: hairline ring, a shadow that sits it on the page.
+.hero-portrait img {
+  width: clamp(150px, 14vw + 90px, 272px);
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1.5px $rule, 0 18px 40px -20px rgba($writing, 0.28);
+}
+
+@media (max-width: 700px) {
+  .hero { gap: var(--space-xl); }
+  .hero-portrait img { width: 128px; }   // the portrait opens the page, card-style
+}
+
+// The SingleBell opening: the icon and the name on one line, as an App Store
+// listing sets them — identity first, claim second.
+.sb-hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--space-xl);
+  margin: clamp(var(--space-xl), 5vh, 56px) 0 var(--space-xxl);
+
+  .app-icon img { margin-bottom: 0; }
+}
+
+h1.sb-name {
+  font-size: clamp(2rem, 1.6rem + 1.2vw, $size-page);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-xs);
+  border: none;
+  padding: 0;
+}
+
+.sb-sub {
+  display: block;
+  color: $ink2;
+  max-width: 30rem;
+  line-height: 1.55;
+  margin-bottom: var(--space-m);
+}
+
+@media (max-width: 700px) {
+  .sb-hero { grid-template-columns: 1fr; gap: var(--space-l); }
+  .app-icon img { width: 88px; height: 88px; }
+}
+
+// A CV entry is the page's one object: a quiet date, the thing itself, and
+// whatever it did. Nothing is boxed and nothing is ruled — the spacing does it.
+.cv-entry {
+  margin-bottom: var(--space-xl);
+
+  p { margin-bottom: var(--space-s); }
+
+  ul {
+    margin: var(--space-s) 0 0;
+    padding-left: 1.15rem;
+  }
+  li {
+    margin-bottom: var(--space-xs);
+    color: $ink2;                     // the detail sits behind the entry itself
+    &::marker { color: $rule; }
+  }
+}
+
+// Consecutive entries breathe more than the lines inside one of them.
+.cv-entry + .cv-entry { margin-top: var(--space-l); }
+
+// Dates run down their own column so every entry starts on the same edge. The
+// date leaves the text flow rather than sitting above it, so the column is a
+// column and not an indent.
+// Sized from the longest date ("May 2022 – May 2024"), with headroom. Both the
+// column and the date's type are in rem, so the ratio holds at any text size.
+$cv-date-column: 11.5rem;
+$cv-date-gutter: 1.75rem;
+
+.cv-entry { position: relative; padding-left: $cv-date-column; }
+
+.cv-when {
+  position: absolute;
+  left: 0;
+  top: 0.28em;                        // optical: caption text against 17px body
+  width: $cv-date-column - $cv-date-gutter;
+  color: $ink3;
+  font-size: $size-caption;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;                // a span of years never wraps mid-range
+}
+
+// Narrow enough that a column would squeeze the text: the date goes back above.
+@media (max-width: 700px) {
+  .cv-entry { padding-left: 0; }
+  .cv-when {
+    position: static;
+    display: block;
+    width: auto;
+    margin-bottom: 2px;
+  }
+}
+
+.cv-what { color: $ink; font-weight: 600; }
+
+// ── App screenshots ────────────────────────────────────────────────────────
+// A phone is a whole: it keeps its edge, at the whole's radius.
+// Capped rather than fluid: a phone shown wider than this only enlarges UI text
+// that is still too small to read, and the source would have to grow with it.
+// At 200px against 600px sources these stay sharp at 3x.
+$shot-width: 200px;
+
+.shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, $shot-width));
+  justify-content: start;
+  gap: var(--space-xl);
+  margin: var(--space-xl) 0 var(--space-xxl);
+
+  figure { margin: 0; }
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 600 / 1303;      // reserves the space before the image loads
+    border-radius: var(--radius-part);
+    border: 1px solid $rule;
+  }
+
+  figcaption {
+    margin-top: var(--space-s);
+    font-size: $size-caption;
+    color: $ink3;
+    line-height: 1.4;
+  }
+}
+
+// ── App icon ───────────────────────────────────────────────────────────────
+// The one drawn object the app has. Masked to the platform's own icon shape so
+// it reads as an app icon rather than a picture of one.
+.app-icon img {
+  width: 104px;
+  height: 104px;
+  border-radius: 22.5%;          // iOS squircle, near enough
+  border: 1px solid $rule;
+  display: block;
+  margin-bottom: var(--space-l);
+}
+
+// A single phone set beside the prose that describes it.
+.shot-right {
+  float: right;
+  width: $shot-width;
+  margin: 0 0 var(--space-l) var(--space-xl);
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 600 / 1303;
+    border-radius: var(--radius-part);
+    border: 1px solid $rule;
+  }
+  figcaption, p {
+    margin-top: var(--space-s);
+    font-size: $size-caption;
+    color: $ink3;
+    line-height: 1.4;
+  }
+}
+
+// A watch face beside the prose about it. Narrower than a phone, and it keeps
+// its own proportions — the phone's aspect ratio would squash it — with a
+// corner near the watch's own glass.
+.watch-shot {
+  float: right;
+  width: 150px;
+  margin: 0 0 var(--space-l) var(--space-xl);
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 24%;
+    border: 1px solid $rule;
+  }
+  figcaption, p {
+    margin-top: var(--space-s);
+    font-size: $size-caption;
+    color: $ink3;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 700px) {
+  .shot-right, .watch-shot { float: none; margin: var(--space-l) 0; }
+}
+
+// A browser window is a wide whole: it keeps its edge at the whole's radius,
+// full measure, with its caption set quietly beneath.
+.wide-shot {
+  margin: var(--space-xl) 0 var(--space-xxl);
+
+  figure { margin: 0; }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-part);
+    border: 1px solid $rule;
+  }
+
+  figcaption {
+    margin-top: var(--space-s);
+    font-size: $size-caption;
+    color: $ink3;
+    line-height: 1.4;
+  }
+}

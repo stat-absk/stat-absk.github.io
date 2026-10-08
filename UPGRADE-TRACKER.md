@@ -278,21 +278,23 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 
 | | Task | Owner | Req |
 | --- | --- | --- | --- |
-| [ ] | 2.1 Confirm OFL licence files for Literata, Atkinson Hyperlegible Next, Atkinson Hyperlegible Mono; commit them under `fonts/` | C | ADR-02 |
-| [ ] | 2.2 `R/subset_fonts.R` (or documented one-off with the command recorded) → subset WOFF2 ≤ 200 KB total | C | FR-2.1 |
-| [ ] | 2.3 `@font-face` with `font-display: swap` and metric-matched fallbacks; measure CLS | C | FR-2.1 |
-| [ ] | 2.4 `_type.scss`: seven-step scale, serif body 18 px, old-style figures in prose, tabular in data | C | FR-2.2 |
-| [ ] | 2.5 No uppercase anywhere; "On this page" sentence case; `text-wrap: balance`/`pretty` | C | FR-2.3 |
-| [ ] | 2.6 Split `_signature.scss` into ground / type / marks / bands / pages | C | review §Build |
+| [x] | 2.1 OFL licences for all three families fetched by `R/fetch_fonts.R` into `fonts/` (8 Oct 2026, download approved) | C | ADR-02 |
+| [x] | 2.2 No subsetting tool needed: Google serves latin-subset variable WOFF2 — Literata roman 38 KB + italic 21 KB, Atkinson Next 33 KB, Mono 10 KB = **102 KB**, served from `/fonts/` | C | FR-2.1 |
+| [~] | 2.3 `_fonts.scss` (`@font-face`, `font-display: swap`) written by the script; faces verified loading. Metric-matched fallbacks need the fonts' vertical metrics, which R cannot read from WOFF2 — **measure CLS on the live site; add `size-adjust` overrides only if it shows** | C | FR-2.1 |
+| [x] | 2.4 `_type.scss`: seven steps (14/15/18/22/28/40/44–76), serif body 18 px, old-style figures in prose, lining tabular in labels and data; labels/nav/dates in the sans | C | FR-2.2 |
+| [x] | 2.5 No uppercase; "On this page" sentence case; `text-wrap: balance` on headings, `pretty` on paragraphs | C | FR-2.3 |
+| [x] | 2.6 `_signature.scss` → `_ground.scss` / `_type-rules.scss` / `_bands.scss` / `_pages.scss` (`_marks.scss` arrives in Phase 3). Rule order preserved within each file | C | review §Build |
 | [ ] | 2.7 Wire W1–W3 into Home and CV when written | A→C | FR-2.4 |
-| [ ] | 2.8 `made.qmd` and `notes.qmd` from `stuff.qmd`; listing rows with date, length, file size per deck (4.6 MB, 6.9 MB) | A→C (W6) | FR-2.7 |
-| [ ] | 2.9 Bar → Work · Notes · CV; About tab added only after W4 | C | FR-2.5, FR-2.6 |
-| [ ] | 2.10 Social icons → Elsewhere line as words; remove icon font | C | FR-2.5, D3 |
-| [ ] | 2.11 `stuff.html` redirect to Notes (Quarto `aliases`) | C | ADR-06 |
-| [ ] | 2.12 Remove competency pills from the web CV | C | FR-2.8 |
-| [ ] | 2.13 D7 Bangla name — if yes, Bengali subset and `lang="bn"` on About | A→C | — |
+| [x] | 2.8 `work.qmd` (Workbench, SingleBell) and `notes.qmd` (the decks, each with month, slide count, file size) replace `stuff.qmd`. The tab is "Work" as the review's bar names it; the page is titled Work, not Made. Descriptions are the existing ones — **W6 revises** | A→C (W6) | FR-2.7 |
+| [x] | 2.9 Bar → Work · Notes · CV; About tab waits for W4 | C | FR-2.5, FR-2.6 |
+| [~] | 2.10 Icons out of the bar; Scholar · GitHub · LinkedIn as words in the footer (every page) and already in the hero pills. **The icon font stays**: Quarto's own toggle and search button use it, so removing it is part of D9 | C | FR-2.5, D3 |
+| [x] | 2.11 `stuff.html` → Notes via `aliases` (verified: lands on `/notes.html`) | C | ADR-06 |
+| [x] | 2.12 Competency pills removed from the web CV | C | FR-2.8 |
+| [ ] | 2.13 D7 Bangla name — if yes, Bengali subset and `lang="bn"` on About (waits for About, W4) | A→C | — |
 | [ ] | 2.14 Cross-device check (iPhone, Windows, Android) — screenshots into this file | A | Gate 2 |
-| [ ] | 2.15 Render, review, **ask before push** | C | — |
+| [ ] | 2.15 Rendered and reviewed locally 8 Oct 2026; **awaiting push OK** | C | — |
+
+*Deviations from the review in Phase 2:* the icon font remains (Quarto's toggle and search use it — folded into D9); fallback metric overrides deferred until CLS is measured; the tab is named Work rather than Made.
 
 ### Phase 3 — Signature · two to three weeks · Gate 3, in three pushable parts
 
@@ -362,3 +364,4 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | 2026-10-08 | Review received. Decisions D1–D5 settled. Tracker created. Nothing pushed. |
 | 2026-10-08 | Phase 1 built and verified locally (1.1–1.15). Planning Markdown excluded from the render (`project.render`). |
 | 2026-10-08 | Phase 1 pushed live (`c701ef3`); live markup verified (pictures, skip link, canonical, theme-color, same-tab links). Lighthouse pending (1.16). |
+| 2026-10-08 | Phase 2 technical half built and verified locally: fonts (102 KB), scale, SCSS split, Work/Notes pages, bar, footer words, competencies cut. Prose (W1–W6) and About still with Abhishek. Awaiting push. |

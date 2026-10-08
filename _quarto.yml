@@ -6,6 +6,7 @@ project:
     - "posts/**/*.qmd"
   resources:
     - slides/               # self-contained slide decks, copied as-is
+    - fonts/                # the site's faces, served from here (see R/fetch_fonts.R)
   post-render:
     - post-render.R         # recreates docs/.nojekyll after each build
 
@@ -20,37 +21,31 @@ website:
   navbar:
     logo: images/favicon.svg
     title: "Abhishek Bhattacharjee"
+    # Work · Notes · CV, and About once it is written. The ways to reach me
+    # are words in the footer, not icons in the bar.
     left:
-      - href: index.qmd
-        text: Home
+      - href: work.qmd
+        text: Work
+      - href: notes.qmd
+        text: Notes
       - href: cv.qmd
         text: CV
-      - href: stuff.qmd
-        text: Stuff
-    right:
-      - icon: linkedin
-        href: https://www.linkedin.com/in/stat-absk/
-        aria-label: LinkedIn
-      - icon: mortarboard
-        href: https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en
-        aria-label: Google Scholar
-      - icon: github
-        href: https://github.com/stat-absk
-        aria-label: GitHub
 
   page-footer:
     left: "&copy; 2026 Abhishek Bhattacharjee"
     center:
-      - text: "Home"
-        href: index.qmd
+      - text: "Work"
+        href: work.qmd
+      - text: "Notes"
+        href: notes.qmd
       - text: "CV"
         href: cv.qmd
-      - text: "Stuff"
-        href: stuff.qmd
-      - text: "Workbench"
-        href: workbench.qmd
-      - text: "SingleBell"
-        href: singlebell.qmd
+      - text: "Scholar"
+        href: https://scholar.google.com/citations?user=9LJsXtMAAAAJ&hl=en
+      - text: "GitHub"
+        href: https://github.com/stat-absk
+      - text: "LinkedIn"
+        href: https://www.linkedin.com/in/stat-absk/
     right: "Made with [Quarto](https://quarto.org)"
 
 format:

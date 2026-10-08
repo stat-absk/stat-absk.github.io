@@ -1,0 +1,98 @@
+// The ground: motion vocabulary, spacing, the grain, arrival, and the settings a
+// reader can ask for. Every colour comes from a variable the appearance defines.
+
+// ── Motion vocabulary ──────────────────────────────────────────────────────
+// SingleBell's springs, as far as CSS can carry them. settle 0.35 and snap 0.25,
+// both critically damped — no overshoot anywhere on a page you cannot throw.
+:root {
+  --settle: 350ms;
+  --snap:   250ms;
+  --ease:   cubic-bezier(0.22, 1, 0.36, 1);
+
+  --space-xs:  4px;
+  --space-s:   8px;
+  --space-m:  12px;
+  --space-l:  16px;
+  --space-xl: 24px;
+  --space-xxl:32px;
+
+  --radius-field: 12px;   // a field
+  --radius-part:  16px;   // a part
+  --radius-whole: 20px;   // a whole
+}
+
+// ── The ground ─────────────────────────────────────────────────────────────
+// The slate has a tooth. A whisper of grain keeps large fields of ground from
+// reading as dead pixels — film grain, not decoration. It belongs to the
+// ground, so it sits beneath the content: photographs and screenshots stay clean.
+body { position: relative; z-index: 0; }
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: $grain-opacity;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyNDAnIGhlaWdodD0nMjQwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsdGVyPSd1cmwoI24pJy8+PC9zdmc+");
+  background-size: 240px 240px;
+}
+
+// Writing selected is chalk under the thumb: the accent, faintly.
+::selection { background: rgba($accent, 0.28); color: $writing; }
+
+html { scrollbar-color: rgba($writing, 0.25) transparent; }
+
+// A page arrives: one short rise, settled, never repeated within the page.
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+}
+main#quarto-document-content { animation: rise 500ms var(--ease) backwards; }
+
+// "Skip to content" is the first thing a keyboard reaches and the last thing a
+// pointer sees: off-canvas until focused, then a chalk tab at the top left.
+.skip-link {
+  position: absolute;
+  top: var(--space-s);
+  left: var(--space-s);
+  z-index: 10000;
+  padding: var(--space-m) var(--space-l);
+  background: $ground;
+  color: $accent;
+  border: 1px solid $edge;
+  border-radius: var(--radius-field);
+  transform: translateY(-200%);
+  transition: transform var(--snap) var(--ease);
+  &:focus { transform: none; }
+}
+
+// ── Accessibility ──────────────────────────────────────────────────────────
+// Reduce Motion means none: nothing rises, nothing lifts, nothing slides.
+// Colour and opacity may still change, instantly.
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  a:active, .nav-card:hover, .hero-links a:active { transform: none !important; }
+}
+
+// Reduce Transparency: the glass becomes the opaque surface, as it does in the app.
+@media (prefers-reduced-transparency: reduce) {
+  .navbar {
+    background: $surface2;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  body { color: $writing; }
+  .pill, .about-links .about-link { border-color: rgba($writing, 0.3); }
+}
+
+:focus-visible {
+  outline: 2px solid $accent;
+  outline-offset: 3px;
+  border-radius: var(--radius-field);
+}

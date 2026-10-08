@@ -38,8 +38,8 @@ Roles, education, talks, and publications — the full record.
 :::
 
 ::: {.nav-card}
-[Stuff](stuff.qmd)
-Notes, write-ups, and things I'm working through.
+[Notes](notes.qmd)
+Talks, write-ups, and things I'm working through.
 :::
 
 ::: {.nav-card}
@@ -63,7 +63,7 @@ Sixty slides on the periodic dataset, HDClarity and simulated releases for testi
 [Tufte for pharma](slides/tufte-pharma.html)
 Ten rules for data graphics, shown on the figures a trial statistician actually makes.
 
-[Everything else, on Stuff →](stuff.qmd){.more}
+[All notes and talks](notes.qmd){.more}
 :::
 
 [Views on this site are my own and do not represent my employer.]{.disclaimer}

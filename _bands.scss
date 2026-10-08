@@ -1,0 +1,243 @@
+// Bands: the floating bar, page openings, the band layout, cards, contents, footer.
+
+// ── The floating layer ─────────────────────────────────────────────────────
+// Glass is worn only by what floats above content. Content scrolls under it;
+// a soft edge where they meet, never a hard divider.
+.navbar {
+  background: rgba($ground, 0);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: none;
+  box-shadow: none;
+  transition: background-color var(--settle) var(--ease),
+              box-shadow var(--settle) var(--ease);
+}
+
+// The scroll edge: at rest the bar is part of the page; the moment content
+// passes beneath it, the glass and a soft shadow arrive together.
+#quarto-header.scrolled .navbar {
+  background: rgba($ground, 0.72);
+  box-shadow: 0 1px 0 rgba($writing, 0.06), 0 8px 24px -12px rgba($writing, 0.18);
+}
+
+.navbar-title { font-family: $font-family-serif; font-weight: 400; letter-spacing: -0.01em; }
+
+// On the page that opens with the name at display size, the bar does not say it
+// twice: the large title collapses into the bar as it scrolls away, as a
+// navigation bar inherits a large title.
+#quarto-header.has-hero .navbar-title {
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity var(--settle) var(--ease), transform var(--settle) var(--ease);
+}
+#quarto-header.has-hero.past-hero .navbar-title { opacity: 1; transform: none; }
+
+// The pages are the bar's whole job, so they read at card size and near-full
+// strength — quiet was costing them findability. The accent still means
+// "you are here", and now it draws the line as well as the word.
+.navbar .nav-link {
+  position: relative;
+  font-size: $size-card;
+  color: $ink;
+  opacity: 0.85;
+  transition: color var(--snap) var(--ease), opacity var(--snap) var(--ease);
+  &:hover { opacity: 1; }
+  &.active {
+    color: $accent;
+    opacity: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.5rem;
+      right: 0.5rem;
+      bottom: 2px;
+      height: 2px;
+      border-radius: 1px;
+      background: $accent;
+    }
+  }
+}
+
+// ── Full screen ────────────────────────────────────────────────────────────
+// The pages take the whole viewport, as the decks do. A page opens with one
+// screen that holds only its name (the hero, the app's listing, or the title
+// block), and the content follows on scroll as bands that run edge to edge:
+// each section's name in a left column, its content beside it, a chalk rule
+// above. The reading measure lives inside a band, so lines stay readable at
+// any width.
+$bar-height: 4rem;
+$band-columns: minmax(11rem, 1fr) minmax(0, 3.4fr);
+$band-gap: clamp(var(--space-xl), 4vw, 64px);
+
+main#quarto-document-content { max-width: none; }
+
+// Other pages open with their name at the top, a page name's worth of air
+// around it, and the content straight under it: no empty screen to cross.
+.sb-hero { margin: clamp(var(--space-xl), 5vh, 48px) 0 var(--space-xxl); }
+
+#title-block-header:not(:empty) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: clamp(var(--space-xl), 5vh, 48px) 0 var(--space-xl);
+  > * { width: 100%; }
+
+  .title { font-size: clamp(2rem, 1.6rem + 1.2vw, $size-page); line-height: 1.1; letter-spacing: -0.016em; text-wrap: balance; }
+  .subtitle, .description { font-size: clamp($size-card, 0.9rem + 0.6vw, $size-lead); max-width: var(--measure); }
+}
+
+// A band: a level-two section. The name sits in the left column and stays
+// while its content scrolls past; the rule spans the whole width.
+main#quarto-document-content section.level2 {
+  display: grid;
+  grid-template-columns: $band-columns;
+  column-gap: $band-gap;
+  padding: clamp(var(--space-xl), 5vh, 56px) 0;
+  border-top: 1.5px solid $rule;
+
+  > h2 {
+    grid-column: 1;
+    grid-row: 1 / span 200;              // the name owns the column for the whole band
+    align-self: start;
+    position: sticky;
+    top: calc(#{$bar-height} + var(--space-l));
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  > :not(h2) { grid-column: 2; }
+  > :not(h2):first-of-type { margin-top: 0; }
+  > *:last-child { margin-bottom: 0; }
+}
+
+// A grid of wholes: the things on the Stuff page. Each keeps its edge at the
+// whole's radius; the measure is the card's.
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: var(--space-xl);
+  margin: 0 0 clamp(var(--space-xl), 5vh, 56px);
+}
+.card {
+  padding: var(--space-xl);
+  border: 1px solid $edge;
+  border-radius: var(--radius-whole);
+  background: rgba($surface, 0.55);
+  transition: border-color var(--snap) var(--ease), transform var(--settle) var(--ease);
+  &:hover { border-color: rgba($writing, 0.28); }
+
+  p { max-width: none; margin-bottom: var(--space-m); }
+  p:last-child { margin-bottom: 0; }
+  > p:first-child > a:first-child {   // the name of the thing, set as a name
+    font-family: $font-family-serif;
+    font-size: $size-lead;
+    line-height: 1.25;
+    color: $ink;
+    display: block;
+    margin-bottom: var(--space-s);
+  }
+}
+
+// Four abreast needs room; between phone and full width the cards pair up.
+@media (max-width: 1100px) {
+  .site-map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    .hero-portrait, .hero-text, .site-map { grid-column: 1; grid-row: auto; }
+    .hero-portrait { order: 0; }
+    .hero-text { order: 1; }
+    .site-map { order: 2; grid-template-columns: 1fr; }
+  }
+  main#quarto-document-content section.level2 {
+    grid-template-columns: 1fr;
+    > h2 { grid-row: auto; position: static; margin-bottom: var(--space-l); }
+    > :not(h2) { grid-column: 1; }
+  }
+  .cards { grid-template-columns: 1fr; }
+}
+
+// ── Page openings ──────────────────────────────────────────────────────────
+// A page's own title block: name, then a quiet description, then air.
+#title-block-header {
+  margin: clamp(var(--space-xl), 5vh, 56px) 0 var(--space-xxl);
+
+  .title { margin-bottom: var(--space-xs); }
+  .subtitle, .description {
+    color: $ink3;
+    font-size: $size-card;
+    line-height: 1.55;
+    max-width: 34rem;
+    margin-top: var(--space-s);
+  }
+  .quarto-title-meta { display: none; }   // no dates, no authors — the page is the author's
+}
+
+// ── The margin TOC ─────────────────────────────────────────────────────────
+// "On this page" is a label in sentence case; the list hangs from a hairline,
+// and the accent marks where you are.
+nav[role="doc-toc"] {
+  #toc-title {
+    font-family: $font-family-sans-serif;
+    font-size: $size-eyebrow;
+    font-weight: 400;
+    color: $ink3;
+    border: none;
+    margin: 0 0 var(--space-m);
+    padding: 0;
+  }
+
+  > ul { border-left: 1px solid $rule; padding-left: 0; }
+
+  .nav-link {
+    display: block;
+    color: $ink3;
+    font-size: $size-caption;
+    line-height: 1.45;
+    padding: 3px 0 3px var(--space-l);
+    margin-left: -1px;
+    border-left: 1px solid transparent;
+    transition: color var(--snap) var(--ease),
+                border-color var(--snap) var(--ease);
+    &:hover { color: $ink; }
+    &.active { color: $ink; border-left-color: $accent; }
+  }
+}
+
+// ── The footer ─────────────────────────────────────────────────────────────
+// One quiet line: the name, the pages set off by middle dots, the colophon.
+.footer, .nav-footer { border-top: 1px solid $rule; font-size: $size-caption; }
+
+.nav-footer {
+  padding: var(--space-xl) 0;
+  color: $ink3;
+
+  p { margin: 0; }
+  // Small type, full-size target: the words stay quiet, the hit area is 44px.
+  a { display: inline-flex; align-items: center; min-height: 44px;
+      color: $ink3; text-decoration: none;
+      &:hover { color: $ink; } }
+
+  .footer-items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .footer-items .nav-item { display: inline-flex; align-items: center; }
+  .footer-items .nav-item + .nav-item::before {
+    content: "·";
+    color: rgba($writing, 0.35);
+    padding: 0 var(--space-s);
+  }
+  .footer-items .nav-link { display: inline; padding: 0; }
+  .footer-items .nav-link p { display: inline; margin: 0; }
+}

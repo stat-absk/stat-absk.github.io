@@ -52,7 +52,7 @@ pages <- list.files(out, pattern = "\\.html$")
 weights <- vapply(file.path(out, pages), page_weight, numeric(1))
 names(weights) <- pages
 
-fonts <- list.files(file.path(out, "fonts"), recursive = TRUE, full.names = TRUE)
+fonts <- list.files(file.path(out, "fonts"), pattern = "\\.woff2?$", recursive = TRUE, full.names = TRUE)
 font_weight <- if (length(fonts)) sum(file.size(fonts)) else 0
 
 fmt_kb <- function(b) sprintf("%7.0f KB", b / 1024)

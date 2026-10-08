@@ -1,0 +1,122 @@
+// Type: the faces by job, the measure, headings, links in prose, pills, tables.
+
+// ── Type ───────────────────────────────────────────────────────────────────
+// Tracking is size-specific: negative as text grows, none at reading size.
+// Leading runs inversely to size.
+// Reading text is the serif; figures in prose are old-style, so a year sits in
+// a sentence like a word.
+body {
+  font-family: $font-family-serif;
+  line-height: 1.6;
+  letter-spacing: 0;
+  // Thinning glyphs helps light-on-dark and hurts dark-on-light, so each
+  // appearance chooses; it is a legibility setting, not a finish.
+  -webkit-font-smoothing: $font-smoothing;
+  -moz-osx-font-smoothing: $font-smoothing-moz;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+}
+
+// Labels, dates, data and navigation take the sans, with lining, tabular
+// figures so columns of numbers align.
+.navbar, .nav-footer, .pill, .hero-links, .cv-when, .eyebrow, .disclaimer,
+figcaption, nav[role="doc-toc"], thead th, .hero-latest p, .latest p, .nav-card p,
+.site-map, .quarto-title-meta {
+  font-family: $font-family-sans-serif;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+table, .cv-what { font-variant-numeric: lining-nums tabular-nums; }
+
+h1, h2, h3, .quarto-title .title {
+  font-family: $font-family-serif;
+  font-weight: 400;                      // serif at regular; semibold blooms
+  color: $ink;
+  text-wrap: balance;
+}
+p { text-wrap: pretty; }
+
+// Leading runs inversely to size; tracking goes negative only above 28px —
+// light text on dark needs the room below that.
+h1, .quarto-title .title { font-size: clamp(2rem, 1.6rem + 1.2vw, $size-page); line-height: 1.15; letter-spacing: -0.016em; }
+h2                       { font-size: $size-section; line-height: 1.25; letter-spacing: 0; }
+h3                       { font-size: $size-lead;    line-height: 1.35; letter-spacing: 0; }
+
+
+// The chalk rule: a hand-ruled line, 1.5px, opening a section.
+h2 {
+  margin-top: var(--space-xxl);
+  padding-bottom: var(--space-s);
+  border-bottom: 1.5px solid $rule;
+}
+
+// The measure: 60 to 72 characters of this face, inside a band rather than
+// across the page. Set in rem, not ch: SF's "0" is wide, so 66ch of it runs to
+// 90 characters of prose. Retune when the reading face changes.
+:root { --measure: 34rem; }
+p, li, blockquote { max-width: var(--measure); }
+
+// A label: sentence case at caption size. No uppercase anywhere on the site.
+.eyebrow {
+  font-size: $size-eyebrow;
+  color: $ink3;
+}
+
+// ── Response: feedback on press, not on release ────────────────────────────
+a, .nav-link {
+  transition: color var(--snap) var(--ease), opacity var(--snap) var(--ease);
+}
+a:active, .nav-link:active { opacity: 0.7; }
+
+// In prose, an underline is drawn faintly in the accent and firms on hover —
+// a link reads as a link without shouting.
+main a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba($accent, 0.4);
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color var(--snap) var(--ease),
+              color var(--snap) var(--ease), opacity var(--snap) var(--ease);
+  &:hover { text-decoration-color: $accent; }
+}
+main .hero-links a, main .pill, main h1 a, main h2 a, main h3 a { text-decoration: none; }
+
+// ── Written things ─────────────────────────────────────────────────────────
+// A pill is a part: a written label with an edge, never a filled chip — the
+// accent is not spent on decoration.
+.pill {
+  display: inline-block;
+  padding: 2px var(--space-m);
+  margin: 0 var(--space-xs) var(--space-s) 0;
+  border: 1px solid $edge;
+  border-radius: 999px;
+  font-size: $size-caption;
+  color: $ink2;
+}
+// The one pill that is a door — the App Store link on the SingleBell page — wears
+// the accent, faintly at rest and firm under the pointer, the way every link does.
+a.pill.store {
+  color: $accent;
+  border-color: rgba($accent, 0.45);
+  &:hover, &:focus-visible { border-color: $accent; }
+}
+
+.disclaimer {
+  display: inline-block;
+  margin-top: var(--space-xl);
+  font-size: $size-caption;
+  color: $ink3;
+}
+
+// Tables: ruled, not boxed.
+table { border-color: $rule; }
+thead th { color: $ink2; font-weight: 600; border-bottom: 1.5px solid $rule; }
+tbody td { border-color: $rule; }
+
+// A float must never run under the next section's heading or its rule.
+h2 { clear: both; }
+
+// A name is set in the serif, as the app sets names — never in bold.
+.name {
+  font-family: $font-family-serif;
+  font-size: 1.06em;
+  color: $ink;
+}

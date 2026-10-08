@@ -1,18 +1,28 @@
-// Two faces by job, and the app's six sizes. Shared by both appearances.
-// ── Type ───────────────────────────────────────────────────────────────────
-// Two faces by job: names in serif, work in the system sans.
-$font-family-serif: ui-serif, "New York", "Iowan Old Style", Palatino, Georgia, serif;
-$font-family-sans-serif: system-ui, -apple-system, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-$font-family-monospace: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+// Three faces by job, and seven sizes. Shared by both appearances.
+// ── Faces ──────────────────────────────────────────────────────────────────
+// Reading text and names in Literata: low contrast, sturdy serifs — chalk
+// cannot draw a hairline. Labels, dates, data and navigation in Atkinson
+// Hyperlegible Next, drawn so no two characters can be mistaken. Code in its
+// mono. The system stacks remain as fallbacks while the files arrive.
+$font-family-serif: "Literata", ui-serif, "New York", "Iowan Old Style", Palatino, Georgia, serif;
+$font-family-sans-serif: "Atkinson Hyperlegible Next", system-ui, -apple-system, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+$font-family-monospace: "Atkinson Hyperlegible Mono", ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
 
-// Six sizes — 12 / 15 / 17 / 22 / 28 / 44 — expressed against Quarto's 17px root
-// so they land on the app's scale while still following the reader's text size.
-$font-size-base: 1rem;              // 17 — body
-$size-eyebrow:  0.706rem;           // 12
-$size-caption:  0.882rem;           // 15
-$size-card:     1rem;               // 17
-$size-section:  1.294rem;           // 22 — a section title
-$size-page:     1.647rem;           // 28 — a page name
-// The app's 44 is a figure size (a count, a clock). This site has no figures,
-// so the scale stops at 28 and every page name is a page name.
+// ── Sizes ──────────────────────────────────────────────────────────────────
+// Seven steps — 14 / 15 / 18 / 22 / 28 / 40 / 44–76 — against Quarto's 17px
+// root, so they follow the reader's text size. The app's scale was tuned for
+// text glanced at from the floor mid-set; a page is read at arm's length for
+// minutes, so the body is larger and the range wider.
+$size-caption: 0.824rem;            // 14 — dates, captions, margin notes
+$size-label:   0.882rem;            // 15 — navigation, table heads, figure labels
+$size-body:    1.059rem;            // 18 — all reading text
+$size-lead:    1.294rem;            // 22 — one opening line per page, and the names of things
+$size-section: 1.647rem;            // 28 — section names
+$size-page:    2.353rem;            // 40 — page names
+$size-display: clamp(2.6rem, 1.6rem + 3.2vw, 4.47rem);   // 44 to 76 — the home opening only
 
+$font-size-base: $size-body;
+
+// Older names, kept so the rules read as they were written.
+$size-eyebrow: $size-caption;
+$size-card:    $size-body;
