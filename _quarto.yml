@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs          # GitHub Pages serves from main branch / docs folder
+  render:                   # pages are .qmd; the plan and tracker in Markdown are not pages
+    - "*.qmd"
+    - "posts/**/*.qmd"
   resources:
     - slides/               # self-contained slide decks, copied as-is
   post-render:
@@ -55,6 +58,8 @@ format:
     theme:
       dark:  [default, styles-dark.scss]    # SingleBell's material; the default
       light: [default, styles-light.scss]   # the same material, read the other way
+    respect-user-color-scheme: true          # the reader's setting wins; the toggle overrides
+    canonical-url: true
     page-layout: full                        # the page takes the viewport, as the decks do
     grid:
       sidebar-width: 0px
@@ -67,17 +72,25 @@ format:
     smooth-scroll: true
     code-copy: true
     code-overflow: wrap
-    link-external-newwindow: true
+    link-external-newwindow: false           # links stay in the tab; the reader decides
     include-in-header:
       - text: |
           <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
           <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-          <meta name="theme-color" content="#0E1412">   <!-- mobile chrome matches the ground -->
+          <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1412">
+          <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F2F3EA">
+    include-before-body:
+      - text: |
+          <a class="skip-link" href="#quarto-document-content">Skip to content</a>
     include-after-body:
       - text: |
           <script>
             // Scroll edge: the header wears its glass only once content passes under it.
             (function () {
+              // "Skip to content" must be the first thing a keyboard reaches. Quarto
+              // places include-before-body inside main, so it is moved to the body's top.
+              var skip = document.querySelector(".skip-link");
+              if (skip) document.body.prepend(skip);
               var header = document.getElementById("quarto-header");
               if (!header) return;
               var hero = document.querySelector(".hero-name");

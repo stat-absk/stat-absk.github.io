@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="description" content="The Clinical Trial Design Workbench is a free, open-source Shiny app for learning group sequential and adaptive clinical trial design with rpact — guided chapters, 64 worked examples, and a follow-along tutorial.">
-
 <title>Clinical Trial Design Workbench – Abhishek Bhattacharjee</title>
 <style>
 /* Default styles provided by pandoc.
@@ -25,28 +23,14 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-
-
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script><script src="site_libs/quarto-nav/headroom.min.js"></script><script src="site_libs/clipboard/clipboard.min.js"></script><script src="site_libs/quarto-search/autocomplete.umd.js"></script><script src="site_libs/quarto-search/fuse.min.js"></script><script src="site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="./">
 <link href="./images/favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script><script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="site_libs/quarto-html/popper.min.js"></script><script src="site_libs/quarto-html/tippy.umd.min.js"></script><script src="site_libs/quarto-html/anchor.min.js"></script><link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-50ccd05846f0989aafe895990644b4ad.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d425e9d334c5ce50f1b957389f860d54.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-45a98062e4a6cd36b2ea2fd6dc4b9bf8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-f7c3c148a9397c43a674a340fa38d6ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script><link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-815884b37800792a25bbdc9f91ef2611.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-23e548d4939d3409bf84efe3e49c4d06.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,13 +57,11 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<style>html{ scroll-behavior: smooth; }</style>
+}</script><style>html{ scroll-behavior: smooth; }</style>
 <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
-<meta name="theme-color" content="#0E1412">   <!-- mobile chrome matches the ground -->
-
-
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1412">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F2F3EA">
 <meta property="og:title" content="Clinical Trial Design Workbench">
 <meta property="og:description" content="A free, open practice environment for group sequential and adaptive trial design. Every screen mirrors the real rpact API, and every result shows the R code that produced it.">
 <meta property="og:image" content="https://stat-absk.github.io/images/workbench/start.png">
@@ -92,9 +74,10 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:image-height" content="900">
 <meta name="twitter:image-width" content="1440">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://stat-absk.github.io/workbench.html">
 </head>
-
-<body class="nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-dark">
+<script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -237,7 +220,8 @@ ul.task-list li input[type="checkbox"] {
       }
     };
     const authorPrefersDark = true;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
     // Dark / light mode switch
     window.quartoToggleColorScheme = () => {
@@ -248,23 +232,25 @@ ul.task-list li input[type="checkbox"] {
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
     } else {
       toggleColorMode(false);
     }
-  </script>
-
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  </script><div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/favicon.svg" alt="" class="navbar-logo light-content">
-    <img src="./images/favicon.svg" alt="" class="navbar-logo dark-content">
-    </a>
+    <img src="./images/favicon.svg" alt="" class="navbar-logo light-content"><img src="./images/favicon.svg" alt="" class="navbar-logo dark-content"></a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Abhishek Bhattacharjee</span>
     </a>
@@ -275,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
@@ -288,8 +274,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Stuff</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
     <a class="nav-link" href="https://www.linkedin.com/in/stat-absk/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
 <span class="menu-text"></span></a>
@@ -305,34 +291,27 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"></span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#whats-inside" id="toc-whats-inside" class="nav-link active" data-scroll-target="#whats-inside">What’s inside</a></li>
+<li><a href="#whats-inside" id="toc-whats-inside" class="nav-link active" data-scroll-target="#whats-inside">What’s inside</a></li>
   <li><a href="#learn-by-doing" id="toc-learn-by-doing" class="nav-link" data-scroll-target="#learn-by-doing">Learn by doing</a></li>
   <li><a href="#what-it-is-and-isnt" id="toc-what-it-is-and-isnt" class="nav-link" data-scroll-target="#what-it-is-and-isnt">What it is, and isn’t</a></li>
-  </ul>
-</nav>
-    </div>
+  </ul></nav>
+</div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content"><a class="skip-link" href="#quarto-document-content">Skip to content</a>
 
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">Clinical Trial Design Workbench</h1>
 <p class="subtitle lead">A free, open practice environment for group sequential and adaptive trial design. Every screen mirrors the real rpact API, and every result shows the R code that produced it.</p>
 </div>
@@ -348,10 +327,7 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
-
-
-<p><span class="pill">A work in progress</span></p>
+</header><p><span class="pill">A work in progress</span></p>
 <div class="hero-links">
 <p><a href="https://stat-absk-ct-dashboard.share.connect.posit.cloud/">Open the workbench</a> <a href="https://github.com/stat-absk/CT_Dashboard/blob/main/TUTORIAL.md">Follow the tutorial</a> <a href="https://github.com/stat-absk/CT_Dashboard/blob/main/USER_GUIDE.md">Quick-start guide</a> <a href="https://github.com/stat-absk/CT_Dashboard">Source on GitHub</a></p>
 </div>
@@ -359,14 +335,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Nothing is hidden behind the interface. Every form mirrors the <a href="https://www.rpact.org">rpact</a> R package’s own functions, and every result is shown with the exact R code that reproduces it, so what you learn in the app transfers directly to your own scripts.</p>
 <div class="wide-shot">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/workbench/start.png" class="img-fluid figure-img"></p>
-<figcaption>The Start tab opens with the course contents: eight chapters in three parts, from a first sample size calculation to a first interim analysis</figcaption>
-</figure>
+<figure class="figure"><p><picture><source type="image/avif" srcset="images/workbench/start-1180.avif 1x, images/workbench/start-1440.avif 2x"></source><source type="image/webp" srcset="images/workbench/start-1180.webp 1x, images/workbench/start-1440.webp 2x"></source><img src="images/workbench/start.png" class="img-fluid figure-img" width="1440" height="900" loading="lazy" decoding="async"></picture></p>
+<figcaption>The Start tab opens with the course contents: eight chapters in three parts, from a first sample size calculation to a first interim analysis</figcaption></figure>
 </div>
 </div>
-<section id="whats-inside" class="level2">
-<h2 class="anchored" data-anchor-id="whats-inside">What’s inside</h2>
+<section id="whats-inside" class="level2"><h2 class="anchored" data-anchor-id="whats-inside">What’s inside</h2>
 <p>Every rpact function family has an interface, organised the way the work is actually done. Each one opens the same way — the phase of work it belongs to, what it does, and a line on when you would reach for it — so moving between them costs nothing.</p>
 <p><span class="name">Design</span> — group sequential boundaries: O’Brien–Fleming, Pocock, Haybittle–Peto, alpha-spending families, and the characteristics and plots that let you read what a boundary costs.</p>
 <p><span class="name">Sample size &amp; power</span> — means, rates, and survival endpoints; survival planning with accrual and follow-up; and the conversion calculators that turn medians into hazard rates and back.</p>
@@ -376,29 +349,20 @@ ul.task-list li input[type="checkbox"] {
 <p>Anything you compute can be saved, carried into the next calculation, exported as an HTML report, or written to a session file and restored later.</p>
 <div class="wide-shot">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/workbench/design.png" class="img-fluid figure-img"></p>
-<figcaption>A design under construction: rpact’s own argument names on the left, the result and its boundary plot in the middle, and underneath, the exact R code that reproduces the whole thing</figcaption>
-</figure>
+<figure class="figure"><p><picture><source type="image/avif" srcset="images/workbench/design-1180.avif 1x, images/workbench/design-1440.avif 2x"></source><source type="image/webp" srcset="images/workbench/design-1180.webp 1x, images/workbench/design-1440.webp 2x"></source><img src="images/workbench/design.png" class="img-fluid figure-img" width="1440" height="1073" loading="lazy" decoding="async"></picture></p>
+<figcaption>A design under construction: rpact’s own argument names on the left, the result and its boundary plot in the middle, and underneath, the exact R code that reproduces the whole thing</figcaption></figure>
 </div>
 </div>
-</section>
-<section id="learn-by-doing" class="level2">
-<h2 class="anchored" data-anchor-id="learn-by-doing">Learn by doing</h2>
+</section><section id="learn-by-doing" class="level2"><h2 class="anchored" data-anchor-id="learn-by-doing">Learn by doing</h2>
 <p>The Start tab is laid out as a course rather than a menu: eight guided chapters in three parts — sizing a fixed trial, designs that can stop early, and what to do when the formulas run out. Each chapter seeds the objects the next one needs, so none of them can dead-end, and the contents list at the top shows the whole arc before you start. Behind them sit <strong>64 worked examples across 58 functions</strong> — every feature in the app has at least one example you can load with a click, run, and then bend: each one ends with a “try changing this” prompt and an interpretation of what the numbers mean.</p>
 <p>The <a href="https://github.com/stat-absk/CT_Dashboard/blob/main/TUTORIAL.md">tutorial</a> turns those examples into a follow-along course. Each exercise names what to load, what numbers to expect, and what to try next; the numbers quoted are verified against rpact 4.4.0. It closes with a capstone that designs, simulates, and analyses an anti-hypertensive trial end to end. If you only want your bearings, the shorter <a href="https://github.com/stat-absk/CT_Dashboard/blob/main/USER_GUIDE.md">quick-start guide</a> covers the layout and the first calculation.</p>
-</section>
-<section id="what-it-is-and-isnt" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-is-and-isnt">What it is, and isn’t</h2>
+</section><section id="what-it-is-and-isnt" class="level2"><h2 class="anchored" data-anchor-id="what-it-is-and-isnt">What it is, and isn’t</h2>
 <p>The workbench is a teaching tool. It is free, open source (<a href="https://github.com/stat-absk/CT_Dashboard/blob/main/LICENSE.md">LGPL-3</a>), and runs entirely on the <a href="https://www.rpact.org">rpact</a> package — the validated, widely used R implementation of confirmatory adaptive trial methodology by Gernot Wassmer and Friedrich Pahlke. All of the statistical machinery is theirs; the workbench only sets a table for learning it. It is not a validated GxP system, and a design headed for a protocol should be reproduced in rpact itself — which is exactly what the R code under every result is for.</p>
 <p>It is also very much a work in progress. Chapters and examples are still being added, rough edges remain, and anything here may change. If something is wrong, missing, or confusing, the <a href="https://github.com/stat-absk/CT_Dashboard/issues">issues page</a> is open — that kind of feedback is exactly what shapes it next.</p>
 <p><span class="disclaimer">The workbench is a personal open-source project and is not affiliated with my employer or with the rpact team.</span></p>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -498,11 +462,6 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
-            // target, if specified
-            link.setAttribute("target", "_blank");
-            if (link.getAttribute("rel") === null) {
-              link.setAttribute("rel", "noopener");
-            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -817,14 +776,13 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© 2026 Abhishek Bhattacharjee</p>
 </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="./index.html">
 <p>Home</p>
 </a>
@@ -850,15 +808,18 @@ ul.task-list li input[type="checkbox"] {
 </a>
   </li>  
 </ul>
-    </div>
+</div>
     <div class="nav-footer-right">
 <p>Made with <a href="https://quarto.org">Quarto</a></p>
 </div>
   </div>
-</footer>
-<script>
+</footer><script>
   // Scroll edge: the header wears its glass only once content passes under it.
   (function () {
+    // "Skip to content" must be the first thing a keyboard reaches. Quarto
+    // places include-before-body inside main, so it is moved to the body's top.
+    var skip = document.querySelector(".skip-link");
+    if (skip) document.body.prepend(skip);
     var header = document.getElementById("quarto-header");
     if (!header) return;
     var hero = document.querySelector(".hero-name");
@@ -872,10 +833,6 @@ ul.task-list li input[type="checkbox"] {
     window.addEventListener("scroll", update, { passive: true });
     update();
   })();
-</script>
-
-
-
-
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
-</body></html>
+</script><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body>
+</html>

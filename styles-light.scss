@@ -21,6 +21,7 @@ $strength-primary:   0.92;   // 13.8:1
 $strength-secondary: 0.80;   //  9.3:1  (was .72 — 7.1:1)
 $strength-tertiary:  0.70;   //  6.6:1  (was .55 — 4.0:1, below AA)
 $strength-faint:     0.22;
+$strength-edge:      0.50;   // 3.4:1 on paper — a control's edge
 
 // Paper takes the full weight of the glyph; antialiasing would thin it.
 $font-smoothing:     auto;

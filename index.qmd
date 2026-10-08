@@ -16,7 +16,7 @@ toc: false
 [Biostatistics leader — clinical development strategy, regulatory science, real-world evidence.]{.hero-role}
 
 ::: {.hero-now}
-Associate Director, Biostatistics at Pfizer in Chennai, leading a team of
+Senior Manager, Biostatistics at Pfizer in Chennai, leading a team of
 statisticians across therapeutic areas. Before this, primary statistical
 reviewer at the FDA's Oncology Center of Excellence. What holds my attention
 now are the methods that change what a development program can learn:

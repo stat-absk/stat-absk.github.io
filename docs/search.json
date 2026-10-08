@@ -4,7 +4,7 @@
     "href": "workbench.html",
     "title": "Clinical Trial Design Workbench",
     "section": "",
-    "text": "A work in progress\nThe workbench is a place to learn trial design by doing it. It is built for statisticians who are new to the field, and it teaches the way people actually learn: start with the question every trial begins with — how many patients? — then power, then the step up to designs with interim looks.\nNothing is hidden behind the interface. Every form mirrors the rpact R package’s own functions, and every result is shown with the exact R code that reproduces it, so what you learn in the app transfers directly to your own scripts."
+    "text": "Skip to content\nA work in progress\nThe workbench is a place to learn trial design by doing it. It is built for statisticians who are new to the field, and it teaches the way people actually learn: start with the question every trial begins with — how many patients? — then power, then the step up to designs with interim looks.\nNothing is hidden behind the interface. Every form mirrors the rpact R package’s own functions, and every result is shown with the exact R code that reproduces it, so what you learn in the app transfers directly to your own scripts."
   },
   {
     "objectID": "workbench.html#whats-inside",
@@ -28,25 +28,11 @@
     "text": "What it is, and isn’t\nThe workbench is a teaching tool. It is free, open source (LGPL-3), and runs entirely on the rpact package — the validated, widely used R implementation of confirmatory adaptive trial methodology by Gernot Wassmer and Friedrich Pahlke. All of the statistical machinery is theirs; the workbench only sets a table for learning it. It is not a validated GxP system, and a design headed for a protocol should be reproduced in rpact itself — which is exactly what the R code under every result is for.\nIt is also very much a work in progress. Chapters and examples are still being added, rough edges remain, and anything here may change. If something is wrong, missing, or confusing, the issues page is open — that kind of feedback is exactly what shapes it next.\nThe workbench is a personal open-source project and is not affiliated with my employer or with the rpact team."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Abhishek Bhattacharjee, PhD",
-    "section": "",
-    "text": "Biostatistics leader — clinical development strategy, regulatory science, real-world evidence.\n\nAssociate Director, Biostatistics at Pfizer in Chennai, leading a team of statisticians across therapeutic areas. Before this, primary statistical reviewer at the FDA’s Oncology Center of Excellence. What holds my attention now are the methods that change what a development program can learn: real-world evidence, target trial emulation, external control cohorts.\n\n\nRead the CV Google Scholar GitHub LinkedIn\n\n\n\n\nCV Roles, education, talks, and publications — the full record.\n\n\nStuff Notes, write-ups, and things I’m working through.\n\n\nWorkbench Practice group sequential and adaptive design on the real rpact API.\n\n\nSingleBell A kettlebell practice app for iOS. One bell, nothing collected."
-  },
-  {
-    "objectID": "index.html#latest",
-    "href": "index.html#latest",
-    "title": "Abhishek Bhattacharjee, PhD",
-    "section": "Latest",
-    "text": "Latest\n\nEnroll-HD for statisticians Sixty slides on the periodic dataset, HDClarity and simulated releases for testing analysis code.\nTufte for pharma Ten rules for data graphics, shown on the figures a trial statistician actually makes.\nEverything else, on Stuff →\n\nViews on this site are my own and do not represent my employer."
-  },
-  {
     "objectID": "singlebell.html",
     "href": "singlebell.html",
     "title": "SingleBell",
     "section": "",
-    "text": "A kettlebell practice app for iPhone. One bell, six classic protocols, a builder for your own sessions — and the practice on your Lock Screen and your wrist while your hands are full.\nDownload on the App Store → iPhone · iOS 18 or later\nSingleBell is a slate, written on in chalk. It gives you one practice for the day, counts it with you, and gets out of the way.\nNative SwiftUI. No dependencies. No network code. No account."
+    "text": "Skip to content\nSingleBell is a slate, written on in chalk. It gives you one practice for the day, counts it with you, and gets out of the way.\nNative SwiftUI. No dependencies. No network code. No account."
   },
   {
     "objectID": "singlebell.html#what-it-does",
@@ -75,6 +61,13 @@
     "title": "SingleBell",
     "section": "The classics",
     "text": "The classics\nThe protocols the kettlebell world already runs, each named for what it asks and adjustable before you start.\n\n\n\n\nEach classic is named for what it asks\n\n\n\nSwings & Get-Ups — 100 swings, then 10 get-ups. Ten sets of ten on the minute, then one get-up a minute for ten.\nSwings and Power Push-Ups — power in short bursts with generous rest: swings and power push-ups, or snatches alone, chosen on the board.\nClean & Press Ladder — ladders of one-arm clean & press, one to five a side, pull-ups between rungs. Own pace, no clock.\nHand-to-Hand Swings — one heavy bell, four hand-to-hand swings on the minute, twenty minutes.\nClean & Press and Squats — clean and press, swing across, press the other side, squat. The lead side swaps every minute.\nSwings, Squats & Push-Ups — swings hold at fifteen every set while squats and push-ups ladder down to one. Pick five sets or ten.\nEach one can be re-paced on the slate before it starts: run Swings & Get-Ups on the minute or at your own pace, swap the get-up out if you haven’t learned it yet, run Swings and Power Push-Ups as snatches alone, tighten Hand-to-Hand Swings to every thirty seconds, lengthen or shorten Clean & Press and Squats or run it on 45- or 90-second rounds, end the Clean & Press Ladder on ten minutes of swings or snatches, choose the set count for Swings, Squats & Push-Ups.\nWarm up first. Every board carries the switch, on until you turn it off. Swings & Get-Ups warms up on its own trio. Everything else takes a round dealt for what follows — the world’s greatest stretch before anything that goes overhead, good mornings before swings, jumping jacks otherwise, the trio under it — for two rounds: each move its own station on the clock, or one block marked down with a tap on a board. About seven minutes in front of a classic."
+  },
+  {
+    "objectID": "singlebell.html#make-your-own",
+    "href": "singlebell.html#make-your-own",
+    "title": "SingleBell",
+    "section": "Make your own",
+    "text": "Make your own\n\n\n\n\nA block, its moves, and the switch that runs it at your own pace or timed\n\n\n\nThe Builder. One practice, two ways to run it: the switch at its head reads Own pace or Timed — a board where you strike each set, or the same blocks on the clock.\nSessions are made of blocks. A block is a complex — up to eight moves from any shelf of the catalog, in the order you chalk them, each with its own count. One lift on a clock is the special case, not the shape.\nTimed, each block decides how the clock treats it: one timer on the whole block (Tabata, EMOM, AMRAP), or a timer on each move as stations, with its own rest, its own number of rounds and a minute between them. Every number is dialled, not picked off a list. Blocks reorder, collapse, and stack into a session as long as you need. Shuffle deals a fresh one to start from, and anything you build can be saved to Library and run again. A half-built session is still there when you come back to it, that day.\nThe Intervals Timer. Just a clock, no moves: work and rest in rounds, rounds in sets, a breather between sets — from 20/10 to 60/30 in one tap, every number dialled after that, and the whole thing read back to you in one sentence before you start.\nMobility sessions. Short sessions for the days in between, each on its own card: Hip Bridges, Prying Squat & Halos — the round that opens Swings & Get-Ups — and others like it, at your own pace."
   },
   {
     "objectID": "singlebell.html#accessibility",
@@ -112,18 +105,11 @@
     "text": "Support\nSingleBell has no account and keeps nothing off your phone, so there is nothing for me to look up on your behalf — but a bug, a question or a request is welcome at absk.bhtt@gmail.com.\nIf it is a bug, the three things that help most are which iPhone and iOS version you are on, what you tapped, and what you expected to happen instead. A screenshot of the room says more than a paragraph. Nothing in a screenshot of SingleBell is personal to you beyond the practices you chose to run."
   },
   {
-    "objectID": "stuff.html",
-    "href": "stuff.html",
-    "title": "Stuff",
-    "section": "",
-    "text": "Clinical Trial Design Workbench — a free, open practice environment for group sequential and adaptive trial design, built on the rpact R package. Guided chapters, a worked example behind every feature, and the reproducing R code under every result. Still a work in progress, and growing. Open the app or follow the tutorial.\n\n\nData visualizations based on Tufte’s principles — Edward Tufte’s ten rules for data graphics, demonstrated on the figures a clinical statistician actually makes: Kaplan-Meier plots, forest plots, lab profiles, spaghetti plots. A 15-minute slide deck; the rules are side-by-side pairs, the junk version on the left, the revised figure on the right, and the kill list is drawn the same way. All data simulated, built in R with Quarto and ggplot2. Open the slides or get the source.\n\n\nGetting started with Enroll-HD data — a tutorial for statisticians about to open an Enroll-HD periodic dataset for the first time: Huntington’s disease in five minutes, how the eleven data files fit together, the de-identification conventions that bite, disease definitions and derived scores, floor and ceiling effects, how age, CAG and time enter a model, and a closing section on HDClarity, the CSF and blood study nested in Enroll-HD, with simulated releases for testing code before the data arrive. Sixty slides, every code chunk in tidy R on small illustrative tables, no participant data. Built from the public Enroll-HD and HDClarity documentation and the Analyzing Data articles at enroll-hd.org. Open the slides or get the source.\n\n\nSingleBell — a kettlebell practice app for iOS. One bell, the day’s practice dealt each morning, and nothing that collects anything about you."
-  },
-  {
     "objectID": "cv.html",
     "href": "cv.html",
     "title": "Curriculum Vitae",
     "section": "",
-    "text": "Chennai, India · Google Scholar · LinkedIn"
+    "text": "Skip to content\nChennai, India · Google Scholar · LinkedIn"
   },
   {
     "objectID": "cv.html#profile",
@@ -182,10 +168,24 @@
     "text": "Publications\n15 peer-reviewed journal articles · 315 citations (as of July 2026) · Google Scholar\n\n2026\n\nDubinsky MC, Cohen ER, Irving PM, … Bhattacharjee A, et al. Bowel urgency in ulcerative colitis is associated with clinical endpoints, health-related quality of life, and biomarkers: data from the etrasimod ELEVATE UC 52 trial. Crohn’s & Colitis 360. 2026;otag072.\nMakgoeng SB, Gamalo M, Russo LJ, Pradhan V, Bhattacharjee A, Bhosale N. Data-driven trial design: use of target trial emulation to evaluate eligibility criteria in asthma and COPD. Frontiers in Medicine. 2026;13:1863026.\n\n\n\n2025\n\nArmuzzi A, Rubin DT, Schreiber S, … Bhattacharjee A, et al. Health-related quality of life outcomes with etrasimod treatment in patients with ulcerative colitis: a post hoc analysis of data from ELEVATE UC 52 and ELEVATE UC 12. Inflammatory Bowel Diseases. 2025;31(6):1583–1594.\nJairath V, Rubin DT, Verstockt B, … Bhattacharjee A, et al. The effect of etrasimod on fecal calprotectin and high-sensitivity C-reactive protein: results from the ELEVATE UC clinical program. Inflammatory Bowel Diseases. 2025;31(4):923–934.\nMagro F, Peyrin-Biroulet L, Sands BE, … Bhattacharjee A, et al. Endoscopic, histologic, and composite endpoints in patients with ulcerative colitis treated with etrasimod. Clinical Gastroenterology and Hepatology. 2025;23(2):341–350.\nAfzali A, Regueiro M, Yarur AJ, … Bhattacharjee A, et al. Concomitant use of etrasimod with opioids or antidepressants in patients with ulcerative colitis — a safety analysis. United European Gastroenterology Journal. 2025;13(5):719–727.\n\n\n\n2024\n\nRegueiro M, Siegmund B, Yarur AJ, … Bhattacharjee A, et al. Etrasimod for the treatment of ulcerative colitis: analysis of infection events from the ELEVATE UC clinical programme. Journal of Crohn’s and Colitis. 2024;18(10):1596–1605.\n\n\n\n2021 and earlier\n\nImerci A, Rogers KJ, Bhattacharjee A, Bowen JR, Thacker MM. Risk factors for failure of Pavlik harness treatment in infants with dislocated hips evaluated by dynamic sonography. Journal of Pediatric Orthopaedics. 2021;41(6):e386–e391.\nChatterjee N, Nair PKR, Nair VD, Viswanath S, Bhattacharjee A. Depth-wise distribution of soil-carbon stock in aggregate-sized fractions under shaded-perennial agroforestry systems in the Western Ghats of Karnataka, India. Agroforestry Systems. 2020;94(2):341–358.\nAlharash H, Hossain MJ, Bhattacharjee A, Levenbrown Y. Use of pulse contour technology for continuous blood pressure monitoring in pediatric patients. Blood Pressure Monitoring. 2020;25(5):278–284.\nChatterjee N, Nair PKR, Nair VD, Bhattacharjee A, et al. Do coffee agroforestry systems always improve soil carbon stocks deeper in the soil? A case study from Turrialba, Costa Rica. Forests. 2019;11(1):49.\nYing W, Bhattacharjee A, Wu SS. Effect of laser acupuncture on mitigating anxiety in acute stressed horses: a randomized, controlled study. American Journal of Traditional Chinese Veterinary Medicine. 2019;14(1).\nBhattacharjee A, Ghosh M. Bias-corrected empirical Bayes confidence intervals for the selected mean. Communications in Statistics — Theory and Methods. 2019;48(3):583–595.\nAhn H, Woods AJ, Kunik ME, … Bhattacharjee A, et al. Efficacy of transcranial direct current stimulation over primary motor cortex and contralateral supraorbital area on clinical pain severity and mobility performance in persons with knee osteoarthritis: a randomized, sham-controlled pilot study. Brain Stimulation. 2017;10(5):902–909.\nWu SS, Chen S, Bhattacharjee A, He Y. Collusion-resistant multi-matrix masking for privacy-preserving data collection. 2017 IEEE 3rd International Conference on Big Data Security on Cloud (BigDataSecurity). 2017:1–7."
   },
   {
-    "objectID": "singlebell.html#make-your-own",
-    "href": "singlebell.html#make-your-own",
-    "title": "SingleBell",
-    "section": "Make your own",
-    "text": "Make your own\n\n\n\n\nA block, its moves, and the switch that runs it at your own pace or timed\n\n\n\nThe Builder. One practice, two ways to run it: the switch at its head reads Own pace or Timed — a board where you strike each set, or the same blocks on the clock.\nSessions are made of blocks. A block is a complex — up to eight moves from any shelf of the catalog, in the order you chalk them, each with its own count. One lift on a clock is the special case, not the shape.\nTimed, each block decides how the clock treats it: one timer on the whole block (Tabata, EMOM, AMRAP), or a timer on each move as stations, with its own rest, its own number of rounds and a minute between them. Every number is dialled, not picked off a list. Blocks reorder, collapse, and stack into a session as long as you need. Shuffle deals a fresh one to start from, and anything you build can be saved to Library and run again. A half-built session is still there when you come back to it, that day.\nThe Intervals Timer. Just a clock, no moves: work and rest in rounds, rounds in sets, a breather between sets — from 20/10 to 60/30 in one tap, every number dialled after that, and the whole thing read back to you in one sentence before you start.\nMobility sessions. Short sessions for the days in between, each on its own card: Hip Bridges, Prying Squat & Halos — the round that opens Swings & Get-Ups — and others like it, at your own pace."
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Abhishek Bhattacharjee, PhD",
+    "section": "",
+    "text": "Skip to content"
+  },
+  {
+    "objectID": "index.html#latest",
+    "href": "index.html#latest",
+    "title": "Abhishek Bhattacharjee, PhD",
+    "section": "Latest",
+    "text": "Latest\n\nEnroll-HD for statisticians Sixty slides on the periodic dataset, HDClarity and simulated releases for testing analysis code.\nTufte for pharma Ten rules for data graphics, shown on the figures a trial statistician actually makes.\nEverything else, on Stuff →\n\nViews on this site are my own and do not represent my employer."
+  },
+  {
+    "objectID": "stuff.html",
+    "href": "stuff.html",
+    "title": "Stuff",
+    "section": "",
+    "text": "Skip to content\n\n\n\n\n\n\nClinical Trial Design Workbench — a free, open practice environment for group sequential and adaptive trial design, built on the rpact R package. Guided chapters, a worked example behind every feature, and the reproducing R code under every result. Still a work in progress, and growing. Open the app or follow the tutorial.\n\n\nData visualizations based on Tufte’s principles — Edward Tufte’s ten rules for data graphics, demonstrated on the figures a clinical statistician actually makes: Kaplan-Meier plots, forest plots, lab profiles, spaghetti plots. A 15-minute slide deck; the rules are side-by-side pairs, the junk version on the left, the revised figure on the right, and the kill list is drawn the same way. All data simulated, built in R with Quarto and ggplot2. Open the slides or get the source.\n\n\nGetting started with Enroll-HD data — a tutorial for statisticians about to open an Enroll-HD periodic dataset for the first time: Huntington’s disease in five minutes, how the eleven data files fit together, the de-identification conventions that bite, disease definitions and derived scores, floor and ceiling effects, how age, CAG and time enter a model, and a closing section on HDClarity, the CSF and blood study nested in Enroll-HD, with simulated releases for testing code before the data arrive. Sixty slides, every code chunk in tidy R on small illustrative tables, no participant data. Built from the public Enroll-HD and HDClarity documentation and the Analyzing Data articles at enroll-hd.org. Open the slides or get the source.\n\n\nSingleBell — a kettlebell practice app for iOS. One bell, the day’s practice dealt each morning, and nothing that collects anything about you."
   }
 ]

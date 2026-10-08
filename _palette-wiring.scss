@@ -7,6 +7,7 @@ $ink:   rgba($writing, $strength-primary);
 $ink2:  rgba($writing, $strength-secondary);
 $ink3:  rgba($writing, $strength-tertiary);
 $rule:  rgba($writing, $strength-faint);    // drawn, never written
+$edge:  rgba($writing, $strength-edge);     // the edge of a control: 3:1, so it can be found
 
 $body-bg:      $ground;
 $body-color:   $ink;

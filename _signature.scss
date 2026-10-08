@@ -23,13 +23,15 @@
 }
 
 // ── The ground ─────────────────────────────────────────────────────────────
-// The slate has a tooth. A whisper of grain over everything keeps large fields
-// of ground from reading as dead pixels — film grain, not decoration.
+// The slate has a tooth. A whisper of grain keeps large fields of ground from
+// reading as dead pixels — film grain, not decoration. It belongs to the
+// ground, so it sits beneath the content: photographs and screenshots stay clean.
+body { position: relative; z-index: 0; }
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: 9999;
+  z-index: -1;
   pointer-events: none;
   opacity: $grain-opacity;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyNDAnIGhlaWdodD0nMjQwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsdGVyPSd1cmwoI24pJy8+PC9zdmc+");
@@ -80,7 +82,28 @@ h2 {
   border-bottom: 1.5px solid $rule;
 }
 
-p { max-width: 46rem; }                 // the measure lives inside a band, not the page
+// The measure: 60 to 72 characters of this face, inside a band rather than
+// across the page. Set in rem, not ch: SF's "0" is wide, so 66ch of it runs to
+// 90 characters of prose. Retune when the reading face changes.
+:root { --measure: 34rem; }
+p, li, blockquote { max-width: var(--measure); }
+
+// "Skip to content" is the first thing a keyboard reaches and the last thing a
+// pointer sees: off-canvas until focused, then a chalk tab at the top left.
+.skip-link {
+  position: absolute;
+  top: var(--space-s);
+  left: var(--space-s);
+  z-index: 10000;
+  padding: var(--space-m) var(--space-l);
+  background: $ground;
+  color: $accent;
+  border: 1px solid $edge;
+  border-radius: var(--radius-field);
+  transform: translateY(-200%);
+  transition: transform var(--snap) var(--ease);
+  &:focus { transform: none; }
+}
 
 // Uppercase exists in exactly one place, and it is tracked.
 .eyebrow {
@@ -217,7 +240,7 @@ main#quarto-document-content { max-width: none; }
 }
 
 .hero-now {
-  max-width: 40rem;
+  max-width: var(--measure);
   margin-top: var(--space-l);
   color: $ink2;
   line-height: 1.55;
@@ -243,7 +266,7 @@ main#quarto-document-content { max-width: none; }
 .nav-card {
   position: relative;
   padding: var(--space-l) var(--space-xl) var(--space-xl);
-  border: 1px solid $rule;
+  border: 1px solid $edge;
   border-radius: var(--radius-part);
   background: rgba($surface, 0.55);
   transition: border-color var(--snap) var(--ease), transform var(--snap) var(--ease);
@@ -348,7 +371,7 @@ main#quarto-document-content section.level2 {
 }
 .card {
   padding: var(--space-xl);
-  border: 1px solid $rule;
+  border: 1px solid $edge;
   border-radius: var(--radius-whole);
   background: rgba($surface, 0.55);
   transition: border-color var(--snap) var(--ease), transform var(--settle) var(--ease);
@@ -413,10 +436,13 @@ h1.hero-name {
   gap: var(--space-s);
   margin-top: var(--space-xl);
 
+  // A pill is a target: 44px tall, with an edge the reader can see (3:1).
   a {
-    display: inline-block;
-    padding: 5px var(--space-l);
-    border: 1px solid $rule;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 var(--space-l);
+    border: 1px solid $edge;
     border-radius: 999px;
     font-size: $size-caption;
     color: $ink2;
@@ -424,7 +450,7 @@ h1.hero-name {
     transition: border-color var(--snap) var(--ease),
                 color var(--snap) var(--ease),
                 transform var(--snap) var(--ease);
-    &:hover { border-color: rgba($writing, 0.28); color: $ink; }
+    &:hover { border-color: $ink2; color: $ink; }
     &:active { transform: scale(0.97); }
   }
 }
@@ -499,7 +525,7 @@ h1.sb-name {
   display: inline-block;
   padding: 2px var(--space-m);
   margin: 0 var(--space-xs) var(--space-s) 0;
-  border: 1px solid $rule;
+  border: 1px solid $edge;
   border-radius: 999px;
   font-size: $size-caption;
   color: $ink2;
@@ -621,7 +647,9 @@ nav[role="doc-toc"] {
   color: $ink3;
 
   p { margin: 0; }
-  a { color: $ink3; text-decoration: none;
+  // Small type, full-size target: the words stay quiet, the hit area is 44px.
+  a { display: inline-flex; align-items: center; min-height: 44px;
+      color: $ink3; text-decoration: none;
       &:hover { color: $ink; } }
 
   .footer-items {
@@ -645,15 +673,15 @@ nav[role="doc-toc"] {
 }
 
 // ── Accessibility ──────────────────────────────────────────────────────────
-// Reduce Motion: the springs collapse to one short fade, as they do in the app.
+// Reduce Motion means none: nothing rises, nothing lifts, nothing slides.
+// Colour and opacity may still change, instantly.
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
-    transition-duration: 200ms !important;
-    animation-duration: 200ms !important;
+    animation: none !important;
+    transition: none !important;
     scroll-behavior: auto !important;
   }
-  a:active { transform: none !important; }
-  main, .hero { animation: none !important; }
+  a:active, .nav-card:hover, .hero-links a:active { transform: none !important; }
 }
 
 // Reduce Transparency: the glass becomes the opaque surface, as it does in the app.
