@@ -292,7 +292,7 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | [x] | 2.12 Competency pills removed from the web CV | C | FR-2.8 |
 | [ ] | 2.13 D7 Bangla name — if yes, Bengali subset and `lang="bn"` on About (waits for About, W4) | A→C | — |
 | [ ] | 2.14 Cross-device check (iPhone, Windows, Android) — screenshots into this file | A | Gate 2 |
-| [ ] | 2.15 Rendered and reviewed locally 8 Oct 2026; **awaiting push OK** | C | — |
+| [x] | 2.15 Rendered, reviewed, pushed with OK — `753d35c`, 8 Oct 2026 | C | — |
 
 *Deviations from the review in Phase 2:* the icon font remains (Quarto's toggle and search use it — folded into D9); fallback metric overrides deferred until CLS is measured; the tab is named Work rather than Made.
 
@@ -364,4 +364,5 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | 2026-10-08 | Review received. Decisions D1–D5 settled. Tracker created. Nothing pushed. |
 | 2026-10-08 | Phase 1 built and verified locally (1.1–1.15). Planning Markdown excluded from the render (`project.render`). |
 | 2026-10-08 | Phase 1 pushed live (`c701ef3`); live markup verified (pictures, skip link, canonical, theme-color, same-tab links). Lighthouse pending (1.16). |
-| 2026-10-08 | Phase 2 technical half built and verified locally: fonts (102 KB), scale, SCSS split, Work/Notes pages, bar, footer words, competencies cut. Prose (W1–W6) and About still with Abhishek. Awaiting push. |
+| 2026-10-08 | Phase 2 technical half built and verified locally: fonts (102 KB), scale, SCSS split, Work/Notes pages, bar, footer words, competencies cut. Prose (W1–W6) and About still with Abhishek. |
+| 2026-10-08 | Phase 2 pushed live (`753d35c`). Open: W1–W6, About (gates the About tab), Lighthouse/CLS readings (1.16, 2.3), cross-device check (2.14). |
