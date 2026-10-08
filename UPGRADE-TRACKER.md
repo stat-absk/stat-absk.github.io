@@ -267,10 +267,10 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | [x] | 1.13 `post-render.R`: AVIF + WebP (AVIF guarded by a capability check) at 1x/2x display widths, `<picture>` rewrite, `width`/`height`, lazy loading. SingleBell as served: 312 KB | C | FR-1.13, FR-1.14 |
 | [x] | 1.14 `R/make_social_card.R` (ragg + magick, Palatino until Literata); Python file deleted | C | D5 |
 | [x] | 1.15 `R/check_budgets.R` — gzip text + 1x images, exits 1 over budget | C | pre-mortem #4 |
-| [x] | 1.16 Lighthouse, first readings from the checks Action (run 37807582344, 8 Oct): performance 0.99–1.00, best-practices 1.00, SEO 1.00 on Home and CV; accessibility 0.96 / 0.96 / 0.91 — the logo link had no name, and Quarto writes captioned figures without `alt`. Both fixed (`logo-alt`, alt from the caption in `post-render.R`) | C | Gate 1 |
+| [x] | 1.16 Lighthouse. First readings (run 37807582344, 8 Oct): performance 0.99–1.00, best-practices 1.00, SEO 1.00 on Home and CV; accessibility 0.96 / 0.96 / 0.91 — the logo link had no name, and Quarto writes captioned figures without `alt`. Both fixed (`logo-alt`, alt from the caption in `post-render.R`); the next run read 100 on every page | C | Gate 1 |
 | [x] | 1.17 Rendered, reviewed in preview, pushed with OK — `c701ef3`, 8 Oct 2026 | C | — |
 
-**Gate 1 record:** accessibility 96 / 96 / 91 on 8 Oct before the alt fixes; re-read after the next deploy · SingleBell 312 KB as served (was ~6.3 MB) · longest prose line ≤ 73 chars · live 2026-10-08
+**Gate 1 record:** accessibility 100 / 100 / 100 (performance, best practices and SEO also 100; SingleBell performance 0.99–1.00) from the checks Action on `3022f59`, 8 Oct 2026 — Gate 1 passed · SingleBell 312 KB as served (was ~6.3 MB) · longest prose line ≤ 73 chars · live 2026-10-08
 
 *Deviations from the review in Phase 1:* the measure is a rem token, not `66ch` (see 1.5); the skip link needs two lines of the existing script, since Quarto offers no body-top include.
 
@@ -373,4 +373,4 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | 2026-10-08 | 3c technical half pushed live (`e8d349e`). Phase 3 remaining: Home recomposition (3c.1, waits on W1, W2, W5, W8) and the Literata social card (3c.9). |
 | 2026-10-08 | W1 and W2 chosen (HOME-DRAFTS.md). Home recomposed and verified locally without Now or the caption. |
 | 2026-10-08 | New Home pushed live (`289d6a6`). Phase 3 remaining: Now band (W5), portrait caption (W8), Elsewhere line to confirm, Literata social card (3c.9). |
-| 2026-10-08 | Phase 4 first batch built locally: CV PDF designed on the site's material (Typst template + filter, static TTFs in `fonts/ttf/`), print stylesheet, last-tended dates, Person JSON-LD, checks workflow; social card in Literata. Pushed live (`fa7c74d`). First checks run: Lighthouse 0.96/0.96/0.91 accessibility, links failed only on root-relative paths. Fixes built locally (logo name, figure alt, lychee root, deployment_status trigger). Awaiting push. |
+| 2026-10-08 | Phase 4 first batch built locally: CV PDF designed on the site's material (Typst template + filter, static TTFs in `fonts/ttf/`), print stylesheet, last-tended dates, Person JSON-LD, checks workflow; social card in Literata. Pushed live (`fa7c74d`). First checks run: Lighthouse 0.96/0.96/0.91 accessibility, links failed only on root-relative paths. Fixes built locally (logo name, figure alt, lychee root, deployment_status trigger). Pushed (`3022f59`); the Action fired on its own from the deployment and Lighthouse read 100 across all four categories on all three pages. Link check: one DOI answers 202, now accepted. |
