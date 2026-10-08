@@ -366,4 +366,5 @@ Legend: `[ ]` open · `[x]` done · `[~]` in progress · `[-]` dropped. Add the 
 | 2026-10-08 | Phase 1 pushed live (`c701ef3`); live markup verified (pictures, skip link, canonical, theme-color, same-tab links). Lighthouse pending (1.16). |
 | 2026-10-08 | Phase 2 technical half built and verified locally: fonts (102 KB), scale, SCSS split, Work/Notes pages, bar, footer words, competencies cut. Prose (W1–W6) and About still with Abhishek. |
 | 2026-10-08 | Phase 2 pushed live (`753d35c`). Open: W1–W6, About (gates the About tab), Lighthouse/CLS readings (1.16, 2.3), cross-device check (2.14). |
-| 2026-10-08 | Phase 3a + 3b built and verified locally (materials, marks, rows, margin, motion). Awaiting review and push OK. 3c waits on W1, W2, W5, W8. |
+| 2026-10-08 | Phase 3a + 3b built and verified locally (materials, marks, rows, margin, motion). |
+| 2026-10-08 | Phase 3a + 3b pushed live (`87e0844`). 3c open: Home recomposition waits on W1, W2, W5, W8; `theme_chalk()`, CV figures, DOIs, Workbench/SingleBell tweaks, Literata social card are Claude's. |
