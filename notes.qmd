@@ -13,7 +13,7 @@ toc: false
 
 A guide for first-time users: how to use Jholok, why it works the way it does, and the shop and accounting ideas behind it, in plain words.
 
-[October 2026 · 19 chapters]{.meta}
+[October 2026 · 19 chapters · [source](https://github.com/stat-absk/jholok-user-guide)]{.meta}
 :::
 
 ::: {.thing}
