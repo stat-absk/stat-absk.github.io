@@ -61,8 +61,8 @@ roles <- tibble::tribble(
   "Assistant professor",         "Northern Colorado",     "University",          "2017-08-01", "2019-07-31", TRUE,
   "Biostatistician",             "Nemours",               "Industry & practice", "2019-08-01", "2020-01-31", TRUE,
   "Mathematical statistician",   "FDA",                   "Regulator",           "2020-02-01", "2022-04-30", FALSE,
-  "Manager",                     "Pfizer",                "Industry & practice", "2022-05-01", "2024-05-31", TRUE,
-  "Senior Manager",              "",                      "Industry & practice", "2024-06-01", as.character(Sys.Date()), FALSE
+  "Manager",                     "",                      "Industry & practice", "2022-05-01", "2024-05-31", FALSE,
+  "Senior Manager",              "Pfizer",                "Industry & practice", "2024-06-01", as.character(Sys.Date()), FALSE
 )
 roles$from <- as.Date(roles$from); roles$to <- as.Date(roles$to)
 kinds <- c("Industry & practice", "Regulator", "University")

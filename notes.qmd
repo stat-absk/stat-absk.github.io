@@ -13,7 +13,7 @@ toc: false
 
 A tutorial for statisticians about to open an Enroll-HD periodic dataset for the first time, with HDClarity and simulated releases for testing code before the data arrive.
 
-[September 2026 · 60 slides · 4.4 MB · [source](https://github.com/stat-absk/enrollhd-getting-started)]{.meta}
+[September 2026 · 60 slides · 4.5 MB · [source](https://github.com/stat-absk/enrollhd-getting-started)]{.meta}
 :::
 
 ::: {.thing}
@@ -21,7 +21,7 @@ A tutorial for statisticians about to open an Enroll-HD periodic dataset for the
 
 Edward Tufte's ten rules for data graphics, demonstrated on the figures a clinical statistician actually makes.
 
-[September 2026 · 17 slides · 6.5 MB · [source](https://github.com/stat-absk/tufte-pharma)]{.meta}
+[September 2026 · 17 slides · 6.7 MB · [source](https://github.com/stat-absk/tufte-pharma)]{.meta}
 :::
 
 :::

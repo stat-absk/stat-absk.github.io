@@ -5,22 +5,26 @@
 --   {{< rule >}}       one chalk rule, the next stroke from the set of eight,
 --                      so neighbouring rules never match.
 --
--- The strokes live in marks/chalk.svg; the chalk roughening is the page's
--- #chalk filter, applied by _marks.scss. In any format that is not HTML (the
+-- The strokes are written inline (the paths are those of marks/chalk.svg), so
+-- a mark needs no other file: the same shortcode works on the site and in a
+-- self-contained deck. On the site the chalk roughening is the page's #chalk
+-- filter, applied by _marks.scss. In any format that is not HTML (the
 -- CV's PDF, for one) a tally is simply its number and a rule is nothing.
 
-local SPRITE = "/marks/chalk.svg"
 local rule_n = 0
 
+local STROKE = "M6.4 2.5 C5.7 12, 6.3 24, 5.5 37.5"   -- one upright, in a 12 x 40 box
+local STRIKE = "M3 31 C18 24.5, 40 14, 57 7"         -- the fifth, across a 60 x 40 gate
+
 local function stroke(x)
-  return string.format('<use href="%s#stroke" x="%d" y="0" width="12" height="40"/>', SPRITE, x)
+  return string.format('<path transform="translate(%d 0)" d="%s"/>', x, STROKE)
 end
 
 -- One gate: up to four uprights and, at five, the strike through them.
 local function gate(k)
   local parts = {}
   for i = 1, math.min(k, 4) do parts[#parts + 1] = stroke(2 + (i - 1) * 13) end
-  if k == 5 then parts[#parts + 1] = string.format('<use href="%s#strike" x="0" y="0" width="60" height="40"/>', SPRITE) end
+  if k == 5 then parts[#parts + 1] = string.format('<path d="%s"/>', STRIKE) end
   local width = (k >= 4) and 60 or (2 + k * 13)
   return string.format('<svg viewBox="0 0 %d 40" aria-hidden="true" focusable="false">%s</svg>', width, table.concat(parts))
 end

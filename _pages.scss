@@ -189,7 +189,7 @@ h1.sb-name {
 main#quarto-document-content section.level2 > .cv-entry:first-of-type { margin-top: calc(#{$size-section} * 1.25 + var(--space-l)); }
 
 // Narrow enough that there is no margin: the date goes back above its entry.
-@media (max-width: 700px) {
+@media (max-width: 991.98px) {   // where the band stacks (_bands.scss)
   .cv-when {
     position: static;
     display: block;
@@ -216,7 +216,7 @@ main#quarto-document-content section.level2 > .margin-figure {
   margin: var(--space-m) 0 0;
   max-width: 14rem;
 }
-@media (max-width: 700px) {
+@media (max-width: 991.98px) {   // where the band stacks (_bands.scss)
   main#quarto-document-content section.level2 > .margin-figure { grid-row: auto; max-width: 16rem; }
 }
 

@@ -150,7 +150,10 @@ main#quarto-document-content section.level2 {
   > p:not(:first-child) a { position: relative; z-index: 1; }
 }
 
-@media (max-width: 700px) {
+// Below 992px Quarto's contents sidebar still takes the right column (from
+// 768px), so a band's name column would leave the text a strip: the band stacks,
+// name above content, at the same width Bootstrap moves the sidebar.
+@media (max-width: 991.98px) {
   main#quarto-document-content section.level2 {
     grid-template-columns: 1fr;
     > h2 { grid-row: auto; position: static; margin-bottom: var(--space-l); }

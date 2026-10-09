@@ -20,3 +20,6 @@
 # _freeze/ = cached R results so the site builds fast and reproducibly
 
 **/*.quarto_ipynb
+
+# R/screenshots.R output when run locally
+/screenshots/

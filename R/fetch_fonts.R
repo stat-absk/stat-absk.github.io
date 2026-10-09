@@ -90,3 +90,6 @@ for (u in statics) {
 }
 ttfs <- list.files("fonts/ttf", pattern = "\\.ttf$")
 cat(sprintf("%-40s %7.0f KB\n", ttfs, file.size(file.path("fonts/ttf", ttfs)) / 1024), sep = "")
+
+# The deck theme carries the same faces inside itself.
+source("R/deck_fonts.R")
