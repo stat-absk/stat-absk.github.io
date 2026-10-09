@@ -114,11 +114,11 @@ main#quarto-document-content section.level2 {
   > *:last-child { margin-bottom: 0; }
 }
 
-// A list of things: ruled rows, a name on the left and one line on the right,
-// the whole row a link. Nothing is boxed.
+// A list of things: a name on the left and one line on the right, the whole
+// row a link. Nothing is boxed or ruled: space separates the rows, and the only
+// lines on a page are the hand-drawn rules that open its bands.
 .things {
   margin: 0 0 var(--space-3xl);
-  border-bottom: 1px solid $rule;
 }
 .thing {
   position: relative;
@@ -127,7 +127,7 @@ main#quarto-document-content section.level2 {
   column-gap: $band-gap;
   align-items: baseline;
   padding: var(--space-l) 0;
-  border-top: 1px solid $rule;
+  &:first-child { padding-top: 0; }
 
   > p { margin: 0; max-width: none; }
   > p:first-child { grid-column: 1; }
