@@ -9,6 +9,14 @@ toc: false
 ::: {.things}
 
 ::: {.thing}
+[Counting your stock with Jholok](jholok-guide/index.html)
+
+A guide for first-time users: how to use Jholok, why it works the way it does, and the shop and accounting ideas behind it, in plain words.
+
+[October 2026 · 19 chapters]{.meta}
+:::
+
+::: {.thing}
 [Getting started with Enroll-HD data](slides/enrollhd-getting-started.html)
 
 A tutorial for statisticians about to open an Enroll-HD periodic dataset for the first time, with HDClarity and simulated releases for testing code before the data arrive.

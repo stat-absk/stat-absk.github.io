@@ -46,6 +46,14 @@ A kettlebell practice app for iOS. One bell, nothing collected.
 
 ::: {.things}
 ::: {.thing}
+[Counting your stock with Jholok](jholok-guide/index.html)
+
+How to use Jholok, why it works the way it does, and the shop and accounting ideas behind it, in plain words.
+
+[October 2026 · 19 chapters]{.meta}
+:::
+
+::: {.thing}
 [Enroll-HD for statisticians](slides/enrollhd-getting-started.html)
 
 Sixty slides on the periodic dataset, HDClarity and simulated releases for testing analysis code.
