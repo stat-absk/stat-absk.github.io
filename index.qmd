@@ -58,7 +58,7 @@ How to use Jholok, why it works the way it does, and the shop and accounting ide
 
 Sixty slides on the periodic dataset, HDClarity and simulated releases for testing analysis code.
 
-[September 2026 · 60 slides · 4.5 MB]{.meta}
+[September 2026 · 60 slides · 4.5 MB · [source](https://github.com/stat-absk/enrollhd-getting-started)]{.meta}
 :::
 
 ::: {.thing}
@@ -66,7 +66,7 @@ Sixty slides on the periodic dataset, HDClarity and simulated releases for testi
 
 Ten rules for data graphics, shown on the figures a trial statistician actually makes.
 
-[September 2026 · 17 slides · 6.7 MB]{.meta}
+[September 2026 · 17 slides · 6.7 MB · [source](https://github.com/stat-absk/tufte-pharma)]{.meta}
 :::
 :::
 
