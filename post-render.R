@@ -120,6 +120,9 @@ tended <- function(page) {
   if (!length(when) || !nzchar(when[1])) return(FALSE)
   d <- as.Date(when[1])
   html <- readLines(page, warn = FALSE, encoding = "UTF-8")
+  # A page Quarto didn't rebuild this time already carries a line: replace it,
+  # never add a second.
+  html <- gsub('<p class="tended">.*?</p>', "", html, perl = TRUE)
   i <- grep("</main>", html, fixed = TRUE)
   if (!length(i)) return(FALSE)
   line <- sprintf('<p class="tended">Last tended <time datetime="%s">%s %s %s</time>.</p>',
