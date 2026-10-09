@@ -40,6 +40,12 @@ Practice group sequential and adaptive design on the real rpact API.
 
 A kettlebell practice app for iOS. One bell, nothing collected.
 :::
+
+::: {.thing}
+[Jholok](jholok.qmd)
+
+A stock-counting app for a jewellery shop. Coming soon to iOS.
+:::
 :::
 
 ## Written

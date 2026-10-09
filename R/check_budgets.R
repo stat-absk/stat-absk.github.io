@@ -21,6 +21,7 @@ served_size <- function(path) {
 out <- "docs"
 budgets <- c(                     # bytes; from UPGRADE-TRACKER.md
   "singlebell.html" = 1000 * 1024,
+  "jholok.html"     = 1000 * 1024,
   fonts             = 200 * 1024
 )
 

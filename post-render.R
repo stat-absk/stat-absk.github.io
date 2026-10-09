@@ -34,11 +34,12 @@ display_width <- function(src) {
   w <- c(
     "images/profile.jpg"            = 300,   # the hero portrait, at its largest
     "images/singlebell/appicon.png" = 104,   # the app icon in the SingleBell opening
+    "images/jholok/appicon.png"     = 104,   # and in the Jholok opening
     "images/workbench/"             = 1180   # browser windows, full measure
   )
   hit <- names(w)[startsWith(src, names(w))]
   if (length(hit)) return(unname(w[hit[1]]))
-  if (startsWith(src, "images/singlebell/")) return(200)  # a phone, as .shots and .shot-right draw it
+  if (startsWith(src, "images/singlebell/") || startsWith(src, "images/jholok/")) return(200)  # a phone, as .shots and .shot-right draw it
   NA
 }
 

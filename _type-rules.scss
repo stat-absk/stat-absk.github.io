@@ -86,7 +86,9 @@ main .hero-links a, main .pill, main h1 a, main h2 a, main h3 a { text-decoratio
   font-size: $size-caption;
   color: $ink2;
 }
-// The one label that is a door — the App Store link on the SingleBell page — is
+// A status, not a link: the accent, so "coming soon" reads first.
+.pill.soon { color: $accent; }
+// The one label that is a door (the App Store link on SingleBell, the guide on Jholok) is
 // a plain primary link: the accent, underlined, 44px tall to tap.
 a.pill.store {
   display: inline-flex;

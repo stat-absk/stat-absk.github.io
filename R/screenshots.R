@@ -14,7 +14,8 @@ library(chromote)
 args  <- commandArgs(trailingOnly = TRUE)
 base  <- if (length(args) >= 1) sub("/$", "", args[1]) else "https://stat-absk.github.io"
 out   <- if (length(args) >= 2) args[2] else "screenshots"
-pages <- c(home = "/", cv = "/cv.html", work = "/work.html", notes = "/notes.html", singlebell = "/singlebell.html")
+pages <- c(home = "/", cv = "/cv.html", work = "/work.html", notes = "/notes.html", singlebell = "/singlebell.html",
+           jholok = "/jholok.html")
 widths <- c(390, 768, 1440)
 schemes <- c("light", "dark")
 
