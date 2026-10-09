@@ -11,6 +11,9 @@
 
 library(chromote)
 
+# A cold runner can take more than chromote's default 10 s to open Chrome.
+options(chromote.timeout = 60)
+
 args  <- commandArgs(trailingOnly = TRUE)
 base  <- if (length(args) >= 1) sub("/$", "", args[1]) else "https://stat-absk.github.io"
 out   <- if (length(args) >= 2) args[2] else "screenshots"
