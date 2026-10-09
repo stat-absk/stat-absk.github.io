@@ -8,6 +8,10 @@
 /.quarto/
 *_files/
 *_cache/
+# The Jholok user guide keeps its figures in *_files/ folders; it's built
+# elsewhere (stat-absk/jholok-user-guide) and copied in whole.
+!jholok-guide/**/*_files/
+!docs/jholok-guide/**/*_files/
 
 # macOS
 .DS_Store

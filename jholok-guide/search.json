@@ -1,0 +1,1174 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Counting your stock with Jholok",
+    "section": "",
+    "text": "Welcome\nJholok helps a jewellery shop know what it has. It keeps a list of your products, records every piece that comes in or goes out, and helps you count what is really on the shelves, so you can see what is missing before it costs you.\nThis guide is for anyone using Jholok for the first time: the shop’s owner, the people who approve counts, and the staff who count. You don’t need to know anything about accounting. Each idea is explained the first time it appears, and every word is in the Glossary.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#how-this-guide-is-arranged",
+    "href": "index.html#how-this-guide-is-arranged",
+    "title": "Counting your stock with Jholok",
+    "section": "How this guide is arranged",
+    "text": "How this guide is arranged\n\nThe ideas behind the app explains stock, the ledger and counting in plain words. Read this part first, even if you only count.\nEveryday use sets the shop up and keeps the catalogue and stock up to date.\nCounting walks through a count, from opening it to counting boxes of pieces.\nChecking a count is for the owner and the people who approve counts.\nLooking after your shop covers backups and privacy, and ends with stories from a shop’s year.\n\nEach chapter says who it is for, starts with what you’ll learn and ends with what to remember. Words that may be new are linked to the Glossary the first time they appear.\n\nWhere to start\n\nIf you count stock, read 1  Stock basics to 3  Counting and checking against the ledger, then the chapters on counting.\nIf you approve counts, read those too, then the chapters on checking a count.\nIf you own the shop, read the guide in order.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#the-shop-in-this-guide",
+    "href": "index.html#the-shop-in-this-guide",
+    "title": "Counting your stock with Jholok",
+    "section": "The shop in this guide",
+    "text": "The shop in this guide\nEvery example and picture uses the same made-up shop, Jholok Jewellers, with its owner Bidisha and staff Sita, Ramesh and Meena. It is the same shop that the app’s demo shows, so what you read here matches what you see on the screen. None of its stock is real.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#the-pictures",
+    "href": "index.html#the-pictures",
+    "title": "Counting your stock with Jholok",
+    "section": "The pictures",
+    "text": "The pictures\nThe screenshots are of the app on an iPhone, showing the demo shop. Your own screens show your shop, so the names and numbers will differ, but the screens are the same.\nThe pictures of boxes of jewellery are drawn examples that the app uses for practice, not photos of a real shop’s boxes. Counting boxes from a photo is new, and how well it works on real boxes hasn’t been measured yet; the chapters on box counting say what that means for you.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#which-app-this-guide-describes",
+    "href": "index.html#which-app-this-guide-describes",
+    "title": "Counting your stock with Jholok",
+    "section": "Which app this guide describes",
+    "text": "Which app this guide describes\nThis is guide 0.1, for Jholok 0.1. The What changed page lists what is new in each edition of the guide.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "chapters/01-stock-basics.html",
+    "href": "chapters/01-stock-basics.html",
+    "title": "1  Stock basics",
+    "section": "",
+    "text": "1.1 The idea\nYour stock is the jewellery the shop owns and means to sell. To look after it, you need to know three things about every piece: what it is, how many of it there are, and what it’s worth. This chapter covers the first and the last. How many there are is the subject of the next two chapters.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stock basics</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-stock-basics.html#the-idea",
+    "href": "chapters/01-stock-basics.html#the-idea",
+    "title": "1  Stock basics",
+    "section": "",
+    "text": "Products and SKUs\nEach design the shop sells is a product. A product is one design, in one metal and one weight, so that every piece of it is alike. The Temple Lakshmi jhumka in 22K gold weighing 14 g is one product. The antique jhumka in 22K weighing 8 g is another, even though both are jhumkas.\nEach product has a short code called its SKU, which stands for stock keeping unit. The Temple Lakshmi jhumka’s SKU is EAR-0002. A SKU belongs to one product only. You can change it with Edit, but it is best to keep it the same, because labels and files use it. Jholok treats small and capital letters as the same, so ear-0002 is the same SKU as EAR-0002. When you add a product, Jholok suggests a SKU from its type (EAR for earrings, RIN for rings), or you can use your own codes.\nHow many of a product the shop holds is its stock on hand.\n\n\nTypes and units\nProducts are grouped into types: in the demo shop these are Earrings, Rings, Necklaces, Bangles, Sets, Coins and Other. A type decides the unit its products are counted in:\n\nEarrings are counted in pairs. A pair is sold together, so it is counted together. A single earring found on its own is not half a pair, so it is never rounded into one: count the whole pairs, and add the single with Singles in the count sheet. It shows beside the pairs (“5 pairs + 1 single”), the approver sees it in Review, and it never changes stock.\nSets are counted as one. A necklace with its matching earrings is one set, and counts as 1, because it is sold as one.\nEverything else is counted in pieces: a ring, a chain, a coin.\n\nBecause the units are different, Jholok keeps them apart when it says what is in stock: “30 pairs · 20 sets · 120 pieces”, not one total. Adding a pair of studs to a bridal set gives a number that means little.\nJholok never adds them into one count of items, even for sales. Where several kinds sold, it lists each, such as “18 pairs and 13 pieces”. Where a rupee value says enough, as in “Last week sold ₹7.79 L”, it gives the value alone.\n\n\nCost, list price and value\nEach product can have two amounts:\n\nits cost: what the shop paid for one, with the gold, the making charge and any stones included;\nits list price: what the shop asks a customer for one (the product page calls it Price).\n\nStock value is what the stock is worth: each product’s stock on hand times its cost, added up. Value at cost is what the shop has paid for the stock it holds. Value at list price is what it would take if everything sold at the list price. The gap between the two is the shop’s margin.\nLarge amounts are written in lakh and crore, as in the app. One lakh (L) is ₹1,00,000, and one crore (Cr) is 100 lakh, or ₹1,00,00,000.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stock basics</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-stock-basics.html#in-the-app",
+    "href": "chapters/01-stock-basics.html#in-the-app",
+    "title": "1  Stock basics",
+    "section": "1.2 In the app",
+    "text": "1.2 In the app\nThe Catalogue tab lists the products, grouped by type.\n\n\n\n\n\n\n\nTap a product to open its page. The Temple Lakshmi jhumka has 2 pairs on hand. Its value, ₹4.12 L at cost, is 2 × ₹2,06,010. Cover says how long the stock lasts at the pace it has sold recently.\n\n\n\n\n\n\n\nThe Overview tab shows the whole shop: its stock value at cost, ₹2.73 Cr, and at list price, ₹3.16 Cr, and what is in stock, by unit.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stock basics</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-stock-basics.html#why-it-works-this-way",
+    "href": "chapters/01-stock-basics.html#why-it-works-this-way",
+    "title": "1  Stock basics",
+    "section": "1.3 Why it works this way",
+    "text": "1.3 Why it works this way\n\nStock is kept in its units so that every total means something. “20 sets” tells you something; “170 items” doesn’t.\nA value always says what it is based on, and when. Value at cost and value at list price differ by the shop’s margin, and gold prices move. So Jholok writes “₹2.73 Cr at today’s cost, 9 Oct”, with its date, never just a figure.\nNothing is left out quietly. One product in the demo shop has no cost, so the Overview says “Leaves out 1 product with no cost” rather than counting it as ₹0.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stock basics</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-stock-basics.html#how-it-works",
+    "href": "chapters/01-stock-basics.html#how-it-works",
+    "title": "1  Stock basics",
+    "section": "1.4 How it works",
+    "text": "1.4 How it works\nFor each product, Jholok multiplies its stock on hand by its cost (or its list price) and adds the results. Stock on hand itself isn’t stored anywhere: Jholok works it out from the ledger, as the next chapter explains. If a product’s stock has gone below zero (a mistake the next chapter also covers), it counts as none in the value, because no shelf holds minus one pendant.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stock basics</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-stock-basics.html#try-it",
+    "href": "chapters/01-stock-basics.html#try-it",
+    "title": "1  Stock basics",
+    "section": "1.5 Try it",
+    "text": "1.5 Try it\nThis is Jholok Jewellers’ stock at the end of the demo’s story, by type.\n\n\n\n\nTable 1.1: Jholok Jewellers’ stock by type. Other leaves out 1 product with no cost, and Coins 1 with no list price.\n\n\n\n\n\n\n\n\n\nType\nIn stock\nAt cost\nAt list price\n\n\n\n\nEarrings\n30 pairs\n₹33.2 L\n₹37.8 L\n\n\nRings\n21 pieces\n₹16.5 L\n₹18.7 L\n\n\nNecklaces\n25 pieces\n₹67.0 L\n₹75.5 L\n\n\nBangles\n23 pieces\n₹46.7 L\n₹51.7 L\n\n\nSets\n20 sets\n₹95.5 L\n₹1.08 Cr\n\n\nCoins\n36 pieces\n₹9.74 L\n₹9.68 L\n\n\nOther\n15 pieces\n₹4.83 L\n₹14.0 L\n\n\n\n\n\n\n\n\n\n\nThe shop holds only 20 sets, but they hold 35% of its value at cost, because each set is heavy and costly.\nQuestion. The antique jhumka (EAR-0001) costs ₹1,16,640 a pair, and the shop has 8 pairs. What are they worth at cost?\n\n\n\n\n\n\nTipAnswer\n\n\n\n\n\n8 × ₹1,16,640 = ₹9,33,120, which the app writes as ₹9.33 L.\n\n\n\n\n\nOne design is one product, with its own SKU.\nEarrings are counted in pairs, sets as one and the rest in pieces, and stock is shown in those units, not as one total.\nStock value is stock on hand times cost (or list price). It always says which, and from when.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stock basics</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-the-ledger.html",
+    "href": "chapters/02-the-ledger.html",
+    "title": "2  The ledger: why stock is a sum",
+    "section": "",
+    "text": "2.1 The idea\nA ledger is a record of every change to the stock, oldest first. Each change is a movement. A movement says which product, when, and what kind of change it was. It also says how many: a plus number for stock coming in, a minus number for stock going out. It has a note, and the name of who entered it.\nThese are the kinds of movement you’ll meet first:\nThere are a few more, for loading the shop’s billing records and for stock that leaves the shop for a while. Later chapters explain them.\nStock on hand is the sum of all a product’s movements. It works like a bank passbook: the balance is every deposit minus every withdrawal, and nobody writes in a new balance by hand.\nHere is the antique jhumka’s year. It opened with 6 pairs, 19 more were received, 1 was returned and 17 were sold. A count found one pair fewer than the ledger expected, and the approver accepted it. That leaves 8 pairs on hand. Two of them are out on jangad with Sharma Jewellers, so the product’s page shows 6 in the shop and 2 off the shelf: still the shop’s, but not on the shelf (Chapter 6).\nThe antique jhumka (EAR-0001) over the year: every kind of movement added together gives the stock on hand.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The ledger: why stock is a sum</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-the-ledger.html#the-idea",
+    "href": "chapters/02-the-ledger.html#the-idea",
+    "title": "2  The ledger: why stock is a sum",
+    "section": "",
+    "text": "Movement\nWhat happened\nStock\n\n\n\n\nOpening stock\nThe product was added to Jholok with stock already in the shop\ngoes up\n\n\nReceived\nA delivery came in from a supplier or the karigar\ngoes up\n\n\nSold\nA customer bought it\ngoes down\n\n\nReturned\nA customer brought it back\ngoes up\n\n\nAdjustment\nA correction outside a count, with a reason, such as a piece damaged and sent for melting\nup or down\n\n\nCount adjustment\nA count found a difference and the approver accepted it (Chapter 3)\nup or down",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The ledger: why stock is a sum</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-the-ledger.html#in-the-app",
+    "href": "chapters/02-the-ledger.html#in-the-app",
+    "title": "2  The ledger: why stock is a sum",
+    "section": "2.2 In the app",
+    "text": "2.2 In the app\nThe Ledger tab lists every movement, newest first. At the top it sums up the last 30 days. In the demo shop that is 52 sold, 1 returned and 54 received.\n\n\n\n\n\n\n\nTo record a movement by hand, open the product and tap Receive, Sell or Adjust. The kinds are also at the top of the screen, where you choose Returned for a customer’s return. For Received, Sold or Returned, enter how many. For Adjust, enter the stock you really have and a reason. Check the date: it should be when the movement happened, which may be earlier than when you enter it. Once People is set up (Chapter 4), Entered by shows the owner; anyone else taps Change and enters their PIN, so the ledger shows their name.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The ledger: why stock is a sum</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-the-ledger.html#why-it-works-this-way",
+    "href": "chapters/02-the-ledger.html#why-it-works-this-way",
+    "title": "2  The ledger: why stock is a sum",
+    "section": "2.3 Why it works this way",
+    "text": "2.3 Why it works this way\nSuppose someone could simply change the antique jhumka’s stock from 8 to 7. The missing pair would vanish without a trace: nobody could tell whether it was sold, lost, or a typing slip. With a ledger, every change has a date, a kind, a note and a name. The question “where did it go?” always has an answer to look up.\nSo a mistake is never erased. It is put right with another movement, and both stay in the ledger. This unbroken history is called an audit trail. It lets the owner, an accountant or an insurer check the stock long after the day.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The ledger: why stock is a sum</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-the-ledger.html#how-it-works",
+    "href": "chapters/02-the-ledger.html#how-it-works",
+    "title": "2  The ledger: why stock is a sum",
+    "section": "2.4 How it works",
+    "text": "2.4 How it works\nJholok stores movements, never stock numbers. Whenever a screen shows stock, Jholok adds up that product’s movements up to that moment. The same sums give the stock on any past date, which is how the Overview draws its charts.\n\nWhen stock goes below zero\nA shelf can’t hold fewer than nothing, so stock below zero always means a movement is missing or wrong. The Lakshmi pendant (NEC-0003) sold its last piece on 26 Sep. On 4 Oct another sale was entered, from a delivery of 6 that had arrived but hadn’t been entered yet. The ledger now says −1.\n\n\n\n\n\n\n\nJholok doesn’t hide this or round it to zero. It marks the product Below zero, lists it under Needs attention on the Overview, and suggests what to do: record the missing delivery, or count the product.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The ledger: why stock is a sum</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-the-ledger.html#try-it",
+    "href": "chapters/02-the-ledger.html#try-it",
+    "title": "2  The ledger: why stock is a sum",
+    "section": "2.5 Try it",
+    "text": "2.5 Try it\nThese are the antique jhumka’s last eight movements. The last column is the running total of the stock the shop owns: each row’s change added to the one before. Sending pairs out on jangad doesn’t change it, because they are still the shop’s.\n\n\n\n\nTable 2.1: The antique jhumka’s last eight movements, with the stock after each.\n\n\n\n\n\n\n\n\n\nDate\nMovement\nPairs\nNote\nOn hand\n\n\n\n\n16 Jul 2026, 19:33\nSold\n−1\nWalk-in\n1\n\n\n22 Jul 2026, 10:30\nReceived\n+3\nSupplier: Shree Gold Works\n4\n\n\n29 Jul 2026, 10:30\nReceived\n+1\nSupplier: Shree Gold Works\n5\n\n\n2 Aug 2026, 20:19\nSold\n−1\nWalk-in\n4\n\n\n12 Aug 2026, 10:30\nReceived\n+1\nSupplier: Shree Gold Works\n5\n\n\n26 Sep 2026, 10:00\nCount adjustment\n−1\nStock count · Showcase 1 · Monthly count. Shortages checked with Ramesh.\n4\n\n\n30 Sep 2026, 10:30\nReceived\n+4\nSupplier: Shree Gold Works\n8\n\n\n7 Oct 2026, 17:00\nSent out\n2 to jangad\nMemo 41\n8\n\n\n\n\n\n\n\n\n\n\nQuestion. A customer returns a ring they bought yesterday. How do you record it, and what happens to the ring’s stock?\n\n\n\n\n\n\nTipAnswer\n\n\n\n\n\nOpen the ring, tap Receive, choose Returned at the top, and enter 1. Its stock goes up by one. The sale stays in the ledger too, so the history shows both: sold, then returned.\n\n\n\n\n\nEvery change to stock is a movement in the ledger, with a kind, a date, a note and a name.\nStock on hand is the sum of the movements. Nobody types in a stock number.\nMistakes are put right with another movement, never erased.\nStock below zero means a movement is missing. Find it, or count the product.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>The ledger: why stock is a sum</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-counting-and-reconciliation.html",
+    "href": "chapters/03-counting-and-reconciliation.html",
+    "title": "3  Counting and checking against the ledger",
+    "section": "",
+    "text": "3.1 The idea\nThe ledger says what should be in the shop. A count, sometimes called a stock take, finds what is there. For each product, Jholok puts the two numbers side by side:\nComparing them, and explaining every difference, is called reconciliation. A count can cover the whole shop or just a few types. You give it a name, such as Showcase 1, but Jholok expects every piece of those types to be counted, wherever it is in the shop.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Counting and checking against the ledger</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-counting-and-reconciliation.html#the-idea",
+    "href": "chapters/03-counting-and-reconciliation.html#the-idea",
+    "title": "3  Counting and checking against the ledger",
+    "section": "",
+    "text": "expected: what the ledger says should be there;\ncounted: what the counters found.\n\n\n\nShort and over\nWhen the two numbers agree, the product matched. When they don’t:\n\nshort means fewer were found than expected;\nover means more were found than expected.\n\nA difference is a question, not yet an answer. These are the usual reasons:\n\n\n\n\n\n\n\nWhat happened\nWhat the count shows\n\n\n\n\nA piece was stolen, lost or damaged\nshort\n\n\nA sale wasn’t entered\nshort\n\n\nA delivery wasn’t entered\nover\n\n\nA return wasn’t entered\nover\n\n\nA piece was put back in the wrong tray\nshort in one place, over in another\n\n\nA counter missed a piece, or counted one twice\nshort or over\n\n\nSomething that isn’t the shop’s stock was in the tray, such as a customer’s piece in for repair\nover\n\n\n\nStock that goes missing without being sold is called shrinkage. A count is how a shop finds out how much it has lost.\n\n\nCounting is blind\nWhile a count is open, counters never see the expected numbers. People find what they expect to find: a counter who knows there should be 9 chains tends to stop at 9, or to look until a ninth turns up. A counter who doesn’t know just counts. That is called a blind count.\n\n\n\n\nCounting the necklaces in Showcase 2: no stock, nothing expected.\n\n\n\n\n\nTwo checks before stock changes\n\nA shortage is counted again first. Review won’t let anyone accept a shortage until the product is recounted, and the recount is blind too: the first count and the ledger stay hidden. Many shortages on a first count are counting slips, and a recount finds them before the stock is changed.\nSomeone who didn’t count approves. The counter submits the count for review. Only an approver who didn’t count in it, or the owner, can open Review and complete it. They give a reason, then sign with their PIN (the owner can use Face ID). This is called separation of duties: the person who might have lost a piece isn’t the one who decides it is lost.\n\n\n\n\n\n\nA count’s life. Counting stops when it’s submitted; the approver can send it back for more counting, with a reason.\n\n\n\n\n\n\nWhat completing a count changes\nCompleting a count changes stock only for the differences the approver left ticked. Each one becomes a count adjustment in the ledger, so stock is still a sum of movements. Products in the count that nobody counted keep their stock, unless the approver chooses Set to zero.\nOvers start unticked. An over is often a missing record (a delivery or a return nobody entered), and the right fix is to enter that record, not to make the stock up to the count.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Counting and checking against the ledger</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-counting-and-reconciliation.html#in-the-app",
+    "href": "chapters/03-counting-and-reconciliation.html#in-the-app",
+    "title": "3  Counting and checking against the ledger",
+    "section": "3.2 In the app",
+    "text": "3.2 In the app\nReview puts the counted and expected numbers side by side, and lists the differences.\n\n\n\n\n\n\n\nA shortage, or a line whose stock moved while it was being counted, waits under Recount first, with its numbers hidden until it is recounted.\n\n\n\n\n\n\n\nWhen the count is completed, its Result says what was counted, what was short and over, and what changed. This is the demo’s count at Showcase 1 on 26 September.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Counting and checking against the ledger</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-counting-and-reconciliation.html#why-it-works-this-way",
+    "href": "chapters/03-counting-and-reconciliation.html#why-it-works-this-way",
+    "title": "3  Counting and checking against the ledger",
+    "section": "3.3 Why it works this way",
+    "text": "3.3 Why it works this way\n\nBlind counts are honest counts. Knowing the answer changes what people find.\nA loss someone counted is never accepted on one count. Shortages cost the shop money, and a recount is cheap. (Products nobody counted are different: they keep their stock unless the approver chooses Set to zero.)\nTwo people, not one. One person can’t count a loss away and approve it too. The activity log records who counted, who approved and why.\nShort and over are kept apart. If a shortage of ₹1,16,640 and an over of ₹57,780 were netted into one figure, a real loss would hide behind something that isn’t stock at all.\nNo percentages on small numbers. Jholok writes “3 of 4 matched” rather than 75% when fewer than 10 products were counted, because a percentage of a handful sounds more certain than it is.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Counting and checking against the ledger</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-counting-and-reconciliation.html#how-it-works",
+    "href": "chapters/03-counting-and-reconciliation.html#how-it-works",
+    "title": "3  Counting and checking against the ledger",
+    "section": "3.4 How it works",
+    "text": "3.4 How it works\nAt Showcase 1, the counters counted 13 products of Earrings and Rings, and 11 matched: Jholok writes that as “11 of 13 matched (85%)”. The jhumka (Antique, 22K, 8 g) was one pair short. It was recounted, still one short, and the approver accepted it: a count adjustment of −1. The hoop (Hammered, 22K, 15 mm, 4 g) was one pair over. The count’s note explains why: a customer’s repair piece was in the tray. It wasn’t the shop’s stock, so the over was left unticked and the stock didn’t change.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Counting and checking against the ledger</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-counting-and-reconciliation.html#try-it",
+    "href": "chapters/03-counting-and-reconciliation.html#try-it",
+    "title": "3  Counting and checking against the ledger",
+    "section": "3.5 Try it",
+    "text": "3.5 Try it\nSuppose the earrings and rings are counted at the end of the demo’s story. Unknown to anyone, a pair of diamond flower studs has gone missing. A counter also counts one plain band twice, and finds a single chandbali earring on its own.\n\n\n\n\nTable 3.1: The products that didn’t match on the first count.\n\n\n\n\n\n\n\n\n\nProduct\nExpected\nCounted\nDifference\n\n\n\n\nStud, Diamond flower, 18K, 0.20 ct\n3 pairs\n2 pairs\nshort ₹41,870 at cost\n\n\nBand, Plain, 22K, 4 g\n11 pieces\n12 pieces\nover ₹57,240 at cost\n\n\n\n\n\n\n\n\n\n\n11 of 13 products matched (85%). The studs show short 1 pair, and the band shows over 1 piece. The single chandbali isn’t counted as a pair: the counter enters the whole pairs as usual and adds the single earring with Singles in the count sheet. Review shows it beside the pairs (“+ 1 single”), so the approver can look into it, and it changes no stock.\nReview asks for the studs to be recounted. The band is over, so it starts unticked. The approver asks for it to be counted again too. On the recount, the band matches: the over was a counting slip. The studs are still one pair short, so the loss is real. After the recount, 12 of 13 products match, and the approver accepts the shortage of ₹41,870 at cost.\nQuestion. A count finds one gold coin more than expected. What should you check before accepting it?\n\n\n\n\n\n\nTipAnswer\n\n\n\n\n\nWhether a delivery or a return of coins hasn’t been entered, and whether the coin is really the shop’s (a customer’s, say). If a record is missing, enter it and leave the over unticked: the ledger then matches the count without a count adjustment.\n\n\n\n\n\nA count compares what the ledger expects with what is really there.\nCounting is blind: counters never see the expected numbers.\nA difference is a question. A shortage is recounted before it’s accepted, and an over usually means a missing record.\nSomeone who didn’t count approves, and only the differences they tick change the stock.",
+    "crumbs": [
+      "The ideas behind the app",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Counting and checking against the ledger</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-setting-up.html",
+    "href": "chapters/04-setting-up.html",
+    "title": "4  Setting up the shop",
+    "section": "",
+    "text": "4.1 The idea\nJholok works on its own from the first launch: it already knows the usual types of jewellery and how each is counted. A few minutes of setting up makes it fit your shop:",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Setting up the shop</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-setting-up.html#the-idea",
+    "href": "chapters/04-setting-up.html#the-idea",
+    "title": "4  Setting up the shop",
+    "section": "",
+    "text": "Product types: check that the types match how your shop groups its stock.\nProducts: add them one by one, or import a spreadsheet (Chapter 5).\nShop details: your shop’s name and address, printed on count reports.\nPeople: who counts and who approves, each with their own PIN.\nThe lock: on by default, so the app stays private.\n\n\nOwner, approvers and counters\nEveryone who uses Jholok has a role:\n\nThe owner runs the shop in Jholok. There is one owner, who sets up the people and proves it’s them for exports and backups.\nAn approver opens a count’s Review and completes it, but only for a count they didn’t count in. Approvers can count too.\nA counter counts, and submits the count for review.\n\nThis is the separation of duties from Chapter 3: one person counts, another checks. The owner may approve a count they counted in only when nobody else can, and the count then says so: “Counted and approved by Bidisha (one person)”.\nEach counter and approver has a PIN of 4 to 6 digits. It shows who entered each figure, and an approver’s PIN is their signature on a completed count.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Setting up the shop</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-setting-up.html#in-the-app",
+    "href": "chapters/04-setting-up.html#in-the-app",
+    "title": "4  Setting up the shop",
+    "section": "4.2 In the app",
+    "text": "4.2 In the app\n\nProduct types\nOpen Settings, then Product types. Each type shows how many products it has and the unit it’s counted in.\n\n\n\n\n\n\n\n\nTap + to add a type. Give it a name, choose what it’s counted in (pieces, pairs or sets), and pick a symbol.\nTap a type to rename it or change its unit. Changing the unit doesn’t convert existing stock: 4 pieces become 4 pairs. So choose the unit before adding products.\nTap Edit to drag the types into the order you like.\nA type that has products can’t be deleted.\n\n\n\nShop details and preferences\nIn Settings, under Preferences:\n\nShop: your shop’s name and address. They head every count report. Add your GSTIN after the address if your accountant wants it on the reports.\nCurrency and Appearance (light, dark, or the phone’s setting).\nSupplier lead time: how many days a reorder takes to arrive, 21 by default. A product whose stock won’t last that long at its recent pace of sales shows as running low (Chapter 7).\n\n\n\n\n\n\n\n\n\n\nPeople\nOpen Settings, then People. Until you set People up, Jholok asks nobody who’s counting, and counts name nobody. That’s fine for trying the app out, but set it up before your first real count.\n\nEnter your name and tap Set up People. On a phone with Face ID, Face ID proves it’s you; an owner PIN is optional, as a second way in. On a phone without Face ID, set an owner PIN.\nTap Add person for each member of staff. Enter their name, choose Counter or Approver, and let them choose their own PIN.\n\n\n\n\n\n\n\n\n\n\n\n\nThe demo shop's people.\n\n\n\nA PIN must be 4 to 6 digits. Jholok refuses easy ones: one digit repeated (1111), a run (1234) and the most common PINs. After 5 wrong tries in a row, the person waits a minute before trying again, and longer after each further 5 wrong tries.\nTo change someone’s role or reset their PIN, tap their name. When someone leaves, Archive them: they can no longer sign in, and the log keeps their name. Nobody is ever deleted, so the history stays complete.\n\n\nThe activity log\nAt the bottom of People, Activity log lists everything that happened: every count entry, box, review, completion and movement, and every change to People, each with who and when. Nothing in it can be edited or removed.\n\n\n\n\n\n\n\n\n\nThe lock\nIn Settings, under Security, Require Face ID is on from the start. Jholok asks for Face ID, or the phone’s passcode, when it opens and when you come back after a minute away. You can choose how soon it locks: straight away, or after 1, 5 or 15 minutes. Whenever the app isn’t in front, a plain cover hides it from the phone’s list of open apps.\nTurning the lock off asks the owner to prove it’s them.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Setting up the shop</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-setting-up.html#why-it-works-this-way",
+    "href": "chapters/04-setting-up.html#why-it-works-this-way",
+    "title": "4  Setting up the shop",
+    "section": "4.3 Why it works this way",
+    "text": "4.3 Why it works this way\n\nTwo people, not one. Roles make sure the person who counts isn’t the person who accepts a loss.\nOnce People is set up, the owner proves it’s them with Face ID or the owner PIN, not the phone’s passcode (except to reset a forgotten owner PIN). On a phone shared in the shop, staff may know the passcode. Everything that takes data off the phone (exports, backups, box photos) and every change to People asks the owner each time.\nNobody is deleted, and the log can’t be edited. A shop’s records are only worth something if they can’t be quietly changed later.\nThe lock is on by default, because costs and stock are private, and a phone left on the counter shouldn’t show them.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Setting up the shop</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-setting-up.html#how-it-works",
+    "href": "chapters/04-setting-up.html#how-it-works",
+    "title": "4  Setting up the shop",
+    "section": "4.4 How it works",
+    "text": "4.4 How it works\nPINs are never stored as typed: Jholok keeps them in a scrambled form that can’t be turned back into the PIN. Each log entry carries a code made from its own details and the code of the entry before it, so the entries form a chain. If anyone changed or removed an entry in the phone’s files, the chain would break, and the log would say so: “The log was changed after entry 12”, instead of “intact”.\nIf the owner forgets their PIN on a phone without Face ID, it can be reset with the phone’s passcode. The log records that, and the next count’s result says so, so a reset can’t go unnoticed.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Setting up the shop</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-setting-up.html#try-it",
+    "href": "chapters/04-setting-up.html#try-it",
+    "title": "4  Setting up the shop",
+    "section": "4.5 Try it",
+    "text": "4.5 Try it\nThe demo shop has four people:\n\n\n\n\nTable 4.1: Jholok Jewellers’ people.\n\n\n\n\n\n\n\n\n\nName\nRole\n\n\n\n\nBidisha\nOwner\n\n\nSita\nApprover\n\n\nRamesh\nCounter\n\n\nMeena\nCounter\n\n\n\n\n\n\n\n\n\n\nThis is who may do what:\n\n\n\n\nTable 4.2: Who may do what. Everything a counter does, an approver and the owner can do too.\n\n\n\n\n\n\n\n\n\nWhat\nCounter\nApprover\nOwner\n\n\n\n\nCount, and submit a count\nYes\nYes\nYes\n\n\nOpen Review and complete a count\nNo\nYes, if they didn't count in it\nYes; if they counted in it, only when no other approver can\n\n\nReopen a submitted count\nNo\nYes, if they didn't count in it\nYes; if they counted in it, only when no other approver can\n\n\nLoad the books into a count\nNo\nYes\nYes\n\n\nSend stock out, and sign it back in\nNo\nYes\nYes\n\n\nMark a tag sold from the books\nNo\nNo\nYes\n\n\nChange People, export, back up\nNo\nNo\nYes\n\n\n\n\n\n\n\n\n\n\nQuestion. Ramesh and Sita counted the strongroom together. Who can approve the count?\n\n\n\n\n\n\nTipAnswer\n\n\n\n\n\nNot Ramesh, who is a counter. Not Sita either: she is an approver, but she counted in this count. Bidisha, the owner, didn’t count, so she can approve it. If Bidisha had counted too, she could still approve, because no other approver is left, and the count would say “one person”.\n\n\n\n\n\nCheck the product types first: a type’s unit can’t convert stock later.\nSet up People before the first real count: the owner, then each counter and approver with their own PIN.\nCounting and approving are kept apart. The owner approves alone only when nobody else can.\nThe lock is on from the start, and only the owner can take data off the phone.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Setting up the shop</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-the-catalogue.html",
+    "href": "chapters/05-the-catalogue.html",
+    "title": "5  The catalogue",
+    "section": "",
+    "text": "5.1 The idea\nThe catalogue is the list of every product the shop sells (Chapter 1). Each product has a name, a type, a SKU, and optionally a variant, a barcode, a cost, a list price, a photo and notes. Jholok needs the catalogue before it can record movements or count anything.\nThere are two ways to build it: add products one at a time, or import them all from a spreadsheet. Most shops start with an import, then add new designs by hand as they arrive.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>The catalogue</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-the-catalogue.html#the-idea",
+    "href": "chapters/05-the-catalogue.html#the-idea",
+    "title": "5  The catalogue",
+    "section": "",
+    "text": "Barcodes and piece tags\nTwo kinds of code can be printed on a label, and they’re used differently:\n\nA barcode belongs to a product. Every piece of the same design carries the same barcode, just like its SKU.\nA piece tag belongs to one individual piece. No two pieces share a tag, even pieces of the same design. Billing software often prints one for each piece.\n\nBecause a piece tag is unique, scanning it during a count counts exactly one piece, and scanning it twice is noticed. A barcode or SKU can’t do that, so Jholok never accepts a product’s barcode or SKU as a piece tag. The tag list says which product each piece tag belongs to.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>The catalogue</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-the-catalogue.html#in-the-app",
+    "href": "chapters/05-the-catalogue.html#in-the-app",
+    "title": "5  The catalogue",
+    "section": "5.2 In the app",
+    "text": "5.2 In the app\n\nAdd a product\nIn the Catalogue tab, tap +.\n\n\n\n\n\n\n\n\nPhoto: choose one or take one. Without a photo, Jholok draws a picture of the piece from its type and name.\nName and Type: required.\nVariant: what sets this design apart, such as “Temple Lakshmi, 22K, 14 g”.\nSKU: leave it blank and Jholok makes one from the type, such as EAR-0009, or type your own. No two products can share a SKU.\nBarcode: the product’s barcode, if it has one.\nCost and Price: what you paid for one, and what you ask. Cost puts a value on stock and on what a count finds short or over.\nOpening stock: how many the shop has now. It goes into the ledger as an opening stock movement. After that, stock changes only through movements: receipts, sales, returns, adjustments and counts.\n\nEditing a product later never changes its stock.\n\n\nA product’s page\nTap a product in the catalogue to open its page. At the top, On hand, Value and Cover (Chapter 1), or In the shop, Off the shelf and Value when some of it is sent out (Chapter 6), then a sentence about its pace of sales, the buttons to record a movement (Chapter 6), its stock history, its details and every movement.\n\n\n\n\n\n\n\nFrom the ⋯ menu, Archive a product you no longer sell: it leaves the catalogue and the counts, but its history stays. A product with no history at all can be deleted instead.\n\n\nPhotos\nPhotos help people recognise products during a count. Picture matching (Chapter 9) compares box photos only with product photos, never with drawings. From the catalogue’s options menu, Take photos goes through every product without a photo, the most valuable first. For a catalogue that looks good together, use the same ivory card each time, in daylight, with the piece filling most of the frame.\nWhere a product has no photo, Jholok draws one. During counting, a small pencil marks a drawing, so nobody mistakes it for a photo of the piece in their hand.\n\n\nImport a catalogue from a spreadsheet\nSave the spreadsheet as a CSV file, then open Settings and tap Import catalogue from CSV.\nThe file needs a name and a type column. These are optional: sku, variant, barcode, cost, price and on_hand (the stock). Common other headings work too, such as “Product”, “Category”, “Code”, “MRP” or “Qty”. Amounts can be written as 1200, 1,200.50, ₹1,23,456, Rs. 450 or 450 INR.\nNothing changes until you’ve seen what the import will do. The preview lists the new products, the products it will update, and any rows it has to skip, with the reason and the line number, so you can fix them in the spreadsheet.\n\n\nPiece tags\nTo link tags you already have, import a tag list: a CSV file with a tag and a sku column, such as an export from your billing software. Open Settings and tap Import tag list from CSV. The preview shows the new tags and anything it can’t use: tags already on another product, SKUs not in the catalogue, and product codes that aren’t piece tags.\n\n\n\n\n\n\n\nTo link tags one product at a time, open the product, tap Tags, then Scan to add tags, and hold each tag in front of the camera. A tag that won’t scan can be typed.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>The catalogue</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-the-catalogue.html#why-it-works-this-way",
+    "href": "chapters/05-the-catalogue.html#why-it-works-this-way",
+    "title": "5  The catalogue",
+    "section": "5.3 Why it works this way",
+    "text": "5.3 Why it works this way\n\nImporting never changes the stock of a product Jholok already has. A spreadsheet is often out of date. If its stock differs, the preview says how many products differ and suggests counting them instead. While a count is open, it doesn’t compare stock at all. Stock only changes through movements (Chapter 2).\nA blank cell never erases anything. If the spreadsheet has no cost for a product that has one in Jholok, the cost stays.\nOne SKU, one product. Jholok treats ear-0002 and EAR-0002 as the same, so a second product can’t take the code by accident.\nA piece tag is one piece. That’s what lets a scan count a piece exactly once.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>The catalogue</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-the-catalogue.html#how-it-works",
+    "href": "chapters/05-the-catalogue.html#how-it-works",
+    "title": "5  The catalogue",
+    "section": "5.4 How it works",
+    "text": "5.4 How it works\nThe import matches rows to products by SKU. A row with a SKU Jholok knows updates that product’s details. A row with a new SKU, or no SKU, makes a new product, and its on_hand becomes its opening stock. A type Jholok hasn’t seen becomes a new type. Jholok guesses its unit: pairs if the name has “earring” in it, sets if the name is or ends in “set” or “sets”, and pieces for the rest. You can change it in Settings → Product types.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>The catalogue</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-the-catalogue.html#try-it",
+    "href": "chapters/05-the-catalogue.html#try-it",
+    "title": "5  The catalogue",
+    "section": "5.5 Try it",
+    "text": "5.5 Try it\nSuppose the shop imports this spreadsheet:\n\n\n\n\nTable 5.1: A small catalogue spreadsheet.\n\n\n\n\n\n\n\n\n\nname\ntype\nsku\nvariant\ncost\nprice\non_hand\n\n\n\n\nJhumka\nEarrings\nEAR-0002\nTemple Lakshmi, 22K, 14 g\n2,06,010\n2,45,000\n5\n\n\nBand\nRings\nRIN-0001\nPlain, 22K, 4 g\n\n₹66,500\n11\n\n\nToe ring\nRings\n\nSilver, 4 g\nRs. 950\n1,400\n6\n\n\n\n\n\n\n\n\n\n\nJholok would:\n\nupdate the Temple Lakshmi jhumka (EAR-0002): its price becomes ₹2,45,000, but its stock stays at 2 pairs, although the file says 5. The preview says “1 existing product has different stock in the file”, and suggests counting it;\nupdate the plain band (RIN-0001): its price becomes ₹66,500, and the blank cost leaves its cost as it was;\nadd the toe ring as a new product, with a SKU made from its type, RIN-0006 (the next after RIN-0005), a cost of ₹950, a price of ₹1,400 and an opening stock of 6.\n\nQuestion. The spreadsheet says you have 5 Temple Lakshmi jhumkas, but Jholok says 2. What should you do?\n\n\n\n\n\n\nTipAnswer\n\n\n\n\n\nCount them. If the count finds 5, the approver accepts the difference and the ledger records a count adjustment, so the reason for the change is kept. If it finds 2, the spreadsheet was out of date.\n\n\n\n\n\nA product needs a name and a type. Jholok makes a SKU if you don’t give one.\nOpening stock goes into the ledger. After that, stock changes only through movements.\nImporting never changes existing stock, and a blank cell never erases a value.\nA barcode belongs to a product; a piece tag belongs to one piece.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>The catalogue</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-recording-movements.html",
+    "href": "chapters/06-recording-movements.html",
+    "title": "6  Recording what comes in and goes out",
+    "section": "",
+    "text": "6.1 The idea\nBetween counts, the ledger stays right only if every movement is recorded: each delivery, each sale and each return. The billing system may record sales too; Jholok needs them as well, because its stock is the sum of its own movements (Chapter 2).\nThree habits keep it right:",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Recording what comes in and goes out</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-recording-movements.html#the-idea",
+    "href": "chapters/06-recording-movements.html#the-idea",
+    "title": "6  Recording what comes in and goes out",
+    "section": "",
+    "text": "Record it when it happens, or as soon as you can, with the date it really happened.\nNever fix a figure by guessing. If the stock is wrong, find out why. If you can’t, count the product.\nWrite a note when it will help someone later: the supplier, the bill number, why a piece was taken out.\n\n\nStock that leaves the shop for a while\nNot all stock is on the shelf. Jewellers often send pieces out and expect them back:\n\nJangad: pieces sent out on approval, with a memo, for a customer or another jeweller to see.\nKarigar: pieces with the craftsman, for repair or alteration.\nOrder: pieces set aside for a customer’s order.\n\nThese pieces are still the shop’s: they count in its stock and its value. But they aren’t on the shelf, so a count mustn’t expect them there. Jholok keeps them apart: a product shows how many are in the shop and how many are off the shelf.\n\n\n\n\n\nWhere stock can be. All of it is the shop’s; a count checks only the shop.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Recording what comes in and goes out</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-recording-movements.html#in-the-app",
+    "href": "chapters/06-recording-movements.html#in-the-app",
+    "title": "6  Recording what comes in and goes out",
+    "section": "6.2 In the app",
+    "text": "6.2 In the app\n\nReceive, sell and return\nOpen the product and tap Receive or Sell. You can also tap + in the Ledger and choose the product, or, when no sales are recorded yet, tap Record a sale on the Overview.\n\n\n\n\n\n\n\n\nChoose the kind: Received, Sold or Returned.\nSet the quantity.\nAdd a note if it will help: the supplier, the bill number.\nCheck the date and time. If the movement happened earlier, set when it happened; Jholok keeps both, and the ledger shows the day it was entered too. A date can’t be in the future.\nEntered by shows the owner. If someone else is entering it, tap Change, choose your name and enter your PIN. (It appears once People is set up.)\nTap Save.\n\nBelow the quantity, Jholok shows what the stock will be, unless the product is being counted. If a sale would take it below zero, it says so, but lets you save: if the sale happened, record it, then count the product to find what’s missing.\n\n\nPut a stock figure right\nIf a product’s stock is wrong for a reason you know (a piece damaged and sent for melting, say), open it, tap Adjust, and enter the correct stock. A reason is required. Jholok records the difference as an adjustment, with your reason, in the ledger.\nIn the demo, a chain (Rope, 22K, 18 in, 10 g) was taken out on 22 January: “Damaged on display, sent for melting”.\nAdjust is turned off for a product while a count covers it, until the count is reviewed. Use the count to put its stock right instead.\n\n\nSend stock out, and bring it back\nOpen the product and tap Send out. An approver or the owner signs it with their PIN.\n\n\n\n\n\n\n\n\nTo: Jangad, Karigar or Order.\nHow many, or choose the pieces by their tags.\nParty: who has it, and Memo: the memo number.\nDue back: when it should come back. Jholok suggests 7 days for jangad and 30 for the karigar, and none for an order; change it if you agreed otherwise.\n\nThe product’s page then shows an Off the shelf section, with each memo, who has it and when it’s due. When the pieces come back, tap ⋯ beside the memo and choose Back in. If the customer keeps them, choose Sold from here. Both are signed by an approver or the owner.\nA memo more than a week overdue appears under Needs attention on the Overview (Chapter 7).",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Recording what comes in and goes out</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-recording-movements.html#why-it-works-this-way",
+    "href": "chapters/06-recording-movements.html#why-it-works-this-way",
+    "title": "6  Recording what comes in and goes out",
+    "section": "6.3 Why it works this way",
+    "text": "6.3 Why it works this way\n\nA movement can’t be edited or deleted. A mistake is put right with another movement, usually an Adjust with its reason, so the ledger keeps the whole story (Chapter 2).\nThe date is when it happened; Jholok also keeps when it was entered. A sale entered late still lands on the right day, and anyone can see it was entered late.\nA sale below zero is allowed. Refusing it would leave a real sale unrecorded. Jholok records the truth and points to the missing piece.\nAdjust waits while a product is being counted. Changing the ledger in the middle of a count would change what the count is checked against.\nSending out needs an approver or the owner. Stock leaving the shop is when pieces go missing, so one of them signs for it, and every memo is logged.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Recording what comes in and goes out</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-recording-movements.html#how-it-works",
+    "href": "chapters/06-recording-movements.html#how-it-works",
+    "title": "6  Recording what comes in and goes out",
+    "section": "6.4 How it works",
+    "text": "6.4 How it works\nEach movement stores its date, its kind, its quantity and note, who entered it and when it was entered. An Adjust stores the difference between the stock before and the correct stock you entered.\nSending out is two movements that add up to nothing: the stock leaves the shop and arrives at the place. So the stock the shop owns, and its value, don’t change, while the stock in the shop goes down. Back in moves it the other way. Sold from here records a sale from that place.\nIf you record a movement dated before a count that has already been completed, Jholok checks whether that count already accounted for it, so it isn’t counted twice. The owner confirms the correction, and a sale needs its bill number. Chapter 12 explains this.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Recording what comes in and goes out</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-recording-movements.html#try-it",
+    "href": "chapters/06-recording-movements.html#try-it",
+    "title": "6  Recording what comes in and goes out",
+    "section": "6.5 Try it",
+    "text": "6.5 Try it\nThis is what came in and went out of Jholok Jewellers in the last 30 days, as the Ledger tab sums it up:\n\n\n\n\n\nPieces, pairs and sets received and sold each day in the last 30 days.\n\n\n\n\nAnd this is the demo’s stock off the shelf:\n\n\n\n\nTable 6.1: Stock off the shelf in the demo shop.\n\n\n\n\n\n\n\n\n\nProduct\nWhere\nHow many\nParty\nMemo\nDue back\n\n\n\n\nJhumka, Antique, 22K, 8 g\nJangad\n2 pairs\nSharma Jewellers\n41\n14 Oct\n\n\nChain, Rope, 22K, 18 in, 10 g\nKarigar\n1 piece\nRamesh karigar\nK-17\n24 Sep\n\n\nBridal set, Kundan necklace and jhumkas, 22K, 85 g\nOrder\n1 set\nMrs Banerjee\nO-208\n–\n\n\n\n\n\n\n\n\n\n\nThe chain with the karigar was due back 14 days ago, so it is listed under Needs attention.\nQuestion. A delivery of 3 pairs arrived on Monday, but you enter it on Wednesday. What date do you give it?\n\n\n\n\n\n\nTipAnswer\n\n\n\n\n\nMonday, when it arrived. Jholok keeps Wednesday too, as the day it was entered, and the ledger shows both.\n\n\n\n\n\nRecord every delivery, sale and return, dated when it happened.\nA movement is never edited. Put a wrong figure right with Adjust, and give the reason.\nAdjust waits while the product is being counted.\nStock on jangad, with the karigar or kept for an order is still the shop’s, but a count doesn’t expect it on the shelf. An approver or the owner signs it out and back.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Recording what comes in and goes out</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/07-the-overview.html",
+    "href": "chapters/07-the-overview.html",
+    "title": "7  Reading the Overview",
+    "section": "",
+    "text": "7.1 The idea\nThe Overview is the first tab: a summary of the whole shop on one screen. It answers the owner’s daily questions. What is my stock worth, and is that going up or down? Which types hold the money? What’s selling, and what isn’t? What needs doing? How did the last count go?\nEvery figure comes from the ledger (Chapter 2), worked out afresh when you open the app. Nothing on the Overview can be typed in.\nAt the top, 3M, 6M and 1Y choose how far back the charts look: 13, 26 or 52 weeks, this week included. Needs attention always looks at the last 90 days.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reading the Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/07-the-overview.html#in-the-app",
+    "href": "chapters/07-the-overview.html#in-the-app",
+    "title": "7  Reading the Overview",
+    "section": "7.2 In the app",
+    "text": "7.2 In the app\n\nStock value\n\n\n\n\n\n\n\nThe large figure is what the stock is worth at cost, ₹2.73 Cr “at today’s cost”. The sentence under it says how that changed over the period, and which type changed most: in the demo, “Down ₹15.1 L (5%) since 12 Apr, mostly Bangles (−₹12.7 L)”. The line shows the value week by week.\nBelow it: the value at list price, what’s in stock in each unit, and how many products there are. The small print says what the figure leaves out, such as products with no cost. It also says past values use today’s costs. So the line shows changes in stock, not in the price of gold.\n\n\nBy type, Needs attention, Sales, Best sellers and Last count\n\n\n\n\n\n\n\n\nBy type shows how the value is shared between types, and how each has moved. Tap it for a chart of each type on the same scale.\nNeeds attention lists products that need something done (below).\nSales shows the value sold each week at list price, after returns.\nBest sellers lists the five products that sold the most by value.\nLast count says how the last count went, and names the type that has gone longest without a count, once that’s over 90 days.\n\n\n\nNeeds attention\n\n\n\n\n\n\n\nEach list has a rule, and something to do about it:\n\n\n\n\n\n\n\n\nList\nMeans\nWhat to do\n\n\n\n\nBelow zero\nThe ledger shows less than none: a movement is missing\nRecord the missing delivery, or count it\n\n\nOut of stock, still selling\nNone left, but it sold in the last 90 days\nReorder\n\n\nRunning low\nAt its recent pace (how fast it sells), the stock won’t last the supplier lead time: the days a supplier takes to deliver (21 unless you change it)\nReorder soon\n\n\nNot selling\nIn stock, with no sale in 90 days\nConsider a discount, a display change, or melting\n\n\nNo cost, No price\nIn stock with no cost or no list price, so values leave it out\nAdd the missing amount\n\n\nOverdue memos\nStock sent out (jangad, karigar, or an order with a due date) more than a week past its due date\nChase it up, or record it back in\n\n\n\nA product only just added (in the last 30 days) isn’t called low or not selling: it hasn’t had time to show its pace.\n\n\nSales\n\n\n\n\n\n\n\nEach bar is a week, Sunday to Saturday (with the phone set to India). The last complete week is gold. The busiest week is labelled with its festival, when there was one.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reading the Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/07-the-overview.html#why-it-works-this-way",
+    "href": "chapters/07-the-overview.html#why-it-works-this-way",
+    "title": "7  Reading the Overview",
+    "section": "7.3 Why it works this way",
+    "text": "7.3 Why it works this way\n\nValues say their basis and date (“at today’s cost, 9 Oct”; “at today’s list price”), because a figure without them can mislead.\nSales are valued at today’s list price, not the price charged. Jholok doesn’t record discounts, so this shows how much stock sold, not the takings. Your billing system has the takings.\nNothing is quietly left out. The small print says how many products have no cost or price, and names the types being counted.\nWhile a count is open, the stock of the types being counted is hidden, with a note at the top: “Stock for Necklaces is hidden while the count at Showcase 2 is open.” Sales, Best sellers and Last count stay.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reading the Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/07-the-overview.html#how-it-works",
+    "href": "chapters/07-the-overview.html#how-it-works",
+    "title": "7  Reading the Overview",
+    "section": "7.4 How it works",
+    "text": "7.4 How it works\nThe value line takes each product’s stock on each day, from the ledger, and values it at today’s cost. Archived products are left out. A product’s pace is the number it sold in the last 90 days, after returns, divided by the days it was in stock (at least 14), and its cover is how many days its stock lasts at that pace. Running low means cover shorter than the supplier lead time, which you can change in Settings → Preferences.\nThe sales figures are rupees at today’s list price, which can be added up. Units sold never are, because a pair, a set and a piece are different things. Under the sales bars, the Sales screen has a small panel each for pairs, sets and pieces sold, each on its own scale. Where a sentence needs a count, it lists the kinds: “Together they sold 18 pairs and 13 pieces in 90 days.” Until products have list prices, the whole Sales section works in units this way, such as “79 pairs · 17 sets · 63 pieces sold”.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reading the Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/07-the-overview.html#try-it",
+    "href": "chapters/07-the-overview.html#try-it",
+    "title": "7  Reading the Overview",
+    "section": "7.5 Try it",
+    "text": "7.5 Try it\nThese are the demo shop’s sales over the last six months. Everything here is worked out from the ledger, the same way as the app.\n\n\n\n\n\nSales by week at today’s list price, after returns. The festival weeks are labelled.\n\n\n\n\nLast week the shop sold ₹7.79 L. The busiest week was Akshaya Tritiya week, 3 May, with ₹35.0 L.\nAnd these are the products that need attention:\n\n\n\n\nTable 7.1: What needs attention in the demo shop. One product can be on two lists.\n\n\n\n\n\n\n\n\n\nList\nProduct\nSKU\n\n\n\n\nBelow zero\nPendant, Lakshmi, 22K, 4 g\nNEC-0003\n\n\nOut of stock, still selling\nCoin, Lakshmi, 24K, 1 g\nCOI-0001\n\n\nOut of stock, still selling\nStud, Plain, 22K, 3 g\nEAR-0004\n\n\nRunning low\nBangle, Plain, 22K, size 2.4, 12 g\nBAN-0001\n\n\nRunning low\nMangalsutra, Short, black beads, 22K, 10 g\nNEC-0005\n\n\nNot selling\nKada, Antique, 22K, 30 g\nBAN-0004\n\n\nNot selling\nEar cuff, Filigree, 22K, 6 g\nEAR-0008\n\n\nNot selling\nTemple necklace, Lakshmi coin, 22K, 45 g\nNEC-0008\n\n\nNot selling\nRani haar, 22K, 60 g\nNEC-0009\n\n\nNot selling\nWaist chain, Kamarbandh, 22K, 50 g\nOTH-0004\n\n\nNo cost\nWaist chain, Kamarbandh, 22K, 50 g\nOTH-0004\n\n\nNo price\nCoin, Silver 999, 10 g\nCOI-0004\n\n\n\n\n\n\n\n\n\n\nThat’s 11 products, as the Overview says.\nQuestion. A pendant shows under Not selling. Does that mean it’s been stolen?\n\n\n\n\n\n\nTipAnswer\n\n\n\n\n\nNo. It means it’s still in stock but hasn’t sold in 90 days. It may be the wrong design for this season, or not on display. Only a count can tell you whether stock is missing.\n\n\n\n\n\nThe Overview is worked out from the ledger every time; nothing on it is typed in.\nEvery value says what it’s based on: today’s cost or today’s list price.\nNeeds attention says what to do: reorder, chase a memo, add a cost, or count.\nWhile a count is open, the stock being counted is hidden here too.",
+    "crumbs": [
+      "Everyday use",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reading the Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/08-a-count-start-to-finish.html",
+    "href": "chapters/08-a-count-start-to-finish.html",
+    "title": "8  A count from start to finish",
+    "section": "",
+    "text": "8.1 The idea\nChapter 3 explained why counts matter. This chapter is the counter’s side: the steps on the phone, from starting a count to handing it over for review.\nThree things are worth knowing before you start:",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>A count from start to finish</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/08-a-count-start-to-finish.html#the-idea",
+    "href": "chapters/08-a-count-start-to-finish.html#the-idea",
+    "title": "8  A count from start to finish",
+    "section": "",
+    "text": "A count can be small. It can cover the whole shop, a few types, or the pieces in one showcase. Smaller, more frequent counts find problems sooner.\nYou count blind. Nothing on the counting screen shows how many there should be. While the count is open, the rest of the app hides the stock of the types being counted too.\nEvery tap is saved at once. If the phone rings or the app closes, the count is still there when you come back.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>A count from start to finish</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/08-a-count-start-to-finish.html#in-the-app",
+    "href": "chapters/08-a-count-start-to-finish.html#in-the-app",
+    "title": "8  A count from start to finish",
+    "section": "8.2 In the app",
+    "text": "8.2 In the app\n\nStart a count\nIn the Count tab, tap New count (the + at the top).\n\n\n\n\n\n\n\n\nLocation: where you’re counting, such as “Front case”. The places used in recent counts are offered below the field, so you can tap one.\nWhat to count: leave All types on to count everything, or turn it off and tick the types you want. Each type says when it was last counted.\nNotes: anything the approver should know. It’s optional.\n\nThe line under the types says how many products the count covers, and reminds you that “Expected stock stays hidden until you review, so it can’t sway the count.” Tap Start.\nThe Count tab also suggests what to count next: under Last counted, a button such as “Count Sets” opens a new count of the type that has gone longest without one.\n\n\n\n\n\n\n\n\n\nSay who’s counting\nIf the owner has set up People (Chapter 4), the app asks Who’s counting? Choose your name if it isn’t already chosen, and enter your PIN.\n\n\n\n\n\n\n\nYou stay signed in while the count is open, even if you leave the app for up to 15 minutes. After that, or if you go back to the list of counts, the app asks again, with your name already chosen. Several people can count in one count: each signs in with their own name, and the count lists everyone who counted.\n\n\nCount each product\nThe counting screen lists the products in the count, grouped by type. The card at the top shows how far you’ve got, such as “4 of 9 products counted”.\n\n\n\n\n\n\n\nEach product has three controls:\n\n+ adds one. Tap it once for each piece, pair or set as you pick it up. It sits on the right, under your thumb.\n− takes one away, if you tapped once too often.\nThe number shows your count. A dash (–) means the product hasn’t been counted yet. Tap the number to type a count instead.\n\nWhen you tap the number, choose Add to add to what you’ve counted so far (useful when you count tray by tray), or Set total to type the whole count. The sheet shows the count so far and the new total before you tap Done. For earrings, the sheet also has Singles, “An earring with no mate”: enter an odd single there, never as a pair (Chapter 1).\n\n\n\n\n\n\n\nTwo quick actions are hidden behind a swipe on a product:\n\nSwipe right for None here, when you’ve looked and there are none. This counts 0, which is different from not counting it at all.\nSwipe left for Clear, to take your count off and start again. It’s there once you’ve counted the product yourself.\n\nA swipe only shows the button: you still have to tap it. That way a stray swipe while your other hand holds a tray never changes a count.\n\n\nPut a mistake right\nAfter any change of more than one, and after every Clear, a bar at the bottom offers Undo for a few seconds. It says what changed, such as “Chain set to 7 pieces, was 9 pieces.” Tap Undo to put the count back exactly as it was.\n\n\n\n\n\n\n\n\n\nFind a product quickly\nType in Find a product to search by name, SKU or barcode. The filter button at the top shows only the products Not counted, or only those Counted, which helps you check nothing was missed.\nTo find a product from its label, tap the barcode button, Find by code. Scan or type a barcode, a SKU or a piece tag, and the list shows only that product’s row. Finding a product never counts it: you still tap +.\n\n\n\n\n\n\n\nThe buttons at the bottom, Scan tags and Box photo, count a whole tray or box at once. Chapter 9 explains them.\n\n\nSubmit the count\nWhen you’ve counted everything, tap Submit (it stays greyed out until something is counted). The app checks that you mean it. If pieces in box photos are still to identify, it offers Identify now or Submit anyway (Chapter 10).\n\n\n\n\n\n\n\nAfter you submit, counting stops and the count waits for an approver. Nobody can change a figure unless an approver who didn’t count in it, or the owner, taps Reopen for counting and gives a reason.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>A count from start to finish</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/08-a-count-start-to-finish.html#why-it-works-this-way",
+    "href": "chapters/08-a-count-start-to-finish.html#why-it-works-this-way",
+    "title": "8  A count from start to finish",
+    "section": "8.3 Why it works this way",
+    "text": "8.3 Why it works this way\n\nOne hand is enough. Counting happens with a tray in the other hand. The\n\nis large and stays at the right edge, under the thumb, and the phone gives a small tap of feedback with every change.\n\nNo swipe changes a count by itself, for the same reason.\nNothing shows stock while you count. Not the counting screen, and not the rest of the app either: the Catalogue shows “Being counted” for the types in an open count, and the Overview leaves them out, with a note at the top.\n\n\n\n\n\nThe Overview while the necklaces are being counted.\n\n\n\n\nNone here is not the same as not counted. “None here” says you looked and found nothing. A product left with a dash wasn’t counted, and keeps its stock unless the approver decides otherwise.\nSubmitting stops counting so that the approver reviews a count that can’t change under them.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>A count from start to finish</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/08-a-count-start-to-finish.html#how-it-works",
+    "href": "chapters/08-a-count-start-to-finish.html#how-it-works",
+    "title": "8  A count from start to finish",
+    "section": "8.4 How it works",
+    "text": "8.4 How it works\nYour count is saved with every tap, together with who entered it and when. The activity log records each figure, so if several people count, it’s clear who counted what. Pieces counted from box photos or tag scans add to the same number as your taps; Chapter 9 explains how the two are kept apart.\nWhen you submit, the count waits under In progress in the Count tab, marked “Waiting for approval”. An approver then reviews it, as Chapter 3 explained.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>A count from start to finish</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/08-a-count-start-to-finish.html#try-it",
+    "href": "chapters/08-a-count-start-to-finish.html#try-it",
+    "title": "8  A count from start to finish",
+    "section": "8.5 Try it",
+    "text": "8.5 Try it\nThe demo’s open count is at Showcase 2. It covers the necklaces: 9 products. So far, 4 have been counted:\n\n\n\n\nTable 8.1: The necklaces counted so far at Showcase 2. Like the counter, this table shows no expected stock.\n\n\n\n\n\n\n\n\n\nProduct\nCounted\nCounted at\n\n\n\n\nChain, Rope, 22K, 18 in, 10 g\n9 pieces\n09:02\n\n\nChain, Box link, 22K, 20 in, 15 g\n5 pieces\n09:05\n\n\nPendant, Diamond heart, 18K\n3 pieces\n09:08\n\n\nMangalsutra, Long, 22K, 20 g\n2 pieces\n09:11\n\n\n\n\n\n\n\n\n\n\nThe other 5 still show a dash.\nQuestion. You’ve counted 3 rope chains on the showcase, then find 2 more in the drawer below. What’s the quickest way to record them, and what will the app show?\n\n\n\n\n\n\nTipAnswer\n\n\n\n\n\nTap +, twice. Or tap the number, choose Add, type 2 and tap Done: the new total is 5, and because the count changed by more than one, the app offers Undo for a few seconds.\n\n\n\n\n\nStart a count from the Count tab, and choose where and what it covers.\nTap + for each piece. Tap the number to type a count. Swipe for None here or Clear, then tap.\nUndo is offered after a change of more than one, and after every Clear.\nSubmit when you’re done; after that, only an approver who didn’t count, or the owner, can reopen the count.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>A count from start to finish</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/09-counting-boxes.html",
+    "href": "chapters/09-counting-boxes.html",
+    "title": "9  Counting boxes: tags and photos",
+    "section": "",
+    "text": "9.1 The idea\nCounting a box of 15 pairs one tap at a time works, but it’s slow. Jholok can count a whole box at once, in one of two ways:\nA box holds many designs of one type, each pair or set on its own card or in its own slot. So the app counts cards, not loose pieces: one card is one pair, or one set.\nEither way, the result is a proposal. The review says “15 pairs proposed”: nothing reaches the count until you’ve checked it and tapped Add.\nThe app counts cards. Where a card may hold two, or cards touch, it asks you; it never splits a piece on its own.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Counting boxes: tags and photos</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/09-counting-boxes.html#the-idea",
+    "href": "chapters/09-counting-boxes.html#the-idea",
+    "title": "9  Counting boxes: tags and photos",
+    "section": "",
+    "text": "Scan tags. If each piece carries its own piece tag (Chapter 5), move the camera over the box. Each tag read counts its piece, once. This is the most reliable way, which is why Scan tags is the gold button.\nBox photo. Photograph the box. Jholok finds the box, straightens it, finds each card, reads any tags it can see, and suggests a product for the rest from their pictures.\n\n\n\n\n\n\n\n\n\nImportantHow well box photos work hasn’t been measured yet\n\n\n\nThe app’s photo counting was built and tuned on drawn example boxes, like the ones in this guide, not on photos of real boxes. How often it gets a real shop’s boxes right isn’t known yet. That’s why every box is checked before it’s added, and why the app never adds a box by itself.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Counting boxes: tags and photos</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/09-counting-boxes.html#in-the-app",
+    "href": "chapters/09-counting-boxes.html#in-the-app",
+    "title": "9  Counting boxes: tags and photos",
+    "section": "9.2 In the app",
+    "text": "9.2 In the app\nOn the counting screen, the two buttons at the bottom open the camera: Scan tags and Box photo. The camera button beside each type’s name photographs a box of that type.\n\n\n\n\n\n\n\n\nScan tags\n\nTap Scan tags, and move the camera slowly over the tags. It reads several at once.\nEach tag read joins the list with what happened to it. The phone gives a different buzz when a tag is read again, so you know to move on.\nFor a tag the camera can’t read, tap Type a tag and type its code. It counts once, like a scanned tag.\nTap Done to see the summary.\n\n\n\n\n\n\n\n\nYou see\nIt means\n\n\n\n\n+1\nCounted\n\n\nAlready counted in Box 2\nThis piece was counted earlier in the count, so it adds nothing\n\n\nNot in your tag list\nThe tag isn’t linked to a product yet\n\n\nProduct code\nA barcode or SKU, which is on every piece of a design, so it can’t count one\n\n\nNot in this count\nA product this count doesn’t cover\n\n\nArchived\nA product no longer in the catalogue\n\n\nCustomer’s piece, not stock\nA customer’s own piece, which is never the shop’s stock\n\n\n\nThe summary says what the scan found. A tag the list doesn’t know must be linked to its product (Link…) or skipped before you can add the scan. Linked tags join your tag list when you add it.\n\n\n\n\n\n\n\nLink or skip the unknown tag, then tap Add … pairs to count: in this scan, 13 if you link it, 12 if you skip it. The scan is kept as “Tag scan 1”, and each counted tag adds one to its product.\n\n\nTake a box photo\n\nTap Box photo. If the count covers several types, choose the box’s type at the top.\nHold the phone flat above the box, with the whole box in the frame. If it’s tilted, the app says “Hold the phone flat”. Tags it can read are ticked as you frame.\nTap the shutter. The app checks the photo, and if it’s blurred, too dark, too bright or tilted, offers Retake or Use anyway.\nIt then finds the pieces, reads the tags and matches pictures, and opens the box’s review.\n\n\n\n\n\nTaken on a test phone with no camera. Your phone shows the camera view here, and has no Sample boxes button.\n\n\n\nYou can also Choose photo to use one you took earlier.\n\n\nCheck the box\nThe review shows the photo with every piece outlined and numbered. A small mark on each outline says how its product was found:\n\na tag: read from its tag;\nsparkles: suggested by its picture, waiting for you to check it;\na question mark: still needs a product;\nno mark: confirmed.\n\nA dashed outline is a piece left out, and a red ! is a piece that may be two, or was found only by its tag.\n\n\n\n\nThe box is a drawn example the app uses for practice, not a photo of a real shop's box.\n\n\n\nTap any piece to open it. The sheet shows its tag, its product, and the products it may be, with a search at the top. From there:\n\nchoose the product, or accept the suggested one;\nMake it 2, on a piece marked with a red ! as maybe two. If one outline holds two pieces and isn’t marked, use Add piece;\nNot a piece, when the outline isn’t jewellery (an empty card, a label). You can undo it until your next change;\nNot in the catalogue, for a design the shop has no product for;\nIdentify later, on a picture match you can’t check now: it clears the match, and the piece waits in the To identify queue (Chapter 10). A piece with no product goes there anyway.\n\n\n\n\n\nThe box is a drawn example the app uses for practice, not a photo of a real shop's box.\n\n\n\nIf the app missed a piece, tap Add piece, then tap where it is. For a tray with one piece per slot, such as rings, turn on Count by tray grid, set the rows and columns, and drag the corners to fit the tray.\n\n\n\n\nThe box is a drawn example the app uses for practice, not a photo of a real shop's box.\n\n\n\nWhen everything looks right, tap Add 15 pairs to count. Any piece still without a product goes to the To identify queue. A piece whose picture match you haven’t checked keeps the box from being added: accept it, change it, or choose Identify later first.\n\n\nIf the box was counted already\nIf a box photo shares half or more of its tags with a box already added, or an untagged box looks just like one already added, the app asks first: “Is this Box 2 again?” If it is, tap Cancel, or its pieces would be counted twice.\n\n\nAfter adding\nThe count lists the box under Boxes, and its pieces add to each product’s count, together with anything counted by hand. Tap a box to open its review again and update it, or swipe it to Remove it: its pieces come off the count, and its photo is deleted.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Counting boxes: tags and photos</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/09-counting-boxes.html#why-it-works-this-way",
+    "href": "chapters/09-counting-boxes.html#why-it-works-this-way",
+    "title": "9  Counting boxes: tags and photos",
+    "section": "9.3 Why it works this way",
+    "text": "9.3 Why it works this way\n\nTags first. A piece tag names one piece exactly, so scanning can’t mistake one design for another.\nA tag counts once per count. Whether it’s scanned twice, or appears in a photo and a scan, the piece is counted once.\nCards, not loose pieces, and never a guessed split. Earrings lie close together and sets are large; guessing would be wrong too often. Where one outline may hold two, the app asks; where pieces touch, it warns.\nA proposal, never automatic. The app can’t yet show it counts real boxes well, so a person checks every box. Settings → Photo counting keeps score.\nNot a piece is kept, left out. What the app got wrong is exactly what a better version needs to learn from, so the outline stays with the box, marked, and is never counted.\nPicture matching never looks at stock. It compares the piece’s picture with product photos of the box’s type only.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Counting boxes: tags and photos</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/09-counting-boxes.html#how-it-works",
+    "href": "chapters/09-counting-boxes.html#how-it-works",
+    "title": "9  Counting boxes: tags and photos",
+    "section": "9.4 How it works",
+    "text": "9.4 How it works\nEvery added box keeps its photo, the straightened box, and every piece you confirmed. These are kept so that, in future, the app can learn from your real boxes. The owner can export them from Settings → Export → Box photos and labels, which asks the owner to confirm each time.\nSettings → Photo counting compares the app’s count of each box with the count you added after checking it. Those numbers lean towards the app, because you saw its proposal first, so they aren’t an independent measure.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Counting boxes: tags and photos</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/09-counting-boxes.html#try-it",
+    "href": "chapters/09-counting-boxes.html#try-it",
+    "title": "9  Counting boxes: tags and photos",
+    "section": "9.5 Try it",
+    "text": "9.5 Try it\nThis is the demo’s tagged box of earrings, with each piece numbered as in its review.\n\n\n\n\n\nThe tagged box of earrings. The box is a drawn example the app uses for practice, not a photo of a real shop’s box.\n\n\n\n\nIts 15 pieces carry tags, but a photo of it doesn’t read them all:\n\n\n\n\nTable 9.1: What happens to each piece’s tag in the tagged box.\n\n\n\n\n\n\n\n\n\nWhat happened\nPieces\n\n\n\n\nIdentified by its tag\n12\n\n\nNo tag read\n2\n\n\nTag not in the tag list\n1\n\n\n\n\n\n\n\n\n\n\n12 pairs are identified by their tags. The tag on one pair, TJ-000269, isn’t among the 68 tags in the demo’s tag list: that pair arrived after the list was exported, so the review asks to link it. Two tags can’t be read. That leaves 3 pairs to identify, as the review says: “3 to identify later, from the count.”\nThe empty card in the bottom corner holds no jewellery. If the app had outlined it, you would tap it and choose Not a piece.\nQuestion. You scan a box and the list shows “Already counted in Box 2” for every tag. What happened?\n\n\n\n\n\n\nTipAnswer\n\n\n\n\n\nThis box was already counted, as Box 2, earlier in the count. Its pieces add nothing, so nothing is counted twice. Don’t add the scan.\n\n\n\n\n\nScan tags when pieces have tags; take a box photo when they don’t.\nEvery box is a proposal: check it, then Add. Nothing is added by itself.\nThe app counts cards, asks when one may be two, and never splits a piece.\nA tag counts once per count. If the app asks whether a box was counted already, believe it until you’ve checked.\nHow well box photos work on real boxes hasn’t been measured yet.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Counting boxes: tags and photos</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/10-identify-later.html",
+    "href": "chapters/10-identify-later.html",
+    "title": "10  Pieces to identify later",
+    "section": "",
+    "text": "10.1 The idea\nWhen a box’s pieces carry tags, Jholok knows each piece’s product from its tag (Chapter 9). In a box with no tags, a photo can still find the cards and count them, but it doesn’t know which design is on each card. Someone has to say.\nDoing that piece by piece in the box review is slow: often slower than counting by hand. So Jholok lets you add the box first and identify its pieces later, from one list, the To identify queue.\nUntil a piece is identified, it counts in the box but in no product. The box adds “15 pairs”, but no product’s count goes up for that piece yet. And the count can’t be completed until every piece is identified, or marked as not in the catalogue. That way, no product is ever called short just because nobody said which pieces were its.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Pieces to identify later</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/10-identify-later.html#in-the-app",
+    "href": "chapters/10-identify-later.html#in-the-app",
+    "title": "10  Pieces to identify later",
+    "section": "10.2 In the app",
+    "text": "10.2 In the app\n\nAdd the box\nIn the review of an untagged box, every piece without a product is marked for identifying later. The gold button still adds the box, and the note under it says how many pieces are left: here, all 15.\n\n\n\n\nThe box is a drawn example the app uses for practice, not a photo of a real shop's box.\n\n\n\nTap Add 15 pairs to count. The count now shows a To identify row at the top, and the type’s heading says how many of its pieces are waiting.\n\n\n\n\n\n\n\n\n\nIdentify each piece\nTap the To identify row. The queue shows one piece at a time.\n\n\n\n\nThe box is a drawn example the app uses for practice, not a photo of a real shop's box.\n\n\n\n\nAt the top: the piece’s picture, how many are left (“1 of 15” means 15 still to identify), and which box and piece it is. See the box shows the whole photo with this piece outlined, so you can find it in the tray.\nBelow: a search field, then picture matches (the products whose photos the piece looks most like), then every product of the box’s type, as pictures. Picture matching compares with product photos only, so products need photos for it to help.\nTap the product the piece is. The queue moves to the next piece.\nSkip leaves a piece for later. When the rest are done, the queue says how many you skipped; tap Start again to go back to them.\nNot in the catalogue, at the bottom, is for a design the shop has no product for. The piece is left out of the count, and the count’s result and report list it by box and piece number, so someone can add the product and count it later.\n\nAfter you pick a product, if other pieces in the same box look the same, the queue offers them too, ticked: “These 3 in Box 1 look the same. Untick any that aren’t.” Untick any that differ, then tap Identify 4 as …, or Just piece 1 to identify only the first. Nothing is identified by its look alone: you always confirm.\n\n\nSubmit with pieces left\nYou can submit a count with pieces still to identify. The app offers Identify now first, and Submit anyway second, and says the count can’t be completed until they’re done. The approver’s Review then says how many pieces aren’t identified, and Complete stays off until they are. The approver reopens the count, with a reason, and a counter identifies them.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Pieces to identify later</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/10-identify-later.html#why-it-works-this-way",
+    "href": "chapters/10-identify-later.html#why-it-works-this-way",
+    "title": "10  Pieces to identify later",
+    "section": "10.3 Why it works this way",
+    "text": "10.3 Why it works this way\n\nIt’s quicker. One list for every box, one tap per piece, and lookalikes in one go, instead of opening each piece in each box.\nUnidentified isn’t missing. A piece nobody has identified still counts in its box. Completing the count with it would call its product short, so completing waits.\nOnly counters identify, while counting. The approver can see what’s short. If the approver could say which product a piece was, a loss could be covered up by “finding” the missing product in a box. So the approver reopens the count, and a counter, who can’t see stock, identifies the pieces.\nThe queue is blind. It shows pieces and products, never stock.\nA design not in the catalogue doesn’t block the count forever. It’s left out, and listed, so it gets dealt with.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Pieces to identify later</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/10-identify-later.html#how-it-works",
+    "href": "chapters/10-identify-later.html#how-it-works",
+    "title": "10  Pieces to identify later",
+    "section": "10.4 How it works",
+    "text": "10.4 How it works\nEach identification is saved at once, with who made it and when, in the activity log. The piece’s product is set, and that product’s count goes up. Identified pieces also help picture matching: until the app is closed, a piece like it in another photo is suggested that product.\nLookalikes are found by comparing the pieces’ pictures with each other, never with the stock. This needs a real phone: on the test phones used for this guide’s screenshots, the queue never offers lookalikes.\nLike everything about box photos, picture matching was tuned on drawn example boxes. How well it does on a real shop’s boxes hasn’t been measured yet: always check the product before you tap it.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Pieces to identify later</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/10-identify-later.html#try-it",
+    "href": "chapters/10-identify-later.html#try-it",
+    "title": "10  Pieces to identify later",
+    "section": "10.5 Try it",
+    "text": "10.5 Try it\nThis is the demo’s untagged box. Its pieces have no tags, so every piece is waiting to be identified.\n\n\n\n\n\nThe untagged box, numbered as in the queue. The box is a drawn example the app uses for practice, not a photo of a real shop’s box.\n\n\n\n\nIf every piece is identified correctly, the box adds these to the count:\n\n\n\n\nTable 10.1: What the untagged box adds, once its pieces are identified.\n\n\n\n\n\n\n\n\n\nProduct\nPairs\n\n\n\n\nChandbali, Kundan, 22K, 12 g\n4\n\n\nHoop, Hammered, 22K, 15 mm, 4 g\n4\n\n\nStud, Diamond flower, 18K, 0.20 ct\n3\n\n\nJhumka, Temple Lakshmi, 22K, 14 g\n2\n\n\nDrop, Pearl, 22K, 5 g\n2\n\n\n\n\n\n\n\n\n\n\nSeveral pieces share a design, such as the chandbali (Kundan, 22K, 12 g), with 4 pairs in this box. On a phone, identifying one of them may offer the others as lookalikes, if their pictures are close enough.\nQuestion. A piece in the box is a design the shop bought last week but hasn’t added to the catalogue yet. What do you do?\n\n\n\n\n\n\nTipAnswer\n\n\n\n\n\nTap Not in the catalogue. The piece is left out of this count, and the count’s result lists it by box and piece number. Then the owner adds the product to the catalogue, and the piece can be counted in the next count.\n\n\n\n\n\nAn untagged box can be added before its pieces are identified.\nIdentify them from the To identify queue: one tap per piece, and lookalikes together.\nA design with no product is marked Not in the catalogue, and listed.\nThe count can’t be completed until every piece is done, and only counters, while counting, identify.",
+    "crumbs": [
+      "Counting",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Pieces to identify later</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/11-book-stock.html",
+    "href": "chapters/11-book-stock.html",
+    "title": "11  Book stock",
+    "section": "",
+    "text": "11.1 The idea\nMost jewellers’ billing software keeps its own list of every tagged piece in stock: the books. When a piece is billed, it drops off that list. Jholok’s ledger should agree, but a sale billed and not entered in Jholok, or a piece sent out and not recorded, makes them differ.\nA count can be loaded with the books: you give Jholok the billing system’s list of tags in stock, and the time it was taken from. For the tagged products in the count, Jholok then expects what the books say, not what its own ledger says. Products with no tags keep Jholok’s own ledger. The count checks the stock against the system that bills the customers.\nBecause each tag names one piece, the books also make a count precise. When every piece of a product had its tag read, Jholok can name the exact tags the books have and the count didn’t find.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Book stock</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/11-book-stock.html#the-idea",
+    "href": "chapters/11-book-stock.html#the-idea",
+    "title": "11  Book stock",
+    "section": "",
+    "text": "The file\nThe billing system’s export, saved as a CSV file, with:\n\na tag column (also “Tag No”, “tag code” or “barcode tag”),\na SKU column (also “Item Code”, “design” or “design code”),\nand optionally a status column (also “location” or “state”), saying where each piece is.\n\nA blank status means the piece is on the shelf. Jholok knows the usual words for the other places: “jangad” or “approval”, “karigar” or “artisan”, “order” or “booked”, and “sold”. A word it doesn’t know, it asks the owner about, once, and remembers.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Book stock</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/11-book-stock.html#in-the-app",
+    "href": "chapters/11-book-stock.html#in-the-app",
+    "title": "11  Book stock",
+    "section": "11.2 In the app",
+    "text": "11.2 In the app\n\nLoad the books\nOn the counting screen, tap Load book stock. An approver or the owner signs in, then chooses the file.\nSet As of to the time the file was taken from the billing system. Jholok suggests the time the file was saved.\nBefore anything changes, the sheet shows a plan:\n\nhow many tags the file has;\nfor the count’s types, the new tags it will link;\nthe pieces it will mark sold;\nthe pieces off the shelf, and where;\ncustomers’ pieces;\nproducts with no tags, which keep Jholok’s ledger. Rows it can’t use are listed under Skipped, with the reason.\n\n\n\n\n\n\n\n\nIf the file uses a status word Jholok doesn’t know, the plan asks: “This file says”rep” for 14 rows. What does it mean?” The owner chooses one of On the shelf, Sold, Jangad, Karigar, Order or Customer’s piece, and taps Use this meaning. Jholok remembers the answer for every later file. The owner can change answers in Settings → Book stock words.\nTap Load. The counting screen then shows when the books are from.\n\n\n\n\n\n\n\nFrom the ⋯ beside it, Load newer book stock loads a later file, and Undo book load takes the latest load back while the count is open.\n\n\nWhen the owner is needed\nThree things need the owner, even when an approver is loading:\n\nSaying what a new status word means. Load stays off until every word has an answer.\nMarking pieces sold. A tag Jholok had in stock that isn’t in the file is marked sold, which takes it out of stock.\nA file that doesn’t look like the stock. The plan says so if loading would leave more than a tenth of the count’s tagged products with none. It also says so if more than one row in twenty matches nothing in the catalogue. Only the owner can Load anyway.\n\n\n\nBefore Review\nIf counting went on more than half an hour after the time the books are from, opening Review warns: “The books are older than the counting.” Pieces sold in between would look missing. Load newer books, or give a reason and Review anyway.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Book stock</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/11-book-stock.html#why-it-works-this-way",
+    "href": "chapters/11-book-stock.html#why-it-works-this-way",
+    "title": "11  Book stock",
+    "section": "11.3 Why it works this way",
+    "text": "11.3 Why it works this way\n\nThe books are the shop’s own record. Checking the stock against the billing system finds sales that never reached Jholok, and pieces that left the shop without a bill.\nThe “as of” time matters. A piece sold after the file was taken isn’t missing; Jholok needs the time to tell the difference.\nNobody counting sees a quantity. The plan shows tags and row counts, never a product’s stock, so loading the books doesn’t spoil a blind count.\nMarking sold, and odd files, need the owner, because both can take a lot of stock off Jholok’s ledger at once.\nCustomers’ pieces are never stock. A piece in for repair may sit in the same tray; the books mark it, and Jholok never counts it.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Book stock</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/11-book-stock.html#how-it-works",
+    "href": "chapters/11-book-stock.html#how-it-works",
+    "title": "11  Book stock",
+    "section": "11.4 How it works",
+    "text": "11.4 How it works\nLoading is one change, saved at once:\n\nFor each tagged product in the count, and each place, Jholok records a Book stock movement: the books minus its own stock at the “as of” time. Stock is still a sum of movements, and now matches the books.\nTags in the file that Jholok didn’t know are linked to their products by SKU. A tag Jholok already knows keeps its product.\nEach tag’s state is set: on the shelf, sold, or out at its place.\nThe load is kept with a fingerprint of the file (its SHA-256), and logged.\n\nThe count’s first load sets the starting point. A later load during the count can show pieces sold during the count: on the shelf in the first file, gone from the later one.\n\nWhat the count finds about each tag\nWhen the count is completed, Jholok freezes what it found for each product, and Result, the report and the CSV list:\n\nTags not found: in the books, not read in the count. These are named only for products where every counted piece had its tag read, so a missing tag really is missing. A product counted by hand says its tags weren’t checked.\nSold during the count: dropped by a later load.\nFound, not in the books: read in the count, but the books don’t have them in stock.\nOut of the shop: read in the count, but recorded as out, on jangad, say.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Book stock</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/11-book-stock.html#try-it",
+    "href": "chapters/11-book-stock.html#try-it",
+    "title": "11  Book stock",
+    "section": "11.5 Try it",
+    "text": "11.5 Try it\nThis is the demo’s billing file, made from the demo’s tag list for the strongroom count’s types, Earrings and Sets. It starts like this:\n\n\n\n\nTable 11.1: The first rows of the demo billing file, as its columns are named.\n\n\n\n\n\n\n\n\n\nTag No\nItem Code\nStatus\n\n\n\n\nTJ-000201\nEAR-0001\n\n\n\nTJ-000202\nEAR-0001\n\n\n\nTJ-000203\nEAR-0001\n\n\n\n\n\n\n\n\n\n\n\nMost rows are tags on the shelf. Jholok doesn’t know the words “Appro” or “Rep”, so it asks the owner about each first. The table shows what happens after the owner answers Jangad and Customer’s piece:\n\n\n\n\nTable 11.2: The rows that aren’t simply on the shelf.\n\n\n\n\n\n\n\n\n\nTag No\nItem Code\nStatus\nWhat Jholok does\n\n\n\n\nTJ-000214\nEAR-0003\nKarigar\nOff the shelf, with the karigar\n\n\nTJ-000222\nEAR-0004\nAppro\nOff the shelf, on jangad (approval)\n\n\nTJ-990001\nJH-22-114\n\nSkipped: a design not in the catalogue\n\n\nRP-0091\n\nRep\nA customer's piece: never stock\n\n\nRP-0093\n\nRep\nA customer's piece: never stock\n\n\n\n\n\n\n\n\n\n\nOne tag Jholok has, TJ-000211 (EAR-0002), isn’t in the file at all. It has been billed, so loading marks it sold, which needs the owner. In the app’s plan above, that’s “Marked sold 1”, “Off the shelf 2 · jangad 1, karigar 1”, “Customers’ pieces 2, never stock”, and 1 row skipped for an unknown SKU.\nQuestion. The books are from 10:00. Counting went on until 11:40, and Review warns that the books are older. What could go wrong if you review anyway?\n\n\n\n\n\n\nTipAnswer\n\n\n\n\n\nA piece sold between 10:00 and 11:40 is still in the 10:00 books, but wasn’t on the shelf to be counted, so it would look missing. Load newer books from the billing system, or, if nothing was sold in that time, give that as the reason and review anyway.\n\n\n\n\n\nThe books are the billing system’s list of tags in stock, as of a time.\nLoading them makes the count’s expected stock the books, for products that have tags. Nothing is changed until you’ve seen the plan.\nMarking pieces sold, and a file that doesn’t look like the stock, need the owner.\nWith every tag read, the count names exactly which tags are missing.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Book stock</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/12-off-the-shelf-and-cut-off.html",
+    "href": "chapters/12-off-the-shelf-and-cut-off.html",
+    "title": "12  Stock off the shelf and the cut-off",
+    "section": "",
+    "text": "12.1 The idea\nA count compares the shelf with the ledger at one moment. Two things make that moment hard to pin down in a real shop: some stock is away, and the shop stays open while it’s counted.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Stock off the shelf and the cut-off</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/12-off-the-shelf-and-cut-off.html#the-idea",
+    "href": "chapters/12-off-the-shelf-and-cut-off.html#the-idea",
+    "title": "12  Stock off the shelf and the cut-off",
+    "section": "",
+    "text": "Stock that is away\nPieces on jangad, with the karigar, or kept for an order are the shop’s stock, but they aren’t on the shelf (Chapter 6). A count expects only what’s in the shop: owned stock minus what’s away. The rest is listed apart, so nobody mistakes it for a loss.\nCustomers’ own pieces, in for repair, are never the shop’s stock, wherever they sit.\n\n\nThe cut-off\nA count takes time. If a pair of jhumkas is sold at 9:30, and the jhumkas were counted between 9:05 and 9:40, which stock should the count be compared with: before the sale, or after?\nJholok works out a cut-off for every product in a count. It reads the activity log to find when that product was counted (its counting window), and compares the count with the stock in the shop at the end of that window. If stock moved during the window, it checks every stock figure along the way: if the count matches any of them, the count is fine. If it matches none, the product needs a recount.\n\n\n\n\n\nA sale during the counting window. A count that matches the stock before or after the sale is fine; one that matches neither is recounted.\n\n\n\n\nSo the shop never has to close for a count, and a sale in the middle of counting is never called a loss.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Stock off the shelf and the cut-off</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/12-off-the-shelf-and-cut-off.html#in-the-app",
+    "href": "chapters/12-off-the-shelf-and-cut-off.html#in-the-app",
+    "title": "12  Stock off the shelf and the cut-off",
+    "section": "12.2 In the app",
+    "text": "12.2 In the app\n\nStock off the shelf in Review\nWhen stock in the count’s types is away, Review’s summary says so, such as “Off the shelf, not counted: 1 with the karigar”. Under the product, it says how many were away when it was counted, “not expected on the shelf”.\n\n\n\n\n\n\n\nIf a count finds more than expected while some are away, Review asks “did some come back?” and offers Back in, so a piece that came back without being recorded can be put right in the count.\nAfter the count is completed, its Result and report list what was off the shelf when each product was counted.\n\n\nLines whose stock moved\nUnder a product counted before the counting ended, or recounted, Review says what its expected stock was taken from, such as “Expected as of 11:42, when it was counted”. A product whose count matches none of the stock figures during its window shows “Stock moved while counted”, and waits under Recount first with its numbers hidden, like a shortage (Chapter 13). After the recount, the recount’s own time becomes the cut-off.\n\n\nEntries made after a count\nSometimes a sale is entered late, after the count that covered it was completed, but dated before the product was counted. If that count had already written the piece off as short, the shop would lose it twice: once in the count, and again in the sale.\nJholok spots this when you record the movement. The sheet says, for example: “This sale is dated before Showcase 2 counted Jhumka, which wrote 1 off as short. Jholok will put 1 back so it isn’t taken off twice.” For a sale, it asks for the bill number. Putting the piece back needs the owner, who confirms with Face ID or the owner PIN. The correction is a cut-off correction movement, logged with the sale.\nIf the owner doesn’t confirm, the sale can still be saved without the correction; the count then lists it as entered after completion, and its write-off stays.\nThe count’s Result and report list every entry made after completion, and the next Review of those types lists the corrections, so nothing changes a past count quietly.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Stock off the shelf and the cut-off</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/12-off-the-shelf-and-cut-off.html#why-it-works-this-way",
+    "href": "chapters/12-off-the-shelf-and-cut-off.html#why-it-works-this-way",
+    "title": "12  Stock off the shelf and the cut-off",
+    "section": "12.3 Why it works this way",
+    "text": "12.3 Why it works this way\n\nWhat’s away isn’t lost. Counting it as short would write off stock the shop still owns.\nA shop doesn’t close for a count. The cut-off lets sales carry on during counting without spoiling it.\nA late sale shouldn’t count twice. The cut-off correction puts back what the count took off, and only for that sale.\nThe owner decides corrections. Changing what a completed count did is serious, so it needs the owner’s proof, and it’s logged and listed.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Stock off the shelf and the cut-off</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/12-off-the-shelf-and-cut-off.html#how-it-works",
+    "href": "chapters/12-off-the-shelf-and-cut-off.html#how-it-works",
+    "title": "12  Stock off the shelf and the cut-off",
+    "section": "12.4 How it works",
+    "text": "12.4 How it works\nFor each product, the counting window runs from the first to the last time its count changed, as the activity log records. Expected stock is the stock in the shop at the window’s end. If movements fell inside the window, Jholok compares the count with the stock before each one and after it.\nWhen every counted piece of a product had its tag read and the count has the books (Chapter 11), expected comes from the tags themselves: the pieces the books have on the shelf.\nCompleting a count freezes, for each product, its cut-off, how it was decided and how much was off the shelf. Later movements never change what the count compared.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Stock off the shelf and the cut-off</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/12-off-the-shelf-and-cut-off.html#try-it",
+    "href": "chapters/12-off-the-shelf-and-cut-off.html#try-it",
+    "title": "12  Stock off the shelf and the cut-off",
+    "section": "12.5 Try it",
+    "text": "12.5 Try it\nIn the screenshot above, a chain (Rope, 22K, 18 in, 10 g) went to Ramesh karigar on 24 Aug, memo K-17. When the chains were counted at Showcase 2, the shop owned 9 but had 8 on the shelf. The counter counted 9, so Review shows it 1 over, with “1 with the karigar, not expected on the shelf”.\nOne over, with one away: the likeliest story is that the chain came back from the karigar and nobody recorded it. Tapping Back in records it as back from when it was counted, and the line then matches.\nQuestion. At 9:15 you count 6 pairs of hoops. At 9:20 a pair is sold. You finish the earrings at 9:40. Is the hoops’ count short?\n\n\n\n\n\n\nTipAnswer\n\n\n\n\n\nNo. The hoops were counted at 9:15, before the sale, when the shop had 6. Their cut-off is 9:15, and your count matches the stock then. Had you counted 5, they would be one short: at 9:15 the sale hadn’t happened yet.\n\n\n\n\n\nA count expects what’s in the shop. Stock on jangad, with the karigar or kept for an order is listed apart, never as a loss.\nEach product’s cut-off is when it was counted. Sales during counting are fine if the count matches the stock at some point.\nA product whose stock moved and matches nothing is recounted.\nA movement entered late, dated before a completed count, gets a cut-off correction that the owner confirms.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Stock off the shelf and the cut-off</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/13-submit-review-complete.html",
+    "href": "chapters/13-submit-review-complete.html",
+    "title": "13  Submit, review and complete",
+    "section": "",
+    "text": "13.1 The idea\nWhen the counters submit a count, it waits for an approver. The approver’s job is to look at what was found, check anything doubtful, and decide which differences become changes to the stock. Until the count is completed, nothing has changed.\nReview is where the expected numbers appear for the first time, so only an approver or the owner who didn’t count in it may open it (Chapter 4). The owner may approve a count they counted in only when nobody else can. It starts with safe choices already made:\nThe approver can change the ticks, but can’t accept a shortage that hasn’t been recounted. These rules are built into the app, not just the screen.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Submit, review and complete</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/13-submit-review-complete.html#the-idea",
+    "href": "chapters/13-submit-review-complete.html#the-idea",
+    "title": "13  Submit, review and complete",
+    "section": "",
+    "text": "A shortage must be recounted before it can be accepted. Its numbers stay hidden until then, and the recount is blind.\nOvers start unticked. An over usually means a missing record: enter that instead.\nA product whose stock moved during counting and matches nothing must be recounted too (Chapter 12).\nProducts nobody counted keep their stock, unless the approver chooses Set to zero.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Submit, review and complete</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/13-submit-review-complete.html#in-the-app",
+    "href": "chapters/13-submit-review-complete.html#in-the-app",
+    "title": "13  Submit, review and complete",
+    "section": "13.2 In the app",
+    "text": "13.2 In the app\n\nOpen Review\nOpen the submitted count from the Count tab and tap Review. The app asks for an approver’s PIN. Only people who may approve are offered; those who counted are named as unable to.\n\n\n\n\n\n\n\nIf the count was loaded with the books, and counting went on more than half an hour after the time they’re from, the app warns first (Chapter 11).\n\n\nRead Review\nThe card at the top says what was counted and how it compares:\n\nhow many products were counted, and in what units;\nhow many were short and over, in units and at cost;\na sentence: how many matched, what happens to those not counted, and how this count compares with the last count of the same types.\n\n\n\n\n\n\n\n\nBelow it come the sections:\n\nNot identified: box photo pieces nobody has identified. The count can’t be completed until a counter identifies them (Chapter 10).\nRecount first: shortages, and products whose stock moved, with their numbers hidden.\nDiscrepancies: every other difference, each with its tick, the ledger and counted numbers, and the value at cost. The line at the end says what completing would change, such as “Net if completed: −₹1.29 L at cost.”\nNot counted: products in the count that nobody counted, with the choice Keep their stock or Set to zero.\nMatched: folded away.\n\n\n\n\n\n\n\n\n\n\nRecount\nTap a product under Recount first to recount it. The recount is blind: the first count and the ledger stay hidden until you tap Done. The app keeps the first count and when the recount happened, even if the recount confirms it.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou can recount any line under Discrepancies or Not counted by tapping it.\n\n\nChoose, then complete\nTick the differences to accept. A ticked line sets stock to the count; an unticked one leaves the stock as it is. Then tap Complete count, or Complete and adjust 3 when three lines will change.\n\n\n\n\n\n\n\nThe sheet says what will change, and what won’t. Give a reason: it goes on the count and on every adjustment it writes, as “Stock count · Showcase 1 · your reason”. Recent reasons are offered to tap. Then Sign with PIN and complete.\nIf the count needs more counting, close Review and tap Reopen for counting on the count, with a reason. The log records that anything counted after Review was counted after it.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Submit, review and complete</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/13-submit-review-complete.html#why-it-works-this-way",
+    "href": "chapters/13-submit-review-complete.html#why-it-works-this-way",
+    "title": "13  Submit, review and complete",
+    "section": "13.3 Why it works this way",
+    "text": "13.3 Why it works this way\n\nA second person decides. The approver didn’t count (unless the owner is the only one who can approve, and the count then says so), so a loss can’t be counted away and approved by the same person.\nA loss someone counted is never accepted on one count. The recount is cheap; a wrong write-off isn’t.\nHidden until recounted. A recount that can see the ledger tends to find the ledger’s number.\nThe reason is written on every adjustment, so the ledger says why each change happened.\nThe PIN is a signature. The count records who approved it, and the log can’t be edited afterwards.\nComparisons are honest. Review says a match rate rose or fell only when the change is bigger than chance would give, with at least 10 products on each side. Otherwise it says “Too few products to call that a change.”",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Submit, review and complete</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/13-submit-review-complete.html#how-it-works",
+    "href": "chapters/13-submit-review-complete.html#how-it-works",
+    "title": "13  Submit, review and complete",
+    "section": "13.4 How it works",
+    "text": "13.4 How it works\nCompleting is one change, saved at once: if anything fails, nothing changes and the count stays open. Jholok freezes every line’s expected and counted numbers, cost, cut-off and stock off the shelf, so the count reads the same forever. For each ticked line it writes a count adjustment movement for the difference, signed by the approver, with the reason. It records who approved, when and why, and logs the completion.\nA completed count can’t be edited. Mistakes found later are put right with new movements, or a new count.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Submit, review and complete</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/13-submit-review-complete.html#try-it",
+    "href": "chapters/13-submit-review-complete.html#try-it",
+    "title": "13  Submit, review and complete",
+    "section": "13.5 Try it",
+    "text": "13.5 Try it\nThe demo’s open count, at Showcase 2, covers the necklaces. Its Review card would say: counted 4 of 9 products · 19 pieces; 4 of 4 matched; 5 not counted keep their stock. The last count of the necklaces was the whole shop count on 14 Apr: 9 of 9. Both are every product matched, so Review says “The same share as then.”\nAt the earlier count at Showcase 1, the approver recounted the short jhumka, found it still short, and ticked it. The hoops that were over, because of a customer’s repair piece, stayed unticked. The counter had also found one single jhumka earring: Review showed it beside the pairs, as “+ 1 single”, and it changed no stock. Completing wrote one count adjustment:\n\n\n\n\nTable 13.1: What completing Showcase 1 wrote in the ledger.\n\n\n\n\n\n\n\n\n\nProduct\nChange\nAt cost\nNote\n\n\n\n\nJhumka, Antique, 22K, 8 g\n−1\n−₹1,16,640\nStock count · Showcase 1 · Monthly count. Shortages checked with Ramesh.\n\n\n\n\n\n\n\n\n\n\nQuestion. A product shows 2 short. You want to accept it, but its tick won’t turn on. Why?\n\n\n\n\n\n\nTipAnswer\n\n\n\n\n\nIt hasn’t been recounted. Tap it under Recount first, count it again blind, and tap Done. If it’s still short, it moves to Discrepancies, already ticked.\n\n\n\n\n\nOnly an approver or the owner who didn’t count opens Review and completes.\nShortages, and products whose stock moved, are recounted blind first.\nOvers start unticked; products not counted keep their stock unless you choose Set to zero.\nGive a reason and sign with your PIN. Completing changes stock only for the ticked lines, and the count can’t be edited afterwards.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Submit, review and complete</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/14-results-and-report.html",
+    "href": "chapters/14-results-and-report.html",
+    "title": "14  Results and the count report",
+    "section": "",
+    "text": "14.1 The idea\nOnce a count is completed, it becomes a record: what was counted, what was found, what changed, who counted and who approved, and why. That record can’t be edited. Jholok shows it on screen as the count’s Result, and can print it as a count report, a PDF to keep with the shop’s accounts or show an auditor or insurer.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Results and the count report</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/14-results-and-report.html#in-the-app",
+    "href": "chapters/14-results-and-report.html#in-the-app",
+    "title": "14  Results and the count report",
+    "section": "14.2 In the app",
+    "text": "14.2 In the app\n\nThe Result\nOpen a completed count from the Count tab. The card at the top leads with what was counted, then what was short and over, in units and at cost. The sentence ends with what changed: for the demo’s count at Showcase 1, “11 of 13 matched (85%)… Completed 26 Sep. Stock adjusted for 1 product; 1 left as it was.”\n\n\n\n\n\n\n\nBelow it:\n\nwhen the count was completed, and what it covered;\nwhere expected stock came from (Jholok’s ledger, or the books);\nwho counted, and who approved and why;\nthe count’s part of the activity log, and whether it’s intact.\n\nIf the phone hasn’t been backed up since, a reminder says “This count is only on this phone until it’s backed up” (chapter 15).\nThen the lists:\n\nStock adjusted and Left unchanged;\nwhere they apply, the tags not found or found outside the books (Chapter 11), what was off the shelf (Chapter 12), single earrings found, and pieces not in the catalogue (Chapter 10);\nentries made after completion;\nproducts not counted, and the products that matched.\n\n\n\n\n\n\n\n\n\n\nShare the report\nTap the Export button at the top and choose:\n\nCount report (PDF): the full report, for printing or keeping;\nLines and log (CSV): every line of the count, and its log, for a spreadsheet.\n\n\n\n\n\n\n\n\nThe owner confirms each time, with Face ID or the owner PIN (until People is set up, Face ID or the phone’s passcode). The first time, Jholok asks for the shop’s name and address, to print at the top. The files are made only for sharing: once the share sheet closes, Jholok deletes its copies.\nSettings → Export also has Count results: every line of every completed count, in one spreadsheet. While a count is open, exports that would show its stock wait until it’s reviewed or discarded.\n\n\nThe record of every count\nThe Count tab keeps score. Under Last counted, each type shows how long since it was counted. Under Record accuracy, every completed count is listed with how many products matched and what was short and over. With fewer than 8 counts, it’s a table; from 8, a chart shows each count’s match rate, with the range chance allows.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Results and the count report</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/14-results-and-report.html#whats-in-the-report",
+    "href": "chapters/14-results-and-report.html#whats-in-the-report",
+    "title": "14  Results and the count report",
+    "section": "14.3 What’s in the report",
+    "text": "14.3 What’s in the report\nThe report is printed in black and white, on A4, so it copies and files well.\n\n\n\n\nPage 1: the shop, the count, the sign-off, totals, discrepancies.\n\n\n\n\nThe first page: the shop’s name and address; the count’s place, types and times; what expected stock came from; the sign-off (who started, counted, submitted, reviewed and approved, and the reason); the log’s code; totals by type; and the discrepancies, each with how it was counted.\n\n\n\n\n\nEvery line, by type, with how each was counted.\n\n\n\n\nEvery line of the count, grouped by type.\nWhere they apply: the tags, what was off the shelf, customers’ pieces, pieces not in the catalogue, and entries made after completion.\n\n\n\n\n\nA page for each box photo, its pieces numbered.\n\n\n\n\nA page for each box photo, with its pieces numbered and a table of what each was and how it was identified, and each tag scan’s tags.\n\nEvery page carries the report’s fingerprint at the bottom: a code made from everything in the report. Printing it again gives the same code, unless a product was renamed, the shop’s name or address changed, or entries were made after the count was completed; then the report says so. Making a report is logged, with its fingerprint.\nThe report gives quantities, not rupee values.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Results and the count report</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/14-results-and-report.html#why-it-works-this-way",
+    "href": "chapters/14-results-and-report.html#why-it-works-this-way",
+    "title": "14  Results and the count report",
+    "section": "14.4 Why it works this way",
+    "text": "14.4 Why it works this way\n\nA completed count is a record, not a draft. Its counts and numbers can’t be edited, so a report printed next year shows the same count.\nThe fingerprint shows the paper is genuine. Print the report again from the app and compare the codes: if the paper was altered, they won’t match. (A renamed product or a late entry also changes the code, and the new report says so.)\nExports ask the owner every time, because a report shows the shop’s stock, and once a file leaves the phone, Jholok can’t take it back.\nAccuracy is shown honestly. No percentage on fewer than 10 products, and no “better” or “worse” unless the difference is bigger than chance.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Results and the count report</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/14-results-and-report.html#how-it-works",
+    "href": "chapters/14-results-and-report.html#how-it-works",
+    "title": "14  Results and the count report",
+    "section": "14.5 How it works",
+    "text": "14.5 How it works\nCompleting a count freezes its counts and numbers. Product names and SKUs are printed as they are on the day (the report says so), and entries made after completion are added. The fingerprint is a code worked out from everything in the report except the time it was printed. The log’s code on the report is the code of the count’s log as it was at completion: if anyone altered the log, the report would say so.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Results and the count report</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/14-results-and-report.html#try-it",
+    "href": "chapters/14-results-and-report.html#try-it",
+    "title": "14  Results and the count report",
+    "section": "14.6 Try it",
+    "text": "14.6 Try it\nThe demo shop has completed two counts. The Count tab’s record would list them like this:\n\n\n\n\nTable 14.1: Jholok Jewellers’ completed counts, as the Count tab lists them.\n\n\n\n\n\n\n\n\n\nDate\nCovered\nMatched\nShort\nOver\n\n\n\n\n14 Apr\nWhole shop\n39 of 42\n1 pair and 1 piece\n1 piece\n\n\n26 Sep\nEarrings and Rings\n11 of 13\n1 pair\n1 pair\n\n\n\n\n\n\n\n\n\n\nWith two counts, the record is a table: too few to draw a trend.\nQuestion. An insurer asks for proof of your last stock count. What do you send, and how can they tell it hasn’t been changed?\n\n\n\n\n\n\nTipAnswer\n\n\n\n\n\nThe count’s report, from Export → Count report (PDF). Every page carries its fingerprint: printing the report again from the app gives the same code, as long as nothing was renamed or entered late, and the report says when something was.\n\n\n\n\n\nA completed count’s numbers can’t change.\nThe report shows the sign-off, totals, discrepancies, every line and every box photo, with a fingerprint on every page.\nEvery export asks the owner first, and Jholok deletes its copy once it’s shared.\nThe Count tab keeps the record of every count.",
+    "crumbs": [
+      "Checking a count",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Results and the count report</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/15-keeping-data-safe.html",
+    "href": "chapters/15-keeping-data-safe.html",
+    "title": "15  Keeping your data safe",
+    "section": "",
+    "text": "15.1 The idea\nJholok keeps everything on the phone: the catalogue, every movement, every count, the activity log, product photos and box photos. Nothing is sent to a server or synced to the cloud. That keeps the shop’s stock and costs private, but it means the phone holds the only copy until you make a backup.\nA backup is one file with everything in it. Saved somewhere other than the phone (iCloud Drive, a computer), it lets you get the shop back if the phone is lost, broken or replaced.\nJholok doesn’t back up by itself. Make it a habit: after every completed count, and at least once a week.",
+    "crumbs": [
+      "Looking after your shop",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Keeping your data safe</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/15-keeping-data-safe.html#in-the-app",
+    "href": "chapters/15-keeping-data-safe.html#in-the-app",
+    "title": "15  Keeping your data safe",
+    "section": "15.2 In the app",
+    "text": "15.2 In the app\n\nBack up\nOpen Settings, then Backup.\n\n\n\n\nBackup, in the demo shop, where backups are turned off.\n\n\n\nThe top says when you last backed up, and some of what’s been added since (“Since then: 1 count completed and 14 box photos added”). A lost phone would lose those, and every sale, receipt and other entry made since too. A backup holds lists what goes in: products, counts, any count in progress, and box photos.\n\nTap Back up now.\nConfirm it’s you, with Face ID or the owner PIN (until People is set up, Face ID or the phone’s passcode).\nChoose where to save the file, such as iCloud Drive in the Files list, or a folder that a computer collects. The file is called something like “Jholok backup 2026-10-09 1730.jholokbackup”.\n\nThe backup holds every product and photo, every count and movement, the activity log, the box photos, and the preferences (currency, appearance, lead time, book stock words and so on).\nAfter a count is completed, its Result reminds you if it isn’t backed up yet: “This count is only on this phone until it’s backed up.” (Chapter 14)\n\n\nRestore, or move to a new phone\nTo restore, open Settings → Backup, tap Restore from a backup…, confirm it’s you, and choose the backup file.\nBefore anything changes, Jholok shows the phone and the backup side by side: when the backup was made, and how many products, counts, counts in progress and box photos each has. It warns that everything on the phone will be replaced. If the phone has data, Back up this phone first saves it before you go on. Then tap Replace with backup.\nTo move to a new phone, back up on the old one, install Jholok on the new one, and restore the backup there. The lock setting and the shop’s name and address (Settings → Shop) aren’t in the backup: set them again on the new phone (Chapter 4).\n\n\nPrivacy\n\nThe lock: Jholok asks for Face ID or the phone’s passcode when it opens and, by default, after a minute away; Settings → Security changes it (Chapter 4).\nThe cover: whenever Jholok isn’t in front, a plain cover hides it from the list of open apps.\nThe owner, every time: every export, backup, restore, report and box photo export asks the owner to confirm, with Face ID or the owner PIN (or the phone’s passcode, until People is set up).\nNothing left behind: files made for sharing are deleted as soon as the share sheet closes, and any left over are deleted when Jholok opens.\n\n\n\nBox photos and space\nBox photos take space. Settings → Photo counting → Storage says how much, and can remove photos of counts completed over 12 months ago. Each box’s pieces and numbers stay; only the photos go.",
+    "crumbs": [
+      "Looking after your shop",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Keeping your data safe</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/15-keeping-data-safe.html#why-it-works-this-way",
+    "href": "chapters/15-keeping-data-safe.html#why-it-works-this-way",
+    "title": "15  Keeping your data safe",
+    "section": "15.3 Why it works this way",
+    "text": "15.3 Why it works this way\n\nOn the phone, not in the cloud, so the shop’s stock and costs are seen only by the people who hold the phone.\nOne file, so a backup is easy to save, copy and keep.\nSide by side before restoring, so nobody replaces new data with an old backup by mistake.\nThe log remembers restores. After a restore, the log records it and where the log it replaced had got to. Going back to an older backup always shows.\nExports ask every time, because once a file leaves the phone, Jholok can’t take it back.",
+    "crumbs": [
+      "Looking after your shop",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Keeping your data safe</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/15-keeping-data-safe.html#how-it-works",
+    "href": "chapters/15-keeping-data-safe.html#how-it-works",
+    "title": "15  Keeping your data safe",
+    "section": "15.4 How it works",
+    "text": "15.4 How it works\n\nSaving never fails silently\nEvery change is saved at once. If a save fails (most often because the phone is nearly full), Jholok puts everything back as it was, so the screen matches what’s stored, and says so: “The send out wasn’t saved, so it’s back as it was. If the phone is nearly full, free some space and try again.” A count whose completion fails stays open, with no stock changed.\n\n\nIf Jholok can’t open its data\nIf the data can’t be opened (after a failed update, say), Jholok doesn’t stop. It shows “Jholok can’t open its data”, and says nothing has been deleted. You can Try again, Restore from a backup…, or Save the data file…, which saves the raw data so it can be repaired. That file isn’t a backup and can’t be restored.\n\n\nRestoring safely\nJholok first copies the backup next to your data, checks it and brings it up to date with the app. Only then does it replace your data. If the phone switched off part way, Jholok finishes the job the next time it opens. A backup made by an older version of Jholok is brought up to date as it’s restored. One made by a newer version can’t be restored until you update the app.\n\n\nDiagnostics\nSettings → Diagnostics, under About, keeps reports of crashes and hangs from iOS, and a log of what went wrong in the app, such as a failed save or a camera that stopped. It never records stock, products, prices or tags. Nothing leaves the phone unless the owner taps Share diagnostics, which makes one file to send to whoever supports the app.",
+    "crumbs": [
+      "Looking after your shop",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Keeping your data safe</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/15-keeping-data-safe.html#try-it",
+    "href": "chapters/15-keeping-data-safe.html#try-it",
+    "title": "15  Keeping your data safe",
+    "section": "15.5 Try it",
+    "text": "15.5 Try it\nQuestion. The shop’s phone is stolen. What do you need to get the shop back, and what would be lost?\n\n\n\n\n\n\nTipAnswer\n\n\n\n\n\nThe latest backup file, saved off the phone. Install Jholok on a new phone and restore it. Everything entered since that backup would be lost: the counts, products and box photos in the Backup screen’s “Since then” line, and every sale, receipt and other entry too. That’s why it’s worth backing up after every count.\n\n\n\n\n\nThe phone holds the only copy until you back up. Jholok doesn’t back up by itself.\nBack up after every completed count, and at least weekly, to iCloud Drive or a computer.\nRestoring shows the phone and the backup side by side first, and replaces everything.\nEvery export and backup asks the owner, and shared files are deleted afterwards.",
+    "crumbs": [
+      "Looking after your shop",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Keeping your data safe</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/16-stories-from-the-shop.html",
+    "href": "chapters/16-stories-from-the-shop.html",
+    "title": "16  Stories from the shop",
+    "section": "",
+    "text": "16.1 The first full count\nThese are moments from Jholok Jewellers’ year. The figures are the demo shop’s own, so you can open the app’s demo and find each of them.\nBidisha decided to count the whole shop at the end of the financial year, before opening on 14 April. She had set up People the week before (Chapter 4): Ramesh and Meena to count, Sita to approve.\nRamesh started the count in the Count tab, with All types, and he and Meena counted tray by tray, each signed in with their own PIN (Chapter 8). Neither could see what the ledger expected. They finished in two hours and Ramesh submitted.\nSita opened Review. 39 of 42 matched (93%). These didn’t:\nTable 16.1: What the first whole-shop count found.\n\n\n\n\n\n\n\n\n\nProduct\nExpected\nCounted\nAt cost\n\n\n\n\nStud, Plain, 22K, 3 g\n8\n7\n−₹43,340\n\n\nCoin, Lakshmi, 24K, 1 g\n28\n29\n₹15,140\n\n\nNose pin, Diamond, 18K\n9\n8\n−₹9,580\nThe shortages waited under Recount first, so Sita recounted them herself, blind. They were still short, and she found no missing sale to explain them. She recounted the coins too, checked that no delivery of coins was missing, and accepted the extra one. She ticked all three and completed the count with a reason, signing with her PIN (Chapter 13). Each accepted difference became a count adjustment in the ledger.\nThe lesson: the first count sets the baseline. From then on, every count is compared with the last one of the same types.",
+    "crumbs": [
+      "Looking after your shop",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Stories from the shop</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/16-stories-from-the-shop.html#dhanteras",
+    "href": "chapters/16-stories-from-the-shop.html#dhanteras",
+    "title": "16  Stories from the shop",
+    "section": "16.2 Dhanteras",
+    "text": "16.2 Dhanteras\nOn Dhanteras, 1 November, the shop sold 71 coins in one day:\n\n\n\n\nTable 16.2: Coins sold on Dhanteras.\n\n\n\n\n\n\n\n\n\nCoin\nSold\n\n\n\n\nCoin, Lakshmi, 24K, 1 g\n45\n\n\nCoin, Silver 999, 10 g\n13\n\n\nCoin, 24K, 5 g\n10\n\n\nCoin, Lakshmi, 24K, 10 g\n3\n\n\n\n\n\n\n\n\n\n\nEvery sale was recorded as it happened, so the ledger kept up. The Overview’s sales chart labelled that week with its festival (Chapter 7), and Needs attention lists any product that, at its new pace, won’t last the supplier lead time.\nThe lesson: after a rush, count what moved fastest. Busy days are when a sale is most easily missed.",
+    "crumbs": [
+      "Looking after your shop",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Stories from the shop</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/16-stories-from-the-shop.html#the-pendant-below-zero",
+    "href": "chapters/16-stories-from-the-shop.html#the-pendant-below-zero",
+    "title": "16  Stories from the shop",
+    "section": "16.3 The pendant below zero",
+    "text": "16.3 The pendant below zero\nThe Overview showed one product Below zero: the Lakshmi pendant, at −1. Its last movement was a sale on 4 Oct, with the note “Walk-in, receipt of 6 not yet entered”.\nThe pendant had sold out, a delivery of 6 had arrived, and a customer bought one before anyone entered the delivery. Bidisha opened the pendant and tapped Receive, entered 6, and set the date to the day the delivery came. The stock became 5, and the warning went away (Chapter 6).\nThe lesson: below zero always means a missing movement. Find it, enter it with its real date, and the stock is right again.",
+    "crumbs": [
+      "Looking after your shop",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Stories from the shop</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/16-stories-from-the-shop.html#the-customers-repair-piece",
+    "href": "chapters/16-stories-from-the-shop.html#the-customers-repair-piece",
+    "title": "16  Stories from the shop",
+    "section": "16.4 The customer’s repair piece",
+    "text": "16.4 The customer’s repair piece\nAt the count at Showcase 1 on 26 September, the hammered hoops came out one pair over. Sita, approving, didn’t accept it straight away: an over usually means a missing record. Ramesh, who led the count, told her why: a customer’s repair piece had been left in the tray.\nThe extra pair wasn’t the shop’s stock at all, so Sita left the line unticked. The hoops’ stock didn’t change, and the Result lists the line under Left unchanged (Chapter 14).\nThe lesson: keep customers’ pieces out of the trays, or mark them, and never make stock up to a count without asking why.",
+    "crumbs": [
+      "Looking after your shop",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Stories from the shop</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/16-stories-from-the-shop.html#the-karigars-chain",
+    "href": "chapters/16-stories-from-the-shop.html#the-karigars-chain",
+    "title": "16  Stories from the shop",
+    "section": "16.5 The karigar’s chain",
+    "text": "16.5 The karigar’s chain\nA chain (Rope, 22K, 18 in, 10 g) had gone to Ramesh karigar for repair, memo K-17, due back in 30 days. By then it was 14 days late, and the Overview’s Needs attention listed it: “1 memo more than a week overdue” (Chapter 6).\nBidisha called the karigar. The chain had come back the week before and was already in the showcase, but nobody had recorded it. Sita opened the chain, tapped ⋯ beside the memo under Off the shelf, chose Back in, set Back on to the day it came back, and signed with her PIN. The chain was in the shop again, and the next count expected it on the shelf (Chapter 12).\nThe lesson: record pieces back in when they come back. Otherwise the next count finds them “over”, and the overdue list keeps nagging.",
+    "crumbs": [
+      "Looking after your shop",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Stories from the shop</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/16-stories-from-the-shop.html#a-new-member-of-staff",
+    "href": "chapters/16-stories-from-the-shop.html#a-new-member-of-staff",
+    "title": "16  Stories from the shop",
+    "section": "16.6 A new member of staff",
+    "text": "16.6 A new member of staff\nWhen a new assistant joined, Bidisha added them in Settings → People as a Counter, and let them choose their own PIN (Chapter 4). Their first count was a small one, the rings in one showcase, with Ramesh beside them to show how + and the number pad work, and how − and Undo put a slip right.\nCounting is blind, so the ledger couldn’t sway the new counter. And a counter can never approve a count. The activity log shows each figure they entered.\nThe lesson: start new staff on small counts. The app’s rules protect the shop and them: nobody can be blamed for a figure someone else entered.\n\n\nCount the whole shop once to set a baseline; then count often, a few types at a time.\nRecord every movement when it happens, with its real date.\nA difference is a question: below zero, over and short each have a usual cause worth finding.\nRecord pieces back in when they come back from jangad or the karigar.",
+    "crumbs": [
+      "Looking after your shop",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Stories from the shop</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/glossary.html",
+    "href": "chapters/glossary.html",
+    "title": "Glossary",
+    "section": "",
+    "text": "For everyone\n\nThe words this guide uses, in plain terms, with the chapter that explains each one.\n\nAdjustment\n\nA movement that corrects stock outside a count, with a reason, such as a piece damaged and sent for melting. See 2  The ledger: why stock is a sum.\n\nApprover\n\nA person who can open a count’s Review and complete it, but only for a count they didn’t count in. See 3  Counting and checking against the ledger.\n\nAudit trail\n\nThe unbroken record of every change to the stock: what changed, when, why and who entered it. Mistakes are corrected with new entries, never erased. See 2  The ledger: why stock is a sum.\n\nBelow zero\n\nStock the ledger says is less than none. It always means a movement is missing or wrong, such as a sale entered before its delivery. See 2  The ledger: why stock is a sum.\n\nBlind count\n\nA count in which the counters never see what the ledger expects, so they count what is there rather than what should be. See 3  Counting and checking against the ledger.\n\nBook stock, the books\n\nThe shop’s billing system’s own record of what is in stock. Jholok can load it into a count. See 11  Book stock.\n\nBox photo\n\nA photo of a box of cards, from which Jholok proposes how many of each product are in it. See 9  Counting boxes: tags and photos.\n\nCard\n\nThe small card each pair of earrings or each set sits on in a box. Jholok’s box photos count cards, not loose pieces. See 9  Counting boxes: tags and photos.\n\nCost\n\nWhat the shop paid for one piece of a product, with the metal, the making charge and any stones. See 1  Stock basics.\n\nCount\n\nFinding what is really in the shop and comparing it with what the ledger expects. Also called a stock take. See 3  Counting and checking against the ledger.\n\nCount adjustment\n\nThe movement Jholok records when an approver completes a count and accepts a difference. See 3  Counting and checking against the ledger.\n\nCounter\n\nA person who counts. Counters count blind, and submit the count for review. See 3  Counting and checking against the ledger.\n\nCounting window\n\nThe time from when a product was first counted in a count to when its count last changed. Its cut-off is the end of it. See 12  Stock off the shelf and the cut-off.\n\nCover\n\nHow long a product’s stock lasts at the pace it has sold recently. See 1  Stock basics.\n\nCrore (Cr)\n\nOne hundred lakh: ₹1,00,00,000. See 1  Stock basics.\n\nCut-off\n\nThe moment a count line’s expected stock is taken from, so that sales during a count don’t look like losses. See 12  Stock off the shelf and the cut-off.\n\nCut-off correction\n\nA movement that puts back what a completed count took off, when a sale, delivery or return dated before the product was counted is entered after the count. The owner confirms it. See 12  Stock off the shelf and the cut-off.\n\nDifference, discrepancy\n\nWhen counted and expected don’t agree: short or over. See 3  Counting and checking against the ledger.\n\nExpected\n\nWhat the ledger says should be in the shop. Counters never see it while counting. See 3  Counting and checking against the ledger.\n\nFingerprint\n\nThe code on every page of a count report, made from everything in it. Printing the same count again gives the same code. See 14  Results and the count report.\n\nItem\n\nA word Jholok doesn’t use for a count. Pairs, sets and pieces are always given apart (“18 pairs and 13 pieces”), never added into a number of items. See 1  Stock basics.\n\nJangad\n\nStock sent out of the shop on approval, with a memo, for a customer or another jeweller to see. It is still the shop’s stock until it is sold. See 12  Stock off the shelf and the cut-off.\n\nKarigar\n\nThe craftsman who makes or repairs jewellery for the shop. Stock with the karigar is still the shop’s. See 12  Stock off the shelf and the cut-off.\n\nLakh (L)\n\n₹1,00,000. See 1  Stock basics.\n\nLedger\n\nThe record of every movement of stock, oldest first. See 2  The ledger: why stock is a sum.\n\nList price\n\nWhat the shop asks a customer for one piece of a product. See 1  Stock basics.\n\nMaking charge\n\nWhat it costs to make a piece, on top of the metal. Part of a product’s cost. See 1  Stock basics.\n\nMatched\n\nA product whose count agrees with what was expected. See 3  Counting and checking against the ledger.\n\nMemo\n\nThe numbered slip that goes with stock sent out on jangad. See 12  Stock off the shelf and the cut-off.\n\nMovement\n\nOne change to a product’s stock: opening stock, received, sold, returned, an adjustment or a count adjustment, and a few more. See 2  The ledger: why stock is a sum.\n\nNot a piece\n\nWhat you choose in a box review when the app outlined something that isn’t jewellery. It is kept, left out, so the app can learn from it. See 9  Counting boxes: tags and photos.\n\nNot in the catalogue\n\nWhat you choose for a piece in a box whose design has no product. It is left out of the count and listed. See 10  Pieces to identify later.\n\nOdd single\n\nA single earring found without its pair. It is never rounded into a pair: count the whole pairs and add it with Singles in the count sheet. It shows beside the pairs in Review, the result, the report and the CSV, and never changes stock. See 1  Stock basics.\n\nOn hand, stock on hand\n\nHow many of a product the shop has: the sum of all its movements. See 1  Stock basics and 2  The ledger: why stock is a sum.\n\nOpening stock\n\nThe stock a product already had when it was added to Jholok. See 2  The ledger: why stock is a sum.\n\nOrder\n\nStock set aside for a customer’s order. It is not on the shelf, but it is still the shop’s. See 12  Stock off the shelf and the cut-off.\n\nOver\n\nMore found than expected. Often a delivery or a return that wasn’t entered. See 3  Counting and checking against the ledger.\n\nOwner\n\nThe person who runs the shop in Jholok. The owner sets up the people, proves it’s them for exports and backups, and can approve a count. See 4  Setting up the shop.\n\nPair\n\nTwo matching earrings, counted and sold as one. See 1  Stock basics.\n\nPiece\n\nThe unit for everything that isn’t earrings or a set: a ring, a chain, a coin. See 1  Stock basics.\n\nPiece tag\n\nA code on one individual piece, different from every other piece’s. It links to its product through the tag list. See 5  The catalogue.\n\nPIN\n\nThe short number each person enters to show who they are. An approver’s PIN is their signature on a completed count. See 4  Setting up the shop.\n\nProduct\n\nOne design in one metal and weight, so that every piece of it is alike. See 1  Stock basics.\n\nProposal\n\nWhat a box photo or tag scan finds, before you check it and add it to the count. See 9  Counting boxes: tags and photos.\n\nReconciliation\n\nComparing what was counted with what was expected, and explaining every difference. See 3  Counting and checking against the ledger.\n\nRecount\n\nCounting a product again. A shortage must be recounted, blind, before it can be accepted. See 3  Counting and checking against the ledger.\n\nReview\n\nThe screen where an approver sees the counted and expected numbers side by side, and decides which differences to accept. See 3  Counting and checking against the ledger.\n\nSeparation of duties\n\nMaking sure the person who counts isn’t the person who approves, so no one can hide a loss alone. See 3  Counting and checking against the ledger.\n\nSet\n\nPieces sold together as one, such as a necklace with matching earrings. Counted as 1. See 1  Stock basics.\n\nShort\n\nFewer found than expected. Recounted before it is accepted. See 3  Counting and checking against the ledger.\n\nShrinkage\n\nStock lost without being sold: theft, damage or mistakes. See 3  Counting and checking against the ledger.\n\nSKU\n\nStock keeping unit: a product’s own short code, such as EAR-0002. See 1  Stock basics.\n\nStock\n\nThe jewellery the shop owns and means to sell. See 1  Stock basics.\n\nStock value\n\nWhat the stock is worth: each product’s stock on hand times its cost, or its list price, added up. See 1  Stock basics.\n\nTag list\n\nThe list linking each piece tag to its product, imported from a spreadsheet or linked in the app. See 5  The catalogue.\n\nTag scan\n\nCounting a box by reading each piece’s tag with the camera. Each tag counts its piece once. See 9  Counting boxes: tags and photos.\n\nTo identify\n\nThe queue of pieces in added box photos that don’t have a product yet. They are identified while the count is open, by whoever is counting, never in Review. See 10  Pieces to identify later.\n\nType\n\nA group of products, such as Earrings or Rings. A type sets the unit its products are counted in. See 1  Stock basics.\n\nUnit\n\nWhat a type is counted in: pairs, sets or pieces. Stock is shown in its units, not as one total. See 1  Stock basics.",
+    "crumbs": [
+      "Appendices",
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "chapters/questions.html",
+    "href": "chapters/questions.html",
+    "title": "Appendix A — Questions and answers",
+    "section": "",
+    "text": "A.1 Counting\nShort answers to the questions people ask most, with the chapter that explains each one.\nI tapped + too many times. Tap − to take one off. After a change of more than one, the bar at the bottom offers Undo for a few seconds. Chapter 8\nI typed the wrong count. Tap the number again and choose Set total, or swipe left on the product and tap Clear to start again. Chapter 8\nThe phone rang, or the app closed, in the middle of counting. Nothing is lost: every tap is saved at once. Open the count again from the Count tab. It may ask who’s counting: check that your name is the one chosen. Chapter 8\nWhy can’t I see how many there should be? Counting is blind on purpose: knowing the answer changes what people find. The approver sees the expected numbers in Review. Chapter 3\nI found a single earring without its pair. Count the whole pairs, then add the odd one with Singles on the same sheet. A single is shown beside the pairs and is never rounded into a pair. Chapter 1\nA product I’m holding isn’t in the list. Search for it, or use Find by code. If it still isn’t there, it may be a type this count doesn’t cover, an archived product, or a design not yet in the catalogue: tell the owner. Chapter 8\nTwo of us want to count the same count. Take turns on the shop’s phone. Each time, go back to the counts list, open the count and choose your own name. The count lists you both. Chapter 8\nWhat’s the difference between “None here” and leaving a product blank? “None here” counts 0: you looked and there were none. A product left with a dash wasn’t counted, and keeps its stock unless the approver chooses Set to zero. Chapter 8",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Questions and answers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/questions.html#boxes-and-tags",
+    "href": "chapters/questions.html#boxes-and-tags",
+    "title": "Appendix A — Questions and answers",
+    "section": "A.2 Boxes and tags",
+    "text": "A.2 Boxes and tags\nThe scan says “Product code”. That’s a barcode or SKU, which is on every piece of a design, so it can’t count one piece. Count those pieces on their rows, or with a box photo. Chapter 9\nThe scan says “Already counted in Box 2”. That piece was counted earlier in this count. It adds nothing, so nothing is counted twice. Chapter 9\nThe app asks “Is this Box 2 again?” It thinks you may have photographed the same box twice. If you have, tap Cancel. Chapter 9\nPicture matches never suggest anything. Picture matching compares pieces with product photos only. Products without a photo, showing a drawing, can’t be matched. Chapter 5\nI can’t tell which product a piece in the To identify queue is. Tap See the box to find it in the tray, then look at the piece itself. If it’s a design the shop has no product for, choose Not in the catalogue. Otherwise Skip it and come back. Chapter 10",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Questions and answers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/questions.html#review-and-completing",
+    "href": "chapters/questions.html#review-and-completing",
+    "title": "Appendix A — Questions and answers",
+    "section": "A.3 Review and completing",
+    "text": "A.3 Review and completing\nA shortage’s tick won’t turn on. It hasn’t been recounted. Tap it under Recount first and count it again. Chapter 13\nComplete is greyed out. Some pieces in box photos aren’t identified. Reopen the count so a counter can identify them. Chapter 10\nEveryone who approves counted in this count. Then the owner approves it. If the owner counted too, the count says one person counted and approved it. Chapter 4\nWe need to count some more after submitting. An approver taps Reopen for counting on the count and gives a reason. Chapter 13\nThe books are older than the counting. Pieces sold in between would look missing. Load newer books, or give the reason and review anyway. Chapter 11",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Questions and answers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/questions.html#stock-and-the-catalogue",
+    "href": "chapters/questions.html#stock-and-the-catalogue",
+    "title": "Appendix A — Questions and answers",
+    "section": "A.4 Stock and the catalogue",
+    "text": "A.4 Stock and the catalogue\nA product shows stock below zero. A movement is missing, usually a delivery entered late. Record it with its real date, or count the product. Chapter 2\nA product’s stock is wrong, and I know why. Open it, tap Adjust, enter the correct stock and the reason. Adjust waits while the product is being counted. Chapter 6\nCan I delete a movement I entered by mistake? No. Put it right with another movement, usually an Adjust with the reason, so the ledger keeps the whole story. Chapter 2\nI imported a spreadsheet, but the stock didn’t change. Importing never changes the stock of a product Jholok already has. Count the product instead. Chapter 5\nA tag won’t link: it says it’s a product code. A product’s barcode or SKU can’t be a piece tag, because every piece of the design carries it. Use the piece’s own tag. Chapter 5\nPieces are on jangad. Will the count call them missing? No. Pieces sent out in Jholok are off the shelf, and a count doesn’t expect them there. Chapter 12",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Questions and answers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/questions.html#data-and-privacy",
+    "href": "chapters/questions.html#data-and-privacy",
+    "title": "Appendix A — Questions and answers",
+    "section": "A.5 Data and privacy",
+    "text": "A.5 Data and privacy\nDoes Jholok need the internet? No. Everything stays on the phone; nothing is sent to a server or synced. Chapter 15\nCan two phones share the shop’s data? No. Jholok keeps the shop on one phone. A backup can move it to another phone, but that replaces what the other phone had. Chapter 15\nHow often should I back up? After every completed count, and at least once a week. Jholok doesn’t back up by itself. Chapter 15\nWhy does every export ask for Face ID? A file that leaves the phone can’t be taken back, so the owner confirms each one. Chapter 4\nI forgot the owner PIN. On a phone with Face ID, use Face ID, then set a new PIN in Settings → People. On a phone without it, the owner PIN can be reset with the phone’s passcode; the log and the next count’s result say it was reset. Chapter 4\nJholok says it can’t open its data. Nothing has been deleted. Try again, restore a backup, or save the data file so it can be repaired. Chapter 15",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Questions and answers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/questions.html#something-went-wrong",
+    "href": "chapters/questions.html#something-went-wrong",
+    "title": "Appendix A — Questions and answers",
+    "section": "A.6 Something went wrong",
+    "text": "A.6 Something went wrong\nThe app says something “wasn’t saved, so it’s back as it was”. The change didn’t save, often because the phone is nearly full, so Jholok put everything back as it was. Free some space and try again. Chapter 15\nThe camera says it’s paused. It says why: a call, another app using the camera, the app beside another in Split View, or the phone being too warm. It comes back on its own, or when you open Jholok full screen. Chapter 9\nA photo is blurred, too dark or tilted. Tap Retake, or Use anyway if you’re happy with it. Chapter 9",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Questions and answers</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/what-changed.html",
+    "href": "chapters/what-changed.html",
+    "title": "Appendix B — What changed",
+    "section": "",
+    "text": "B.1 Guide 0.1, for Jholok 0.1\nThe guide grows with the app. Each edition is listed here, newest first, with what’s new in it, so you can see what to read again after an update.\nThe first edition: the whole app, for people using it for the first time.\nIt already covers two recent changes to the app:",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>What changed</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/what-changed.html#guide-0.1-for-jholok-0.1",
+    "href": "chapters/what-changed.html#guide-0.1-for-jholok-0.1",
+    "title": "Appendix B — What changed",
+    "section": "",
+    "text": "The ideas behind the app: stock, units and value (Chapter 1), the ledger (Chapter 2), and counting and checking against it (Chapter 3).\nEveryday use: setting up the shop and its people (Chapter 4), the catalogue (Chapter 5), recording what comes in and goes out (Chapter 6), and the Overview (Chapter 7).\nCounting: a count from start to finish (Chapter 8), counting boxes by their tags or a photo (Chapter 9), and identifying pieces later (Chapter 10).\nChecking a count: book stock (Chapter 11), stock off the shelf and the cut-off (Chapter 12), Review (Chapter 13), and the Result and the count report (Chapter 14).\nLooking after your shop: backups and privacy (Chapter 15), and stories from a shop’s year (Chapter 16).\nThe Questions and answers and the Glossary.\n\n\n\nSingle earrings. An earring found without its pair is added with Singles on the count sheet, beside the pairs, and never changes stock (Chapter 1, Chapter 8).\nUnits kept apart. The Overview never adds pairs, sets and pieces into one number of “items”: it gives values, or lists each kind (Chapter 7).",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>What changed</span>"
+    ]
+  }
+]

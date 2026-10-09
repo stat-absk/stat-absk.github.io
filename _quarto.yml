@@ -8,6 +8,7 @@ project:
     - slides/               # self-contained slide decks, copied as-is
     - fonts/                # the site's faces, served from here (see R/fetch_fonts.R)
     - marks/                # the chalk marks sprite (see _extensions/chalk)
+    - jholok-guide/         # the Jholok user guide, built in stat-absk/jholok-user-guide
   post-render:
     - post-render.R         # recreates docs/.nojekyll after each build
 
