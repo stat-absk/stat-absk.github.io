@@ -44,6 +44,8 @@ jobs:
             --no-progress
             --root-dir docs
             --accept 200,202,204,206,301,302,303,307,308,403,429,999
+            --max-retries 4
+            --retry-wait-time 10
             --exclude-path docs/site_libs
             --exclude-path docs/slides
             --exclude 'linkedin\.com'
