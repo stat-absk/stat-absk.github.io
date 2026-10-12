@@ -8,7 +8,7 @@
 
 <meta name="description" content="How to use Jholok, why it works the way it does, and the shop and accounting ideas behind it, in plain words.">
 
-<title>3&nbsp; Counting and checking against the ledger – Counting your stock with Jholok</title>
+<title>5&nbsp; Counting and checking against the ledger – Counting your stock with Jholok</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,7 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/04-setting-up.html" rel="next">
+<link href="../chapters/13-submit-review-complete.html" rel="next">
 <link href="../chapters/02-the-ledger.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -261,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/01-stock-basics.html">The ideas behind the app</a></li><li class="breadcrumb-item"><a href="../chapters/03-counting-and-reconciliation.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Counting and checking against the ledger</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/01-stock-basics.html">How counting works</a></li><li class="breadcrumb-item"><a href="../chapters/03-counting-and-reconciliation.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Counting and checking against the ledger</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -298,7 +298,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">The ideas behind the app</span></a>
+ <span class="menu-text">Start here</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -306,20 +306,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/01-stock-basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Stock basics</span></span></a>
+  <a href="../chapters/00-first-count.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Your first count in 30 minutes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/02-the-ledger.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The ledger: why stock is a sum</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/03-counting-and-reconciliation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Counting and checking against the ledger</span></span></a>
+  <a href="../chapters/08-a-count-start-to-finish.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A count from start to finish</span></span></a>
   </div>
 </li>
       </ul>
@@ -327,7 +321,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Everyday use</span></a>
+ <span class="menu-text">How counting works</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -335,26 +329,32 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/04-setting-up.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting up the shop</span></span></a>
+  <a href="../chapters/01-stock-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Stock basics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/05-the-catalogue.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The catalogue</span></span></a>
+  <a href="../chapters/02-the-ledger.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The ledger: why stock is a sum</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/06-recording-movements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Recording what comes in and goes out</span></span></a>
+  <a href="../chapters/03-counting-and-reconciliation.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Counting and checking against the ledger</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/07-the-overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Reading the Overview</span></span></a>
+  <a href="../chapters/13-submit-review-complete.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Submit, review and complete</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/14-results-and-report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Results and the count report</span></span></a>
   </div>
 </li>
       </ul>
@@ -362,7 +362,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Counting</span></a>
+ <span class="menu-text">Everyday use</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -370,20 +370,32 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/08-a-count-start-to-finish.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">A count from start to finish</span></span></a>
+  <a href="../chapters/04-setting-up.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Setting up the shop</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/09-counting-boxes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Counting boxes: tags and photos</span></span></a>
+  <a href="../chapters/05-the-catalogue.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">The catalogue</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/10-identify-later.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Pieces to identify later</span></span></a>
+  <a href="../chapters/06-recording-movements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Recording what comes in and goes out</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07-the-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Reading the Overview</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/15-keeping-data-safe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Keeping your data safe</span></span></a>
   </div>
 </li>
       </ul>
@@ -391,7 +403,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Checking a count</span></a>
+ <span class="menu-text">Boxes, tags and billing files</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -399,26 +411,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/09-counting-boxes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Counting boxes: tags and photos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/10-identify-later.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Pieces to identify later</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/11-book-stock.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Book stock</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/12-off-the-shelf-and-cut-off.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Stock off the shelf and the cut-off</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/13-submit-review-complete.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Submit, review and complete</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/14-results-and-report.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Results and the count report</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Book stock</span></span></a>
   </div>
 </li>
       </ul>
@@ -426,7 +432,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Looking after your shop</span></a>
+ <span class="menu-text">Advanced</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -434,14 +440,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/15-keeping-data-safe.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Keeping your data safe</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/16-stories-from-the-shop.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Stories from the shop</span></span></a>
+  <a href="../chapters/12-off-the-shelf-and-cut-off.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Stock off the shelf and the cut-off</span></span></a>
   </div>
 </li>
       </ul>
@@ -449,12 +449,35 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Appendices</span></a>
+ <span class="menu-text">From the shop</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/16-stories-from-the-shop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Stories from the shop</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/counters-quick-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">For counters: the quick guide</span></span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/glossary.html" class="sidebar-item-text sidebar-link">
@@ -464,13 +487,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/questions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Questions and answers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Questions and answers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/what-changed.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">What changed</span></span></a>
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">What changed</span></span></a>
   </div>
 </li>
       </ul>
@@ -485,11 +508,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#the-idea" id="toc-the-idea" class="nav-link active" data-scroll-target="#the-idea"><span class="header-section-number">3.1</span> The idea</a></li>
-  <li><a href="#in-the-app" id="toc-in-the-app" class="nav-link" data-scroll-target="#in-the-app"><span class="header-section-number">3.2</span> In the app</a></li>
-  <li><a href="#why-it-works-this-way" id="toc-why-it-works-this-way" class="nav-link" data-scroll-target="#why-it-works-this-way"><span class="header-section-number">3.3</span> Why it works this way</a></li>
-  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works"><span class="header-section-number">3.4</span> How it works</a></li>
-  <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it"><span class="header-section-number">3.5</span> Try it</a></li>
+  <li><a href="#the-idea" id="toc-the-idea" class="nav-link active" data-scroll-target="#the-idea"><span class="header-section-number">5.1</span> The idea</a></li>
+  <li><a href="#in-the-app" id="toc-in-the-app" class="nav-link" data-scroll-target="#in-the-app"><span class="header-section-number">5.2</span> In the app</a></li>
+  <li><a href="#why-it-works-this-way" id="toc-why-it-works-this-way" class="nav-link" data-scroll-target="#why-it-works-this-way"><span class="header-section-number">5.3</span> Why it works this way</a></li>
+  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works"><span class="header-section-number">5.4</span> How it works</a></li>
+  <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it"><span class="header-section-number">5.5</span> Try it</a></li>
   </ul>
 </nav>
     </div>
@@ -497,9 +520,9 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/01-stock-basics.html">The ideas behind the app</a></li><li class="breadcrumb-item"><a href="../chapters/03-counting-and-reconciliation.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Counting and checking against the ledger</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/01-stock-basics.html">How counting works</a></li><li class="breadcrumb-item"><a href="../chapters/03-counting-and-reconciliation.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Counting and checking against the ledger</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-counting" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Counting and checking against the ledger</span></span></h1>
+<h1 class="title"><span id="sec-counting" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Counting and checking against the ledger</span></span></h1>
 </div>
 
 
@@ -526,8 +549,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Why a shortage is counted again, and why someone who didn’t count approves.</li>
 </ul>
 </div>
-<section id="the-idea" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="the-idea"><span class="header-section-number">3.1</span> The idea</h2>
+<section id="the-idea" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="the-idea"><span class="header-section-number">5.1</span> The idea</h2>
 <p>The ledger says what <em>should</em> be in the shop. A <a href="../chapters/glossary.html#count"><strong>count</strong></a>, sometimes called a stock take, finds what <em>is</em> there. For each product, Jholok puts the two numbers side by side:</p>
 <ul>
 <li><a href="../chapters/glossary.html#expected"><strong>expected</strong></a>: what the ledger says should be there;</li>
@@ -602,7 +625,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="two-checks-before-stock-changes">Two checks before stock changes</h3>
 <ol type="1">
 <li><strong>A shortage is counted again first.</strong> Review won’t let anyone accept a shortage until the product is <a href="../chapters/glossary.html#recount">recounted</a>, and the recount is blind too: the first count and the ledger stay hidden. Many shortages on a first count are counting slips, and a recount finds them before the stock is changed.</li>
-<li><strong>Someone who didn’t count approves.</strong> The counter submits the count for review. Only an <a href="../chapters/glossary.html#approver"><strong>approver</strong></a> who didn’t count in it, or the owner, can open Review and complete it. They give a reason, then sign with their <a href="../chapters/glossary.html#pin">PIN</a> (the owner can use Face ID). This is called <a href="../chapters/glossary.html#separation-of-duties"><strong>separation of duties</strong></a>: the person who might have lost a piece isn’t the one who decides it is lost.</li>
+<li><strong>Someone who didn’t count approves.</strong> The counter submits the count for review. Only an <a href="../chapters/glossary.html#approver"><strong>approver</strong></a> who didn’t count in it, or the owner, can open Review and complete it. They give a reason, then sign with their <a href="../chapters/glossary.html#pin">PIN</a> (the owner can use Face ID). This is called <a href="../chapters/glossary.html#separation-of-duties"><strong>separation of duties</strong></a>: the person who might have lost a piece isn’t the one who decides it is lost. This applies once People is set up. An owner who counts alone, without People, taps <strong>Review</strong> instead of Submit and completes without a PIN, and the count says “The owner (People not set up)” (<a href="13-submit-review-complete.html#sec-solo-path" class="quarto-xref"><span>Section 6.2.5</span></a>).</li>
 </ol>
 <div class="cell">
 <div class="cell-output-display">
@@ -621,8 +644,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Overs start unticked. An over is often a missing record (a delivery or a return nobody entered), and the right fix is to enter that record, not to make the stock up to the count.</p>
 </section>
 </section>
-<section id="in-the-app" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="in-the-app"><span class="header-section-number">3.2</span> In the app</h2>
+<section id="in-the-app" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="in-the-app"><span class="header-section-number">5.2</span> In the app</h2>
 <p><a href="../chapters/glossary.html#review"><strong>Review</strong></a> puts the counted and expected numbers side by side, and lists the differences.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -648,8 +671,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="why-it-works-this-way" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="why-it-works-this-way"><span class="header-section-number">3.3</span> Why it works this way</h2>
+<section id="why-it-works-this-way" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="why-it-works-this-way"><span class="header-section-number">5.3</span> Why it works this way</h2>
 <ul>
 <li><strong>Blind counts are honest counts.</strong> Knowing the answer changes what people find.</li>
 <li><strong>A loss someone counted is never accepted on one count.</strong> Shortages cost the shop money, and a recount is cheap. (Products nobody counted are different: they keep their stock unless the approver chooses Set to zero.)</li>
@@ -658,38 +681,53 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>No percentages on small numbers.</strong> Jholok writes “3 of 4 matched” rather than 75% when fewer than 10 products were counted, because a percentage of a handful sounds more certain than it is.</li>
 </ul>
 </section>
-<section id="how-it-works" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="how-it-works"><span class="header-section-number">3.4</span> How it works</h2>
+<section id="how-it-works" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="how-it-works"><span class="header-section-number">5.4</span> How it works</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Read how it works">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Read how it works
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>At Showcase 1, the counters counted 13 products of Earrings and Rings, and 11 matched: Jholok writes that as “11 of 13 matched (85%)”. The jhumka (Antique, 22K, 8 g) was one pair short. It was recounted, still one short, and the approver accepted it: a count adjustment of −1. The hoop (Hammered, 22K, 15 mm, 4 g) was one pair over. The count’s note explains why: <em>a customer’s repair piece was in the tray</em>. It wasn’t the shop’s stock, so the over was left unticked and the stock didn’t change.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="try-it" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="try-it"><span class="header-section-number">3.5</span> Try it</h2>
+<section id="try-it" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="try-it"><span class="header-section-number">5.5</span> Try it</h2>
 <p>Suppose the earrings and rings are counted at the end of the demo’s story. Unknown to anyone, a pair of diamond flower studs has gone missing. A counter also counts one plain band twice, and finds a single chandbali earring on its own.</p>
 <div class="cell">
 <div id="tbl-first-count" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-first-count-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3.1: The products that didn’t match on the first count.
+Table&nbsp;5.1: The products that didn’t match on the first count.
 </figcaption>
 <div aria-describedby="tbl-first-count-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="gsgveanvda" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gsgveanvda table {
+<div id="wylhdleten" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wylhdleten table {
   font-family: inherit, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gsgveanvda thead, #gsgveanvda tbody, #gsgveanvda tfoot, #gsgveanvda tr, #gsgveanvda td, #gsgveanvda th {
+#wylhdleten thead, #wylhdleten tbody, #wylhdleten tfoot, #wylhdleten tr, #wylhdleten td, #wylhdleten th {
   border-style: none;
 }
 
-#gsgveanvda p {
+#wylhdleten p {
   margin: 0;
   padding: 0;
 }
 
-#gsgveanvda .gt_table {
+#wylhdleten .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -715,12 +753,12 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   border-left-color: #D3D3D3;
 }
 
-#gsgveanvda .gt_caption {
+#wylhdleten .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gsgveanvda .gt_title {
+#wylhdleten .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -732,7 +770,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   border-bottom-width: 0;
 }
 
-#gsgveanvda .gt_subtitle {
+#wylhdleten .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -744,7 +782,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   border-top-width: 0;
 }
 
-#gsgveanvda .gt_heading {
+#wylhdleten .gt_heading {
   background-color: rgba(255, 255, 255, 0);
   text-align: center;
   border-bottom-color: rgba(255, 255, 255, 0);
@@ -756,13 +794,13 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   border-right-color: #D3D3D3;
 }
 
-#gsgveanvda .gt_bottom_border {
+#wylhdleten .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gsgveanvda .gt_col_headings {
+#wylhdleten .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #E2DACB;
@@ -777,7 +815,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   border-right-color: #D3D3D3;
 }
 
-#gsgveanvda .gt_col_heading {
+#wylhdleten .gt_col_heading {
   color: #333333;
   background-color: rgba(255, 255, 255, 0);
   font-size: 100%;
@@ -797,7 +835,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   overflow-x: hidden;
 }
 
-#gsgveanvda .gt_column_spanner_outer {
+#wylhdleten .gt_column_spanner_outer {
   color: #333333;
   background-color: rgba(255, 255, 255, 0);
   font-size: 100%;
@@ -809,15 +847,15 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   padding-right: 4px;
 }
 
-#gsgveanvda .gt_column_spanner_outer:first-child {
+#wylhdleten .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gsgveanvda .gt_column_spanner_outer:last-child {
+#wylhdleten .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gsgveanvda .gt_column_spanner {
+#wylhdleten .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #E2DACB;
@@ -829,11 +867,11 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   width: 100%;
 }
 
-#gsgveanvda .gt_spanner_row {
+#wylhdleten .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gsgveanvda .gt_group_heading {
+#wylhdleten .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -859,7 +897,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   text-align: left;
 }
 
-#gsgveanvda .gt_empty_group_heading {
+#wylhdleten .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: rgba(255, 255, 255, 0);
@@ -874,15 +912,15 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   vertical-align: middle;
 }
 
-#gsgveanvda .gt_from_md > :first-child {
+#wylhdleten .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gsgveanvda .gt_from_md > :last-child {
+#wylhdleten .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gsgveanvda .gt_row {
+#wylhdleten .gt_row {
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 5px;
@@ -901,7 +939,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   overflow-x: hidden;
 }
 
-#gsgveanvda .gt_stub {
+#wylhdleten .gt_stub {
   color: #333333;
   background-color: rgba(255, 255, 255, 0);
   font-size: 100%;
@@ -914,7 +952,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   padding-right: 5px;
 }
 
-#gsgveanvda .gt_stub_row_group {
+#wylhdleten .gt_stub_row_group {
   color: #333333;
   background-color: rgba(255, 255, 255, 0);
   font-size: 100%;
@@ -928,15 +966,15 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   vertical-align: top;
 }
 
-#gsgveanvda .gt_row_group_first td {
+#wylhdleten .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gsgveanvda .gt_row_group_first th {
+#wylhdleten .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gsgveanvda .gt_summary_row {
+#wylhdleten .gt_summary_row {
   color: #333333;
   background-color: rgba(255, 255, 255, 0);
   text-transform: inherit;
@@ -946,16 +984,16 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   padding-right: 5px;
 }
 
-#gsgveanvda .gt_first_summary_row {
+#wylhdleten .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gsgveanvda .gt_first_summary_row.thick {
+#wylhdleten .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gsgveanvda .gt_last_summary_row {
+#wylhdleten .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -965,7 +1003,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   border-bottom-color: #D3D3D3;
 }
 
-#gsgveanvda .gt_grand_summary_row {
+#wylhdleten .gt_grand_summary_row {
   color: #333333;
   background-color: rgba(255, 255, 255, 0);
   text-transform: inherit;
@@ -975,7 +1013,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   padding-right: 5px;
 }
 
-#gsgveanvda .gt_first_grand_summary_row {
+#wylhdleten .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -985,7 +1023,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   border-top-color: #D3D3D3;
 }
 
-#gsgveanvda .gt_last_grand_summary_row_top {
+#wylhdleten .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -995,11 +1033,11 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   border-bottom-color: #D3D3D3;
 }
 
-#gsgveanvda .gt_striped {
+#wylhdleten .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gsgveanvda .gt_table_body {
+#wylhdleten .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1008,7 +1046,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   border-bottom-color: #E2DACB;
 }
 
-#gsgveanvda .gt_footnotes {
+#wylhdleten .gt_footnotes {
   color: #333333;
   background-color: rgba(255, 255, 255, 0);
   border-bottom-style: none;
@@ -1022,7 +1060,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   border-right-color: #D3D3D3;
 }
 
-#gsgveanvda .gt_footnote {
+#wylhdleten .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1031,7 +1069,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   padding-right: 5px;
 }
 
-#gsgveanvda .gt_sourcenotes {
+#wylhdleten .gt_sourcenotes {
   color: #333333;
   background-color: rgba(255, 255, 255, 0);
   border-bottom-style: none;
@@ -1045,7 +1083,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   border-right-color: #D3D3D3;
 }
 
-#gsgveanvda .gt_sourcenote {
+#wylhdleten .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1053,72 +1091,72 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
   padding-right: 5px;
 }
 
-#gsgveanvda .gt_left {
+#wylhdleten .gt_left {
   text-align: left;
 }
 
-#gsgveanvda .gt_center {
+#wylhdleten .gt_center {
   text-align: center;
 }
 
-#gsgveanvda .gt_right {
+#wylhdleten .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gsgveanvda .gt_font_normal {
+#wylhdleten .gt_font_normal {
   font-weight: normal;
 }
 
-#gsgveanvda .gt_font_bold {
+#wylhdleten .gt_font_bold {
   font-weight: bold;
 }
 
-#gsgveanvda .gt_font_italic {
+#wylhdleten .gt_font_italic {
   font-style: italic;
 }
 
-#gsgveanvda .gt_super {
+#wylhdleten .gt_super {
   font-size: 65%;
 }
 
-#gsgveanvda .gt_footnote_marks {
+#wylhdleten .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gsgveanvda .gt_asterisk {
+#wylhdleten .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gsgveanvda .gt_indent_1 {
+#wylhdleten .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gsgveanvda .gt_indent_2 {
+#wylhdleten .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gsgveanvda .gt_indent_3 {
+#wylhdleten .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gsgveanvda .gt_indent_4 {
+#wylhdleten .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gsgveanvda .gt_indent_5 {
+#wylhdleten .gt_indent_5 {
   text-indent: 25px;
 }
 
-#gsgveanvda .katex-display {
+#wylhdleten .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#gsgveanvda div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#wylhdleten div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1158,7 +1196,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
 <p>Review asks for the studs to be recounted. The band is over, so it starts unticked. The approver asks for it to be counted again too. On the recount, the band matches: the over was a counting slip. The studs are still one pair short, so the loss is real. After the recount, 12 of 13 products match, and the approver accepts the shortage of ₹41,870 at cost.</p>
 <p><strong>Question.</strong> A count finds one gold coin more than expected. What should you check before accepting it?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1167,7 +1205,7 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Whether a delivery or a return of coins hasn’t been entered, and whether the coin is really the shop’s (a customer’s, say). If a record is missing, enter it and leave the over unticked: the ledger then matches the count without a count adjustment.</p>
 </div>
@@ -1607,12 +1645,12 @@ Table&nbsp;3.1: The products that didn’t match on the first count.
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../chapters/02-the-ledger.html" class="pagination-link" aria-label="The ledger: why stock is a sum">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The ledger: why stock is a sum</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The ledger: why stock is a sum</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/04-setting-up.html" class="pagination-link" aria-label="Setting up the shop">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting up the shop</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/13-submit-review-complete.html" class="pagination-link" aria-label="Submit, review and complete">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Submit, review and complete</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
