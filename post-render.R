@@ -72,7 +72,9 @@ make_derivatives <- function(src) {
 # ── Rewriting the page ───────────────────────────────────────────────────────
 rewrite_images <- function(page) {
   doc <- read_html(page, encoding = "UTF-8")
-  imgs <- xml_find_all(doc, "//main//img[not(contains(@class,'navbar-logo'))]")
+  # A page Quarto didn't rebuild this time was rewritten on an earlier run and
+  # already holds its <picture>s: leave those, never wrap a second time.
+  imgs <- xml_find_all(doc, "//main//img[not(contains(@class,'navbar-logo')) and not(parent::picture)]")
   changed <- FALSE
   for (img in imgs) {
     src <- xml_attr(img, "src")
