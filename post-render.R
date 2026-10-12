@@ -60,7 +60,11 @@ make_derivatives <- function(src) {
     scaled <- if (w < info$width) image_resize(img, paste0(w, "x")) else img
     for (fmt in formats) {
       target <- file.path(out, derivative_path(src, w, fmt))
-      if (!file.exists(target)) {
+      # Written when missing, and again when the original has changed since: a
+      # single-page render doesn't empty docs/, so a stale derivative would
+      # otherwise outlive a new picture.
+      stale <- file.exists(target) && file.mtime(target) < file.mtime(original)
+      if (!file.exists(target) || stale) {
         quality <- if (fmt == "avif") 55 else 80
         image_write(scaled, target, format = fmt, quality = quality)
       }
