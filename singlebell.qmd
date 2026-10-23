@@ -26,7 +26,7 @@ counts it with you, and gets out of the way.
 Native SwiftUI. No dependencies. No network code. No account.
 
 ::: {.shots}
-![Today's Practice, dealt fresh each morning](images/singlebell/home.png){group="shots"}
+![Today's Practice, dealt each morning](images/singlebell/home.png){group="shots"}
 
 ![Every card opens its chalkboard before it starts anything](images/singlebell/chalkboard.png){group="shots"}
 
@@ -37,16 +37,21 @@ Native SwiftUI. No dependencies. No network code. No account.
 
 ## What it does
 
-**Today's Practice.** One full board each morning, dealt from the shape of the week and
-from what you have already done: a warm-up chosen for the day's lift, a kettlebell
-complex around that lift — clean & press, one-arm swings, or the snatch — and a
-bodyweight finisher, chalked on the board with an honest estimate of what it costs. Short
-is about twenty minutes, Standard about thirty-five. Run it at your own pace, striking
-each set as you finish it, or timed, on the clock — one switch on the card. The lift you
-have practised least recently leads, and a snatch day waits until you have logged a swing
-day. Rest when you decide to: the app never declares a rest day, and the week beside the
-date shows what it has had. Tap Light, Right or Heavy when you finish and the next board
-led by that lift adds or drops a set. The day is dealt once and holds until midnight — finishing it
+**Today's Practice.** One card each morning: a short warm-up chosen for the day's lift,
+the lift itself — clean & press, one-arm swings or the snatch, whichever you have
+practised least recently — then the same few lifts at every practice: a press, a row, a
+squat, a plank and a carry, each lift with its own rest, chalked on the board with an
+honest estimate of what it costs. Every practice swings or snatches at least forty times
+(a Clean & Press Day swings after its presses); the presses come in sets of two to five,
+the row and the squat in tens. It needs one bell you can press at
+least twice a side. Run it at your own pace, striking each set as you finish it, or timed,
+on the clock — one switch on the card. The snatch and the clean & press wait until you have
+done two swing practices. Rest when you decide to: the app never declares a rest day, and
+the week beside the date shows what it has had. Tap Light, Right or Heavy when you finish:
+two light days at a step move the next practice on a step, Right keeps it, Heavy steps it
+back, and Heavy at the first step deals a shorter day. When the top step stays light, the
+card asks whether a heavier bell is to hand. Short is the same day at fewer sets, never
+under forty swings or snatches. The day is dealt once and holds until midnight — finishing it
 resolves the card in place rather than moving it under your feet. Either side of Start
 are two doors: open the day in the Builder and make it yours, or keep it in your Library
 as dealt.
@@ -180,8 +185,8 @@ a clock is the special case, not the shape.
 Timed, each block decides how the clock treats it: one timer on the whole block (Tabata,
 EMOM, AMRAP), or a timer on each move as stations, with its own rest, its own number of
 rounds and a minute between them. Every number is dialled, not picked off a list. Blocks
-reorder, collapse, and stack into a session as long as you need. Shuffle deals a fresh one
-to start from, and anything you build can be saved to Library and run again. A half-built
+reorder, collapse, and stack into a session as long as you need. Shuffle deals the day's own
+shape around another lift, at your step, to start from, and anything you build can be saved to Library and run again. A half-built
 session is still there when you come back to it, that day.
 
 **The Intervals Timer.** Just a clock, no moves: work and rest in rounds, rounds in sets, a

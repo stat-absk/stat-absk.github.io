@@ -7,7 +7,7 @@ aliases:
   - singlebell-privacy.html
 ---
 
-*Effective 5 October 2026.*
+*Effective 22 October 2026.*
 
 **SingleBell collects nothing.** Not anonymised, not aggregated, not "to improve the
 experience". Nothing. The rest of this section is only the detail behind that sentence.
@@ -52,11 +52,13 @@ It holds:
 - **your Library** — the practices you chose to save, and any move you typed in yourself;
 - **a list of the practices you finished, and when** — which practice, the date, how long
   it took, and the one optional word from the closing screen, Light, Right or Heavy. It
-  marks the practice calendar, lets a chalkboard say "last run 9 days ago", and picks
-  which lift Today's Practice leads with. That is everything it is used for. A practice
-  you end early, after at least a minute, is kept too, marked as ended early, and nothing
-  is dealt from it; one you take off the calendar is held until midnight, only so today's
-  practice does not change under you, and is then gone;
+  marks the practice calendar, lets a chalkboard say "last run 9 days ago", picks which
+  lift Today's Practice leads with, and, by your word, steps the next practice's lifts
+  on, keeps them, or steps them back. That is everything it is used for. A practice you
+  end early, after at least a minute, is kept too, marked as ended early, and on the
+  day's card it is read as Heavy unless you give it a word; one you take off the calendar
+  is held until midnight, only so today's practice does not change under you, and is then
+  gone;
 - **the last six practices you ran**, so the Recents shelf on the practice calendar can
   offer them again;
 - **today's card**, as it was dealt this morning, kept for that day so it does not change
