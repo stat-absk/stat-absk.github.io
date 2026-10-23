@@ -1,11 +1,15 @@
-# The 1200 x 630 social card for singlebell.qmd, drawn from the current store frame.
+# The 1200 x 630 social card for singlebell.qmd, drawn from the App Store's own
+# search results asset.
 #
 #   Rscript R/make_social_card.R
 #
-# Run from the site root. Reads images/singlebell/home.png (the 600 x 1303 site
-# frame) and appicon.png, and writes social-card.png beside them. The card wears
-# the site's own palette (_palette-wiring.scss: ground, writing, accent), not the
-# app's, because it is the site's card; the phone inside it is the app as it is.
+# Run from the site root. Reads appicon.png and the search results asset from
+# the app's repository (../AI_Jobs/SingleBell/Marketing/creative-assets/, the
+# bell in the glowing work ring since 23 October 2026), and writes
+# social-card.png in images/singlebell/. The card wears the site's own palette
+# (_palette-wiring.scss: ground, writing, accent), not the app's, because it is
+# the site's card; the picture inside it is the app's as the store shows it.
+# Until 23 October the right side was the site's home frame as a phone.
 #
 # Type: the site's own faces, from the static TTFs in fonts/ttf (see
 # R/fetch_fonts.R), registered for this session.
@@ -15,7 +19,8 @@ library(ragg)
 library(magick)
 library(systemfonts)
 
-here <- "images/singlebell"
+here  <- "images/singlebell"
+asset <- "../AI_Jobs/SingleBell/Marketing/creative-assets/search-3840x2560.png"
 ground  <- "#131A17"; writing <- "#F2F3EA"; muted <- "#B8BDB5"; accent <- "#E9D592"
 W <- 1200; H <- 630
 
@@ -50,21 +55,24 @@ text("A kettlebell practice app for iPhone.",   92, 332, 30, muted, sans)
 text("The day's practice, dealt each morning.", 92, 374, 30, muted, sans)
 text("No account · no analytics · collects nothing", 92, 458, 30, accent, sans, "bold")
 
-# The phone: the site's home frame, scaled to sit on the right and run off the
-# foot, clipped to the phone's corner and edged in a slate rim.
-frame <- image_read(file.path(here, "home.png"))
-pw <- 310; ph <- round(image_info(frame)$height * pw / image_info(frame)$width)
-frame <- image_resize(frame, paste0(pw, "x"))
-x <- 782; y <- 30; r <- 44
-rim <- viewport(x = px(x), y = top(y), width = px(pw + 8), height = px(ph + 8), just = c("left", "top"),
+# The bell in the ring: the centre square of the 3:2 store asset, on the right,
+# clipped to a rounded card and edged in a slate rim, as the phone was.
+pic <- image_read(asset)
+info <- image_info(pic)
+side <- info$height
+pic <- image_crop(pic, sprintf("%dx%d+%d+0", side, side, (info$width - side) %/% 2))
+s <- 470
+pic <- image_resize(pic, paste0(s, "x", s, "!"))
+x <- 706; y <- 76; r <- 40
+rim <- viewport(x = px(x), y = top(y), width = px(s + 8), height = px(s + 8), just = c("left", "top"),
                 clip = roundrectGrob(r = px(r + 4)))
 pushViewport(rim)
 grid.rect(gp = gpar(fill = "#343A37", col = NA))
 popViewport()
-screen <- viewport(x = px(x + 4), y = top(y + 4), width = px(pw), height = px(ph), just = c("left", "top"),
-                   clip = roundrectGrob(r = px(r)))
-pushViewport(screen)
-grid.raster(as.raster(frame), width = unit(1, "npc"), height = unit(1, "npc"), interpolate = TRUE)
+card <- viewport(x = px(x + 4), y = top(y + 4), width = px(s), height = px(s), just = c("left", "top"),
+                 clip = roundrectGrob(r = px(r)))
+pushViewport(card)
+grid.raster(as.raster(pic), width = unit(1, "npc"), height = unit(1, "npc"), interpolate = TRUE)
 popViewport()
 
 invisible(dev.off())

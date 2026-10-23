@@ -34,6 +34,7 @@ display_width <- function(src) {
   w <- c(
     "images/profile.jpg"            = 300,   # the hero portrait, at its largest
     "images/singlebell/appicon.png" = 104,   # the app icon in the SingleBell opening
+    "images/singlebell/header.png"  = 1180,  # the store header over the SingleBell opening, full body width
     "images/jholok/appicon.png"     = 104,   # and in the Jholok opening
     "images/workbench/"             = 1180   # browser windows, full measure
   )

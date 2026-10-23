@@ -112,6 +112,21 @@ html.arrived .hero .chalk-rule { animation: none; }
   .hero-portrait img { width: 128px; }
 }
 
+// The App Store's product page header, over the opening as iOS 27 draws it: the
+// bell in the glowing work ring, the whole 21:9 picture at the body's width.
+.sb-banner {
+  margin: var(--space-l) 0 0;
+  p { margin: 0; }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3840 / 1646;     // reserves the space before the image loads
+    border-radius: var(--radius-image);
+    margin: 0;
+  }
+}
+
 // The SingleBell opening: the icon and the name on one line, as an App Store
 // listing sets them — identity first, claim second.
 .sb-hero {

@@ -6,6 +6,10 @@ toc: true
 toc-title: "On this page"
 ---
 
+::: {.sb-banner}
+![](images/singlebell/header.png){fig-alt="The App Store's header for SingleBell: the white glass kettlebell inside the glowing lime work ring, on pine green"}
+:::
+
 ::: {.sb-hero}
 ::: {.app-icon}
 ![](images/singlebell/appicon.png){fig-alt="The SingleBell app icon: a white glass kettlebell on a pine green and slate blue ground"}
